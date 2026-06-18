@@ -164,7 +164,7 @@ export const bespokePackages = {
     {
       id: "custom-app",
       name: "Custom Web + Android App",
-      price: 3500,
+      price: 4800,
       description: "Sistem kustom bersepadu yang berjalan serentak pada platform web dan aplikasi mudah alih Android."
     },
     {
@@ -249,7 +249,7 @@ export const bespokePackages = {
     {
       id: "custom-app",
       name: "Custom Web + Android App",
-      price: 3500,
+      price: 4800,
       description: "Custom system that works through both web platform and Android mobile app."
     },
     {
