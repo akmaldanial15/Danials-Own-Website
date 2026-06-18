@@ -2,16 +2,11 @@
 
 import React, { useState, useMemo } from "react";
 import { PHONE_NUMBER } from "@/utils/whatsapp";
-import { useLanguage } from "@/context/LanguageContext";
-import { translations } from "@/data/translations";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function Contact() {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
-  const { language } = useLanguage();
-
-  const t = (key: keyof typeof translations.ms): string => {
-    return translations[language][key] || translations.ms[key];
-  };
+  const { t, language } = useTranslation();
 
   const faqs = useMemo(() => {
     return [

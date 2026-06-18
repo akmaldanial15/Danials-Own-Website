@@ -4,15 +4,10 @@ import React from "react";
 import GlowCard from "@/components/ui/GlowCard";
 import { fastTrackPackages, quickFixes } from "@/data/packages";
 import { generateWhatsAppLink, generateQuickFixLink } from "@/utils/whatsapp";
-import { useLanguage } from "@/context/LanguageContext";
-import { translations } from "@/data/translations";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function FastTrackServices() {
-  const { language } = useLanguage();
-
-  const t = (key: keyof typeof translations.ms): string => {
-    return translations[language][key] || translations.ms[key];
-  };
+  const { t, language } = useTranslation();
 
   const currentPackages = fastTrackPackages[language];
   const currentFixes = quickFixes[language];

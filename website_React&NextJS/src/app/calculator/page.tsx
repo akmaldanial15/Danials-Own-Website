@@ -3,15 +3,10 @@
 import React, { useState, useMemo } from "react";
 import { fastTrackPackages, bespokePackages, addOns } from "@/data/packages";
 import { generateWhatsAppLink } from "@/utils/whatsapp";
-import { useLanguage } from "@/context/LanguageContext";
-import { translations } from "@/data/translations";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function PricingCalculator() {
-  const { language } = useLanguage();
-
-  const t = (key: keyof typeof translations.ms): string => {
-    return translations[language][key] || translations.ms[key];
-  };
+  const { t, language } = useTranslation();
 
   // Combine all base packages into a single flat array based on active language
   const allBasePackages = useMemo(() => {

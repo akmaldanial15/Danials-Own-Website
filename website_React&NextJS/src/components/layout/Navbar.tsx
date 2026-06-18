@@ -3,19 +3,14 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useLanguage } from "@/context/LanguageContext";
-import { translations } from "@/data/translations";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [servicesDropdown, setServicesDropdown] = useState(false);
   const pathname = usePathname();
-  const { language, setLanguage } = useLanguage();
-
-  const t = (key: keyof typeof translations.ms): string => {
-    return translations[language][key] || translations.ms[key];
-  };
+  const { t, language, setLanguage } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {

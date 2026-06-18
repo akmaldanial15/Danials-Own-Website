@@ -5,15 +5,10 @@ import Link from "next/link";
 import GlowCard from "@/components/ui/GlowCard";
 import { bespokePackages } from "@/data/packages";
 import { generateWhatsAppLink } from "@/utils/whatsapp";
-import { useLanguage } from "@/context/LanguageContext";
-import { translations } from "@/data/translations";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function CustomServices() {
-  const { language } = useLanguage();
-
-  const t = (key: keyof typeof translations.ms): string => {
-    return translations[language][key] || translations.ms[key];
-  };
+  const { t, language } = useTranslation();
 
   const currentBespoke = bespokePackages[language];
 

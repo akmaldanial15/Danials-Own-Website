@@ -2,16 +2,11 @@
 
 import React from "react";
 import Link from "next/link";
-import { useLanguage } from "@/context/LanguageContext";
-import { translations } from "@/data/translations";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const { language } = useLanguage();
-
-  const t = (key: keyof typeof translations.ms): string => {
-    return translations[language][key] || translations.ms[key];
-  };
+  const { t, language } = useTranslation();
 
   return (
     <footer className="bg-zinc-950 border-t border-zinc-900 text-zinc-400 py-12 px-4 md:py-16 md:px-8">

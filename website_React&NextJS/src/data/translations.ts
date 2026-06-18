@@ -104,6 +104,9 @@ export const translations = {
     galHeader: "Galeri Hasil Kerja",
     galDesc: "Lihat demonstrasi reka bentuk dan fungsi sistem yang telah kami selesaikan. Setiap projek mengikut amalan reka bentuk premium dan kod yang dioptimumkan.",
     filterAll: "Semua",
+    filterRedesign: "Redesign & Repair",
+    filterScratch: "Bina dari Kosong",
+    filterIntegration: "Integrasi Sistem & App",
 
     // Calculator Page
     calcHeader: "Kalkulator Anggaran Bajet",
@@ -243,6 +246,9 @@ export const translations = {
     galHeader: "Project Gallery",
     galDesc: "Browse live demonstrations of design templates and custom systems we have completed. Crafted with premium design practices and optimized code.",
     filterAll: "All",
+    filterRedesign: "Redesign & Upgrades",
+    filterScratch: "Web from Scratch",
+    filterIntegration: "App & System Integration",
 
     // Calculator Page
     calcHeader: "Interactive Budget Calculator",

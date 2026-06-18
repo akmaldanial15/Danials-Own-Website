@@ -5,15 +5,10 @@ import Link from "next/link";
 import GlowCard from "@/components/ui/GlowCard";
 import DashboardMockup from "@/components/home/DashboardMockup";
 import { portfolioItems } from "@/data/portfolio";
-import { useLanguage } from "@/context/LanguageContext";
-import { translations } from "@/data/translations";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function Home() {
-  const { language } = useLanguage();
-
-  const t = (key: keyof typeof translations.ms): string => {
-    return translations[language][key] || translations.ms[key];
-  };
+  const { t, language } = useTranslation();
 
   // Take first 2 items of localized portfolio data
   const featuredPortfolio = portfolioItems[language].slice(0, 2);
