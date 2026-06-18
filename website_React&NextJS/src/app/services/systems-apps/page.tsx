@@ -191,7 +191,7 @@ export default function SystemsAppsServices() {
             href="https://wa.me/60136632092?text=Hai%20Danial,%20saya%20nak%20bincang%20untuk%20bina%20sistem/app%20kustom%20saya."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-md hover:shadow-[0_0_20px_rgba(147,51,234,0.4)] transition-all duration-300"
+            className="inline-flex w-full items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-md hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all duration-300"
           >
             {isMs ? "Bincang Sistem di WhatsApp" : "Discuss System on WhatsApp"}
           </a>

@@ -8,7 +8,7 @@ export default function DashboardMockup() {
   const isMs = language === "ms";
 
   return (
-    <div className="relative mt-16 max-w-5xl mx-auto rounded-2xl bg-zinc-950/80 backdrop-blur-md border border-zinc-800/80 shadow-[0_0_50px_-12px_rgba(168,85,247,0.3)] overflow-hidden transition-all duration-300 hover:shadow-[0_0_60px_-10px_rgba(168,85,247,0.45)] hover:border-purple-500/20 group">
+    <div className="relative mt-16 max-w-5xl mx-auto rounded-2xl bg-zinc-950/80 backdrop-blur-md border border-zinc-800/80 shadow-[0_0_50px_-12px_rgba(59,130,246,0.3)] overflow-hidden transition-all duration-300 hover:shadow-[0_0_60px_-10px_rgba(59,130,246,0.45)] hover:border-purple-500/20 group">
       {/* Subtle inner ambient grid light */}
       <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/5 via-transparent to-cyan-500/5 pointer-events-none" />
       
@@ -187,7 +187,7 @@ export default function DashboardMockup() {
                 <span className="text-[9px] text-purple-400 bg-purple-950/40 px-1.5 rounded font-bold">1</span>
               </div>
 
-              <div className="p-3 rounded-xl bg-gradient-to-tr from-purple-950/10 via-zinc-900/60 to-zinc-900/60 border border-purple-500/30 space-y-2.5 relative shadow-[0_0_20px_rgba(168,85,247,0.03)]">
+              <div className="p-3 rounded-xl bg-gradient-to-tr from-purple-950/10 via-zinc-900/60 to-zinc-900/60 border border-purple-500/30 space-y-2.5 relative shadow-[0_0_20px_rgba(59,130,246,0.03)]">
                 <div className="absolute top-0 right-0 w-16 h-16 bg-purple-500/5 blur-xl pointer-events-none" />
                 <div>
                   <span className="text-[8px] px-1.5 py-0.2 rounded bg-red-950/40 text-red-400 border border-red-500/10 font-bold uppercase">

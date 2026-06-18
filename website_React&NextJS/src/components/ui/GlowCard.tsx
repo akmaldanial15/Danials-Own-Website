@@ -2,7 +2,7 @@ import React from "react";
 
 export default function GlowCard({ children, className = "", color = "from-purple-600 via-indigo-500 to-cyan-500" }) {
   return (
-    <div className={`relative group rounded-2xl bg-zinc-900/80 p-[1px] transition-all duration-500 hover:shadow-[0_0_30px_rgba(99,102,241,0.2)] ${className}`}>
+    <div className={`relative group rounded-2xl bg-zinc-900/80 p-[1px] transition-all duration-500 hover:shadow-[0_0_30px_rgba(59,130,246,0.25)] ${className}`}>
       {/* Background radial/gradient glow on hover */}
       <div className={`absolute -inset-px rounded-2xl bg-gradient-to-r ${color} opacity-10 blur-sm transition-all duration-500 group-hover:opacity-75`} />
       

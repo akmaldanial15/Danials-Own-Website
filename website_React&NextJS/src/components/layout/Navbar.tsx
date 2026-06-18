@@ -160,7 +160,7 @@ export default function Navbar() {
 
             <Link
               href="/calculator"
-              className="px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 text-white hover:shadow-[0_0_20px_rgba(147,51,234,0.4)] transition-all duration-300"
+              className="px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 text-white hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all duration-300"
             >
               {t("navButton")}
             </Link>

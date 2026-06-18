@@ -88,7 +88,7 @@ function GalleryContent() {
             return (
               <div 
                 key={item.id} 
-                className={`group rounded-2xl bg-zinc-900/35 border border-zinc-850 hover:border-purple-500/30 transition-all duration-500 flex flex-col justify-between overflow-hidden shadow-xl hover:shadow-[0_0_30px_rgba(168,85,247,0.08)] ${
+                className={`group rounded-2xl bg-zinc-900/35 border border-zinc-850 hover:border-purple-500/30 transition-all duration-500 flex flex-col justify-between overflow-hidden shadow-xl hover:shadow-[0_0_30px_rgba(59,130,246,0.08)] ${
                   isLargeCard ? "md:col-span-2" : "md:col-span-1"
                 }`}
               >
