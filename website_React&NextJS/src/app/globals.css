@@ -39,7 +39,7 @@
 
 html {
   filter: invert(0.92) hue-rotate(180deg);
-  background-color: #0f0f15;
+  background-color: #0c1524;
 }
 
 /* Ensure images, video, and marked elements are not double-inverted */
@@ -48,11 +48,13 @@ img, video, .no-invert {
 }
 
 body {
-  background-color: var(--background);
+  background: linear-gradient(135deg, #022c22 0%, #0c1524 35%, #1e3a8a 70%, #2e1065 100%);
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: var(--font-sans);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
 }
 
 /* Glassmorphism Classes */
