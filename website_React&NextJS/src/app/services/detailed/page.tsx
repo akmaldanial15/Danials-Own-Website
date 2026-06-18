@@ -7,7 +7,7 @@ import { bespokePackages } from "@/data/packages";
 import { generateWhatsAppLink } from "@/utils/whatsapp";
 import { useTranslation } from "@/hooks/useTranslation";
 
-export default function CustomServices() {
+export default function DetailedServices() {
   const { t, language } = useTranslation();
 
   const currentBespoke = bespokePackages[language];
@@ -32,11 +32,11 @@ export default function CustomServices() {
           </p>
         </div>
 
-        {/* Value Pitch Section: Why Custom? */}
+        {/* Value Pitch Section: Why Detailed? */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="p-6 rounded-2xl bg-zinc-900/20 border border-zinc-850 space-y-3">
             <div className="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 border border-purple-500/20">
-              ⚡
+              🛡️
             </div>
             <h3 className="text-lg font-bold text-white">{t("pitch1Title")}</h3>
             <p className="text-xs text-zinc-400 leading-relaxed">
@@ -45,7 +45,7 @@ export default function CustomServices() {
           </div>
           <div className="p-6 rounded-2xl bg-zinc-900/20 border border-zinc-850 space-y-3">
             <div className="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 border border-cyan-500/20">
-              🛡️
+              👤
             </div>
             <h3 className="text-lg font-bold text-white">{t("pitch2Title")}</h3>
             <p className="text-xs text-zinc-400 leading-relaxed">
@@ -54,7 +54,7 @@ export default function CustomServices() {
           </div>
           <div className="p-6 rounded-2xl bg-zinc-900/20 border border-zinc-850 space-y-3">
             <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 border border-indigo-500/20">
-              🤖
+              ⚡
             </div>
             <h3 className="text-lg font-bold text-white">{t("pitch3Title")}</h3>
             <p className="text-xs text-zinc-400 leading-relaxed">

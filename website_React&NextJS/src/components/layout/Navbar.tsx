@@ -99,9 +99,9 @@ export default function Navbar() {
                   {t("navFastTrack")}
                 </Link>
                 <Link
-                  href="/services/custom"
+                  href="/services/detailed"
                   className={`block px-4 py-2.5 rounded-lg text-xs sm:text-sm font-medium transition-all duration-200 ${
-                    isActive("/services/custom")
+                    isActive("/services/detailed")
                       ? "bg-gradient-to-r from-purple-950/40 to-indigo-950/20 text-purple-300 border-l-2 border-purple-500"
                       : "text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900/40 hover:pl-5"
                   }`}
@@ -239,10 +239,10 @@ export default function Navbar() {
                 {t("navFastTrack")}
               </Link>
               <Link
-                href="/services/custom"
+                href="/services/detailed"
                 onClick={() => { setIsOpen(false); setServicesDropdown(false); }}
                 className={`block px-3 py-2 rounded-lg text-sm font-medium ${
-                  isActive("/services/custom") ? "text-purple-400 bg-zinc-900/30" : "text-zinc-400 hover:text-zinc-100"
+                  isActive("/services/detailed") ? "text-purple-400 bg-zinc-900/30" : "text-zinc-400 hover:text-zinc-100"
                 }`}
               >
                 {t("navCustom")}

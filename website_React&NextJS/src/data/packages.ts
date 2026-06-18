@@ -1,67 +1,69 @@
 export const fastTrackPackages = {
   ms: [
     {
-      id: "basic",
-      name: "Basic Website",
-      price: 799,
-      description: "Laman web 1-3 halaman ringkas untuk perniagaan kecil, profil peribadi atau kehadiran dalam talian asas.",
+      id: "budget-basic",
+      name: "Super Budget (1 Halaman)",
+      price: 299,
+      description: "Pilihan paling jimat untuk bertapak secara atas talian dengan cepat. 100% bayaran pendahuluan (upfront).",
       features: [
-        "Laman web kustom 1-3 halaman",
-        "HTML, CSS & JavaScript",
-        "Reka bentuk mesra telefon",
-        "Maklumat perniagaan asas",
-        "Bahagian hubungan",
-        "Persediaan SEO asas",
-        "2 kali semakan (revisions)"
+        "Laman web kustom 1 Halaman",
+        "100% Downpayment (Sebelum Mula)",
+        "Hosting & Subdomain Percuma (.vercel.app / .pythonanywhere.com)",
+        "Proper hosting & domain beli sendiri (atau tambah RM30/bulan)",
+        "Penyelenggaraan Bulanan RM40/bulan (standard)",
+        "Penyelenggaraan Premium RM70/bulan (termasuk domain kustom & hosting)",
+        "Siap dalam 2 - 4 hari bekerja",
+        "Penghantaran ekspres (< 24 jam) dicaj tambahan"
       ]
     },
     {
-      id: "standard",
-      name: "Standard Website",
-      price: 1499,
-      description: "Laman web profesional untuk perniagaan, perkhidmatan, profil syarikat atau portfolio.",
+      id: "budget-standard",
+      name: "Medium Budget (Sehingga 4 Halaman)",
+      price: 699,
+      description: "Sesuai untuk perniagaan kecil yang memerlukan halaman berasingan bagi maklumat penting.",
       features: [
-        "Laman web 4-6 halaman",
-        "Reka bentuk kustom dari kosong",
-        "Halaman Utama, Mengenai Kami, Servis, Galeri & Hubungi",
-        "Reka bentuk mudah alih responsif",
-        "Borang hubungan interaktif",
-        "Persediaan SEO asas",
-        "Panduan persediaan domain & hosting",
-        "4 kali semakan (revisions)"
+        "Website kustom sehingga 4 Halaman",
+        "Termasuk Galeri, Google Maps, & Hubungi WhatsApp",
+        "Percuma 4 kali suntingan / kemas kini asas",
+        "Hosting & Subdomain Percuma",
+        "Penyelenggaraan Bulanan RM50/bulan (standard)",
+        "Penyelenggaraan Premium RM75/bulan (termasuk domain kustom & hosting)",
+        "Siap dalam 2 - 4 hari bekerja",
+        "Penghantaran ekspres (< 24 jam) dicaj tambahan"
       ]
     }
   ],
   en: [
     {
-      id: "basic",
-      name: "Basic Website",
-      price: 799,
-      description: "Simple 1-3 page website for small business, personal profile or basic online presence.",
+      id: "budget-basic",
+      name: "Super Budget (1 Page)",
+      price: 299,
+      description: "The most budget-friendly plan to establish your online presence. 100% upfront downpayment.",
       features: [
-        "1-3 page custom website",
-        "HTML, CSS & JavaScript",
-        "Mobile-friendly design",
-        "Basic business information",
-        "Contact section",
-        "Basic SEO setup",
-        "2 revisions"
+        "1-Page custom website",
+        "100% Upfront Downpayment",
+        "Free Hosting & Subdomain (.vercel.app / .pythonanywhere.com)",
+        "Self-purchased domain & hosting option (or add RM30/month)",
+        "Monthly Maintenance RM40/month (standard)",
+        "Premium Maintenance RM70/month (includes custom domain & hosting)",
+        "Delivered within 2 - 4 working days",
+        "Express delivery (< 24 hours) available for extra fee"
       ]
     },
     {
-      id: "standard",
-      name: "Standard Website",
-      price: 1499,
-      description: "Professional website for business, services, company profile or portfolio.",
+      id: "budget-standard",
+      name: "Medium Budget (Up to 4 Pages)",
+      price: 699,
+      description: "Perfect for small businesses needing separate pages for core information.",
       features: [
-        "4-6 pages website",
-        "Custom design from scratch",
-        "Home, About, Services, Gallery & Contact pages",
-        "Responsive mobile layout",
-        "Contact form",
-        "Basic SEO setup",
-        "Domain & hosting setup guidance",
-        "4 revisions"
+        "Custom website up to 4 Pages",
+        "Includes Gallery, Google Maps, & WhatsApp link",
+        "Free 4 basic website edits/updates",
+        "Free Hosting & Subdomain",
+        "Monthly Maintenance RM50/month (standard)",
+        "Premium Maintenance RM75/month (includes custom domain & hosting)",
+        "Delivered within 2 - 4 working days",
+        "Express delivery (< 24 hours) available for extra fee"
       ]
     }
   ]
@@ -89,19 +91,49 @@ export const quickFixes = {
 export const bespokePackages = {
   ms: [
     {
+      id: "basic",
+      name: "Detailed Basic Website",
+      price: 799,
+      description: "Laman web 1-3 halaman yang disiapkan dengan ketelitian tinggi, dioptimumkan untuk kelajuan, dan mesra semua peranti.",
+      features: [
+        "Laman web kustom 1-3 halaman",
+        "HTML, CSS & JavaScript (diuji mendalam)",
+        "Sangat responsif (keserasian 100% semua peranti)",
+        "Persediaan SEO terancang",
+        "Reka bentuk estetik human-centric",
+        "2 kali semakan (revisions)"
+      ]
+    },
+    {
+      id: "standard",
+      name: "Detailed Standard Website",
+      price: 1499,
+      description: "Laman web profesional dengan reka bentuk terperinci untuk penjenamaan perniagaan yang kukuh.",
+      features: [
+        "Laman web 4-6 halaman",
+        "Reka bentuk kustom premium (dari kosong)",
+        "Halaman Utama, Mengenai Kami, Servis, Galeri & Hubungi",
+        "Keserasian paparan semua peranti (responsif)",
+        "Borang hubungan interaktif & pautan WhatsApp",
+        "Optimasi kelajuan Lighthouse",
+        "Persediaan domain & hosting kustom",
+        "4 kali semakan (revisions)"
+      ]
+    },
+    {
       id: "advanced",
-      name: "Advanced Website",
+      name: "Detailed Advanced Website",
       price: 2599,
-      description: "Laman web lengkap untuk perniagaan berkembang, halaman admin, projek atau jualan online.",
+      description: "Laman web korporat lengkap dengan sistem pengurusan kandungan (admin page), senarai dinamik dan jualan online.",
       features: [
         "Laman web 7-10+ halaman",
-        "Reka bentuk kustom premium",
+        "Reka bentuk kustom premium terperinci",
         "Halaman admin (urus kandungan)",
-        "Senarai produk / servis",
-        "Optimasi kelajuan laman",
-        "Struktur SEO terancang",
-        "Panduan persediaan emel perniagaan",
-        "Sokongan penyelenggaraan",
+        "Senarai produk / servis dinamik",
+        "Optimasi kelajuan maksimum",
+        "Struktur SEO termaju",
+        "Persediaan e-mel perniagaan",
+        "Jaminan sokongan teknikal 30 hari",
         "7 kali semakan"
       ]
     },
@@ -144,19 +176,49 @@ export const bespokePackages = {
   ],
   en: [
     {
+      id: "basic",
+      name: "Detailed Basic Website",
+      price: 799,
+      description: "A 1-3 page website crafted with extreme care, optimized for speed, and highly cross-device compatible.",
+      features: [
+        "1-3 page custom website",
+        "HTML, CSS & JavaScript (deeply tested)",
+        "100% cross-device display compatibility",
+        "Planned SEO setup",
+        "Human-centric aesthetic design",
+        "2 revisions"
+      ]
+    },
+    {
+      id: "standard",
+      name: "Detailed Standard Website",
+      price: 1499,
+      description: "Professional website with a highly detailed design for solid business branding.",
+      features: [
+        "4-6 pages website",
+        "Premium custom design from scratch",
+        "Home, About, Services, Gallery & Contact pages",
+        "Cross-device display compatibility",
+        "Interactive forms & WhatsApp integrations",
+        "Lighthouse speed optimizations",
+        "Custom domain & hosting setups",
+        "4 revisions"
+      ]
+    },
+    {
       id: "advanced",
-      name: "Advanced Website",
+      name: "Detailed Advanced Website",
       price: 2599,
-      description: "Complete website for growing business, admin page, project or online selling.",
+      description: "Complete corporate website with a content management system (admin page), dynamic listings, and online sales.",
       features: [
         "7-10+ pages website",
-        "Premium custom design",
+        "Detailed premium custom design",
         "Admin page website (manage content)",
-        "Product / service listing",
-        "Speed optimization",
-        "SEO structure setup",
+        "Dynamic product / service listing",
+        "Maximum speed optimization",
+        "Advanced SEO structure",
         "Business email setup guidance",
-        "Maintenance support",
+        "30-day technical support warranty",
         "7 revisions"
       ]
     },

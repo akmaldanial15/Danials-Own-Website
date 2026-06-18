@@ -41,7 +41,7 @@ export default function Footer() {
               <Link href="/services/fast-track" className="hover:text-zinc-200 transition-colors">{t("pakejMurah")}</Link>
             </li>
             <li>
-              <Link href="/services/custom" className="hover:text-zinc-200 transition-colors">{t("sistemKustom")}</Link>
+              <Link href="/services/detailed" className="hover:text-zinc-200 transition-colors">{t("sistemKustom")}</Link>
             </li>
             <li>
               <Link href="/gallery" className="hover:text-zinc-200 transition-colors">{t("navGallery")}</Link>
@@ -123,7 +123,7 @@ export default function Footer() {
         <p className="flex gap-4">
           <Link href="/services/fast-track" className="hover:text-zinc-400">{t("pakejMurah")}</Link>
           <span>&middot;</span>
-          <Link href="/services/custom" className="hover:text-zinc-400">{t("sistemKustom")}</Link>
+          <Link href="/services/detailed" className="hover:text-zinc-400">{t("sistemKustom")}</Link>
           <span>&middot;</span>
           <Link href="/calculator" className="hover:text-zinc-400">{t("kalkulatorDinamik")}</Link>
         </p>

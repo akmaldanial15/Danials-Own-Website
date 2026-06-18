@@ -111,7 +111,7 @@ export default function Home() {
             </div>
             <div className="mt-8">
               <Link
-                href="/services/custom"
+                href="/services/detailed"
                 className="inline-flex w-full items-center justify-center px-5 py-3 rounded-xl text-sm font-semibold bg-purple-600 hover:bg-purple-500 text-white transition-all shadow-md shadow-purple-900/10 hover:shadow-purple-500/20"
               >
                 {t("btnBespoke")}
