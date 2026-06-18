@@ -1,0 +1,160 @@
+"use client";
+
+import React from "react";
+import GlowCard from "@/components/ui/GlowCard";
+import { fastTrackPackages, quickFixes } from "@/data/packages";
+import { generateWhatsAppLink, generateQuickFixLink } from "@/utils/whatsapp";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/data/translations";
+
+export default function FastTrackServices() {
+  const { language } = useLanguage();
+
+  const t = (key: keyof typeof translations.ms): string => {
+    return translations[language][key] || translations.ms[key];
+  };
+
+  const currentPackages = fastTrackPackages[language];
+  const currentFixes = quickFixes[language];
+
+  return (
+    <div className="relative min-h-screen bg-zinc-950 text-zinc-100 py-16 px-4 md:py-24 md:px-8 overflow-hidden">
+      {/* Glow ambient background */}
+      <div className="absolute top-[-20%] right-[-10%] w-[60%] h-[60%] rounded-full glow-blur-cyan z-0 pointer-events-none" />
+      <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full glow-blur-purple z-0 pointer-events-none" />
+
+      <div className="relative z-10 max-w-6xl mx-auto space-y-20">
+        {/* Page Header */}
+        <div className="text-center max-w-3xl mx-auto space-y-4">
+          <span className="text-xs px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-400 font-semibold border border-cyan-500/20">
+            {t("tagFastTrack")}
+          </span>
+          <h1 className="text-4xl font-extrabold text-white tracking-tight sm:text-5xl">
+            {t("fastHeader")}
+          </h1>
+          <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
+            {t("fastDesc")}
+          </p>
+        </div>
+
+        {/* Website Packages Grid */}
+        <div className="space-y-10">
+          <h2 className="text-2xl font-bold text-white border-b border-zinc-900 pb-3 flex items-center gap-3">
+            <span className="w-2 h-6 bg-cyan-500 rounded"></span>
+            {t("pkgHeader")}
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {currentPackages.map((pkg) => (
+              <GlowCard key={pkg.id} color="from-cyan-500 to-indigo-500">
+                <div className="space-y-6 flex flex-col justify-between h-full">
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="text-2xl font-bold text-white">{pkg.name}</h3>
+                      <p className="mt-2 text-zinc-400 text-xs leading-relaxed min-h-[40px]">
+                        {pkg.description}
+                      </p>
+                    </div>
+                    
+                    <div className="flex items-baseline gap-1.5 py-2 border-y border-zinc-900">
+                      <span className="text-xs text-zinc-550 font-medium">{t("fromText")}</span>
+                      <span className="text-3xl font-extrabold text-white">RM{pkg.price}</span>
+                    </div>
+
+                    <ul className="space-y-3 text-sm text-zinc-350 flex-grow">
+                      {pkg.features.map((feature, i) => (
+                        <li key={i} className="flex items-start gap-2.5">
+                          <svg className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                          </svg>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="pt-4 border-t border-zinc-900/40">
+                    <a
+                      href={generateWhatsAppLink({
+                        packageName: pkg.name,
+                        priceText: `Mulai RM${pkg.price}`,
+                        totalEstimate: pkg.price
+                      })}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex w-full items-center justify-center px-4 py-3 rounded-xl text-sm font-semibold bg-cyan-600 hover:bg-cyan-500 text-white transition-all shadow-md shadow-cyan-950/20"
+                    >
+                      {t("btnBookPkg")}
+                    </a>
+                  </div>
+                </div>
+              </GlowCard>
+            ))}
+          </div>
+        </div>
+
+        {/* Bug Fixing Price Guide */}
+        <div className="space-y-10">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-zinc-900 pb-3">
+            <h2 className="text-2xl font-bold text-white flex items-center gap-3">
+              <span className="w-2 h-6 bg-purple-500 rounded"></span>
+              {t("fixesHeader")}
+            </h2>
+            <span className="text-xs text-zinc-400 font-semibold bg-zinc-900 px-3 py-1 rounded-full border border-zinc-850">
+              Basic Check: FREE
+            </span>
+          </div>
+
+          <p className="text-zinc-400 text-sm max-w-3xl leading-relaxed">
+            {t("fixesDesc")}
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {currentFixes.map((fix) => (
+              <div 
+                key={fix.id} 
+                className="p-5 rounded-2xl bg-zinc-950 border border-zinc-900 hover:border-zinc-800 transition-all flex flex-col justify-between"
+              >
+                <div className="space-y-2">
+                  <div className="flex justify-between items-start gap-4">
+                    <h4 className="text-base font-bold text-zinc-150">{fix.name}</h4>
+                    <span className="text-xs font-bold text-purple-400 bg-purple-500/10 px-2.5 py-0.5 rounded border border-purple-500/10 shrink-0">
+                      RM{fix.price === 0 ? "FREE" : fix.price + "+"}
+                    </span>
+                  </div>
+                  <p className="text-xs text-zinc-450 leading-relaxed min-h-[48px]">
+                    {fix.desc}
+                  </p>
+                </div>
+                
+                <div className="pt-4 border-t border-zinc-900/50 mt-4">
+                  <a
+                    href={generateQuickFixLink(fix.name, fix.price)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex w-full items-center justify-center px-3.5 py-2 rounded-xl text-xs font-semibold bg-zinc-900 hover:bg-zinc-850 text-zinc-300 border border-zinc-850 transition-all hover:text-white"
+                  >
+                    {t("btnDiscussFix")}
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Support note */}
+        <div className="p-6 rounded-2xl bg-zinc-900/20 border border-zinc-900 max-w-3xl mx-auto flex items-start gap-4">
+          <svg className="w-6 h-6 text-cyan-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <div className="space-y-1 text-xs sm:text-sm text-zinc-400">
+            <p className="font-bold text-zinc-200">{t("supportNoteTitle")}</p>
+            <p className="leading-relaxed">
+              {t("supportNoteText")}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
