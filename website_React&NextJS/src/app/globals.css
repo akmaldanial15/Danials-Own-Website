@@ -38,7 +38,7 @@
 }
 
 html {
-  filter: invert(0.92) hue-rotate(180deg);
+  filter: invert(0.80) hue-rotate(180deg);
   background-color: #0c1524;
 }
 

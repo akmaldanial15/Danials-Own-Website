@@ -28,7 +28,7 @@ export default function Home() {
 
       {/* 1. HERO SECTION */}
       <section className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 md:pt-20 text-center">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-zinc-200 leading-tight">
           {t("heroTitle")}{" "}
           <span className="bg-gradient-to-r from-purple-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent text-glow animate-pulse duration-[3000ms]">
             {t("heroTitleSpan")}

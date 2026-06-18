@@ -17,7 +17,7 @@ export default function Footer() {
             <span className="text-lg font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
               {"DANIAL'S"}
             </span>
-            <span className="text-[10px] px-2 py-0.5 rounded bg-zinc-900 text-zinc-300 font-semibold border border-zinc-880">
+            <span className="text-[10px] px-2 py-0.5 rounded bg-zinc-900/50 text-zinc-400 font-semibold border border-zinc-800/30">
               WEB & SYSTEMS
             </span>
           </div>

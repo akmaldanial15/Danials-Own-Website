@@ -46,7 +46,7 @@ export default function Navbar() {
               <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-purple-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent">
                 {"DANIAL'S"}
               </span>
-              <span className="text-[10px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-350 font-semibold border border-zinc-700/50">
+              <span className="text-[10px] px-2 py-0.5 rounded bg-zinc-900/50 text-zinc-400 font-semibold border border-zinc-800/30">
                 WEB & SYSTEMS
               </span>
             </Link>
