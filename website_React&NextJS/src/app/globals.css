@@ -19,6 +19,16 @@
   --border-glow: rgba(139, 92, 246, 0.15);
 }
 
+html {
+  filter: invert(0.92) hue-rotate(180deg);
+  background-color: #0f0f15;
+}
+
+/* Ensure images, video, and marked elements are not double-inverted */
+img, video, .no-invert {
+  filter: invert(1) hue-rotate(180deg);
+}
+
 body {
   background-color: var(--background);
   color: var(--foreground);
