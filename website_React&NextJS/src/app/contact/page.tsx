@@ -65,16 +65,31 @@ export default function Contact() {
 
       <div className="relative z-10 max-w-6xl mx-auto space-y-20">
         {/* Page Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4">
-          <span className="text-xs px-2.5 py-1 rounded-full bg-purple-500/10 text-purple-400 font-semibold border border-purple-500/20">
+        <div className="text-center max-w-3xl mx-auto space-y-6 relative py-4">
+          {/* Subtle colored glow orb behind the header text */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[150px] bg-gradient-to-tr from-cyan-500/10 via-purple-500/10 to-indigo-500/10 rounded-full blur-3xl pointer-events-none -z-10" />
+
+          {/* Premium category badge */}
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 font-bold border border-cyan-500/20 tracking-wider text-[11px] uppercase transition-all duration-300">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+            </span>
             {t("navContact")}
-          </span>
-          <h1 className="text-4xl font-extrabold text-white tracking-tight sm:text-5xl">
+          </div>
+
+          {/* Glowing gradient heading: Green -> Blue -> Purple */}
+          <h1 className="text-4xl font-black text-white tracking-tight sm:text-6xl bg-gradient-to-r from-cyan-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent text-glow leading-tight select-none">
             {t("contactHeader")}
           </h1>
-          <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
+
+          {/* Description */}
+          <p className="text-zinc-400 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
             {t("contactDesc")}
           </p>
+
+          {/* Subtle horizontal gradient divider line */}
+          <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent mx-auto mt-4" />
         </div>
 
         {/* Contact Info Cards */}
