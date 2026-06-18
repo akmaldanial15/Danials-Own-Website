@@ -46,64 +46,70 @@ export default function FastTrackServices() {
         </div>
 
         {/* Infographic Section: Why Fast-Track? */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {/* Card 1: Quick Launch */}
-          <div className="relative group p-6 rounded-2xl bg-zinc-900/30 border border-zinc-850 hover:border-cyan-500/20 hover:bg-zinc-900/50 transition-all duration-300">
-            <div className="absolute top-4 right-4 text-[10px] font-mono text-cyan-400/60 font-black tracking-widest uppercase">
+          <div className="relative group p-8 md:p-10 rounded-3xl bg-zinc-900/40 border border-zinc-850 hover:border-cyan-500/30 hover:bg-zinc-900/60 hover:shadow-[0_10px_30px_rgba(16,185,129,0.08)] transition-all duration-300">
+            <div className="absolute top-6 right-6 text-[10px] font-mono font-bold tracking-widest text-cyan-400 bg-cyan-500/10 px-2.5 py-0.5 rounded-full border border-cyan-500/10 uppercase">
               2-4 DAYS
             </div>
-            <div className="space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 border border-cyan-500/20 shadow-[0_0_15px_rgba(16,185,129,0.1)]">
+            <div className="space-y-4">
+              <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center text-2xl text-cyan-400 border border-cyan-500/20 shadow-[0_0_25px_rgba(16,185,129,0.15)] transition-transform duration-300 group-hover:scale-110">
                 🚀
               </div>
-              <h3 className="text-base font-bold text-zinc-150">
-                {language === "ms" ? "Pelancaran Segera" : "Quick Launch"}
-              </h3>
-              <p className="text-xs text-zinc-405 leading-relaxed">
-                {language === "ms" 
-                  ? "Sedia dilancarkan dalam tempoh 2 hingga 4 hari bekerja sahaja. Sesuai untuk pelancaran profil perniagaan ekspres."
-                  : "Ready to go live in just 2 to 4 working days. Perfect for quick market entry or corporate profiles."}
-              </p>
+              <div className="space-y-2">
+                <h3 className="text-xl font-extrabold text-zinc-150">
+                  {language === "ms" ? "Pelancaran Segera" : "Quick Launch"}
+                </h3>
+                <p className="text-xs sm:text-sm text-zinc-405 leading-relaxed">
+                  {language === "ms" 
+                    ? "Sedia dilancarkan dalam tempoh 2 hingga 4 hari bekerja sahaja. Sesuai untuk pelancaran profil perniagaan ekspres."
+                    : "Ready to go live in just 2 to 4 working days. Perfect for quick market entry or corporate profiles."}
+                </p>
+              </div>
             </div>
           </div>
 
           {/* Card 2: Budget Friendly */}
-          <div className="relative group p-6 rounded-2xl bg-zinc-900/30 border border-zinc-850 hover:border-purple-500/20 hover:bg-zinc-900/50 transition-all duration-300">
-            <div className="absolute top-4 right-4 text-[10px] font-mono text-purple-400/60 font-black tracking-widest uppercase">
+          <div className="relative group p-8 md:p-10 rounded-3xl bg-zinc-900/40 border border-zinc-850 hover:border-purple-500/30 hover:bg-zinc-900/60 hover:shadow-[0_10px_30px_rgba(59,130,246,0.08)] transition-all duration-300">
+            <div className="absolute top-6 right-6 text-[10px] font-mono font-bold tracking-widest text-purple-400 bg-purple-500/10 px-2.5 py-0.5 rounded-full border border-purple-500/10 uppercase">
               FROM RM299
             </div>
-            <div className="space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 border border-purple-500/20 shadow-[0_0_15px_rgba(59,130,246,0.1)]">
+            <div className="space-y-4">
+              <div className="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center text-2xl text-purple-400 border border-purple-500/20 shadow-[0_0_25px_rgba(59,130,246,0.15)] transition-transform duration-300 group-hover:scale-110">
                 💰
               </div>
-              <h3 className="text-base font-bold text-zinc-150">
-                {language === "ms" ? "Paling Mampu Milik" : "Budget Friendly"}
-              </h3>
-              <p className="text-xs text-zinc-405 leading-relaxed">
-                {language === "ms" 
-                  ? "Penyelesaian digital paling mesra bajet dengan bayaran sekali sahaja tanpa caj tersembunyi."
-                  : "Highly budget-friendly plans with one-time payment and no hidden custom build fees."}
-              </p>
+              <div className="space-y-2">
+                <h3 className="text-xl font-extrabold text-zinc-150">
+                  {language === "ms" ? "Paling Mampu Milik" : "Budget Friendly"}
+                </h3>
+                <p className="text-xs sm:text-sm text-zinc-405 leading-relaxed">
+                  {language === "ms" 
+                    ? "Penyelesaian digital paling mesra bajet dengan bayaran sekali sahaja tanpa caj tersembunyi."
+                    : "Highly budget-friendly plans with one-time payment and no hidden custom build fees."}
+                </p>
+              </div>
             </div>
           </div>
 
           {/* Card 3: Simplicity Focus */}
-          <div className="relative group p-6 rounded-2xl bg-zinc-900/30 border border-zinc-850 hover:border-indigo-500/20 hover:bg-zinc-900/50 transition-all duration-300">
-            <div className="absolute top-4 right-4 text-[10px] font-mono text-indigo-400/60 font-black tracking-widest uppercase">
+          <div className="relative group p-8 md:p-10 rounded-3xl bg-zinc-900/40 border border-zinc-850 hover:border-indigo-500/30 hover:bg-zinc-900/60 hover:shadow-[0_10px_30px_rgba(139,92,246,0.08)] transition-all duration-300">
+            <div className="absolute top-6 right-6 text-[10px] font-mono font-bold tracking-widest text-indigo-400 bg-indigo-500/10 px-2.5 py-0.5 rounded-full border border-indigo-500/10 uppercase">
               CLEAN CODE
             </div>
-            <div className="space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 border border-indigo-500/20 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
+            <div className="space-y-4">
+              <div className="w-14 h-14 rounded-2xl bg-indigo-500/10 flex items-center justify-center text-2xl text-indigo-400 border border-indigo-500/20 shadow-[0_0_25px_rgba(139,92,246,0.15)] transition-transform duration-300 group-hover:scale-110">
                 ✨
               </div>
-              <h3 className="text-base font-bold text-zinc-150">
-                {language === "ms" ? "Fokus Simplicity" : "Simplicity Focus"}
-              </h3>
-              <p className="text-xs text-zinc-405 leading-relaxed">
-                {language === "ms" 
-                  ? "Reka bentuk minimalis berimpak tinggi. Fokus kepada navigasi yang bersih dan mesra pengguna."
-                  : "High-impact, clean layouts. Focusing on essential features and frictionless user experiences."}
-              </p>
+              <div className="space-y-2">
+                <h3 className="text-xl font-extrabold text-zinc-150">
+                  {language === "ms" ? "Fokus Simplicity" : "Simplicity Focus"}
+                </h3>
+                <p className="text-xs sm:text-sm text-zinc-405 leading-relaxed">
+                  {language === "ms" 
+                    ? "Reka bentuk minimalis berimpak tinggi. Fokus kepada navigasi yang bersih dan mesra pengguna."
+                    : "High-impact, clean layouts. Focusing on essential features and frictionless user experiences."}
+                </p>
+              </div>
             </div>
           </div>
         </div>
