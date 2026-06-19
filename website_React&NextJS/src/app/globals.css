@@ -38,8 +38,8 @@
 }
 
 html {
-  filter: invert(0.95) hue-rotate(180deg);
-  background-color: #0c0f17;
+  filter: invert(0.98) hue-rotate(180deg);
+  background-color: #000000;
 }
 
 /* Ensure images, video, and marked elements are not double-inverted */
@@ -48,7 +48,7 @@ img, video, .no-invert {
 }
 
 body {
-  background: linear-gradient(135deg, #053520 0%, #0c0f17 35%, #0f1e4a 70%, #1c0d30 100%);
+  background: linear-gradient(135deg, #023d26 0%, #000000 35%, #0d2c70 70%, #1f0b3b 100%);
   background-attachment: fixed;
   color: var(--foreground);
   font-family: var(--font-sans);
