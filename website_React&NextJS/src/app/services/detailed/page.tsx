@@ -7,6 +7,119 @@ import { bespokePackages } from "@/data/packages";
 import { generateWhatsAppLink } from "@/utils/whatsapp";
 import { useTranslation } from "@/hooks/useTranslation";
 
+const bespokeDetails = {
+  ms: {
+    "basic": {
+      deliverables: [
+        "Laman web kustom 1-3 Halaman",
+        "HTML, CSS & JavaScript (diuji mendalam)",
+        "Sangat responsif (keserasian 100% peranti)",
+        "Persediaan SEO terancang",
+        "Reka bentuk estetik human-centric"
+      ],
+      specs: [
+        { label: "Siap dlm", value: "7-14 Hari" },
+        { label: "Semakan", value: "2x Revisions" },
+        { label: "Sokongan", value: "14 Hari Waranti" },
+        { label: "Teknologi", value: "HTML/CSS/JS" },
+        { label: "Bayaran", value: "35% / 35% / 30%" },
+        { label: "SEO & Kelajuan", value: "Optimum Asas" }
+      ]
+    },
+    "standard": {
+      deliverables: [
+        "Laman web 4-6 Halaman",
+        "Reka bentuk kustom premium (dari kosong)",
+        "Halaman Utama, Mengenai, Servis, Galeri & Hubungi",
+        "Keserasian paparan semua peranti (responsif)",
+        "Borang hubungan & pautan WhatsApp",
+        "Optimasi kelajuan Lighthouse"
+      ],
+      specs: [
+        { label: "Siap dlm", value: "14-21 Hari" },
+        { label: "Semakan", value: "4x Revisions" },
+        { label: "Sokongan", value: "30 Hari Waranti" },
+        { label: "Teknologi", value: "Clean Framework" },
+        { label: "Bayaran", value: "35% / 35% / 30%" },
+        { label: "SEO & Kelajuan", value: "Optimum Premium" }
+      ]
+    },
+    "advanced": {
+      deliverables: [
+        "Laman web 7-10+ Halaman",
+        "Reka bentuk kustom premium terperinci",
+        "Halaman admin (urus kandungan)",
+        "Senarai produk / servis dinamik",
+        "Optimasi kelajuan maksimum",
+        "Struktur SEO termaju & e-mel perniagaan"
+      ],
+      specs: [
+        { label: "Siap dlm", value: "21-30 Hari" },
+        { label: "Semakan", value: "7x Revisions" },
+        { label: "Sokongan", value: "60 Hari Waranti" },
+        { label: "Teknologi", value: "NextJS / React" },
+        { label: "Bayaran", value: "35% / 35% / 30%" },
+        { label: "SEO & Kelajuan", value: "Optimum Maksimum" }
+      ]
+    }
+  },
+  en: {
+    "basic": {
+      deliverables: [
+        "1-3 pages custom website",
+        "HTML, CSS & JavaScript (deeply tested)",
+        "100% cross-device display compatibility",
+        "Planned SEO setup",
+        "Human-centric aesthetic design"
+      ],
+      specs: [
+        { label: "Delivery", value: "7-14 Days" },
+        { label: "Revisions", value: "2 Sessions" },
+        { label: "Support", value: "14 Days Warranty" },
+        { label: "Technology", value: "HTML/CSS/JS" },
+        { label: "Payment", value: "35% / 35% / 30%" },
+        { label: "SEO & Speed", value: "Basic Optimized" }
+      ]
+    },
+    "standard": {
+      deliverables: [
+        "4-6 pages website",
+        "Premium custom design from scratch",
+        "Home, About, Services, Gallery & Contact pages",
+        "Cross-device display compatibility",
+        "Interactive forms & WhatsApp integrations",
+        "Lighthouse speed optimizations"
+      ],
+      specs: [
+        { label: "Delivery", value: "14-21 Days" },
+        { label: "Revisions", value: "4 Sessions" },
+        { label: "Support", value: "30 Days Warranty" },
+        { label: "Technology", value: "Clean Framework" },
+        { label: "Payment", value: "35% / 35% / 30%" },
+        { label: "SEO & Speed", value: "Premium Optimized" }
+      ]
+    },
+    "advanced": {
+      deliverables: [
+        "7-10+ pages website",
+        "Detailed premium custom design",
+        "Admin page website (manage content)",
+        "Dynamic product / service listing",
+        "Maximum speed optimization",
+        "Advanced SEO structure & business email"
+      ],
+      specs: [
+        { label: "Delivery", value: "21-30 Days" },
+        { label: "Revisions", value: "7 Sessions" },
+        { label: "Support", value: "60 Days Warranty" },
+        { label: "Technology", value: "NextJS / React" },
+        { label: "Payment", value: "35% / 35% / 30%" },
+        { label: "SEO & Speed", value: "Max Optimized" }
+      ]
+    }
+  }
+};
+
 export default function DetailedServices() {
   const { t, language } = useTranslation();
 
@@ -126,43 +239,69 @@ export default function DetailedServices() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {currentBespoke.map((pkg) => (
-              <GlowCard key={pkg.id} color="from-purple-500 to-indigo-600">
-                <div className="flex flex-col justify-between h-full space-y-6">
-                  <div className="space-y-3">
-                    <h3 className="text-xl font-bold text-white">{pkg.name}</h3>
-                    <p className="text-xs text-zinc-400 leading-relaxed min-h-[48px]">
-                      {pkg.description}
-                    </p>
-                  </div>
-                  
-                  <div className="space-y-4">
-                    <div className="flex items-baseline gap-1 py-1.5 border-t border-zinc-900">
-                      <span className="text-xs text-zinc-550">{t("fromText")}</span>
-                      <span className="text-2xl font-extrabold text-white">
-                        {typeof pkg.price === "number" ? `RM${pkg.price.toLocaleString()}` : pkg.price}
-                      </span>
+            {currentBespoke.map((pkg) => {
+              const structured = bespokeDetails[language][pkg.id as keyof typeof bespokeDetails["ms"]];
+
+              return (
+                <GlowCard key={pkg.id} color="from-purple-500 to-indigo-600">
+                  <div className="flex flex-col justify-between h-full space-y-6">
+                    <div className="space-y-4">
+                      <div className="space-y-2">
+                        <h3 className="text-xl font-bold text-white tracking-tight">{pkg.name}</h3>
+                        <p className="text-xs text-zinc-400 leading-relaxed min-h-[48px]">
+                          {pkg.description}
+                        </p>
+                      </div>
+                      
+                      <div className="flex items-baseline gap-1 py-1.5 border-y border-zinc-900/60">
+                        <span className="text-[10px] text-zinc-550 font-medium">{t("fromText")}</span>
+                        <span className="text-2xl font-black text-white">
+                          {typeof pkg.price === "number" ? `RM${pkg.price.toLocaleString()}` : pkg.price}
+                        </span>
+                      </div>
+
+                      {/* Scope & Features Checklist */}
+                      {((structured && structured.deliverables) || pkg.features) && (
+                        <div className="space-y-2">
+                          <span className="text-[9px] text-zinc-550 font-bold uppercase tracking-wider">
+                            {language === "ms" ? "Skop & Keupayaan" : "Scope & Features"}
+                          </span>
+                          <ul className="space-y-2 text-xs text-zinc-350">
+                            {((structured && structured.deliverables) || pkg.features).map((feature, i) => (
+                              <li key={i} className="flex items-start gap-2">
+                                <svg className="w-3.5 h-3.5 text-purple-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span className="leading-snug">{feature}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+
+                      {/* Specs & Terms Grid */}
+                      {structured && structured.specs.length > 0 && (
+                        <div className="space-y-2 pt-3 border-t border-zinc-900/50">
+                          <span className="text-[9px] text-zinc-550 font-bold uppercase tracking-wider">
+                            {language === "ms" ? "Spesifikasi Pembangunan" : "Development Specs"}
+                          </span>
+                          <div className="grid grid-cols-2 gap-1.5">
+                            {structured.specs.map((spec, i) => (
+                              <div key={i} className="p-2 rounded-xl bg-zinc-950/40 border border-zinc-900/60 flex flex-col justify-center min-h-[44px]">
+                                <span className="text-zinc-550 font-bold uppercase text-[7px] tracking-wider leading-none">
+                                  {spec.label}
+                                </span>
+                                <span className="text-zinc-200 font-extrabold text-[10px] mt-1 leading-tight">
+                                  {spec.value}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
 
-                    {pkg.features && (
-                      <ul className="space-y-2 text-xs text-zinc-350 border-t border-zinc-900/50 pt-3 flex-grow">
-                        {pkg.features.slice(0, 5).map((feature, i) => (
-                          <li key={i} className="flex items-start gap-2">
-                            <svg className="w-3.5 h-3.5 text-purple-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>{feature}</span>
-                          </li>
-                        ))}
-                        {pkg.features.length > 5 && (
-                          <li className="text-[10px] text-zinc-500 font-medium pl-5">
-                            + {pkg.features.length - 5} lagi...
-                          </li>
-                        )}
-                      </ul>
-                    )}
-
-                    <div className="pt-2">
+                    <div className="pt-2 border-t border-zinc-900/40">
                       <a
                         href={generateWhatsAppLink({
                           packageName: pkg.name,
@@ -177,9 +316,9 @@ export default function DetailedServices() {
                       </a>
                     </div>
                   </div>
-                </div>
-              </GlowCard>
-            ))}
+                </GlowCard>
+              );
+            })}
           </div>
         </div>
 
