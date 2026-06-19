@@ -53,6 +53,27 @@ export const fastTrackPackages = {
         "Siap dalam 2 - 4 hari bekerja",
         "Penghantaran ekspres (< 24 jam) dicaj tambahan"
       ]
+    },
+    {
+      id: "budget-value",
+      name: "Value System (Sehingga 13 Halaman)",
+      price: 1899,
+      description: "Sistem perniagaan bernilai tinggi dengan panel admin kustom untuk mengurus kandungan, sistem tempahan, dan ciri keselamatan tambahan. (Pelan penyelenggaraan minima RM60/bulan, kontrak 1 tahun sahaja).",
+      features: [
+        "Laman web & sistem kustom sehingga 13 Halaman",
+        "Urusan Pembayaran: 60% Deposit Mula, 40% Baki Sebelum Pelancaran",
+        "Panel Admin Login Kustom (boleh kemas kini hampir semua kandungan)",
+        "Dibina dengan framework moden & struktur kod stabil terancang",
+        "Ciri Keselamatan Tambahan (Secured Security Features) disertakan",
+        "Termasuk Galeri, Sistem Pesanan (Ordering System) & Resit Automatik",
+        "Notifikasi pesanan masuk dihantar automatik ke WhatsApp/Telegram",
+        "Wajib ambil pelan penyelenggaraan: Minima RM60/bulan (Kontrak 1 tahun sahaja)",
+        "Hosting & Domain Kustom: Pilihan dari RM78/bulan (sekali pelan penyelenggaraan)",
+        "Termasuk 4 kali suntingan / kemas kini asas (sebelum pelancaran)",
+        "Percuma 6 kali suntingan asas & 1 kali reka semula (redesign) ringan setahun",
+        "Siap dalam 3 - 5 hari bekerja (proses integrasi admin panel)",
+        "Penghantaran ekspres tersedia untuk caj tambahan"
+      ]
     }
   ],
   en: [
@@ -108,6 +129,27 @@ export const fastTrackPackages = {
         "Includes 6 basic edits/updates & 1 free light redesign per year",
         "Delivered within 2 - 4 working days",
         "Express delivery (< 24 hours) available for extra fee"
+      ]
+    },
+    {
+      id: "budget-value",
+      name: "Value System (Up to 13 Pages)",
+      price: 1899,
+      description: "Our best value system package equipped with a custom admin login panel, secure features, and full booking/ordering integrations. (Required maintenance plan of at least RM60/month, 1-year contract only).",
+      features: [
+        "Custom website & system up to 13 Pages",
+        "Payment terms: 60% Start Deposit, 40% Balance Before Website Launch",
+        "Custom Admin Login Panel (Update almost any content easily)",
+        "Built with modern frameworks & robust clean code structure",
+        "Integrated Security Features (Add-on protection included)",
+        "Includes Gallery, Ordering System, & Automated Receipts",
+        "Incoming order notifications sent automatically via WhatsApp/Telegram",
+        "Required Maintenance Plan: Minimum RM60/month (1-year contract only)",
+        "Custom Domain & Hosting: Option from RM78/month (including maintenance)",
+        "Includes 4 basic edits/updates (before launch/release)",
+        "Includes 6 basic edits/updates & 1 free light redesign per year",
+        "Delivered within 3 - 5 working days (due to admin panel setup)",
+        "Express delivery available for extra fee"
       ]
     }
   ]
