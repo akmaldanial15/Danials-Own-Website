@@ -349,30 +349,16 @@ export const bespokePackages = {
 
 export const addOns = {
   ms: [
-    { id: "domain", name: "Bantuan Setup Domain", price: 80, type: "sekali-bayar" },
-    { id: "hosting", name: "Bantuan Setup Hosting", price: 150, type: "sekali-bayar" },
-    { id: "managed-hosting", name: "Hosting Diurus 1 Tahun", price: 350, type: "tahunan" },
     { id: "email", name: "Setup E-mel Perniagaan", price: 150, type: "sekali-bayar" },
-    { id: "extra-page", name: "Halaman Tambahan", price: 100, type: "sekali-bayar" },
-    { id: "redesign", name: "Reka Bentuk Semula Laman", price: 500, type: "sekali-bayar" },
-    { id: "update", name: "Kemas Kini Kandungan/Imej", price: 50, type: "sekali-bayar" },
     { id: "seo", name: "Naik Taraf SEO Asas", price: 200, type: "sekali-bayar" },
     { id: "maintenance", name: "Penyelenggaraan Bulanan", price: 80, type: "bulanan" },
-    { id: "upload", name: "Kemasukan Produk Baru", price: 5, type: "per-item" },
     { id: "gateway", name: "Setup Payment Gateway", price: 500, type: "sekali-bayar" },
     { id: "ai-agents", name: "Ejen & Robot Pintar AI", price: 1000, type: "sekali-bayar" }
   ],
   en: [
-    { id: "domain", name: "Domain Setup Assistance", price: 80, type: "one-time" },
-    { id: "hosting", name: "Hosting Setup Assistance", price: 150, type: "one-time" },
-    { id: "managed-hosting", name: "1-Year Managed Hosting", price: 350, type: "yearly" },
     { id: "email", name: "Business Email Setup", price: 150, type: "one-time" },
-    { id: "extra-page", name: "Extra Page", price: 100, type: "one-time" },
-    { id: "redesign", name: "Website Redesign", price: 500, type: "one-time" },
-    { id: "update", name: "Content / Image Update", price: 50, type: "one-time" },
     { id: "seo", name: "Basic SEO Upgrade", price: 200, type: "one-time" },
     { id: "maintenance", name: "Monthly Maintenance", price: 80, type: "monthly" },
-    { id: "upload", name: "Product Upload", price: 5, type: "item" },
     { id: "gateway", name: "Payment Gateway Setup", price: 500, type: "one-time" },
     { id: "ai-agents", name: "AI Tools & Autonomous Agents", price: 1000, type: "one-time" }
   ]
