@@ -53,8 +53,8 @@ export default function FastTrackServices() {
               2-4 DAYS
             </div>
             <div className="space-y-4">
-              <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center text-2xl text-cyan-400 border border-cyan-500/20 shadow-[0_0_25px_rgba(16,185,129,0.15)] transition-transform duration-300 group-hover:scale-110">
-                🚀
+              <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20 shadow-[0_0_25px_rgba(16,185,129,0.15)] transition-transform duration-300 group-hover:scale-110 p-2">
+                <img src="/images/icons/rocket.png" alt="Rocket Icon" className="w-full h-full object-contain no-invert" />
               </div>
               <div className="space-y-2">
                 <h3 className="text-xl font-extrabold text-zinc-150">
@@ -62,8 +62,8 @@ export default function FastTrackServices() {
                 </h3>
                 <p className="text-xs sm:text-sm text-zinc-405 leading-relaxed">
                   {language === "ms" 
-                    ? "Sedia dilancarkan dalam tempoh 2 hingga 4 hari bekerja sahaja. Sesuai untuk pelancaran profil perniagaan ekspres."
-                    : "Ready to go live in just 2 to 4 working days. Perfect for quick market entry or corporate profiles."}
+                     ? "Sedia dilancarkan dalam tempoh 2 hingga 4 hari bekerja sahaja. Sesuai untuk pelancaran profil perniagaan ekspres."
+                     : "Ready to go live in just 2 to 4 working days. Perfect for quick market entry or corporate profiles."}
                 </p>
               </div>
             </div>
@@ -75,8 +75,8 @@ export default function FastTrackServices() {
               FROM RM299
             </div>
             <div className="space-y-4">
-              <div className="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center text-2xl text-purple-400 border border-purple-500/20 shadow-[0_0_25px_rgba(59,130,246,0.15)] transition-transform duration-300 group-hover:scale-110">
-                💰
+              <div className="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center border border-purple-500/20 shadow-[0_0_25px_rgba(59,130,246,0.15)] transition-transform duration-300 group-hover:scale-110 p-2">
+                <img src="/images/icons/money_bag.png" alt="Money Bag Icon" className="w-full h-full object-contain no-invert" />
               </div>
               <div className="space-y-2">
                 <h3 className="text-xl font-extrabold text-zinc-150">
@@ -97,8 +97,8 @@ export default function FastTrackServices() {
               CLEAN CODE
             </div>
             <div className="space-y-4">
-              <div className="w-14 h-14 rounded-2xl bg-indigo-500/10 flex items-center justify-center text-2xl text-indigo-400 border border-indigo-500/20 shadow-[0_0_25px_rgba(139,92,246,0.15)] transition-transform duration-300 group-hover:scale-110">
-                ✨
+              <div className="w-14 h-14 rounded-2xl bg-indigo-500/10 flex items-center justify-center border border-indigo-500/20 shadow-[0_0_25px_rgba(139,92,246,0.15)] transition-transform duration-300 group-hover:scale-110 p-2">
+                <img src="/images/icons/sparkles.png" alt="Sparkles Icon" className="w-full h-full object-contain no-invert" />
               </div>
               <div className="space-y-2">
                 <h3 className="text-xl font-extrabold text-zinc-150">
