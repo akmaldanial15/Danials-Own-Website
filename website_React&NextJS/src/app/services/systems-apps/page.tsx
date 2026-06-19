@@ -189,7 +189,7 @@ export default function SystemsAppsServices() {
             <p className="font-bold text-zinc-200">{isMs ? "Penyediaan Demo & Bayaran:" : "Demo Access & Payments:"}</p>
             <ul className="space-y-2.5 list-disc list-inside leading-relaxed">
               <li>{isMs ? "Penyediaan Demo: Hosting percuma / terhad boleh digunakan bagi tujuan menguji aliran kerja (workflow) sistem sebelum pelancaran rasmi." : "Demo Testing: Free or temporary staging servers are set up to test logic flows before production deployment."}</li>
-              <li>{isMs ? "Terma Bayaran Peringkat: 35% sebelum mula, 35% selepas draf preview pertama disiapkan, dan 30% sebelum penyerahan kod sumber rasmi." : "Phased Milestones: 35% deposit before start, 35% after first review layout preview, 30% before final production code handover."}</li>
+              <li>{isMs ? "Terma Bayaran Peringkat: 50% sebelum mula, 20% selepas draf suntingan utama pertama disiapkan, dan 30% sebelum penyerahan kod sumber rasmi." : "Phased Milestones: 50% deposit before start, 20% after first major edit review, 30% before final production code handover."}</li>
             </ul>
           </div>
         </div>

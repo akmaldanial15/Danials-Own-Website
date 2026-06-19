@@ -22,7 +22,7 @@ const bespokeDetails = {
         { label: "Semakan", value: "2x Revisions" },
         { label: "Sokongan", value: "14 Hari Waranti" },
         { label: "Teknologi", value: "Framework / Vanilla (Pilihan)" },
-        { label: "Bayaran", value: "35% / 35% / 30%" },
+        { label: "Bayaran", value: "50% / 20% / 30%" },
         { label: "SEO & Kelajuan", value: "Optimum Asas" }
       ]
     },
@@ -40,7 +40,7 @@ const bespokeDetails = {
         { label: "Semakan", value: "4x Revisions" },
         { label: "Sokongan", value: "30 Hari Waranti" },
         { label: "Teknologi", value: "Framework / Vanilla (Pilihan)" },
-        { label: "Bayaran", value: "35% / 35% / 30%" },
+        { label: "Bayaran", value: "50% / 20% / 30%" },
         { label: "SEO & Kelajuan", value: "Optimum Premium" }
       ]
     },
@@ -58,8 +58,8 @@ const bespokeDetails = {
         { label: "Semakan", value: "7x Revisions" },
         { label: "Sokongan", value: "60 Hari Waranti" },
         { label: "Teknologi", value: "Framework / Vanilla (Pilihan)" },
-        { label: "Bayaran", value: "35% / 35% / 30%" },
-        { label: "SEO & Kelajuan", value: "Optimum Maksimum" }
+        { label: "Bayaran", value: "50% / 20% / 30%" },
+        { label: "SEO & Kelajuan", value: "Optimum Optimum" }
       ]
     }
   },
@@ -77,7 +77,7 @@ const bespokeDetails = {
         { label: "Revisions", value: "2 Sessions" },
         { label: "Support", value: "14 Days Warranty" },
         { label: "Technology", value: "Framework / Vanilla (Your Choice)" },
-        { label: "Payment", value: "35% / 35% / 30%" },
+        { label: "Payment", value: "50% / 20% / 30%" },
         { label: "SEO & Speed", value: "Basic Optimized" }
       ]
     },
@@ -95,7 +95,7 @@ const bespokeDetails = {
         { label: "Revisions", value: "4 Sessions" },
         { label: "Support", value: "30 Days Warranty" },
         { label: "Technology", value: "Framework / Vanilla (Your Choice)" },
-        { label: "Payment", value: "35% / 35% / 30%" },
+        { label: "Payment", value: "50% / 20% / 30%" },
         { label: "SEO & Speed", value: "Premium Optimized" }
       ]
     },
@@ -113,7 +113,7 @@ const bespokeDetails = {
         { label: "Revisions", value: "7 Sessions" },
         { label: "Support", value: "60 Days Warranty" },
         { label: "Technology", value: "Framework / Vanilla (Your Choice)" },
-        { label: "Payment", value: "35% / 35% / 30%" },
+        { label: "Payment", value: "50% / 20% / 30%" },
         { label: "SEO & Speed", value: "Max Optimized" }
       ]
     }

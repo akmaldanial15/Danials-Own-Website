@@ -42,7 +42,7 @@ export const fastTrackPackages = {
       description: "Pakej lengkap dengan sistem pesanan (ordering) terus ke WhatsApp/Telegram. (Wajib ambil pelan penyelenggaraan minima RM60/bulan, kontrak 1 tahun sahaja).",
       features: [
         "Laman web kustom sehingga 7 Halaman",
-        "Urusan Pembayaran: 60% Deposit Mula, 40% Baki Sebelum Pelancaran",
+        "Urusan Pembayaran: 60% Deposit Mula, 20% Draf Suntingan, 20% Pelancaran",
         "Sistem Pesanan (Ordering System) & Resit Automatik terus dari website",
         "Notifikasi pesanan masuk dihantar automatik ke WhatsApp/Telegram",
         "Tiada Admin Login Panel (tiada console backend)",
@@ -61,7 +61,7 @@ export const fastTrackPackages = {
       description: "Sistem perniagaan bernilai tinggi dengan panel admin kustom untuk mengurus kandungan, sistem tempahan, dan ciri keselamatan tambahan. (Pelan penyelenggaraan minima RM60/bulan, kontrak 1 tahun sahaja).",
       features: [
         "Laman web & sistem kustom sehingga 13 Halaman",
-        "Urusan Pembayaran: 60% Deposit Mula, 40% Baki Sebelum Pelancaran",
+        "Urusan Pembayaran: 60% Deposit Mula, 20% Draf Suntingan, 20% Pelancaran",
         "Panel Admin Login Kustom (boleh kemas kini hampir semua kandungan)",
         "Dibina dengan framework moden & struktur kod stabil terancang",
         "Ciri Keselamatan Tambahan (Secured Security Features) disertakan",
@@ -119,7 +119,7 @@ export const fastTrackPackages = {
       description: "Complete package with integrated ordering system routed to WhatsApp/Telegram. (Required maintenance plan of at least RM60/month, 1-year contract only).",
       features: [
         "Custom website up to 7 Pages",
-        "Payment terms: 60% Start Deposit, 40% Balance Before Website Launch",
+        "Payment terms: 60% Start Deposit, 20% Draft Edit, 20% Website Launch",
         "Ordering System & Automated Receipts generated directly from website",
         "Incoming order notifications sent automatically via WhatsApp/Telegram",
         "No Admin Login Panel (database-free backend)",
@@ -138,7 +138,7 @@ export const fastTrackPackages = {
       description: "Our best value system package equipped with a custom admin login panel, secure features, and full booking/ordering integrations. (Required maintenance plan of at least RM60/month, 1-year contract only).",
       features: [
         "Custom website & system up to 13 Pages",
-        "Payment terms: 60% Start Deposit, 40% Balance Before Website Launch",
+        "Payment terms: 60% Start Deposit, 20% Draft Edit, 20% Website Launch",
         "Custom Admin Login Panel (Update almost any content easily)",
         "Built with modern frameworks & robust clean code structure",
         "Integrated Security Features (Add-on protection included)",

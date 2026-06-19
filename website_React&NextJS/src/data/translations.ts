@@ -20,8 +20,8 @@ export const translations = {
     depositMula: "1. Deposit Mula",
     draftPreview: "2. Preview Pertama",
     penyerahan: "3. Penyerahan",
-    sebelumMula: "35% Sebelum Mula",
-    selepasDraft: "35% Selepas Draft",
+    sebelumMula: "50% Sebelum Mula",
+    selepasDraft: "20% Selepas Draf Utama",
     sebelumLaunch: "30% Sebelum Launch",
     footerNote: "*Nota: Yuran domain, hosting, dan API pihak ketiga dicaj berasingan melainkan dinyatakan sebaliknya.",
     contactTitle: "Hubungi Terus",
@@ -123,7 +123,7 @@ export const translations = {
     btnBookWhatsApp: "Book Now via WhatsApp",
     calcTermsTitle: "Terma Perkhidmatan Kami:",
     calcTerm1: "Anggaran harga kasar ini tidak mengikat dan boleh berubah mengikut kerumitan struktur pangkalan data dan kod.",
-    calcTerm2: "Terma bayaran berperingkat (35% deposit mula, 35% draf preview pertama, 30% penyerahan kod).",
+    calcTerm2: "Terma bayaran berperingkat (50% deposit mula, 20% draf suntingan utama, 30% sebelum pelancaran).",
     calcTerm3: "Sistem pangkalan data dan Android app dibina menggunakan kod yang bersih (clean code) dan diuji secara terperinci sebelum penyerahan.",
 
     // Contact Page
@@ -162,8 +162,8 @@ export const translations = {
     depositMula: "1. Initial Deposit",
     draftPreview: "2. First Preview",
     penyerahan: "3. Final Handover",
-    sebelumMula: "35% Before Start",
-    selepasDraft: "35% After Draft",
+    sebelumMula: "50% Before Start",
+    selepasDraft: "20% After Major Edit",
     sebelumLaunch: "30% Before Launch",
     footerNote: "*Note: Domain, hosting, and third-party API fees are charged separately unless stated otherwise.",
     contactTitle: "Direct Contact",
@@ -265,7 +265,7 @@ export const translations = {
     btnBookWhatsApp: "Book Now via WhatsApp",
     calcTermsTitle: "Our Terms of Service:",
     calcTerm1: "This dynamic estimate is rough and subject to change based on actual database structures and custom API rules.",
-    calcTerm2: "Phased milestone payments (35% start deposit, 35% first layout preview draft, 30% final source code delivery).",
+    calcTerm2: "Phased milestone payments (50% start deposit, 20% first major edit preview, 30% before launch).",
     calcTerm3: "Database structures and Android systems are written with clean, commented code and thoroughly debugged before delivery.",
 
     // Contact Page

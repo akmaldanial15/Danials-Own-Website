@@ -23,8 +23,8 @@ export default function Contact() {
           ? "Bagaimanakah terma pembayaran projek?"
           : "What are the project payment milestones?",
         a: language === "ms"
-          ? "Pembayaran terbahagi kepada 3 fasa standard kami: 35% sebagai deposit/pendahuluan sebelum projek dimulakan, 35% selepas preview draf reka bentuk pertama diluluskan, dan baki 30% sebelum penyerahan kod sumber penuh (source code) dan pelancaran."
-          : "Payments are split into 3 standard milestones: 35% deposit/retainer before project commencement, 35% after the first design preview/draft is approved, and the remaining 30% balance before source code handover and deployment."
+          ? "Pembayaran terbahagi kepada 3 fasa standard kami: 50% sebagai deposit/pendahuluan sebelum projek dimulakan, 20% selepas preview draf reka bentuk utama pertama disiapkan, dan baki 30% sebelum penyerahan kod sumber penuh (source code) dan pelancaran."
+          : "Payments are split into 3 standard milestones: 50% deposit/retainer before project commencement, 20% after the first major design/draft edit preview, and the remaining 30% balance before source code handover and deployment."
       },
       {
         q: language === "ms"

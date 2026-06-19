@@ -1,6 +1,20 @@
 export const PHONE_NUMBER = "0136632092"; // Danial's direct number
 
-export function generateWhatsAppLink({ packageName, priceText, selectedAddOns = [], totalEstimate = 0 }) {
+interface WhatsAppLinkParams {
+  packageName: string;
+  priceText: string;
+  selectedAddOns?: any[];
+  totalEstimate?: number;
+  customText?: string;
+}
+
+export function generateWhatsAppLink({
+  packageName,
+  priceText,
+  selectedAddOns = [],
+  totalEstimate = 0,
+  customText = ""
+}: WhatsAppLinkParams) {
   const formattedPhone = "6" + PHONE_NUMBER.replace(/\D/g, ""); // Malaysian country code 6013...
   
   let message = `Hi Danial's Web & Systems, saya berminat untuk menempah/bertanya tentang perkhidmatan berikut:\n\n`;
@@ -15,6 +29,10 @@ export function generateWhatsAppLink({ packageName, priceText, selectedAddOns = 
   
   if (totalEstimate > 0) {
     message += `\n*Anggaran Kasar Harga:* RM${totalEstimate.toLocaleString()}\n`;
+  }
+
+  if (customText) {
+    message += `\n*Maklumat Tambahan:*\n${customText}\n`;
   }
   
   message += `\nSila hubungi saya untuk perbincangan lanjut. Terima kasih!`;

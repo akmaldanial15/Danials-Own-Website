@@ -47,7 +47,7 @@ const packageDetails = {
       ],
       specs: [
         { label: "Siap dlm", value: "2-4 Hari" },
-        { label: "Bayaran", value: "60% Depo / 40% Baki" },
+        { label: "Bayaran", value: "60% / 20% / 20%" },
         { label: "Maintenance", value: "Min RM60/bln" },
         { label: "Kontrak", value: "1 Tahun" },
         { label: "Suntingan Asas", value: "6x / Tahun" },
@@ -65,7 +65,7 @@ const packageDetails = {
       ],
       specs: [
         { label: "Siap dlm", value: "3-5 Hari" },
-        { label: "Bayaran", value: "60% Depo / 40% Baki" },
+        { label: "Bayaran", value: "60% / 20% / 20%" },
         { label: "Maintenance", value: "Min RM60/bln" },
         { label: "Kontrak", value: "1 Tahun" },
         { label: "Suntingan Asas", value: "6x / Tahun" },
@@ -113,7 +113,7 @@ const packageDetails = {
       ],
       specs: [
         { label: "Delivery", value: "2-4 Days" },
-        { label: "Payment", value: "60% Depo / 40% Bal" },
+        { label: "Payment", value: "60% / 20% / 20%" },
         { label: "Maintenance", value: "Min RM60/mo" },
         { label: "Contract", value: "1 Year" },
         { label: "Basic Edits", value: "6x / Year" },
@@ -131,7 +131,7 @@ const packageDetails = {
       ],
       specs: [
         { label: "Delivery", value: "3-5 Days" },
-        { label: "Payment", value: "60% Depo / 40% Bal" },
+        { label: "Payment", value: "60% / 20% / 20%" },
         { label: "Maintenance", value: "Min RM60/mo" },
         { label: "Contract", value: "1 Year" },
         { label: "Basic Edits", value: "6x / Year" },
