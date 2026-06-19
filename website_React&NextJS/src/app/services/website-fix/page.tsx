@@ -10,6 +10,7 @@ interface DiagnosticIssue {
   title: string;
   category: string;
   price: string;
+  activeBorder: string;
   delivery: string;
   complexity: "Easy" | "Medium" | "High" | "Expert" | "Mudah" | "Sederhana" | "Tinggi" | "Pakar";
   complexityScore: 1 | 2 | 3 | 4; // 1 = Easy, 2 = Medium, 3 = High, 4 = Expert
@@ -34,6 +35,7 @@ export default function WebsiteFixServices() {
       title: isMs ? "Paparan Telefon Rosak" : "Broken Phone Layout",
       category: isMs ? "Susun Atur & Reka Bentuk" : "Layout & Styling",
       price: "200",
+      activeBorder: "border-cyan-500",
       delivery: isMs ? "2-3 Hari" : "2-3 Days",
       complexity: isMs ? "Sederhana" : "Medium",
       complexityScore: 2,
@@ -67,6 +69,7 @@ export default function WebsiteFixServices() {
       title: isMs ? "Website Lambat Loading" : "Slow Website Loading",
       category: isMs ? "Prestasi & Kelajuan" : "Performance & Optimization",
       price: "300",
+      activeBorder: "border-cyan-500",
       delivery: isMs ? "3-5 Hari" : "3-5 Days",
       complexity: isMs ? "Sederhana" : "Medium",
       complexityScore: 2,
@@ -100,6 +103,7 @@ export default function WebsiteFixServices() {
       title: isMs ? "Borang Hubungi / E-mel Rosak" : "Broken Contact Form / Email",
       category: isMs ? "Integrasi Fungsi" : "Function Integration",
       price: "250",
+      activeBorder: "border-cyan-500",
       delivery: isMs ? "1-2 Hari" : "1-2 Days",
       complexity: isMs ? "Mudah" : "Easy",
       complexityScore: 1,
@@ -133,6 +137,7 @@ export default function WebsiteFixServices() {
       title: isMs ? "Ralat Database / Log Masuk" : "Database & Auth Errors",
       category: isMs ? "Sistem Backend" : "Backend Database",
       price: "1500",
+      activeBorder: "border-rose-500",
       delivery: isMs ? "5-7 Hari" : "5-7 Days",
       complexity: isMs ? "Tinggi" : "High",
       complexityScore: 3,
@@ -166,6 +171,7 @@ export default function WebsiteFixServices() {
       title: isMs ? "Tambah Panel Admin / CMS" : "Add Admin Panel / CMS Portal",
       category: isMs ? "Pengurusan Sistem" : "Systems Management",
       price: "800",
+      activeBorder: "border-purple-500",
       delivery: isMs ? "4-6 Hari" : "4-6 Days",
       complexity: isMs ? "Tinggi" : "High",
       complexityScore: 3,
@@ -200,6 +206,7 @@ export default function WebsiteFixServices() {
       title: isMs ? "Isu Server / SSL / Domain" : "Server, SSL & Domain Fixes",
       category: isMs ? "Penyediaan Pelayan" : "DevOps & Hosting",
       price: "250",
+      activeBorder: "border-cyan-500",
       delivery: isMs ? "1-2 Hari" : "1-2 Days",
       complexity: isMs ? "Mudah" : "Easy",
       complexityScore: 1,
@@ -233,12 +240,13 @@ export default function WebsiteFixServices() {
       title: isMs ? "Pautan Rosak / Edit Teks CSS" : "Broken Link / CSS Typo Fix",
       category: isMs ? "Pembaikan Segera" : "Quick CSS & Route Fix",
       price: "80",
+      activeBorder: "border-cyan-500",
       delivery: isMs ? "Dalam 24 Jam" : "Within 24 Hours",
       complexity: isMs ? "Mudah" : "Easy",
       complexityScore: 1,
       complexityColor: "text-emerald-400 border-emerald-500/30",
       glowColor: "from-zinc-400 via-slate-400 to-zinc-500",
-      badgeGlow: "bg-zinc-500/10 text-zinc-400 border-zinc-500/30",
+      badgeGlow: "bg-zinc-50/10 text-zinc-400 border-zinc-500/30",
       desc: isMs
         ? "Tukar warna butang, kemas kini ejaan teks atau logo yang rosak, baiki pautan media sosial yang tidak menghala ke destinasi betul, dan pembetulan kecil lain."
         : "Changing accent colors, updating spelling mistakes or logo assets, routing social media handles, and cleaning minor broken route links.",
@@ -266,6 +274,7 @@ export default function WebsiteFixServices() {
       title: isMs ? "Masalah Lain / Kustom" : "Other / Custom Issue",
       category: isMs ? "Servis Kustom / Integrasi" : "Custom Request & Integration",
       price: "Request",
+      activeBorder: "border-indigo-500",
       delivery: isMs ? "Bincang Dahulu" : "To Be Discussed",
       complexity: isMs ? "Pakar" : "Expert",
       complexityScore: 4,
@@ -455,24 +464,14 @@ export default function WebsiteFixServices() {
                   onClick={() => setActiveIssueId(issue.id)}
                   className={`relative group p-4 rounded-xl border flex flex-col items-center justify-center gap-3 text-center transition-all duration-350 select-none ${
                     isActive 
-                      ? `bg-zinc-900/80 border-transparent shadow-[0_0_25px_rgba(6,182,212,0.15)]`
-                      : "backdrop-blur-md bg-zinc-950/40 border-zinc-900/80 hover:border-zinc-800 hover:bg-zinc-900/30"
+                      ? `bg-zinc-900/90 ${issue.activeBorder} shadow-[0_4px_20px_rgba(16,185,129,0.08)]`
+                      : "backdrop-blur-md bg-zinc-950/40 border-zinc-900/80 hover:border-zinc-800 hover:bg-zinc-900/30 text-zinc-400 group-hover:text-zinc-200"
                   }`}
                 >
-                  {/* Selected dynamic glow border */}
-                  {isActive && (
-                    <div className={`absolute -inset-px rounded-xl bg-gradient-to-r ${issue.glowColor} opacity-75 blur-[1px] -z-10`} />
-                  )}
-
-                  {/* Top glow indicator stripe */}
-                  {isActive && (
-                    <div className={`absolute top-0 inset-x-4 h-[2px] bg-gradient-to-r ${issue.glowColor} rounded-full`} />
-                  )}
-
                   {/* Icon Tile */}
                   <div className={`w-12 h-12 rounded-xl flex items-center justify-center border transition-all duration-300 ${
                     isActive 
-                      ? `bg-gradient-to-br from-cyan-500/10 to-blue-600/10 border-cyan-500/30 text-cyan-400`
+                      ? `bg-zinc-950 border-cyan-500/30 text-cyan-400`
                       : "bg-zinc-900/50 border-zinc-900/60 text-zinc-500 group-hover:text-zinc-300 group-hover:border-zinc-800"
                   }`}>
                     {issue.icon("w-5.5 h-5.5")}
@@ -503,10 +502,10 @@ export default function WebsiteFixServices() {
               }}
             />
             
-            <div className="relative rounded-[15px] bg-zinc-50/95 p-6 md:p-8 border border-zinc-200/80 flex flex-col lg:flex-row gap-8 justify-between items-stretch">
+            <div className="relative rounded-[15px] bg-zinc-950/95 p-6 md:p-8 border border-zinc-850 flex flex-col lg:flex-row gap-8 justify-between items-stretch">
               
               {/* Left Panel: Telemetry Widgets */}
-              <div className="w-full lg:w-2/5 flex flex-col justify-between gap-6 border-b lg:border-b-0 lg:border-r border-zinc-200/60 pb-6 lg:pb-0 lg:pr-8 relative">
+              <div className="w-full lg:w-2/5 flex flex-col justify-between gap-6 border-b lg:border-b-0 lg:border-r border-zinc-900 pb-6 lg:pb-0 lg:pr-8 relative">
                 
                 {/* Visual glow element behind price */}
                 <div className={`absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-gradient-to-r ${activeIssue.glowColor} opacity-5 rounded-full blur-3xl pointer-events-none`} />
@@ -514,39 +513,39 @@ export default function WebsiteFixServices() {
                 <div className="space-y-5 relative z-10">
                   <div className="flex justify-between items-center">
                     <div>
-                      <span className="text-[9px] font-mono tracking-widest text-zinc-650 uppercase block">
+                      <span className="text-[9px] font-mono tracking-widest text-zinc-500 uppercase block">
                         {isMs ? "KATEGORI DIAGNOSIS" : "DIAGNOSTIC CATEGORY"}
                       </span>
-                      <h3 className="text-base font-extrabold text-zinc-950 mt-1">
+                      <h3 className="text-base font-extrabold text-zinc-300 mt-1">
                         {activeIssue.category}
                       </h3>
                     </div>
                     {/* Blinking debugger dot */}
-                    <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-zinc-150 border border-zinc-250">
+                    <div className="flex items-center gap-1.5 px-2 py-0.5 rounded bg-zinc-900 border border-zinc-850">
                       <span className="relative flex h-1.5 w-1.5">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-rose-500"></span>
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
                       </span>
-                      <span className="text-[8px] font-mono text-zinc-600 uppercase tracking-widest">LIVE_SCAN</span>
+                      <span className="text-[8px] font-mono text-zinc-500 uppercase tracking-widest">LIVE_SCAN</span>
                     </div>
                   </div>
 
                   {/* Telemetry Price & Delivery Widgets */}
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="p-4 rounded-xl bg-zinc-100/70 border border-zinc-250/80 flex flex-col justify-center">
+                    <div className="p-4 rounded-xl bg-zinc-900/40 border border-zinc-900 flex flex-col justify-center">
                       <span className="text-[8px] font-mono text-zinc-550 uppercase tracking-wider">
                         {isMs ? "Harga Permulaan" : "Starting Price"}
                       </span>
-                      <span className="text-2xl font-black bg-gradient-to-r from-zinc-950 via-zinc-800 to-zinc-700 bg-clip-text text-transparent drop-shadow-[0_0_8px_rgba(0,0,0,0.05)] mt-1">
+                      <span className="text-2xl font-black bg-gradient-to-r from-white via-zinc-100 to-zinc-350 bg-clip-text text-transparent drop-shadow-[0_0_8px_rgba(255,255,255,0.05)] mt-1">
                         {activeIssue.price === "Request" ? "Custom" : `RM${activeIssue.price}+`}
                       </span>
                     </div>
 
-                    <div className="p-4 rounded-xl bg-zinc-100/70 border border-zinc-250/80 flex flex-col justify-center">
+                    <div className="p-4 rounded-xl bg-zinc-900/40 border border-zinc-900 flex flex-col justify-center">
                       <span className="text-[8px] font-mono text-zinc-550 uppercase tracking-wider">
                         {isMs ? "Tempoh Siap" : "Timeframe"}
                       </span>
-                      <span className="text-sm font-extrabold text-zinc-950 flex items-center gap-1 mt-2">
+                      <span className="text-sm font-extrabold text-zinc-200 flex items-center gap-1 mt-2">
                         <svg className="w-3.5 h-3.5 text-zinc-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
@@ -556,14 +555,10 @@ export default function WebsiteFixServices() {
                   </div>
 
                   {/* Graphical Complexity Widget */}
-                  <div className="p-4 rounded-xl bg-zinc-100/50 border border-zinc-250/80 space-y-2.5">
-                    <div className="flex justify-between items-center text-[8px] font-mono text-zinc-550 uppercase tracking-wider">
+                  <div className="p-4 rounded-xl bg-zinc-900/30 border border-zinc-900 space-y-2.5">
+                    <div className="flex justify-between items-center text-[8px] font-mono text-zinc-555 uppercase tracking-wider">
                       <span>{isMs ? "Tahap Kerumitan" : "Complexity Rating"}</span>
-                      <span className={`font-bold tracking-widest ${
-                        activeIssue.complexityScore === 1 ? "text-rose-500" :
-                        activeIssue.complexityScore === 2 ? "text-blue-500" :
-                        activeIssue.complexityScore === 3 ? "text-emerald-500" : "text-orange-500"
-                      }`}>
+                      <span className={`font-bold tracking-widest ${activeIssue.complexityColor.split(" ")[0]}`}>
                         {activeIssue.complexity.toUpperCase()}
                       </span>
                     </div>
@@ -571,18 +566,18 @@ export default function WebsiteFixServices() {
                     <div className="grid grid-cols-4 gap-1.5">
                       {[1, 2, 3, 4].map((seg) => {
                         const isLit = seg <= activeIssue.complexityScore;
-                        let segmentBg = "bg-zinc-250";
+                        let segmentBg = "bg-zinc-800";
                         if (isLit) {
-                          if (activeIssue.complexityScore === 1) segmentBg = "bg-rose-500";
-                          else if (activeIssue.complexityScore === 2) segmentBg = "bg-blue-500";
-                          else if (activeIssue.complexityScore === 3) segmentBg = "bg-emerald-500";
-                          else segmentBg = "bg-orange-500";
+                          if (activeIssue.complexityScore === 1) segmentBg = "bg-emerald-500";
+                          else if (activeIssue.complexityScore === 2) segmentBg = "bg-amber-500";
+                          else if (activeIssue.complexityScore === 3) segmentBg = "bg-rose-500";
+                          else segmentBg = "bg-gradient-to-r from-purple-500 to-pink-500";
                         }
                         return (
                           <div 
                             key={seg} 
                             className={`h-2.5 rounded-sm transition-all duration-500 ${segmentBg} ${
-                              isLit ? "shadow-[0_0_8px_rgba(244,63,94,0.2)]" : ""
+                              isLit ? "shadow-[0_0_8px_rgba(59,130,246,0.1)]" : ""
                             }`} 
                           />
                         );
@@ -600,44 +595,44 @@ export default function WebsiteFixServices() {
               <div className="w-full lg:w-3/5 flex flex-col justify-between gap-6 relative">
                 
                 {/* Heartbeat ECG pulse wave for futuristic visual */}
-                <svg className="w-28 h-6 text-rose-500/20 absolute top-0 right-0 hidden md:block" viewBox="0 0 100 20" fill="none">
+                <svg className="w-28 h-6 text-zinc-800/40 absolute top-0 right-0 hidden md:block" viewBox="0 0 100 20" fill="none">
                   <path d="M0 10 h25 l3 -6 l3 12 l3 -6 h20 l3 -6 l3 12 l3 -6 h35" stroke="currentColor" strokeWidth="1.5" strokeDasharray="100" strokeDashoffset="0" className="animate-pulse" />
                 </svg>
 
                 <div className="space-y-5">
                   <div>
-                    <span className="text-[9px] font-mono tracking-widest text-zinc-650 uppercase block">
+                    <span className="text-[9px] font-mono tracking-widest text-zinc-500 uppercase block">
                       {isMs ? "ANALISIS TEKNIKAL" : "TECHNICAL RESOLUTION"}
                     </span>
-                    <h4 className="text-lg font-black text-zinc-950 mt-1">
+                    <h4 className="text-lg font-black text-white mt-1">
                       {activeIssue.title}
                     </h4>
-                    <p className="text-xs sm:text-sm text-zinc-700 mt-2.5 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-zinc-400 mt-2.5 leading-relaxed">
                       {activeIssue.desc}
                     </p>
                   </div>
 
                   {/* Checked fixes list */}
                   <div className="space-y-3">
-                    <span className="text-[9px] font-mono tracking-widest text-zinc-650 uppercase block">
+                    <span className="text-[9px] font-mono tracking-widest text-zinc-500 uppercase block">
                       {isMs ? "SKOP DIAGNOSIS DIUJI" : "AUDITED WORK SCOPE"}
                     </span>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {activeIssue.fixes.map((fix, idx) => {
                         // Set checkmark colors based on active theme
-                        let textCheckColor = "text-rose-500";
-                        if (activeIssue.complexityScore === 2) textCheckColor = "text-blue-500";
-                        if (activeIssue.complexityScore === 3) textCheckColor = "text-emerald-500";
-                        if (activeIssue.complexityScore === 4) textCheckColor = "text-orange-500";
+                        let textCheckColor = "text-cyan-400";
+                        if (activeIssue.complexityScore === 2) textCheckColor = "text-amber-400";
+                        if (activeIssue.complexityScore === 3) textCheckColor = "text-rose-400";
+                        if (activeIssue.complexityScore === 4) textCheckColor = "text-fuchsia-400";
 
                         return (
-                          <div key={idx} className="flex items-start gap-2.5 text-xs text-zinc-700 group/item">
+                          <div key={idx} className="flex items-start gap-2.5 text-xs text-zinc-350 group/item">
                             <span className={`shrink-0 mt-0.5 transition-transform duration-300 group-hover/item:scale-110 ${textCheckColor}`}>
                               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                               </svg>
                             </span>
-                            <span className="line-clamp-1 group-hover/item:text-zinc-950 transition-colors duration-300">{fix}</span>
+                            <span className="line-clamp-1 group-hover/item:text-zinc-200 transition-colors duration-300">{fix}</span>
                           </div>
                         );
                       })}
@@ -646,19 +641,19 @@ export default function WebsiteFixServices() {
                 </div>
 
                 {/* WhatsApp Call to Action Panel */}
-                <div className="pt-6 border-t border-zinc-200 mt-6 flex flex-col sm:flex-row items-center gap-4 relative z-10">
+                <div className="pt-6 border-t border-zinc-900 flex flex-col sm:flex-row items-center gap-4 relative z-10">
                   <a
                     href={generateQuickFixLink(activeIssue.title, parseFloat(activeIssue.price.replace(/[^0-9.]/g, "")) || 0)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-xs font-black bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-zinc-950 transition-all duration-300 shadow-[0_4px_15px_rgba(244,63,94,0.15)] hover:shadow-[0_4px_25px_rgba(244,63,94,0.25)] shrink-0 cursor-pointer"
+                    className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-xs font-black bg-gradient-to-r from-cyan-600 to-cyan-700 hover:from-cyan-500 hover:to-cyan-600 text-zinc-950 transition-all duration-300 shadow-[0_4px_15px_rgba(6,182,212,0.15)] hover:shadow-[0_4px_25px_rgba(6,182,212,0.25)] shrink-0 cursor-pointer"
                   >
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.57 1.978 14.1 1.953 11.47 1.951 6.037 1.951 1.61 6.32 1.607 11.75c-.001 1.632.455 3.222 1.32 4.629l-.995 3.635 3.715-.96z" />
                     </svg>
                     {isMs ? "Bincang Masalah Ini di WhatsApp" : "Discuss This Issue on WhatsApp"}
                   </a>
-                  <span className="text-[10px] text-zinc-550 leading-relaxed text-center sm:text-left">
+                  <span className="text-[10px] text-zinc-500 leading-relaxed text-center sm:text-left">
                     {isMs 
                       ? "*Tiada deposit diagnosis diperlukan. Pemeriksaan fail & pautan website asal adalah 100% PERCUMA."
                       : "*No initial deposit required for system scoping. Original site checks are 100% FREE."}
@@ -816,7 +811,7 @@ export default function WebsiteFixServices() {
             href="https://wa.me/60136632092?text=Hai%20Danial,%20saya%20nak%20bincang%20untuk%20repair/upgrade%20website%20saya."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-extrabold bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-zinc-950 shadow-md hover:shadow-[0_4px_20px_rgba(245,158,11,0.25)] transition-all duration-300 cursor-pointer"
+            className="inline-flex w-full items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-extrabold bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-zinc-950 shadow-md hover:shadow-[0_4px_20px_rgba(124,58,237,0.25)] transition-all duration-300 cursor-pointer"
           >
             {isMs ? "Hubungi Danial di WhatsApp" : "Contact Danial via WhatsApp"}
           </a>
