@@ -48,33 +48,65 @@ export default function DetailedServices() {
         </div>
 
         {/* Value Pitch Section: Why Detailed? */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="p-6 rounded-2xl bg-zinc-900/20 border border-zinc-850 space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 border border-purple-500/20">
-              🛡️
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {/* Card 1: Rigorous Device Testing */}
+          <div className="relative group p-8 md:p-10 rounded-3xl bg-zinc-900/40 border border-zinc-850 hover:border-cyan-500/30 hover:bg-zinc-900/60 hover:shadow-[0_10px_30px_rgba(6,182,212,0.08)] transition-all duration-300">
+            <div className="absolute top-6 right-6 text-[10px] font-mono font-bold tracking-widest text-cyan-400 bg-cyan-500/10 px-2.5 py-0.5 rounded-full border border-cyan-500/10 uppercase">
+              {language === "ms" ? "SELAMAT" : "SECURE"}
             </div>
-            <h3 className="text-lg font-bold text-white">{t("pitch1Title")}</h3>
-            <p className="text-xs text-zinc-400 leading-relaxed">
-              {t("pitch1Desc")}
-            </p>
+            <div className="space-y-4">
+              <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20 shadow-[0_0_25px_rgba(6,182,212,0.15)] transition-transform duration-300 group-hover:scale-110 p-2.5">
+                <img src="/images/icons/shield.png" alt="Shield Icon" className="w-full h-full object-contain no-invert" />
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-xl font-extrabold text-zinc-150">
+                  {t("pitch1Title")}
+                </h3>
+                <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+                  {t("pitch1Desc")}
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="p-6 rounded-2xl bg-zinc-900/20 border border-zinc-850 space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 border border-cyan-500/20">
-              👤
+
+          {/* Card 2: Human-Centric UX */}
+          <div className="relative group p-8 md:p-10 rounded-3xl bg-zinc-900/40 border border-zinc-850 hover:border-purple-500/30 hover:bg-zinc-900/60 hover:shadow-[0_10px_30px_rgba(168,85,247,0.08)] transition-all duration-300">
+            <div className="absolute top-6 right-6 text-[10px] font-mono font-bold tracking-widest text-purple-400 bg-purple-500/10 px-2.5 py-0.5 rounded-full border border-purple-500/10 uppercase">
+              {language === "ms" ? "MESRA PENGGUNA" : "HUMAN-CENTRIC"}
             </div>
-            <h3 className="text-lg font-bold text-white">{t("pitch2Title")}</h3>
-            <p className="text-xs text-zinc-400 leading-relaxed">
-              {t("pitch2Desc")}
-            </p>
+            <div className="space-y-4">
+              <div className="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center border border-purple-500/20 shadow-[0_0_25px_rgba(168,85,247,0.15)] transition-transform duration-300 group-hover:scale-110 p-2.5">
+                <img src="/images/icons/ux.png" alt="UX Icon" className="w-full h-full object-contain no-invert" />
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-xl font-extrabold text-zinc-150">
+                  {t("pitch2Title")}
+                </h3>
+                <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+                  {t("pitch2Desc")}
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="p-6 rounded-2xl bg-zinc-900/20 border border-zinc-850 space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 border border-indigo-500/20">
-              ⚡
+
+          {/* Card 3: Performance & Databases */}
+          <div className="relative group p-8 md:p-10 rounded-3xl bg-zinc-900/40 border border-zinc-850 hover:border-indigo-500/30 hover:bg-zinc-900/60 hover:shadow-[0_10px_30px_rgba(99,102,241,0.08)] transition-all duration-300">
+            <div className="absolute top-6 right-6 text-[10px] font-mono font-bold tracking-widest text-indigo-400 bg-indigo-500/10 px-2.5 py-0.5 rounded-full border border-indigo-500/10 uppercase">
+              {language === "ms" ? "LAJU & STABIL" : "ULTRA-FAST"}
             </div>
-            <h3 className="text-lg font-bold text-white">{t("pitch3Title")}</h3>
-            <p className="text-xs text-zinc-400 leading-relaxed">
-              {t("pitch3Desc")}
-            </p>
+            <div className="space-y-4">
+              <div className="w-14 h-14 rounded-2xl bg-indigo-500/10 flex items-center justify-center border border-indigo-500/20 shadow-[0_0_25px_rgba(99,102,241,0.15)] transition-transform duration-300 group-hover:scale-110 p-2.5">
+                <img src="/images/icons/lightning.png" alt="Lightning Icon" className="w-full h-full object-contain no-invert" />
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-xl font-extrabold text-zinc-150">
+                  {t("pitch3Title")}
+                </h3>
+                <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+                  {t("pitch3Desc")}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
