@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import GlowCard from "@/components/ui/GlowCard";
 import { useLanguage } from "@/context/LanguageContext";
 import { generateQuickFixLink } from "@/utils/whatsapp";
@@ -23,8 +23,13 @@ interface DiagnosticIssue {
 }
 
 export default function WebsiteFixServices() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const { language } = useLanguage();
-  const isMs = language === "ms";
+  const isMs = !mounted ? true : language === "ms";
 
   const [activeIssueId, setActiveIssueId] = useState<string>("layout");
 
@@ -574,31 +579,31 @@ export default function WebsiteFixServices() {
             </p>
           </div>
 
-          {/* Grid Selector Buttons with glossy design */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
+          {/* Grid Selector Buttons with glossy design - Scrollable on mobile/tablet, Grid on PC */}
+          <div className="flex lg:grid lg:grid-cols-8 gap-3 overflow-x-auto lg:overflow-x-visible pb-3 lg:pb-0 snap-x snap-mandatory scrollbar-none [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {diagnosticIssues.map((issue) => {
               const isActive = issue.id === activeIssueId;
               return (
                 <button
                   key={issue.id}
                   onClick={() => setActiveIssueId(issue.id)}
-                  className={`relative group p-4 rounded-xl border flex flex-col items-center justify-center gap-3 text-center transition-all duration-350 select-none ${
+                  className={`relative group p-3 lg:p-4 rounded-xl border flex flex-col items-center justify-center gap-2 lg:gap-3 text-center transition-all duration-350 select-none shrink-0 w-[120px] sm:w-[140px] lg:w-full snap-center ${
                     isActive 
                       ? `bg-zinc-900/90 ${issue.activeBorder} shadow-[0_4px_20px_rgba(16,185,129,0.08)]`
                       : "backdrop-blur-md bg-zinc-950/40 border-zinc-900/80 hover:border-zinc-800 hover:bg-zinc-900/30 text-zinc-400 group-hover:text-zinc-200"
                   }`}
                 >
                   {/* Icon Tile */}
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center border transition-all duration-300 ${
+                  <div className={`w-10 h-10 lg:w-12 lg:h-12 rounded-xl flex items-center justify-center border transition-all duration-300 ${
                     isActive 
                       ? `bg-zinc-950 border-cyan-500/30 text-cyan-400`
                       : "bg-zinc-900/50 border-zinc-900/60 text-zinc-500 group-hover:text-zinc-300 group-hover:border-zinc-800"
                   }`}>
-                    {issue.icon("w-5.5 h-5.5")}
+                    {issue.icon("w-5 h-5 lg:w-5.5 lg:h-5.5")}
                   </div>
 
                   {/* Label */}
-                  <span className={`text-[11px] font-extrabold tracking-tight line-clamp-2 leading-tight transition-colors duration-300 ${
+                  <span className={`text-[10px] lg:text-[11px] font-extrabold tracking-tight line-clamp-2 leading-tight transition-colors duration-300 ${
                     isActive ? "text-white" : "text-zinc-400 group-hover:text-zinc-200"
                   }`}>
                     {issue.title}
