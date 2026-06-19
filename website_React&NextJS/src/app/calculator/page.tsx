@@ -13,11 +13,13 @@ export default function PricingCalculator() {
   const [selectedAddOnIds, setSelectedAddOnIds] = useState<string[]>([]);
   const [extraPages, setExtraPages] = useState(0);
   const [maintenanceCycle, setMaintenanceCycle] = useState<"monthly" | "yearly">("monthly");
+  const [includeBudgetHosting, setIncludeBudgetHosting] = useState(false);
 
   // Synchronize first package selection when switching tabs
   const handleTabChange = (tab: "budget" | "bespoke") => {
     setSelectedTab(tab);
     setSelectedPkgId(tab === "budget" ? "budget-basic" : "basic");
+    setIncludeBudgetHosting(false);
   };
 
   // Grouped base packages depending on active language
@@ -122,6 +124,11 @@ export default function PricingCalculator() {
         fee = 60;
         term = language === "ms" ? "Kontrak 1 Tahun" : "1-Year Contract";
       }
+
+      if (includeBudgetHosting) {
+        fee += 18;
+        term += language === "ms" ? " (Termasuk Domain & Hosting)" : " (Includes Domain & Hosting)";
+      }
     } else {
       // Detailed packages
       const hasMaintenanceAddon = selectedAddOnIds.includes("maintenance");
@@ -137,7 +144,7 @@ export default function PricingCalculator() {
     }
 
     return { fee, term, isMandatory };
-  }, [currentPackage, selectedAddOnIds, maintenanceCycle, language]);
+  }, [currentPackage, selectedAddOnIds, maintenanceCycle, includeBudgetHosting, language]);
 
   // Generate the WhatsApp URL
   const whatsAppUrl = useMemo(() => {
@@ -309,7 +316,10 @@ export default function PricingCalculator() {
                   {(selectedTab === "bespoke" ? customPackagesList : budgetPackagesList).map((pkg) => (
                     <button
                       key={pkg.id}
-                      onClick={() => setSelectedPkgId(pkg.id)}
+                      onClick={() => {
+                        setSelectedPkgId(pkg.id);
+                        setIncludeBudgetHosting(false);
+                      }}
                       className={`p-5 rounded-2xl text-left border transition-all flex flex-col justify-between min-h-[140px] relative group ${
                         selectedPkgId === pkg.id
                           ? "bg-purple-950/15 border-purple-500/40 shadow-[0_0_20px_rgba(168,85,247,0.05)]"
@@ -516,7 +526,7 @@ export default function PricingCalculator() {
 
                   {/* Maintenance segment if applicable */}
                   {maintenanceInfo.fee > 0 && (
-                    <div className="p-3 rounded-xl bg-purple-500/5 border border-purple-500/10 space-y-1">
+                    <div className="p-3 rounded-xl bg-purple-500/5 border border-purple-500/10 space-y-2">
                       <div className="flex justify-between items-center text-xs">
                         <span className="font-bold text-purple-400">
                           {language === "ms" ? "Penyelenggaraan:" : "Maintenance:"}
@@ -528,6 +538,22 @@ export default function PricingCalculator() {
                       <p className="text-[10px] text-zinc-400 leading-none font-medium">
                         * {maintenanceInfo.term} {maintenanceInfo.isMandatory ? `(${language === "ms" ? "Wajib" : "Mandatory"})` : ""}
                       </p>
+
+                      {/* Budget Hosting Checkbox */}
+                      {currentPackage.id.startsWith("budget-") && (
+                        <div className="pt-2 border-t border-purple-500/10 flex items-center justify-between">
+                          <label className="text-[9px] text-zinc-350 font-bold uppercase tracking-wider cursor-pointer select-none" htmlFor="budget-hosting-chk">
+                            {language === "ms" ? "Sertakan Domain & Hosting (+RM18/bln)" : "Include Domain & Hosting (+RM18/mo)"}
+                          </label>
+                          <input
+                            type="checkbox"
+                            id="budget-hosting-chk"
+                            checked={includeBudgetHosting}
+                            onChange={(e) => setIncludeBudgetHosting(e.target.checked)}
+                            className="w-3.5 h-3.5 rounded border-zinc-700 bg-zinc-950 text-purple-600 focus:ring-0 focus:ring-offset-0 cursor-pointer"
+                          />
+                        </div>
+                      )}
                     </div>
                   )}
 
