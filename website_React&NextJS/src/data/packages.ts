@@ -209,7 +209,7 @@ export const bespokePackages = {
     {
       id: "advanced",
       name: "Detailed Advanced Website",
-      price: 2599,
+      price: 2899,
       description: "Laman web korporat lengkap dengan sistem pengurusan kandungan (admin page), senarai dinamik dan jualan online.",
       features: [
         "Laman web 7-10+ halaman",
@@ -294,7 +294,7 @@ export const bespokePackages = {
     {
       id: "advanced",
       name: "Detailed Advanced Website",
-      price: 2599,
+      price: 2899,
       description: "Complete corporate website with a content management system (admin page), dynamic listings, and online sales.",
       features: [
         "7-10+ pages website",

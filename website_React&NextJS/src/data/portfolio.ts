@@ -43,7 +43,7 @@ export const portfolioItems = {
       tags: ["Next.js", "Database", "Classroom Sync"],
       description: "Sistem laman web rasmi pusat tuisyen. Menyokong kemasukan jadual dinamik, borang pendaftaran pelajar baru, dashboard guru-pelajar, dan pengurusan kelas.",
       tech: ["Next.js", "Node.js", "MongoDB", "Tailwind CSS", "Resend API"],
-      priceClass: "Advanced Website (dari RM2,599)"
+      priceClass: "Advanced Website (dari RM2,899)"
     },
     {
       id: "ivinas-florist",
@@ -102,7 +102,7 @@ export const portfolioItems = {
       tags: ["Next.js", "Database", "Classroom Sync"],
       description: "A premium website built for an education center. Integrates dynamic scheduling, online student enrollment, teacher-student dashboards, and class tracking.",
       tech: ["Next.js", "Node.js", "MongoDB", "Tailwind CSS", "Resend API"],
-      priceClass: "Advanced Website (from RM2,599)"
+      priceClass: "Advanced Website (from RM2,899)"
     },
     {
       id: "ivinas-florist",

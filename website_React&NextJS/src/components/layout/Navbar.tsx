@@ -158,12 +158,15 @@ export default function Navbar() {
               {language === "ms" ? "EN" : "BM"}
             </button>
 
-            <Link
-              href="/calculator"
-              className="px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 text-white hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all duration-300"
-            >
-              {t("navButton")}
-            </Link>
+            <div className="relative group">
+              <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-500 opacity-30 blur-[2px] group-hover:opacity-100 transition duration-500" />
+              <Link
+                href="/calculator"
+                className="relative block px-4 py-2 rounded-full text-xs font-extrabold bg-zinc-950 text-white border border-zinc-800/80 group-hover:border-zinc-700 transition duration-300 shadow-[0_4px_12px_rgba(0,0,0,0.5)] cursor-pointer"
+              >
+                {t("navButton")}
+              </Link>
+            </div>
           </div>
 
           {/* Mobile Menu & Language Actions */}
@@ -285,13 +288,16 @@ export default function Navbar() {
           ))}
 
           <div className="pt-4 pb-2 px-3">
-            <Link
-              href="/calculator"
-              onClick={() => setIsOpen(false)}
-              className="block w-full py-3 text-center rounded-xl text-base font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-md"
-            >
-              {t("navButton")}
-            </Link>
+            <div className="relative group">
+              <div className="absolute -inset-0.5 rounded-xl bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-500 opacity-20 blur-[2px]" />
+              <Link
+                href="/calculator"
+                onClick={() => setIsOpen(false)}
+                className="relative block w-full py-3 text-center rounded-xl text-sm font-bold bg-zinc-950 text-white border border-zinc-850"
+              >
+                {t("navButton")}
+              </Link>
+            </div>
           </div>
         </div>
       </div>
