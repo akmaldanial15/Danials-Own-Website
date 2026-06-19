@@ -233,26 +233,29 @@ export default function Home() {
                 {item.demoUrl ? (
                   <div
                     onClick={() => setActiveDemo({ url: item.demoUrl!, title: item.title })}
-                    className="w-full h-full rounded-lg border border-zinc-800 border-dashed p-4 flex flex-col justify-between relative overflow-hidden bg-zinc-955/40 hover:border-zinc-700 transition-all cursor-pointer block group/wireframe"
+                    className="w-full h-full rounded-lg overflow-hidden bg-white relative border border-zinc-800/80 shadow-md flex items-center justify-center cursor-pointer select-none group/live"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/5 to-cyan-500/5 z-0" />
-                    <div className="relative z-10 flex justify-between items-center text-xs text-zinc-650">
-                      <span>{"DANIAL'S PROJECT WIREFRAME"}</span>
-                      <span className="flex items-center gap-1 text-emerald-400 font-semibold bg-emerald-950/20 px-1 py-0.2 rounded border border-emerald-500/10 text-[9px]">
+                    <iframe
+                      src={item.demoUrl}
+                      className="w-[200%] h-[200%] border-0 no-invert pointer-events-none scale-50 origin-top-left absolute top-0 left-0"
+                      title={`${item.title} Live Mini Preview`}
+                      loading="lazy"
+                    />
+                    {/* Overlay blocker */}
+                    <div className="absolute inset-0 bg-transparent z-10 flex flex-col justify-between p-3" />
+                    
+                    {/* Floating indicators */}
+                    <div className="absolute top-3 left-3 right-3 z-20 flex justify-between items-center text-[8px] font-mono text-zinc-400 tracking-widest bg-zinc-950/85 px-2.5 py-1.5 rounded-lg border border-zinc-800/50 backdrop-blur-sm pointer-events-none">
+                      <span>PROJECT PREVIEW</span>
+                      <span className="flex items-center gap-1 text-emerald-400 font-semibold bg-emerald-950/20 px-1 py-0.2 rounded border border-emerald-500/10 text-[6px]">
                         <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                         LIVE_PREVIEW
                       </span>
                     </div>
-                    <div className="relative z-10 text-center my-auto">
-                      <p className="text-xl font-bold text-zinc-200 group-hover/wireframe:text-purple-400 transition-colors">{item.title}</p>
-                      <p className="text-xs text-zinc-500 font-medium mt-1">{item.subtitle}</p>
-                    </div>
-                    <div className="relative z-10 flex gap-2">
-                      {item.tags.slice(0, 2).map((t) => (
-                        <span key={t} className="text-[10px] px-2 py-0.5 rounded bg-zinc-900 text-zinc-400 border border-zinc-80">
-                          {t}
-                        </span>
-                      ))}
+                    
+                    <div className="absolute bottom-3 left-3 right-3 z-20 flex justify-between items-center text-[8px] text-zinc-400 bg-zinc-950/85 px-2.5 py-1.5 rounded-lg border border-zinc-800/50 backdrop-blur-sm pointer-events-none">
+                      <span className="font-bold text-white">{item.title}</span>
+                      <span className="text-[6px] tracking-wide text-purple-400 font-bold uppercase">CLICK TO INTERACT</span>
                     </div>
                   </div>
                 ) : (

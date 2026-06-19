@@ -164,26 +164,15 @@ function GalleryContent() {
 
                         {/* 2. RASA NUSANTARA CAFE MOCKUP */}
                         {item.id === "rasa-nusantara" && (
-                          <div className="space-y-2.5 w-full max-w-[200px] mx-auto text-left">
-                            {/* Floating menu preview card */}
-                            <div className="bg-zinc-900/60 p-2.5 rounded-xl border border-zinc-800/80 space-y-1.5 shadow-lg relative overflow-hidden">
-                              <div className="absolute -top-6 -right-6 w-12 h-12 rounded-full bg-amber-500/10 blur-md" />
-                              <div className="flex justify-between items-center">
-                                <span className="text-[7px] text-zinc-550 font-bold uppercase tracking-wider">Today's Special</span>
-                                <span className="text-[6px] px-1 py-0.2 rounded bg-amber-500/10 text-amber-400 font-semibold border border-amber-500/10">Cafe Menu</span>
-                              </div>
-                              <div className="flex gap-2 items-center">
-                                <div className="w-7 h-7 rounded bg-gradient-to-tr from-amber-500 to-orange-500 shrink-0 shadow-[0_0_8px_rgba(245,158,11,0.2)] flex items-center justify-center text-xs">☕</div>
-                                <div className="space-y-0.5">
-                                  <h5 className="text-[8px] font-bold text-white">Roti Jala Premium</h5>
-                                  <p className="text-[6px] text-zinc-455">Warm served with chicken curry.</p>
-                                </div>
-                              </div>
-                              <div className="flex justify-between items-center text-[7px] pt-1.5 border-t border-zinc-950">
-                                <span className="text-zinc-500">⭐ 4.9 (240 reviews)</span>
-                                <span className="font-bold text-white">RM12.00</span>
-                              </div>
-                            </div>
+                          <div className="w-[190px] h-[100px] rounded-lg overflow-hidden bg-white relative border border-zinc-800/80 shadow-md mx-auto shrink-0 select-none">
+                            <iframe
+                              src={item.demoUrl}
+                              className="w-[380px] h-[200px] border-0 no-invert pointer-events-none scale-50 origin-top-left absolute top-0 left-0"
+                              title="Rasa Nusantara Live Mini Preview"
+                              loading="lazy"
+                            />
+                            {/* Overlay blocker */}
+                            <div className="absolute inset-0 bg-transparent z-10" />
                           </div>
                         )}
 
