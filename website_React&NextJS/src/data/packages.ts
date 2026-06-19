@@ -4,11 +4,11 @@ export const fastTrackPackages = {
       id: "budget-basic",
       name: "Super Budget (1 Halaman)",
       price: 299,
-      description: "Pilihan paling jimat untuk bertapak secara atas talian dengan cepat. 100% bayaran pendahuluan. (Wajib ambil pelan penyelenggaraan minima RM40/bulan).",
+      description: "Pilihan paling jimat untuk bertapak secara atas talian dengan cepat. 100% bayaran pendahuluan. (Wajib ambil pelan penyelenggaraan minima RM40/bulan, kontrak 2 tahun).",
       features: [
         "Laman web kustom 1 Halaman",
         "100% Downpayment (Sebelum Mula)",
-        "Wajib ambil pelan penyelenggaraan: Minima RM40/bulan",
+        "Wajib ambil pelan penyelenggaraan: Minima RM40/bulan (Kontrak 2 tahun)",
         "Penyelenggaraan hanya melindungi ralat/error teknikal yang tiba-tiba muncul",
         "Tiada suntingan asas percuma (no free basic edits) sebelum pelancaran",
         "Kemas kini menu/kandungan secara manual dicaj RM40+ setiap sesi (tiada admin console, maks 4 kali setahun)",
@@ -22,15 +22,34 @@ export const fastTrackPackages = {
       id: "budget-standard",
       name: "Medium Budget (Sehingga 4 Halaman)",
       price: 699,
-      description: "Sesuai untuk perniagaan kecil yang memerlukan halaman berasingan. (Wajib ambil pelan penyelenggaraan minima RM50/bulan).",
+      description: "Sesuai untuk perniagaan kecil yang memerlukan halaman berasingan. (Wajib ambil pelan penyelenggaraan minima RM50/bulan, kontrak 2 tahun).",
       features: [
         "Website kustom sehingga 4 Halaman",
         "Termasuk Galeri, Google Maps, & Hubungi WhatsApp",
-        "Wajib ambil pelan penyelenggaraan: Minima RM50/bulan",
+        "Wajib ambil pelan penyelenggaraan: Minima RM50/bulan (Kontrak 2 tahun)",
         "Termasuk 4 kali suntingan / kemas kini asas (sebelum pelancaran/release)",
         "Termasuk 6 kali suntingan / kemas kini asas setahun (di bawah pelan maintenance)",
         "Hosting & Domain Kustom: Pilihan (Optional) tetapi sangat disyorkan",
         "Subdomain & Hosting Percuma disediakan (jika tiada domain sendiri)",
+        "Siap dalam 2 - 4 hari bekerja",
+        "Penghantaran ekspres (< 24 jam) dicaj tambahan"
+      ]
+    },
+    {
+      id: "budget-advanced",
+      name: "Advanced Budget (Sehingga 7 Halaman)",
+      price: 1099,
+      description: "Pakej lengkap dengan sistem pesanan (ordering) terus ke WhatsApp/Telegram. (Wajib ambil pelan penyelenggaraan minima RM60/bulan, kontrak 1 tahun sahaja).",
+      features: [
+        "Laman web kustom sehingga 7 Halaman",
+        "Urusan Pembayaran: 60% Deposit Mula, 40% Baki Sebelum Pelancaran",
+        "Sistem Pesanan (Ordering System) & Resit Automatik terus dari website",
+        "Notifikasi pesanan masuk dihantar automatik ke WhatsApp/Telegram",
+        "Tiada Admin Login Panel (tiada console backend)",
+        "Wajib ambil pelan penyelenggaraan: Minima RM60/bulan (Kontrak 1 tahun sahaja)",
+        "Hosting & Domain Kustom: Pilihan dari RM78/bulan (sekali pelan penyelenggaraan)",
+        "Termasuk 4 kali suntingan / kemas kini asas (sebelum pelancaran)",
+        "Percuma 10 kali suntingan asas & 1 kali reka semula (redesign) ringan setahun",
         "Siap dalam 2 - 4 hari bekerja",
         "Penghantaran ekspres (< 24 jam) dicaj tambahan"
       ]
@@ -41,11 +60,11 @@ export const fastTrackPackages = {
       id: "budget-basic",
       name: "Super Budget (1 Page)",
       price: 299,
-      description: "The most budget-friendly plan to establish your online presence. 100% upfront downpayment. (Required maintenance plan of at least RM40/month).",
+      description: "The most budget-friendly plan to establish your online presence. 100% upfront downpayment. (Required maintenance plan of at least RM40/month, 2-year contract).",
       features: [
         "1-Page custom website",
         "100% Upfront Downpayment",
-        "Required Maintenance Plan: Minimum RM40/month",
+        "Required Maintenance Plan: Minimum RM40/month (2-year contract)",
         "Maintenance only covers technical fixes/errors that suddenly appear",
         "No free basic edits before launch",
         "Manual menu/content updates charged at RM40+ per session (no admin console, max 4 times/year)",
@@ -59,15 +78,34 @@ export const fastTrackPackages = {
       id: "budget-standard",
       name: "Medium Budget (Up to 4 Pages)",
       price: 699,
-      description: "Perfect for small businesses needing separate pages for core information. (Required maintenance plan of at least RM50/month).",
+      description: "Perfect for small businesses needing separate pages for core information. (Required maintenance plan of at least RM50/month, 2-year contract).",
       features: [
         "Custom website up to 4 Pages",
         "Includes Gallery, Google Maps, & WhatsApp link",
-        "Required Maintenance Plan: Minimum RM50/month",
+        "Required Maintenance Plan: Minimum RM50/month (2-year contract)",
         "Includes 4 basic edits/updates (before launch/release)",
         "Includes 6 basic edits/updates per year (under standard maintenance)",
         "Custom Domain & Hosting: Optional but highly recommended",
         "Free Subdomain & Hosting provided (if no custom domain is used)",
+        "Delivered within 2 - 4 working days",
+        "Express delivery (< 24 hours) available for extra fee"
+      ]
+    },
+    {
+      id: "budget-advanced",
+      name: "Advanced Budget (Up to 7 Pages)",
+      price: 1099,
+      description: "Complete package with integrated ordering system routed to WhatsApp/Telegram. (Required maintenance plan of at least RM60/month, 1-year contract only).",
+      features: [
+        "Custom website up to 7 Pages",
+        "Payment terms: 60% Start Deposit, 40% Balance Before Website Launch",
+        "Ordering System & Automated Receipts generated directly from website",
+        "Incoming order notifications sent automatically via WhatsApp/Telegram",
+        "No Admin Login Panel (database-free backend)",
+        "Required Maintenance Plan: Minimum RM60/month (1-year contract only)",
+        "Custom Domain & Hosting: Option from RM78/month (including maintenance)",
+        "Includes 4 basic edits/updates (before launch/release)",
+        "Includes 10 basic edits/updates & 1 free light redesign per year",
         "Delivered within 2 - 4 working days",
         "Express delivery (< 24 hours) available for extra fee"
       ]
