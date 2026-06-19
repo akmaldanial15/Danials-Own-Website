@@ -20,7 +20,8 @@ export const portfolioItems = {
       tags: ["Landing Page", "HTML", "CSS", "Vanilla JS"],
       description: "Halaman landing page yang menarik secara visual dibina untuk kafe roti artisan. Memaparkan menu harian mereka, lokasi cawangan, waktu operasi, serta borang tempahan meja.",
       tech: ["HTML5", "CSS3", "JavaScript", "Google Maps API"],
-      priceClass: "Basic Website (dari RM799)"
+      priceClass: "Basic Website (dari RM799)",
+      demoUrl: "https://nusantara-website.vercel.app/"
     },
     {
       id: "admin-management",
@@ -77,7 +78,8 @@ export const portfolioItems = {
       tags: ["Landing Page", "HTML", "CSS", "Vanilla JS"],
       description: "A gorgeous, highly visual landing page built for an artisan bakery. Highlights their daily menu, location, opening hours, and integrating a direct booking system.",
       tech: ["HTML5", "CSS3", "JavaScript", "Google Maps API"],
-      priceClass: "Basic Website (from RM799)"
+      priceClass: "Basic Website (from RM799)",
+      demoUrl: "https://nusantara-website.vercel.app/"
     },
     {
       id: "admin-management",

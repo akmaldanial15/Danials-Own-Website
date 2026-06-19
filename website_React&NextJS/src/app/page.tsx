@@ -228,44 +228,99 @@ export default function Home() {
             <div key={item.id} className="group rounded-2xl bg-zinc-900/30 border border-zinc-850 overflow-hidden hover:border-zinc-800 transition-all flex flex-col justify-between">
               {/* Image box representation */}
               <div className="relative aspect-video w-full bg-zinc-950 flex items-center justify-center p-8 border-b border-zinc-850">
-                <div className="w-full h-full rounded-lg border border-zinc-800 border-dashed p-4 flex flex-col justify-between relative overflow-hidden bg-zinc-950/50">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/5 to-cyan-500/5 z-0" />
-                  <div className="relative z-10 flex justify-between items-center text-xs text-zinc-650">
-                    <span>{"DANIAL'S PROJECT WIREFRAME"}</span>
-                    <span>ACTIVE SCREEN</span>
+                {item.demoUrl ? (
+                  <a
+                    href={item.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full h-full rounded-lg border border-zinc-800 border-dashed p-4 flex flex-col justify-between relative overflow-hidden bg-zinc-955/40 hover:border-zinc-700 transition-all cursor-pointer block group/wireframe"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/5 to-cyan-500/5 z-0" />
+                    <div className="relative z-10 flex justify-between items-center text-xs text-zinc-650">
+                      <span>{"DANIAL'S PROJECT WIREFRAME"}</span>
+                      <span className="flex items-center gap-1 text-emerald-400 font-semibold bg-emerald-950/20 px-1 py-0.2 rounded border border-emerald-500/10 text-[9px]">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                        LIVE_PREVIEW
+                      </span>
+                    </div>
+                    <div className="relative z-10 text-center my-auto">
+                      <p className="text-xl font-bold text-zinc-200 group-hover/wireframe:text-purple-400 transition-colors">{item.title}</p>
+                      <p className="text-xs text-zinc-500 font-medium mt-1">{item.subtitle}</p>
+                    </div>
+                    <div className="relative z-10 flex gap-2">
+                      {item.tags.slice(0, 2).map((t) => (
+                        <span key={t} className="text-[10px] px-2 py-0.5 rounded bg-zinc-900 text-zinc-400 border border-zinc-80">
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </a>
+                ) : (
+                  <div className="w-full h-full rounded-lg border border-zinc-800 border-dashed p-4 flex flex-col justify-between relative overflow-hidden bg-zinc-950/50">
+                    <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/5 to-cyan-500/5 z-0" />
+                    <div className="relative z-10 flex justify-between items-center text-xs text-zinc-650">
+                      <span>{"DANIAL'S PROJECT WIREFRAME"}</span>
+                      <span>ACTIVE SCREEN</span>
+                    </div>
+                    <div className="relative z-10 text-center my-auto">
+                      <p className="text-xl font-bold text-zinc-200">{item.title}</p>
+                      <p className="text-xs text-zinc-500 font-medium mt-1">{item.subtitle}</p>
+                    </div>
+                    <div className="relative z-10 flex gap-2">
+                      {item.tags.slice(0, 2).map((t) => (
+                        <span key={t} className="text-[10px] px-2 py-0.5 rounded bg-zinc-900 text-zinc-400 border border-zinc-80">
+                          {t}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                  <div className="relative z-10 text-center my-auto">
-                    <p className="text-xl font-bold text-zinc-200">{item.title}</p>
-                    <p className="text-xs text-zinc-500 font-medium mt-1">{item.subtitle}</p>
+                )}
+              </div>
+              <div className="p-6 flex-grow flex flex-col justify-between">
+                <div className="space-y-3">
+                  <div className="flex justify-between items-start gap-4">
+                    <div>
+                      <span className="text-[10px] uppercase tracking-wider font-bold text-purple-400">{item.category}</span>
+                      <h3 className="text-lg font-bold text-white mt-1">{item.title}</h3>
+                    </div>
+                    <span className="text-xs font-semibold text-zinc-400 px-2.5 py-1 rounded-full bg-zinc-900 border border-zinc-800">
+                      {item.priceClass}
+                    </span>
                   </div>
-                  <div className="relative z-10 flex gap-2">
-                    {item.tags.slice(0, 2).map((t) => (
-                      <span key={t} className="text-[10px] px-2 py-0.5 rounded bg-zinc-900 text-zinc-400 border border-zinc-80">
+                  <p className="mt-3 text-zinc-400 text-sm leading-relaxed">{item.description}</p>
+                  
+                  {/* Tech stack */}
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {item.tech.map((t) => (
+                      <span key={t} className="text-xs px-2.5 py-1 rounded bg-zinc-900 text-zinc-350 border border-zinc-85">
                         {t}
                       </span>
                     ))}
                   </div>
                 </div>
-              </div>
-              <div className="p-6">
-                <div className="flex justify-between items-start gap-4">
-                  <div>
-                    <span className="text-[10px] uppercase tracking-wider font-bold text-purple-400">{item.category}</span>
-                    <h3 className="text-lg font-bold text-white mt-1">{item.title}</h3>
-                  </div>
-                  <span className="text-xs font-semibold text-zinc-400 px-2.5 py-1 rounded-full bg-zinc-900 border border-zinc-800">
-                    {item.priceClass}
-                  </span>
-                </div>
-                <p className="mt-3 text-zinc-400 text-sm leading-relaxed">{item.description}</p>
-                
-                {/* Tech stack */}
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {item.tech.map((t) => (
-                    <span key={t} className="text-xs px-2.5 py-1 rounded bg-zinc-900 text-zinc-350 border border-zinc-85">
-                      {t}
-                    </span>
-                  ))}
+
+                {/* Action buttons */}
+                <div className="mt-6 pt-4 border-t border-zinc-900/60 flex gap-3">
+                  {item.demoUrl && (
+                    <a
+                      href={item.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex flex-1 items-center justify-center px-4 py-2.5 rounded-xl text-xs font-semibold bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white transition-all shadow-md shadow-cyan-900/10 hover:shadow-cyan-500/20"
+                    >
+                      🌐 {language === "ms" ? "Lihat Demo" : "Live Preview"}
+                    </a>
+                  )}
+                  <a
+                    href={`https://wa.me/60136632092?text=Hi%20Danial,%20saya%20berminat%20dengan%20projek%20${encodeURIComponent(item.title)}%20(${item.category})%20dan%20mahu%20bertanya%20tentang%20servis%20seperti%20ini.`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`inline-flex items-center justify-center px-4 py-2.5 rounded-xl text-xs font-semibold bg-zinc-900 hover:bg-zinc-850 text-zinc-350 border border-zinc-850 hover:border-zinc-800 transition-all hover:text-white ${
+                      item.demoUrl ? "w-1/2" : "w-full"
+                    }`}
+                  >
+                    {language === "ms" ? "Tanya Servis" : "Inquire Service"}
+                  </a>
                 </div>
               </div>
             </div>
