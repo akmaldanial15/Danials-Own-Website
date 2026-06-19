@@ -52,9 +52,9 @@ export const portfolioItems = {
       category: "App & System Integration",
       image: "/images/portfolio-florist.jpg",
       tags: ["E-Commerce", "Payment Gateway", "Database System"],
-      description: "Sistem e-commerce kustom untuk butik bunga. Menyokong pembayaran kad kredit/FPX, penjejakan status pesanan, pengurusan stok, dan SMS notifikasi pesanan automatik.",
-      tech: ["React", "Express.js", "Stripe API", "MongoDB", "Framer Motion"],
-      priceClass: "Custom System (Harga Atas Rundingan)",
+      description: "Sistem e-commerce kustom dengan panel admin penuh dan sistem tempahan bunga. Menyokong pembayaran kad kredit/FPX, penjejakan status pesanan, pengurusan stok, dan notifikasi pesanan automatik.",
+      tech: ["HTML5", "CSS3", "JavaScript", "SQLite", "Stripe API"],
+      priceClass: "Value System (dari RM1,899)",
       demoUrl: "https://lvinasflorist.pythonanywhere.com/"
     }
   ],
@@ -111,9 +111,9 @@ export const portfolioItems = {
       category: "App & System Integration",
       image: "/images/portfolio-florist.jpg",
       tags: ["E-Commerce", "Payment Gateway", "Database System"],
-      description: "A fully custom e-commerce solution for a florist boutique. Includes credit card/FPX checkout, order tracking, inventory dashboard, and automated SMS alerts.",
-      tech: ["React", "Express.js", "Stripe API", "MongoDB", "Framer Motion"],
-      priceClass: "Custom System (Price by Request)",
+      description: "A complete e-commerce solution featuring a custom admin panel and booking/ordering system. Includes credit card/FPX checkout, order tracking, and automated notifications.",
+      tech: ["HTML5", "CSS3", "JavaScript", "SQLite", "Stripe API"],
+      priceClass: "Value System (from RM1,899)",
       demoUrl: "https://lvinasflorist.pythonanywhere.com/"
     }
   ]
