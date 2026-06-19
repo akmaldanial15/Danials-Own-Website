@@ -6,6 +6,141 @@ import { fastTrackPackages, quickFixes } from "@/data/packages";
 import { generateWhatsAppLink, generateQuickFixLink } from "@/utils/whatsapp";
 import { useTranslation } from "@/hooks/useTranslation";
 
+const packageDetails = {
+  ms: {
+    "budget-basic": {
+      deliverables: [
+        "Laman web kustom 1 Halaman",
+        "Subdomain & Hosting Percuma",
+        "Penyelenggaraan cover ralat teknikal sahaja"
+      ],
+      specs: [
+        { label: "Siap dlm", value: "2-4 Hari" },
+        { label: "Bayaran", value: "100% Upfront" },
+        { label: "Maintenance", value: "Min RM40/bln" },
+        { label: "Kontrak", value: "2 Tahun" },
+        { label: "Suntingan", value: "Tiada" },
+        { label: "Ekspres", value: "Tersedia (Caj extra)" }
+      ]
+    },
+    "budget-standard": {
+      deliverables: [
+        "Website kustom sehingga 4 Halaman",
+        "Termasuk Galeri, Google Maps, & WhatsApp link",
+        "Subdomain & Hosting Percuma"
+      ],
+      specs: [
+        { label: "Siap dlm", value: "2-4 Hari" },
+        { label: "Bayaran", value: "100% Upfront" },
+        { label: "Maintenance", value: "Min RM50/bln" },
+        { label: "Kontrak", value: "2 Tahun" },
+        { label: "Suntingan Asas", value: "6x / Tahun" },
+        { label: "Draf Edits", value: "4x sblm launch" }
+      ]
+    },
+    "budget-advanced": {
+      deliverables: [
+        "Laman web kustom sehingga 7 Halaman",
+        "Sistem Pesanan & Resit Automatik",
+        "Notifikasi pesanan terus ke WhatsApp/Telegram",
+        "Tiada Admin Login Panel"
+      ],
+      specs: [
+        { label: "Siap dlm", value: "2-4 Hari" },
+        { label: "Bayaran", value: "60% Depo / 40% Baki" },
+        { label: "Maintenance", value: "Min RM60/bln" },
+        { label: "Kontrak", value: "1 Tahun" },
+        { label: "Suntingan Asas", value: "6x / Tahun" },
+        { label: "Reka Semula", value: "1x Percuma/yr" }
+      ]
+    },
+    "budget-value": {
+      deliverables: [
+        "Laman web & sistem kustom sehingga 13 Halaman",
+        "Panel Admin Login Kustom (boleh sunting semua)",
+        "Dibina dengan framework & kod stabil",
+        "Ciri keselamatan tambahan disertakan",
+        "Termasuk Galeri, Sistem Pesanan & Resit",
+        "Pesanan masuk automatik ke WhatsApp/Telegram"
+      ],
+      specs: [
+        { label: "Siap dlm", value: "3-5 Hari" },
+        { label: "Bayaran", value: "60% Depo / 40% Baki" },
+        { label: "Maintenance", value: "Min RM60/bln" },
+        { label: "Kontrak", value: "1 Tahun" },
+        { label: "Suntingan Asas", value: "6x / Tahun" },
+        { label: "Reka Semula", value: "1x Percuma/yr" }
+      ]
+    }
+  },
+  en: {
+    "budget-basic": {
+      deliverables: [
+        "1-Page custom website",
+        "Free Subdomain & Hosting",
+        "Maintenance covers technical bug fixes only"
+      ],
+      specs: [
+        { label: "Delivery", value: "2-4 Days" },
+        { label: "Payment", value: "100% Upfront" },
+        { label: "Maintenance", value: "Min RM40/mo" },
+        { label: "Contract", value: "2 Years" },
+        { label: "Basic Edits", value: "None" },
+        { label: "Express", value: "Available (Extra)" }
+      ]
+    },
+    "budget-standard": {
+      deliverables: [
+        "Custom website up to 4 Pages",
+        "Includes Gallery, Google Maps, & WhatsApp link",
+        "Free Subdomain & Hosting"
+      ],
+      specs: [
+        { label: "Delivery", value: "2-4 Days" },
+        { label: "Payment", value: "100% Upfront" },
+        { label: "Maintenance", value: "Min RM50/mo" },
+        { label: "Contract", value: "2 Years" },
+        { label: "Basic Edits", value: "6x / Year" },
+        { label: "Draft Edits", value: "4x before launch" }
+      ]
+    },
+    "budget-advanced": {
+      deliverables: [
+        "Custom website up to 7 Pages",
+        "Ordering System & Automated Receipts",
+        "Order notifications routed to WhatsApp/Telegram",
+        "No Admin Login Panel"
+      ],
+      specs: [
+        { label: "Delivery", value: "2-4 Days" },
+        { label: "Payment", value: "60% Depo / 40% Bal" },
+        { label: "Maintenance", value: "Min RM60/mo" },
+        { label: "Contract", value: "1 Year" },
+        { label: "Basic Edits", value: "6x / Year" },
+        { label: "Redesign", value: "1x Free/yr" }
+      ]
+    },
+    "budget-value": {
+      deliverables: [
+        "Custom website & system up to 13 Pages",
+        "Custom Admin Login Panel (edit almost anything)",
+        "Built with modern framework & clean stable code",
+        "Integrated Security Features included",
+        "Includes Gallery, Ordering System & Receipts",
+        "Order notifications routed to WhatsApp/Telegram"
+      ],
+      specs: [
+        { label: "Delivery", value: "3-5 Days" },
+        { label: "Payment", value: "60% Depo / 40% Bal" },
+        { label: "Maintenance", value: "Min RM60/mo" },
+        { label: "Contract", value: "1 Year" },
+        { label: "Basic Edits", value: "6x / Year" },
+        { label: "Redesign", value: "1x Free/yr" }
+      ]
+    }
+  }
+};
+
 export default function FastTrackServices() {
   const { t, language } = useTranslation();
 
@@ -122,51 +257,85 @@ export default function FastTrackServices() {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {currentPackages.map((pkg) => (
-              <GlowCard key={pkg.id} color="from-cyan-500 to-indigo-500">
-                <div className="space-y-6 flex flex-col justify-between h-full">
-                  <div className="space-y-4">
-                    <div>
-                      <h3 className="text-2xl font-bold text-white">{pkg.name}</h3>
-                      <p className="mt-2 text-zinc-400 text-xs leading-relaxed min-h-[40px]">
-                        {pkg.description}
-                      </p>
-                    </div>
-                    
-                    <div className="flex items-baseline gap-1.5 py-2 border-y border-zinc-900">
-                      <span className="text-xs text-zinc-550 font-medium">{t("fromText")}</span>
-                      <span className="text-3xl font-extrabold text-white">RM{pkg.price}</span>
+            {currentPackages.map((pkg) => {
+              const structured = packageDetails[language][pkg.id as keyof typeof packageDetails["ms"]] || {
+                deliverables: pkg.features,
+                specs: []
+              };
+
+              return (
+                <GlowCard key={pkg.id} color="from-cyan-500 to-indigo-500">
+                  <div className="space-y-5 flex flex-col justify-between h-full">
+                    <div className="space-y-4">
+                      <div>
+                        <h3 className="text-xl font-extrabold text-white tracking-tight">{pkg.name}</h3>
+                        <p className="mt-1.5 text-zinc-400 text-[11px] leading-relaxed line-clamp-3">
+                          {pkg.description}
+                        </p>
+                      </div>
+                      
+                      <div className="flex items-baseline gap-1 py-1.5 border-y border-zinc-900/60">
+                        <span className="text-[10px] text-zinc-550 font-medium">{t("fromText")}</span>
+                        <span className="text-2xl font-black text-white">RM{pkg.price}</span>
+                      </div>
+
+                      {/* Scope & Features Checklist */}
+                      <div className="space-y-2">
+                        <span className="text-[9px] text-zinc-550 font-bold uppercase tracking-wider">
+                          {language === "ms" ? "Fungsi & Skop" : "Scope & Features"}
+                        </span>
+                        <ul className="space-y-2 text-xs text-zinc-350">
+                          {structured.deliverables.map((feature, i) => (
+                            <li key={i} className="flex items-start gap-2">
+                              <svg className="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                              </svg>
+                              <span className="leading-snug">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Specs & Terms Grid */}
+                      {structured.specs.length > 0 && (
+                        <div className="space-y-2 pt-3 border-t border-zinc-900/50">
+                          <span className="text-[9px] text-zinc-550 font-bold uppercase tracking-wider">
+                            {language === "ms" ? "Spesifikasi & Terma" : "Specs & Terms"}
+                          </span>
+                          <div className="grid grid-cols-2 gap-1.5">
+                            {structured.specs.map((spec, i) => (
+                              <div key={i} className="p-2 rounded-xl bg-zinc-950/40 border border-zinc-900/60 flex flex-col justify-center min-h-[44px]">
+                                <span className="text-zinc-550 font-bold uppercase text-[7px] tracking-wider leading-none">
+                                  {spec.label}
+                                </span>
+                                <span className="text-zinc-200 font-extrabold text-[10px] mt-1 leading-tight">
+                                  {spec.value}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
 
-                    <ul className="space-y-3 text-sm text-zinc-350 flex-grow">
-                      {pkg.features.map((feature, i) => (
-                        <li key={i} className="flex items-start gap-2.5">
-                          <svg className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                          </svg>
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="pt-3 border-t border-zinc-900/40">
+                      <a
+                        href={generateWhatsAppLink({
+                          packageName: pkg.name,
+                          priceText: `Mulai RM${pkg.price}`,
+                          totalEstimate: pkg.price
+                        })}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex w-full items-center justify-center px-4 py-2.5 rounded-xl text-xs font-bold bg-cyan-600 hover:bg-cyan-500 text-white transition-all shadow-md shadow-cyan-950/20"
+                      >
+                        {t("btnBookPkg")}
+                      </a>
+                    </div>
                   </div>
-
-                  <div className="pt-4 border-t border-zinc-900/40">
-                    <a
-                      href={generateWhatsAppLink({
-                        packageName: pkg.name,
-                        priceText: `Mulai RM${pkg.price}`,
-                        totalEstimate: pkg.price
-                      })}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex w-full items-center justify-center px-4 py-3 rounded-xl text-sm font-semibold bg-cyan-600 hover:bg-cyan-500 text-white transition-all shadow-md shadow-cyan-950/20"
-                    >
-                      {t("btnBookPkg")}
-                    </a>
-                  </div>
-                </div>
-              </GlowCard>
-            ))}
+                </GlowCard>
+              );
+            })}
           </div>
         </div>
 
