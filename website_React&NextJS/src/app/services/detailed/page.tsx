@@ -13,7 +13,7 @@ export default function DetailedServices() {
   const currentBespoke = bespokePackages[language];
 
   return (
-    <div className="relative min-h-screen bg-zinc-950 text-zinc-100 py-16 px-4 md:py-24 md:px-8 overflow-hidden">
+    <div className="relative min-h-screen bg-transparent text-zinc-100 py-16 px-4 md:py-24 md:px-8 overflow-hidden">
       {/* Glow ambient background */}
       <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] rounded-full glow-blur-purple z-0 pointer-events-none" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[55%] h-[55%] rounded-full glow-blur-cyan z-0 pointer-events-none" />

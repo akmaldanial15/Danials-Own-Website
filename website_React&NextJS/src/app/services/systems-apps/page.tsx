@@ -77,7 +77,7 @@ export default function SystemsAppsServices() {
   ];
 
   return (
-    <div className="relative min-h-screen bg-zinc-950 text-zinc-100 py-16 px-4 md:py-24 md:px-8 overflow-hidden">
+    <div className="relative min-h-screen bg-transparent text-zinc-100 py-16 px-4 md:py-24 md:px-8 overflow-hidden">
       {/* Glow ambient background */}
       <div className="absolute top-[-20%] right-[-10%] w-[60%] h-[60%] rounded-full glow-blur-cyan z-0 pointer-events-none" />
       <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full glow-blur-purple z-0 pointer-events-none" />

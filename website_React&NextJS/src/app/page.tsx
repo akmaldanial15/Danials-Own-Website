@@ -14,7 +14,7 @@ export default function Home() {
   const featuredPortfolio = portfolioItems[language].slice(0, 2);
 
   return (
-    <div className="relative min-h-screen flex flex-col bg-zinc-950 overflow-hidden pb-24">
+    <div className="relative min-h-screen flex flex-col bg-transparent overflow-hidden pb-24">
       {/* Background glow effects */}
       <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full glow-blur-purple z-0 pointer-events-none" />
       <div className="absolute bottom-[20%] right-[-10%] w-[50%] h-[50%] rounded-full glow-blur-cyan z-0 pointer-events-none" />

@@ -38,7 +38,7 @@ function GalleryContent() {
   }, [filter, currentPortfolio]);
 
   return (
-    <div className="relative min-h-screen bg-zinc-950 text-zinc-100 py-16 px-4 md:py-24 md:px-8 overflow-hidden">
+    <div className="relative min-h-screen bg-transparent text-zinc-100 py-16 px-4 md:py-24 md:px-8 overflow-hidden">
       {/* Ambient glowing backdrops (Huly style) */}
       <div className="absolute top-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full glow-blur-purple z-0 pointer-events-none opacity-40" />
       <div className="absolute bottom-[-10%] left-[-10%] w-[60%] h-[60%] rounded-full glow-blur-cyan z-0 pointer-events-none opacity-30" />
