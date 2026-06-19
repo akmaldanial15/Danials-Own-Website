@@ -349,17 +349,27 @@ export const bespokePackages = {
 
 export const addOns = {
   ms: [
+    { id: "extra-page", name: "Halaman Tambahan", price: 100, type: "sekali-bayar" },
     { id: "email", name: "Setup E-mel Perniagaan", price: 150, type: "sekali-bayar" },
     { id: "seo", name: "Naik Taraf SEO Asas", price: 200, type: "sekali-bayar" },
     { id: "maintenance", name: "Penyelenggaraan Bulanan", price: 80, type: "bulanan" },
     { id: "gateway", name: "Setup Payment Gateway", price: 500, type: "sekali-bayar" },
+    { id: "security", name: "Sistem Keselamatan & Firewall", price: 300, type: "sekali-bayar" },
+    { id: "api-integration", name: "Integrasi API Pihak Ketiga", price: 400, type: "sekali-bayar" },
+    { id: "backup-system", name: "Sistem Backup Awan Automatik", price: 250, type: "sekali-bayar" },
+    { id: "multilingual", name: "Sistem Dwi-Bahasa (Multi-Lang)", price: 300, type: "sekali-bayar" },
     { id: "ai-agents", name: "Ejen & Robot Pintar AI", price: 1000, type: "sekali-bayar" }
   ],
   en: [
+    { id: "extra-page", name: "Extra Page", price: 100, type: "one-time" },
     { id: "email", name: "Business Email Setup", price: 150, type: "one-time" },
     { id: "seo", name: "Basic SEO Upgrade", price: 200, type: "one-time" },
     { id: "maintenance", name: "Monthly Maintenance", price: 80, type: "monthly" },
     { id: "gateway", name: "Payment Gateway Setup", price: 500, type: "one-time" },
+    { id: "security", name: "Secured Firewall & SSL Hardening", price: 300, type: "one-time" },
+    { id: "api-integration", name: "Custom API & Webhook Integration", price: 400, type: "one-time" },
+    { id: "backup-system", name: "Automated Cloud Backup System", price: 250, type: "one-time" },
+    { id: "multilingual", name: "Multi-Language (Bilingual) Integration", price: 300, type: "one-time" },
     { id: "ai-agents", name: "AI Tools & Autonomous Agents", price: 1000, type: "one-time" }
   ]
 };
