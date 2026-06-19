@@ -21,7 +21,7 @@ const bespokeDetails = {
         { label: "Siap dlm", value: "7-14 Hari" },
         { label: "Semakan", value: "2x Revisions" },
         { label: "Sokongan", value: "14 Hari Waranti" },
-        { label: "Teknologi", value: "HTML/CSS/JS" },
+        { label: "Teknologi", value: "Framework / Vanilla (Pilihan)" },
         { label: "Bayaran", value: "35% / 35% / 30%" },
         { label: "SEO & Kelajuan", value: "Optimum Asas" }
       ]
@@ -39,7 +39,7 @@ const bespokeDetails = {
         { label: "Siap dlm", value: "14-21 Hari" },
         { label: "Semakan", value: "4x Revisions" },
         { label: "Sokongan", value: "30 Hari Waranti" },
-        { label: "Teknologi", value: "Clean Framework" },
+        { label: "Teknologi", value: "Framework / Vanilla (Pilihan)" },
         { label: "Bayaran", value: "35% / 35% / 30%" },
         { label: "SEO & Kelajuan", value: "Optimum Premium" }
       ]
@@ -57,7 +57,7 @@ const bespokeDetails = {
         { label: "Siap dlm", value: "21-30 Hari" },
         { label: "Semakan", value: "7x Revisions" },
         { label: "Sokongan", value: "60 Hari Waranti" },
-        { label: "Teknologi", value: "NextJS / React" },
+        { label: "Teknologi", value: "Framework / Vanilla (Pilihan)" },
         { label: "Bayaran", value: "35% / 35% / 30%" },
         { label: "SEO & Kelajuan", value: "Optimum Maksimum" }
       ]
@@ -76,7 +76,7 @@ const bespokeDetails = {
         { label: "Delivery", value: "7-14 Days" },
         { label: "Revisions", value: "2 Sessions" },
         { label: "Support", value: "14 Days Warranty" },
-        { label: "Technology", value: "HTML/CSS/JS" },
+        { label: "Technology", value: "Framework / Vanilla (Your Choice)" },
         { label: "Payment", value: "35% / 35% / 30%" },
         { label: "SEO & Speed", value: "Basic Optimized" }
       ]
@@ -94,7 +94,7 @@ const bespokeDetails = {
         { label: "Delivery", value: "14-21 Days" },
         { label: "Revisions", value: "4 Sessions" },
         { label: "Support", value: "30 Days Warranty" },
-        { label: "Technology", value: "Clean Framework" },
+        { label: "Technology", value: "Framework / Vanilla (Your Choice)" },
         { label: "Payment", value: "35% / 35% / 30%" },
         { label: "SEO & Speed", value: "Premium Optimized" }
       ]
@@ -112,7 +112,7 @@ const bespokeDetails = {
         { label: "Delivery", value: "21-30 Days" },
         { label: "Revisions", value: "7 Sessions" },
         { label: "Support", value: "60 Days Warranty" },
-        { label: "Technology", value: "NextJS / React" },
+        { label: "Technology", value: "Framework / Vanilla (Your Choice)" },
         { label: "Payment", value: "35% / 35% / 30%" },
         { label: "SEO & Speed", value: "Max Optimized" }
       ]
