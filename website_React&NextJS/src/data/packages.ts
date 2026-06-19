@@ -27,9 +27,10 @@ export const fastTrackPackages = {
         "Website kustom sehingga 4 Halaman",
         "Termasuk Galeri, Google Maps, & Hubungi WhatsApp",
         "Wajib ambil pelan penyelenggaraan: Minima RM50/bulan",
+        "Termasuk 4 kali suntingan / kemas kini asas (sebelum pelancaran/release)",
+        "Termasuk 6 kali suntingan / kemas kini asas setahun (di bawah pelan maintenance)",
         "Hosting & Domain Kustom: Pilihan (Optional) tetapi sangat disyorkan",
         "Subdomain & Hosting Percuma disediakan (jika tiada domain sendiri)",
-        "Penyelenggaraan Premium RM75/bulan (termasuk domain kustom & hosting)",
         "Siap dalam 2 - 4 hari bekerja",
         "Penghantaran ekspres (< 24 jam) dicaj tambahan"
       ]
@@ -63,9 +64,10 @@ export const fastTrackPackages = {
         "Custom website up to 4 Pages",
         "Includes Gallery, Google Maps, & WhatsApp link",
         "Required Maintenance Plan: Minimum RM50/month",
+        "Includes 4 basic edits/updates (before launch/release)",
+        "Includes 6 basic edits/updates per year (under standard maintenance)",
         "Custom Domain & Hosting: Optional but highly recommended",
         "Free Subdomain & Hosting provided (if no custom domain is used)",
-        "Premium Maintenance RM75/month (includes custom domain & hosting)",
         "Delivered within 2 - 4 working days",
         "Express delivery (< 24 hours) available for extra fee"
       ]
