@@ -112,7 +112,7 @@ export default function WebsiteFixServices() {
           </div>
 
           {/* Glowing gradient heading: Green -> Blue -> Purple */}
-          <h1 className="text-4xl font-black text-white tracking-tight sm:text-6xl bg-gradient-to-r from-cyan-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent text-glow leading-tight select-none">
+          <h1 className="text-4xl font-black tracking-tight sm:text-6xl bg-gradient-to-r from-cyan-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent text-glow leading-tight select-none">
             {isMs ? "Pembaikan & Naik Taraf Website" : "Website Fix & Upgrade"}
           </h1>
 
