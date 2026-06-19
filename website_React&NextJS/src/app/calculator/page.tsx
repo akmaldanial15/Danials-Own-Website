@@ -12,6 +12,7 @@ export default function PricingCalculator() {
   const [selectedPkgId, setSelectedPkgId] = useState("basic");
   const [selectedAddOnIds, setSelectedAddOnIds] = useState<string[]>([]);
   const [extraPages, setExtraPages] = useState(0);
+  const [maintenanceCycle, setMaintenanceCycle] = useState<"monthly" | "yearly">("monthly");
 
   // Synchronize first package selection when switching tabs
   const handleTabChange = (tab: "budget" | "bespoke") => {
@@ -57,7 +58,9 @@ export default function PricingCalculator() {
   }, [extraPages]);
 
   const addOnsTotal = useMemo(() => {
-    return activeAddOns.reduce((sum, addon) => sum + addon.price, 0);
+    return activeAddOns
+      .filter(addon => addon.id !== "maintenance")
+      .reduce((sum, addon) => sum + addon.price, 0);
   }, [activeAddOns]);
 
   const oneTimeTotal = useMemo(() => {
@@ -123,13 +126,18 @@ export default function PricingCalculator() {
       // Detailed packages
       const hasMaintenanceAddon = selectedAddOnIds.includes("maintenance");
       if (hasMaintenanceAddon) {
-        fee = 80;
-        term = language === "ms" ? "Bulanan (Fleksibel)" : "Monthly (Flexible)";
+        if (maintenanceCycle === "monthly") {
+          fee = 80;
+          term = language === "ms" ? "Bulanan (Fleksibel)" : "Monthly (Flexible)";
+        } else {
+          fee = 700;
+          term = language === "ms" ? "Tahunan (Fleksibel)" : "Yearly (Flexible)";
+        }
       }
     }
 
     return { fee, term, isMandatory };
-  }, [currentPackage, selectedAddOnIds, language]);
+  }, [currentPackage, selectedAddOnIds, maintenanceCycle, language]);
 
   // Generate the WhatsApp URL
   const whatsAppUrl = useMemo(() => {
@@ -145,10 +153,14 @@ export default function PricingCalculator() {
     // Format description text inside URL parameters
     const customSummary = [];
     if (maintenanceInfo.fee > 0) {
+      const isBudget = currentPackage.id.startsWith("budget-");
+      const cycleUnit = isBudget || maintenanceCycle === "monthly"
+        ? (language === "ms" ? "bulan" : "month")
+        : (language === "ms" ? "tahun" : "year");
       customSummary.push(
         language === "ms"
-          ? `Penyelenggaraan: RM${maintenanceInfo.fee}/bulan (${maintenanceInfo.term})`
-          : `Maintenance: RM${maintenanceInfo.fee}/month (${maintenanceInfo.term})`
+          ? `Penyelenggaraan: RM${maintenanceInfo.fee}/${cycleUnit} (${maintenanceInfo.term})`
+          : `Maintenance: RM${maintenanceInfo.fee}/${cycleUnit} (${maintenanceInfo.term})`
       );
     }
     customSummary.push(
@@ -163,7 +175,13 @@ export default function PricingCalculator() {
       selectedAddOns: [
         ...activeAddOns.map(addon => {
           if (addon.id === "maintenance") {
-            return { ...addon, name: `${addon.name} (RM80/bln)` };
+            return {
+              ...addon,
+              name: language === "ms"
+                ? `Penyelenggaraan (${maintenanceCycle === "monthly" ? "RM80/bln" : "RM700/thn"})`
+                : `Maintenance (${maintenanceCycle === "monthly" ? "RM80/mo" : "RM700/yr"})`,
+              price: maintenanceCycle === "monthly" ? 80 : 700
+            };
           }
           return addon;
         }),
@@ -172,7 +190,7 @@ export default function PricingCalculator() {
       totalEstimate: oneTimeTotal,
       customText: customSummary.join("\n")
     });
-  }, [currentPackage, activeAddOns, extraPages, oneTimeTotal, paymentMilestones, maintenanceInfo, language]);
+  }, [currentPackage, activeAddOns, extraPages, oneTimeTotal, paymentMilestones, maintenanceInfo, maintenanceCycle, language]);
 
   // Calculate daily equivalent value for project marketing
   const dailyValue = useMemo(() => {
@@ -366,22 +384,63 @@ export default function PricingCalculator() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {addOns[language].map((addon) => {
                     const isChecked = selectedAddOnIds.includes(addon.id);
+                    const isMaintenance = addon.id === "maintenance";
+                    const displayPrice = isMaintenance
+                      ? (maintenanceCycle === "monthly" ? 80 : 700)
+                      : addon.price;
+                    const displayType = isMaintenance
+                      ? (maintenanceCycle === "monthly"
+                          ? (language === "ms" ? "bulanan" : "monthly")
+                          : (language === "ms" ? "tahunan" : "yearly"))
+                      : addon.type.replace("-", " ");
+
                     return (
-                      <button
+                      <div
                         key={addon.id}
                         onClick={() => handleAddOnToggle(addon.id)}
-                        className={`p-4 rounded-xl text-left border transition-all flex items-center justify-between gap-4 w-full ${
+                        className={`p-4 rounded-xl text-left border transition-all flex items-center justify-between gap-4 w-full cursor-pointer ${
                           isChecked
                             ? "bg-purple-950/15 border-purple-500/40 shadow-[0_0_10px_rgba(168,85,247,0.03)]"
                             : "bg-zinc-900/30 border-zinc-900 hover:border-zinc-800"
                         }`}
                       >
-                        <div className="space-y-0.5 pr-2">
+                        <div className="space-y-0.5 pr-2 flex-1">
                           <p className="text-xs font-semibold text-zinc-200 leading-tight">{addon.name}</p>
-                          <p className="text-[9px] text-zinc-400 uppercase tracking-wider font-bold">{addon.type.replace("-", " ")}</p>
+                          <p className="text-[9px] text-zinc-400 uppercase tracking-wider font-bold">{displayType}</p>
+                          
+                          {/* Maintenance Sub-Toggle */}
+                          {isMaintenance && isChecked && (
+                            <div 
+                              className="mt-2 inline-flex gap-1 bg-zinc-950/80 p-0.5 rounded-lg border border-zinc-900"
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              <button
+                                type="button"
+                                onClick={() => setMaintenanceCycle("monthly")}
+                                className={`px-2 py-0.5 rounded text-[8px] font-bold uppercase transition-all cursor-pointer ${
+                                  maintenanceCycle === "monthly"
+                                    ? "bg-purple-600 text-white"
+                                    : "text-zinc-400 hover:text-zinc-200"
+                                }`}
+                              >
+                                {language === "ms" ? "Bulanan" : "Monthly"}
+                              </button>
+                              <button
+                                type="button"
+                                onClick={() => setMaintenanceCycle("yearly")}
+                                className={`px-2 py-0.5 rounded text-[8px] font-bold uppercase transition-all cursor-pointer ${
+                                  maintenanceCycle === "yearly"
+                                    ? "bg-purple-600 text-white"
+                                    : "text-zinc-400 hover:text-zinc-200"
+                                }`}
+                              >
+                                {language === "ms" ? "Tahunan (Jimat)" : "Yearly (Save)"}
+                              </button>
+                            </div>
+                          )}
                         </div>
                         <div className="flex items-center gap-2.5 shrink-0">
-                          <span className="text-xs font-bold text-purple-400">+RM{addon.price}</span>
+                          <span className="text-xs font-bold text-purple-400">+RM{displayPrice}</span>
                           <div className={`w-4 h-4 rounded border flex items-center justify-center transition-colors ${
                             isChecked 
                               ? "border-purple-400 bg-purple-600" 
@@ -394,7 +453,7 @@ export default function PricingCalculator() {
                             )}
                           </div>
                         </div>
-                      </button>
+                      </div>
                     );
                   })}
                 </div>
@@ -431,15 +490,17 @@ export default function PricingCalculator() {
                   )}
 
                   {/* Add-ons List */}
-                  {activeAddOns.length > 0 && (
+                  {activeAddOns.filter(addon => addon.id !== "maintenance").length > 0 && (
                     <div className="border-t border-zinc-900/50 pt-3 space-y-2">
                       <p className="text-[10px] text-zinc-400 font-bold uppercase tracking-wider">{t("summaryAddons")}</p>
-                      {activeAddOns.map((addon) => (
-                        <div key={addon.id} className="flex justify-between items-center text-xs text-zinc-400">
-                          <span>{addon.name}</span>
-                          <span className="font-medium text-zinc-200">+RM{addon.price}</span>
-                        </div>
-                      ))}
+                      {activeAddOns
+                        .filter(addon => addon.id !== "maintenance")
+                        .map((addon) => (
+                          <div key={addon.id} className="flex justify-between items-center text-xs text-zinc-400">
+                            <span>{addon.name}</span>
+                            <span className="font-medium text-zinc-200">+RM{addon.price}</span>
+                          </div>
+                        ))}
                     </div>
                   )}
 
@@ -453,14 +514,16 @@ export default function PricingCalculator() {
                     </div>
                   </div>
 
-                  {/* Monthly Maintenance segment if applicable */}
+                  {/* Maintenance segment if applicable */}
                   {maintenanceInfo.fee > 0 && (
                     <div className="p-3 rounded-xl bg-purple-500/5 border border-purple-500/10 space-y-1">
                       <div className="flex justify-between items-center text-xs">
                         <span className="font-bold text-purple-400">
-                          {language === "ms" ? "Penyelenggaraan Bulanan:" : "Monthly Maintenance:"}
+                          {language === "ms" ? "Penyelenggaraan:" : "Maintenance:"}
                         </span>
-                        <span className="font-bold text-white">RM{maintenanceInfo.fee}/bln</span>
+                        <span className="font-bold text-white">
+                          RM{maintenanceInfo.fee}/{currentPackage.id.startsWith("budget-") || maintenanceCycle === "monthly" ? (language === "ms" ? "bln" : "mo") : (language === "ms" ? "thn" : "yr")}
+                        </span>
                       </div>
                       <p className="text-[10px] text-zinc-400 leading-none font-medium">
                         * {maintenanceInfo.term} {maintenanceInfo.isMandatory ? `(${language === "ms" ? "Wajib" : "Mandatory"})` : ""}
