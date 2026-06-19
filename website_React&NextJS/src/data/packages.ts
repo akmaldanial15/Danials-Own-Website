@@ -49,7 +49,7 @@ export const fastTrackPackages = {
         "Wajib ambil pelan penyelenggaraan: Minima RM60/bulan (Kontrak 1 tahun sahaja)",
         "Hosting & Domain Kustom: Pilihan dari RM78/bulan (sekali pelan penyelenggaraan)",
         "Termasuk 4 kali suntingan / kemas kini asas (sebelum pelancaran)",
-        "Percuma 10 kali suntingan asas & 1 kali reka semula (redesign) ringan setahun",
+        "Percuma 6 kali suntingan asas & 1 kali reka semula (redesign) ringan setahun",
         "Siap dalam 2 - 4 hari bekerja",
         "Penghantaran ekspres (< 24 jam) dicaj tambahan"
       ]
@@ -105,7 +105,7 @@ export const fastTrackPackages = {
         "Required Maintenance Plan: Minimum RM60/month (1-year contract only)",
         "Custom Domain & Hosting: Option from RM78/month (including maintenance)",
         "Includes 4 basic edits/updates (before launch/release)",
-        "Includes 10 basic edits/updates & 1 free light redesign per year",
+        "Includes 6 basic edits/updates & 1 free light redesign per year",
         "Delivered within 2 - 4 working days",
         "Express delivery (< 24 hours) available for extra fee"
       ]
