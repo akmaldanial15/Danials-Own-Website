@@ -339,52 +339,71 @@ export default function FastTrackServices() {
           </div>
         </div>
 
-        {/* Bug Fixing Price Guide */}
-        <div className="space-y-10">
+
+        {/* App & Template Systems Section (Coming Soon) */}
+        <div className="space-y-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-zinc-900 pb-3">
             <h2 className="text-2xl font-bold text-white flex items-center gap-3">
               <span className="w-2 h-6 bg-purple-500 rounded"></span>
-              {t("fixesHeader")}
+              {language === "ms" ? "Sistem App & Templat Kustom" : "Custom App & Template Systems"}
             </h2>
-            <span className="text-xs text-zinc-400 font-semibold bg-zinc-900 px-3 py-1 rounded-full border border-zinc-850">
-              Basic Check: FREE
+            <span className="text-xs text-purple-400 font-bold bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/20 uppercase tracking-wider animate-pulse">
+              {language === "ms" ? "Akan Datang" : "Coming Soon"}
             </span>
           </div>
 
-          <p className="text-zinc-400 text-sm max-w-3xl leading-relaxed">
-            {t("fixesDesc")}
-          </p>
+          <div className="p-8 md:p-10 rounded-3xl bg-zinc-900/20 border border-zinc-900 max-w-4xl mx-auto relative overflow-hidden flex flex-col md:flex-row gap-8 items-center">
+            {/* Ambient subtle glow background */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] h-[250px] bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {currentFixes.map((fix) => (
-              <div 
-                key={fix.id} 
-                className="p-5 rounded-2xl bg-zinc-950 border border-zinc-900 hover:border-zinc-800 transition-all flex flex-col justify-between"
+            <div className="flex-1 space-y-4 text-left">
+              <h3 className="text-xl font-extrabold text-zinc-150">
+                {language === "ms" ? "Sistem Templat Boleh Diubah Suai" : "Fully Customizable Template Builds"}
+              </h3>
+              <p className="text-xs sm:text-sm text-zinc-405 leading-relaxed">
+                {language === "ms" 
+                  ? "Penyelesaian pantas yang fleksibel. Sesuai untuk membina sistem tersuai sama ada berasaskan laman web (web-based) mahupun bukan web (non-web systems). Direka khas agar boleh diubah suai dengan mudah mengikut keperluan operasi unik perniagaan anda."
+                  : "A highly flexible and rapid system build. Perfect for implementing custom systems that can run either as a standard web platform or non-web application. Fully tailored to match your specific operational guidelines."}
+              </p>
+              
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-zinc-350 pt-2">
+                <li className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-purple-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>{language === "ms" ? "Sistem Laman Web (Web Systems)" : "Web-Based Systems"}</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-purple-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>{language === "ms" ? "Aplikasi Bukan Web (Non-Web Apps)" : "Non-Web Operations"}</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-purple-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>{language === "ms" ? "Struktur Templat Kustom" : "Customizable Blueprints"}</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-purple-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>{language === "ms" ? "Integrasi Pangkalan Data SQLite/Lite" : "SQLite / Lightweight DB Sync"}</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="shrink-0 w-full sm:w-auto">
+              <a
+                href="https://wa.me/60136632092?text=Hai%20Danial,%20saya%20berminat%20nak%20bincang%20pasal%20Sistem%20App/Templat%20Kustom."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-full sm:w-auto items-center justify-center px-5 py-3 rounded-xl text-xs font-bold bg-purple-600 hover:bg-purple-500 text-white transition-all shadow-md shadow-purple-950/20 animate-pulse"
               >
-                <div className="space-y-2">
-                  <div className="flex justify-between items-start gap-4">
-                    <h4 className="text-base font-bold text-zinc-150">{fix.name}</h4>
-                    <span className="text-xs font-bold text-purple-400 bg-purple-500/10 px-2.5 py-0.5 rounded border border-purple-500/10 shrink-0">
-                      RM{fix.price === 0 ? "FREE" : fix.price + "+"}
-                    </span>
-                  </div>
-                  <p className="text-xs text-zinc-450 leading-relaxed min-h-[48px]">
-                    {fix.desc}
-                  </p>
-                </div>
-                
-                <div className="pt-4 border-t border-zinc-900/50 mt-4">
-                  <a
-                    href={generateQuickFixLink(fix.name, fix.price)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex w-full items-center justify-center px-3.5 py-2 rounded-xl text-xs font-semibold bg-zinc-900 hover:bg-zinc-850 text-zinc-300 border border-zinc-850 transition-all hover:text-white"
-                  >
-                    {t("btnDiscussFix")}
-                  </a>
-                </div>
-              </div>
-            ))}
+                {language === "ms" ? "Bincang Idea Projek" : "Discuss Project Idea"}
+              </a>
+            </div>
           </div>
         </div>
 
