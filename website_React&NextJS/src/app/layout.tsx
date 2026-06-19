@@ -24,6 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="ms"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-transparent text-zinc-100 font-sans">
         <LanguageProvider>
