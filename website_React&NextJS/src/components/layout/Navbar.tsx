@@ -159,10 +159,10 @@ export default function Navbar() {
             </button>
 
             <div className="relative group">
-              <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-500 opacity-30 blur-[2px] group-hover:opacity-100 transition duration-500" />
+              <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-500 opacity-40 blur-[3px] group-hover:opacity-90 transition duration-500" />
               <Link
                 href="/calculator"
-                className="relative block px-4 py-2 rounded-full text-xs font-extrabold bg-zinc-950 text-white border border-zinc-800/80 group-hover:border-zinc-700 transition duration-300 shadow-[0_4px_12px_rgba(0,0,0,0.5)] cursor-pointer"
+                className="relative block px-4 py-2 rounded-full text-xs font-black bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-500 text-zinc-950 hover:from-purple-400 hover:via-indigo-400 hover:to-cyan-400 border-none transition duration-300 shadow-[0_4px_15px_rgba(124,58,237,0.2)] cursor-pointer"
               >
                 {t("navButton")}
               </Link>
@@ -289,11 +289,11 @@ export default function Navbar() {
 
           <div className="pt-4 pb-2 px-3">
             <div className="relative group">
-              <div className="absolute -inset-0.5 rounded-xl bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-500 opacity-20 blur-[2px]" />
+              <div className="absolute -inset-0.5 rounded-xl bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-500 opacity-30 blur-[3px]" />
               <Link
                 href="/calculator"
                 onClick={() => setIsOpen(false)}
-                className="relative block w-full py-3 text-center rounded-xl text-sm font-bold bg-zinc-950 text-white border border-zinc-850"
+                className="relative block w-full py-3 text-center rounded-xl text-sm font-extrabold bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-500 text-zinc-950 border-none transition duration-300"
               >
                 {t("navButton")}
               </Link>
