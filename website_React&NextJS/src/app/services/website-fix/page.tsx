@@ -405,6 +405,126 @@ export default function WebsiteFixServices() {
     }
   ];
 
+  // Upgrade Packages Data
+  const upgradePackages = [
+    {
+      id: "framework",
+      title: isMs ? "Migrasi Framework (Next.js/React)" : "Next.js & React Framework Migration",
+      badge: isMs ? "Prestasi Ekstrim" : "Extreme Performance",
+      price: "1,800",
+      glowColor: "from-cyan-500 via-blue-500 to-indigo-600",
+      activeBorder: "border-cyan-500",
+      desc: isMs
+        ? "Tukar laman web lama anda (WordPress, PHP, static HTML) kepada framework Next.js atau React yang moden. Menawarkan kepantasan loading bawah 1 saat, SEO terbaik dengan rendering pelayan (SSR), dan kos hosting bulanan percuma."
+        : "Migrate your slow or outdated website (WordPress, PHP, static HTML) into a cutting-edge Next.js or React framework. Gain sub-second loading speeds, advanced Server-Side Rendering (SSR) SEO, and save on hosting costs.",
+      highlights: isMs
+        ? [
+            "Kepantasan loading luar biasa (sub-second loading)",
+            "SEO automatik & mesra carian Google",
+            "Hosting percuma & selamat (Vercel/Netlify)",
+            "Struktur kod moden mudah dikembangkan"
+          ]
+        : [
+            "Sub-second core web vitals load speeds",
+            "Built-in Server-Side Rendering (SSR) SEO",
+            "Deploy to stable serverless hosting (Vercel/Netlify)",
+            "Modular and future-proof codebase architecture"
+          ],
+      icon: (className: string) => (
+        <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+        </svg>
+      )
+    },
+    {
+      id: "visual",
+      title: isMs ? "Transformasi Rekabentuk UI/UX" : "Visual UI/UX Transformation",
+      badge: isMs ? "Aestetik Premium" : "Premium Aesthetic",
+      price: "1,500",
+      glowColor: "from-purple-500 via-pink-500 to-rose-500",
+      activeBorder: "border-purple-500",
+      desc: isMs
+        ? "Ubah rekabentuk website yang kelihatan murah atau lapuk kepada antaramuka bertaraf dunia. Menggunakan visual premium seperti glassmorphism, warna tersuai, susun atur responsif telefon pintar, dan animasi mikro interaktif."
+        : "Reconstruct your outdated website UI into a gorgeous, premium digital experience. We design bespoke interfaces featuring custom typography, modern glassmorphism, fluid micro-animations, and full mobile optimization.",
+      highlights: isMs
+        ? [
+            "Rekabentuk kustom tersuai sepenuhnya (tiada templat)",
+            "Animasi mikro & kesan hover interaktif",
+            "Navigasi mesra pengguna (tinggi jualan)",
+            "Sokongan mod gelap/cerah jika diperlukan"
+          ]
+        : [
+            "100% custom-crafted design (zero generic templates)",
+            "Smooth hover effects & custom micro-animations",
+            "Conversion-focused intuitive user flows",
+            "Dark/Light mode support toggle configurations"
+          ],
+      icon: (className: string) => (
+        <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 00-2 2z" />
+        </svg>
+      )
+    },
+    {
+      id: "portal",
+      title: isMs ? "Integrasi Sistem Dinamik & CMS" : "Dynamic Database & Custom CMS",
+      badge: isMs ? "Keupayaan Backend" : "Backend Capabilities",
+      price: "2,200",
+      glowColor: "from-emerald-500 via-teal-500 to-cyan-500",
+      activeBorder: "border-emerald-500",
+      desc: isMs
+        ? "Tingkatkan fungsi website dengan pangkalan data tersuai dan log masuk admin yang selamat. Sesuai untuk menambah/menyunting berita, mengurus galeri gambar, melihat data pelanggan, atau memproses borang pendaftaran tanpa mengubah kod."
+        : "Supercharge your website with robust database integrations and a secure custom admin panel. Edit blog posts, manage portfolio galleries, view client submissions, or dynamic lists in real-time without writing HTML or touching code.",
+      highlights: isMs
+        ? [
+            "Pangkalan data laju & selamat (SQLite, MySQL)",
+            "Sistem log masuk pengguna & kebenaran peranan",
+            "Panel kawalan admin (CMS) mesra pengguna",
+            "Eksport data borang & laporan ke Excel/CSV"
+          ]
+        : [
+            "Ultra-secure database architecture (SQLite, MySQL)",
+            "Robust user log-in credentials & role managers",
+            "Bespoke admin dashboard custom content manager",
+            "One-click data table export options (CSV/Excel)"
+          ],
+      icon: (className: string) => (
+        <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.58 4 8 4s8-1.79 8-4M4 7c0-2.21 3.58-4 8-4s8 1.79 8 4m0 5c0 2.21-3.58 4-8 4s-8-1.79-8-4" />
+        </svg>
+      )
+    },
+    {
+      id: "ecommerce",
+      title: isMs ? "Gerbang Pembayaran & E-Commerce" : "Payment Gateways & E-Commerce",
+      badge: isMs ? "Automasi Jualan" : "Sales Automation",
+      price: "2,500",
+      glowColor: "from-orange-500 via-amber-500 to-yellow-500",
+      activeBorder: "border-orange-500",
+      desc: isMs
+        ? "Tukar website anda menjadi sistem jualan automatik 24/7. Hubungkan gerbang pembayaran popular tempatan/antarabangsa seperti FPX online banking, Stripe, ToyyibPay, atau Billplz beserta sistem troli belian."
+        : "Transform your website into a 24/7 automated sales channel. Integrate local & international payment gateways like Stripe, FPX online banking, ToyyibPay, or Billplz with a clean, conversion-optimized shopping cart system.",
+      highlights: isMs
+        ? [
+            "Penerimaan pembayaran automatik FPX & Kad",
+            "Sistem troli & tempahan lancar (checkout flow)",
+            "Automasi notifikasi resit e-mel & WhatsApp",
+            "Panel pengurusan pesanan & status penghantaran"
+          ]
+        : [
+            "Seamless checkout using FPX & Card gateways",
+            "Premium cart system & interactive checkout interfaces",
+            "Automated order notification alerts (Email/WhatsApp)",
+            "Order tracking & invoice generation panel"
+          ],
+      icon: (className: string) => (
+        <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+      )
+    }
+  ];
+
   // Active Issue Object
   const activeIssue = diagnosticIssues.find((issue) => issue.id === activeIssueId) || diagnosticIssues[0];
 
@@ -646,7 +766,7 @@ export default function WebsiteFixServices() {
                     href={generateQuickFixLink(activeIssue.title, parseFloat(activeIssue.price.replace(/[^0-9.]/g, "")) || 0)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-xs font-black bg-gradient-to-r from-cyan-600 to-cyan-700 hover:from-cyan-500 hover:to-cyan-600 text-zinc-950 transition-all duration-300 shadow-[0_4px_15px_rgba(6,182,212,0.15)] hover:shadow-[0_4px_25px_rgba(6,182,212,0.25)] shrink-0 cursor-pointer"
+                    className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-xs font-black bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-400 hover:to-cyan-500 text-zinc-950 transition-all duration-300 shadow-[0_4px_15px_rgba(6,182,212,0.15)] hover:shadow-[0_4px_25px_rgba(6,182,212,0.25)] shrink-0 cursor-pointer"
                   >
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.57 1.978 14.1 1.953 11.47 1.951 6.037 1.951 1.61 6.32 1.607 11.75c-.001 1.632.455 3.222 1.32 4.629l-.995 3.635 3.715-.96z" />
@@ -719,7 +839,171 @@ export default function WebsiteFixServices() {
           </div>
         </div>
 
-        {/* 3. 4-STEP PROCESS TIMELINE INFOGRAPHIC */}
+        {/* 3. WEBSITE UPGRADE & MODERNIZATION HUB */}
+        <div className="space-y-12">
+          <div className="text-center md:text-left space-y-2">
+            <h2 className="text-2xl font-extrabold text-white flex items-center justify-center md:justify-start gap-2">
+              <span className="w-1.5 h-6 bg-cyan-500 rounded"></span>
+              {isMs ? "Pemodenan & Naik Taraf Website" : "Website Upgrade & Modernization"}
+            </h2>
+            <p className="text-xs sm:text-sm text-zinc-450">
+              {isMs
+                ? "Bawa laman web lama anda ke era moden dengan framework berprestasi tinggi, reka bentuk premium, database, dan integrasi automatik."
+                : "Transform legacy sites into modern, high-performance web applications with premium UI/UX, databases, and custom API workflows."}
+            </p>
+          </div>
+
+          {/* Grid of Upgrade Packages */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {upgradePackages.map((pkg) => (
+              <GlowCard key={pkg.id} color={pkg.glowColor} className="group">
+                <div className="space-y-5 h-full flex flex-col justify-between">
+                  <div className="space-y-4">
+                    {/* Badge & Price Header */}
+                    <div className="flex justify-between items-start gap-2">
+                      <span className="text-[9px] font-mono tracking-wider uppercase text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 px-2.5 py-0.5 rounded-full">
+                        {pkg.badge}
+                      </span>
+                      <div className="text-right shrink-0">
+                        <span className="text-[8px] font-mono text-zinc-550 uppercase tracking-wider block">
+                          {isMs ? "Mulai Dari" : "Starts From"}
+                        </span>
+                        <span className="text-sm font-black text-white">
+                          RM{pkg.price}+
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="space-y-2">
+                      <h3 className="text-sm sm:text-base font-extrabold text-white group-hover:text-cyan-400 transition-colors flex items-center gap-2">
+                        {pkg.icon("w-5 h-5 text-cyan-400 shrink-0")}
+                        {pkg.title}
+                      </h3>
+                      
+                      <p className="text-xs text-zinc-450 leading-relaxed min-h-[72px]">
+                        {pkg.desc}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="w-full border-t border-zinc-900/50 pt-4 space-y-4">
+                    {/* Highlights List */}
+                    <div className="space-y-2.5">
+                      {pkg.highlights.map((item, idx) => (
+                        <div key={idx} className="flex items-start gap-2 text-xs text-zinc-350">
+                          <svg className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                          </svg>
+                          <span className="line-clamp-1">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Button to WhatsApp */}
+                    <a
+                      href={`https://wa.me/60136632092?text=Hai%20Danial,%20saya%20berminat%20untuk%20upgrade%20website%20saya:%20${encodeURIComponent(pkg.title)}%20(Mulai%20RM${pkg.price})`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex w-full items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-black bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-400 hover:to-cyan-500 text-zinc-950 transition-all duration-300 shadow-md hover:shadow-[0_4px_15px_rgba(6,182,212,0.15)] cursor-pointer"
+                    >
+                      <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.57 1.978 14.1 1.953 11.47 1.951 6.037 1.951 1.61 6.32 1.607 11.75c-.001 1.632.455 3.222 1.32 4.629l-.995 3.635 3.715-.96z" />
+                      </svg>
+                      {isMs ? "Bincang Upgrade" : "Discuss Upgrade"}
+                    </a>
+                  </div>
+                </div>
+              </GlowCard>
+            ))}
+          </div>
+
+          {/* Comparison Subsection: Why Upgrade? */}
+          <div className="space-y-6 pt-6">
+            <div className="text-center space-y-2">
+              <span className="text-[9px] font-mono tracking-widest text-cyan-400 uppercase block">
+                {isMs ? "ANALISIS PERBANDINGAN" : "PERFORMANCE GAP ANALYSIS"}
+              </span>
+              <h3 className="text-xl font-bold text-white">
+                {isMs ? "Kenapa Perlu Naik Taraf?" : "Why Should You Upgrade?"}
+              </h3>
+              <p className="text-xs text-zinc-450 max-w-lg mx-auto">
+                {isMs 
+                  ? "Perbezaan prestasi sistem antara laman web lapuk/templat berbanding seni bina kod moden yang kami bina."
+                  : "The visual and performance gap between legacy templates and modern custom web architecture."}
+              </p>
+            </div>
+
+            <div className="max-w-4xl mx-auto rounded-2xl bg-zinc-950/80 border border-zinc-900 overflow-hidden shadow-xl p-6 md:p-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 divide-y md:divide-y-0 md:divide-x divide-zinc-900">
+                {/* Legacy Column */}
+                <div className="space-y-4 md:pr-8 pb-6 md:pb-0">
+                  <div className="flex items-center gap-2">
+                    <span className="p-1.5 rounded bg-rose-500/10 text-rose-500 border border-rose-500/20">
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                      </svg>
+                    </span>
+                    <h4 className="text-base font-extrabold text-zinc-300">
+                      {isMs ? "Laman Web Biasa / Legacy" : "Legacy / Template Website"}
+                    </h4>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-2.5 text-xs text-zinc-450">
+                      <span className="text-rose-500 font-bold shrink-0">✕</span>
+                      <span>{isMs ? "Kelajuan loading lambat (3s - 8s) - Risiko tinggi pelawat keluar" : "Slow load times (3s - 8s) - High visitor bounce rates"}</span>
+                    </div>
+                    <div className="flex items-start gap-2.5 text-xs text-zinc-450">
+                      <span className="text-rose-500 font-bold shrink-0">✕</span>
+                      <span>{isMs ? "Paparan telefon pintar yang kaku, menu terkeluar atau bertindih" : "Rigid layout scaling, broken menus, and poor mobile scaling"}</span>
+                    </div>
+                    <div className="flex items-start gap-2.5 text-xs text-zinc-450">
+                      <span className="text-rose-500 font-bold shrink-0">✕</span>
+                      <span>{isMs ? "Sistem terdedah kepada serangan malware & spam bot borang" : "Vulnerable to hacking exploits and database security leaks"}</span>
+                    </div>
+                    <div className="flex items-start gap-2.5 text-xs text-zinc-450">
+                      <span className="text-rose-500 font-bold shrink-0">✕</span>
+                      <span>{isMs ? "Sukar edit kandungan - memerlukan upah developer setiap kali edit" : "Manual code updates requiring recurring developer bills"}</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Upgraded Column */}
+                <div className="space-y-4 md:pl-8 pt-6 md:pt-0">
+                  <div className="flex items-center gap-2">
+                    <span className="p-1.5 rounded bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </span>
+                    <h4 className="text-base font-extrabold text-white">
+                      {isMs ? "Selepas Naik Taraf (Danial's Custom)" : "Upgraded Custom Architecture"}
+                    </h4>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-2.5 text-xs text-zinc-350">
+                      <span className="text-emerald-500 font-bold shrink-0">✓</span>
+                      <span>{isMs ? "Loading ultra-pantas (bawah 1 saat) untuk kadar jualan tinggi" : "Sub-second load times using advanced Next.js optimization"}</span>
+                    </div>
+                    <div className="flex items-start gap-2.5 text-xs text-zinc-350">
+                      <span className="text-emerald-500 font-bold shrink-0">✓</span>
+                      <span>{isMs ? "Antaramuka responsif cecair (fluid responsive) di semua peranti" : "Fluidly optimized viewport scaling across phone screens"}</span>
+                    </div>
+                    <div className="flex items-start gap-2.5 text-xs text-zinc-350">
+                      <span className="text-emerald-500 font-bold shrink-0">✓</span>
+                      <span>{isMs ? "Penyulitan HTTPS SSL ketat & tapisan bot perlindungan borang" : "Secure edge servers, SSL, and anti-spam verification checks"}</span>
+                    </div>
+                    <div className="flex items-start gap-2.5 text-xs text-zinc-350">
+                      <span className="text-emerald-500 font-bold shrink-0">✓</span>
+                      <span>{isMs ? "Panel Admin (CMS) tersuai untuk edit tulisan & galeri secara terus" : "Self-editable custom CMS dashboard for simple site management"}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 4. 4-STEP PROCESS TIMELINE INFOGRAPHIC */}
         <div className="space-y-8">
           <div className="text-center md:text-left space-y-2">
             <h2 className="text-2xl font-extrabold text-white flex items-center justify-center md:justify-start gap-2">
@@ -811,7 +1095,7 @@ export default function WebsiteFixServices() {
             href="https://wa.me/60136632092?text=Hai%20Danial,%20saya%20nak%20bincang%20untuk%20repair/upgrade%20website%20saya."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-extrabold bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-zinc-950 shadow-md hover:shadow-[0_4px_20px_rgba(124,58,237,0.25)] transition-all duration-300 cursor-pointer"
+            className="inline-flex w-full items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-extrabold bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-400 hover:to-indigo-400 text-zinc-950 shadow-md hover:shadow-[0_4px_20px_rgba(124,58,237,0.25)] transition-all duration-300 cursor-pointer"
           >
             {isMs ? "Hubungi Danial di WhatsApp" : "Contact Danial via WhatsApp"}
           </a>
