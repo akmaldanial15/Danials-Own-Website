@@ -9,9 +9,11 @@ export const fastTrackPackages = {
         "Laman web kustom 1 Halaman",
         "100% Downpayment (Sebelum Mula)",
         "Wajib ambil pelan penyelenggaraan: Minima RM40/bulan",
+        "Penyelenggaraan hanya melindungi ralat/error teknikal yang tiba-tiba muncul",
+        "Tiada suntingan asas percuma (no free basic edits) sebelum pelancaran",
+        "Kemas kini menu/kandungan secara manual dicaj RM40+ setiap sesi (tiada admin console, maks 4 kali setahun)",
         "Hosting & Domain Kustom: Pilihan (Optional) tetapi sangat disyorkan",
         "Subdomain & Hosting Percuma disediakan (jika tiada domain sendiri)",
-        "Penyelenggaraan Premium RM70/bulan (termasuk domain kustom & hosting)",
         "Siap dalam 2 - 4 hari bekerja",
         "Penghantaran ekspres (< 24 jam) dicaj tambahan"
       ]
@@ -43,9 +45,11 @@ export const fastTrackPackages = {
         "1-Page custom website",
         "100% Upfront Downpayment",
         "Required Maintenance Plan: Minimum RM40/month",
+        "Maintenance only covers technical fixes/errors that suddenly appear",
+        "No free basic edits before launch",
+        "Manual menu/content updates charged at RM40+ per session (no admin console, max 4 times/year)",
         "Custom Domain & Hosting: Optional but highly recommended",
         "Free Subdomain & Hosting provided (if no custom domain is used)",
-        "Premium Maintenance RM70/month (includes custom domain & hosting)",
         "Delivered within 2 - 4 working days",
         "Express delivery (< 24 hours) available for extra fee"
       ]

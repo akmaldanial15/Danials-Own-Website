@@ -18,9 +18,9 @@ export const portfolioItems = {
       category: "Web (From Scratch)",
       image: "/images/portfolio-cafe.jpg",
       tags: ["Landing Page", "WhatsApp Booking", "Vanilla JS"],
-      description: "Halaman landing page bajet super dibina untuk kafe roti artisan. Memaparkan menu harian, lokasi cawangan, waktu operasi, berserta sistem tempahan ringkas tanpa database (terus dihantar ke WhatsApp).",
+      description: "Landing page 1-halaman bajet super (RM299) untuk kafe roti artisan. Ciri tempahan automatik terus ke WhatsApp (simulasi). Tiada dashboard admin, kemas kini menu secara manual dicaj RM40+ (maksimum 4 kali setahun). Pelan penyelenggaraan hanya melindungi ralat/error teknikal tiba-tiba.",
       tech: ["HTML5", "CSS3", "JavaScript", "WhatsApp Integration"],
-      priceClass: "Basic Website (dari RM799)",
+      priceClass: "Super Budget (dari RM299)",
       demoUrl: "https://nusantara-website.vercel.app/"
     },
     {
@@ -77,9 +77,9 @@ export const portfolioItems = {
       category: "Web (From Scratch)",
       image: "/images/portfolio-cafe.jpg",
       tags: ["Landing Page", "WhatsApp Booking", "Vanilla JS"],
-      description: "A super budget landing page built for an artisan bakery. Displays their daily menu, locations, opening hours, and a simple database-free booking system that redirects orders directly to WhatsApp.",
+      description: "A 1-page super budget (RM299) landing page built for an artisan bakery. Features simulated automatic ordering redirected directly to WhatsApp. Since there is no admin console, manual menu updates are charged at RM40+ (max 4 updates/year under the maintenance plan). The maintenance plan only covers sudden system errors.",
       tech: ["HTML5", "CSS3", "JavaScript", "WhatsApp Integration"],
-      priceClass: "Basic Website (from RM799)",
+      priceClass: "Super Budget (from RM299)",
       demoUrl: "https://nusantara-website.vercel.app/"
     },
     {
