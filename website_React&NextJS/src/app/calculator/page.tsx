@@ -258,11 +258,11 @@ export default function PricingCalculator() {
                     className={`flex flex-col items-center justify-center p-4 rounded-xl transition-all duration-350 ${
                       selectedTab === "bespoke"
                         ? "bg-zinc-900 text-purple-400 border border-purple-500/20 shadow-md"
-                        : "text-zinc-450 hover:text-zinc-200"
+                        : "text-zinc-400 hover:text-zinc-200"
                     }`}
                   >
                     <span className="text-sm font-bold">{language === "ms" ? "Detailed Website" : "Detailed Bespoke"}</span>
-                    <span className="text-[9px] text-zinc-500 mt-1 uppercase tracking-wider">
+                    <span className="text-[10px] text-zinc-400 mt-1 uppercase tracking-wider font-semibold">
                       {language === "ms" ? "Reka Bentuk Kustom & Sistem" : "Fully Custom & Web Systems"}
                     </span>
                   </button>
@@ -271,11 +271,11 @@ export default function PricingCalculator() {
                     className={`flex flex-col items-center justify-center p-4 rounded-xl transition-all duration-350 ${
                       selectedTab === "budget"
                         ? "bg-zinc-900 text-purple-400 border border-purple-500/20 shadow-md"
-                        : "text-zinc-450 hover:text-zinc-200"
+                        : "text-zinc-400 hover:text-zinc-200"
                     }`}
                   >
                     <span className="text-sm font-bold">{language === "ms" ? "Pakej Fast-Track" : "Fast-Track Budget"}</span>
-                    <span className="text-[9px] text-zinc-500 mt-1 uppercase tracking-wider">
+                    <span className="text-[10px] text-zinc-400 mt-1 uppercase tracking-wider font-semibold">
                       {language === "ms" ? "Mampu Milik & Templat Pantas" : "Budget-Friendly Templates"}
                     </span>
                   </button>
@@ -307,13 +307,13 @@ export default function PricingCalculator() {
 
                       <div className="space-y-2 pr-6">
                         <h4 className="text-sm font-bold text-zinc-200">{pkg.name}</h4>
-                        <p className="text-[10px] text-zinc-455 leading-relaxed line-clamp-3">
+                        <p className="text-xs text-zinc-400 leading-relaxed line-clamp-3">
                           {pkg.description}
                         </p>
                       </div>
 
                       <div className="mt-4 pt-3 border-t border-zinc-900/80 w-full flex items-baseline gap-1">
-                        <span className="text-[8px] text-zinc-550 font-bold uppercase tracking-wider">{t("fromText")}</span>
+                        <span className="text-[10px] text-zinc-400 font-bold uppercase tracking-wider">{t("fromText")}</span>
                         <span className="text-base font-black text-white">
                           {typeof pkg.price === "number" ? `RM${pkg.price.toLocaleString()}` : pkg.price}
                         </span>
@@ -338,7 +338,7 @@ export default function PricingCalculator() {
                   <div className="flex items-center bg-zinc-950 border border-zinc-900 rounded-xl p-1 shrink-0">
                     <button
                       onClick={() => setExtraPages(Math.max(0, extraPages - 1))}
-                      className="w-9 h-9 flex items-center justify-center text-lg font-bold text-zinc-450 hover:text-white rounded-lg hover:bg-zinc-900 transition-colors"
+                      className="w-9 h-9 flex items-center justify-center text-lg font-bold text-zinc-400 hover:text-white rounded-lg hover:bg-zinc-900 transition-colors"
                     >
                       -
                     </button>
@@ -347,12 +347,12 @@ export default function PricingCalculator() {
                     </span>
                     <button
                       onClick={() => setExtraPages(Math.min(20, extraPages + 1))}
-                      className="w-9 h-9 flex items-center justify-center text-lg font-bold text-zinc-450 hover:text-white rounded-lg hover:bg-zinc-900 transition-colors"
+                      className="w-9 h-9 flex items-center justify-center text-lg font-bold text-zinc-400 hover:text-white rounded-lg hover:bg-zinc-900 transition-colors"
                     >
                       +
                     </button>
                   </div>
-                  <p className="text-[11px] text-zinc-400 leading-relaxed">
+                  <p className="text-xs text-zinc-400 leading-relaxed">
                     {t("pageCounterDesc")}
                   </p>
                 </div>
@@ -360,7 +360,7 @@ export default function PricingCalculator() {
 
               {/* Add-on features */}
               <div className="space-y-4">
-                <span className="text-[10px] text-zinc-550 font-bold uppercase tracking-widest leading-none">
+                <span className="text-[10px] text-zinc-400 font-bold uppercase tracking-widest leading-none">
                   {language === "ms" ? "CIRI-CIRI TAMBAHAN & ADD-ON" : "ADD-ON FEATURES"}
                 </span>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -378,7 +378,7 @@ export default function PricingCalculator() {
                       >
                         <div className="space-y-0.5 pr-2">
                           <p className="text-xs font-semibold text-zinc-200 leading-tight">{addon.name}</p>
-                          <p className="text-[8px] text-zinc-500 uppercase tracking-wider font-bold">{addon.type.replace("-", " ")}</p>
+                          <p className="text-[9px] text-zinc-400 uppercase tracking-wider font-bold">{addon.type.replace("-", " ")}</p>
                         </div>
                         <div className="flex items-center gap-2.5 shrink-0">
                           <span className="text-xs font-bold text-purple-400">+RM{addon.price}</span>
@@ -415,7 +415,7 @@ export default function PricingCalculator() {
                   <div className="flex justify-between items-start gap-4">
                     <div className="space-y-0.5">
                       <p className="text-xs font-bold text-zinc-200">{currentPackage.name}</p>
-                      <p className="text-[9px] text-zinc-500 uppercase font-semibold">{t("summaryBasePkg")}</p>
+                      <p className="text-[10px] text-zinc-400 uppercase font-semibold">{t("summaryBasePkg")}</p>
                     </div>
                     <span className="text-xs font-bold text-zinc-200 shrink-0">
                       {typeof currentPackage.price === "number" ? `RM${currentPackage.price.toLocaleString()}` : "Custom"}
@@ -433,7 +433,7 @@ export default function PricingCalculator() {
                   {/* Add-ons List */}
                   {activeAddOns.length > 0 && (
                     <div className="border-t border-zinc-900/50 pt-3 space-y-2">
-                      <p className="text-[8px] text-zinc-550 font-bold uppercase tracking-wider">{t("summaryAddons")}</p>
+                      <p className="text-[10px] text-zinc-400 font-bold uppercase tracking-wider">{t("summaryAddons")}</p>
                       {activeAddOns.map((addon) => (
                         <div key={addon.id} className="flex justify-between items-center text-xs text-zinc-400">
                           <span>{addon.name}</span>
@@ -445,7 +445,7 @@ export default function PricingCalculator() {
 
                   {/* One-Time Total Price */}
                   <div className="border-t border-zinc-900 pt-4 flex justify-between items-baseline gap-4">
-                    <span className="text-xs font-bold text-zinc-350">{t("summaryTotal")}</span>
+                    <span className="text-xs font-bold text-zinc-400">{t("summaryTotal")}</span>
                     <div className="text-right">
                       <span className="text-2xl font-black text-white text-glow">
                         RM{oneTimeTotal.toLocaleString()}
@@ -462,7 +462,7 @@ export default function PricingCalculator() {
                         </span>
                         <span className="font-bold text-white">RM{maintenanceInfo.fee}/bln</span>
                       </div>
-                      <p className="text-[9px] text-zinc-550 leading-none">
+                      <p className="text-[10px] text-zinc-400 leading-none font-medium">
                         * {maintenanceInfo.term} {maintenanceInfo.isMandatory ? `(${language === "ms" ? "Wajib" : "Mandatory"})` : ""}
                       </p>
                     </div>
@@ -470,21 +470,21 @@ export default function PricingCalculator() {
 
                   {/* Payment Milestone Split Breakdown details */}
                   <div className="border-t border-zinc-900/80 pt-4 space-y-2.5">
-                    <span className="text-[8px] text-zinc-550 font-bold uppercase tracking-wider block">
+                    <span className="text-[10px] text-zinc-400 font-bold uppercase tracking-widest block">
                       {language === "ms" ? "Pecahan Fasa Bayaran" : "Milestone Payment Schedule"}
                     </span>
-                    <div className="grid grid-cols-3 gap-1 bg-zinc-900/40 p-1.5 rounded-xl border border-zinc-900/60">
+                    <div className="grid grid-cols-3 gap-1.5 bg-zinc-900/40 p-2 rounded-xl border border-zinc-900/60">
                       <div className="text-center p-1">
-                        <span className="text-[7px] text-zinc-500 uppercase font-bold block">Deposit ({paymentMilestones.depositPct}%)</span>
-                        <span className="text-[10px] font-black text-zinc-200 mt-0.5 block">RM{paymentMilestones.depositVal.toLocaleString()}</span>
+                        <span className="text-[9px] text-zinc-400 uppercase font-bold tracking-wider block">Deposit ({paymentMilestones.depositPct}%)</span>
+                        <span className="text-xs font-black text-zinc-200 mt-0.5 block">RM{paymentMilestones.depositVal.toLocaleString()}</span>
                       </div>
                       <div className="text-center p-1 border-x border-zinc-900/80">
-                        <span className="text-[7px] text-zinc-500 uppercase font-bold block">Edit ({paymentMilestones.majorEditPct}%)</span>
-                        <span className="text-[10px] font-black text-zinc-200 mt-0.5 block">RM{paymentMilestones.majorEditVal.toLocaleString()}</span>
+                        <span className="text-[9px] text-zinc-400 uppercase font-bold tracking-wider block">Edit ({paymentMilestones.majorEditPct}%)</span>
+                        <span className="text-xs font-black text-zinc-200 mt-0.5 block">RM{paymentMilestones.majorEditVal.toLocaleString()}</span>
                       </div>
                       <div className="text-center p-1">
-                        <span className="text-[7px] text-zinc-500 uppercase font-bold block">Launch ({paymentMilestones.launchPct}%)</span>
-                        <span className="text-[10px] font-black text-zinc-200 mt-0.5 block">RM{paymentMilestones.launchVal.toLocaleString()}</span>
+                        <span className="text-[9px] text-zinc-400 uppercase font-bold tracking-wider block">Launch ({paymentMilestones.launchPct}%)</span>
+                        <span className="text-xs font-black text-zinc-200 mt-0.5 block">RM{paymentMilestones.launchVal.toLocaleString()}</span>
                       </div>
                     </div>
                   </div>
@@ -492,12 +492,12 @@ export default function PricingCalculator() {
                   {/* ServersCamp Quick Equivalency Conversion Column */}
                   <div className="border-t border-zinc-900/80 pt-4 grid grid-cols-2 gap-4 text-center">
                     <div className="p-2 rounded-xl bg-zinc-900/30 border border-zinc-900/60">
-                      <span className="text-[7px] text-zinc-550 font-bold uppercase block">{language === "ms" ? "KADAR HARIAN" : "DAILY EQUIVALENT"}</span>
-                      <span className="text-xs font-bold text-zinc-350 mt-1 block">RM{dailyValue}</span>
+                      <span className="text-[9px] text-zinc-400 font-bold uppercase tracking-wider block">{language === "ms" ? "KADAR HARIAN" : "DAILY EQUIVALENT"}</span>
+                      <span className="text-sm font-black text-zinc-200 mt-1 block">RM{dailyValue}</span>
                     </div>
                     <div className="p-2 rounded-xl bg-zinc-900/30 border border-zinc-900/60">
-                      <span className="text-[7px] text-zinc-550 font-bold uppercase block">{language === "ms" ? "KADAR SEJAM" : "HOURLY EQUIVALENT"}</span>
-                      <span className="text-xs font-bold text-zinc-350 mt-1 block">RM{hourlyValue}</span>
+                      <span className="text-[9px] text-zinc-400 font-bold uppercase tracking-wider block">{language === "ms" ? "KADAR SEJAM" : "HOURLY EQUIVALENT"}</span>
+                      <span className="text-sm font-black text-zinc-200 mt-1 block">RM{hourlyValue}</span>
                     </div>
                   </div>
                 </div>
@@ -519,7 +519,7 @@ export default function PricingCalculator() {
               </div>
 
               {/* Service Terms checklist */}
-              <div className="p-6 rounded-2xl bg-zinc-900/10 border border-zinc-900/80 space-y-3 text-xs text-zinc-550">
+              <div className="p-6 rounded-2xl bg-zinc-900/10 border border-zinc-900/80 space-y-3 text-xs text-zinc-400">
                 <p className="font-bold text-zinc-400">{t("calcTermsTitle")}</p>
                 <ul className="space-y-2 list-disc pl-4 leading-relaxed">
                   <li>{t("calcTerm1")}</li>
