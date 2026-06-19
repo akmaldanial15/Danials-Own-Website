@@ -11,6 +11,8 @@ function GalleryContent() {
   const filterParam = searchParams.get("filter");
 
   const [filter, setFilter] = useState("All");
+  const [activeDemo, setActiveDemo] = useState<{ url: string; title: string } | null>(null);
+  const [previewMode, setPreviewMode] = useState<"desktop" | "tablet" | "mobile">("desktop");
 
   // Update filter state if query parameter changes
   useEffect(() => {
@@ -109,10 +111,8 @@ function GalleryContent() {
               >
                 {/* Visual Showcase (High-Fidelity Mockups based on Huly theme) */}
                 {item.demoUrl ? (
-                  <a
-                    href={item.demoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <div
+                    onClick={() => setActiveDemo({ url: item.demoUrl!, title: item.title })}
                     className="relative aspect-video w-full bg-zinc-950 border-b border-zinc-850 overflow-hidden flex items-center justify-center p-5 select-none hover:bg-zinc-900/10 transition-colors cursor-pointer block group/showcase"
                   >
                     {/* Glowing background in mockups */}
@@ -293,7 +293,7 @@ function GalleryContent() {
                         <span>v2.1</span>
                       </div>
                     </div>
-                  </a>
+                  </div>
                 ) : (
                   <div className="relative aspect-video w-full bg-zinc-950 border-b border-zinc-850 overflow-hidden flex items-center justify-center p-5 select-none">
                     {/* Glowing background in mockups */}
@@ -518,14 +518,12 @@ function GalleryContent() {
                     {/* Action buttons */}
                     <div className="pt-2 flex gap-3">
                       {item.demoUrl && (
-                        <a
-                          href={item.demoUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex flex-1 items-center justify-center px-4 py-3 rounded-xl text-xs font-semibold bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white transition-all shadow-md shadow-cyan-900/10 hover:shadow-cyan-500/20"
+                        <button
+                          onClick={() => setActiveDemo({ url: item.demoUrl!, title: item.title })}
+                          className="inline-flex flex-1 items-center justify-center px-4 py-3 rounded-xl text-xs font-semibold bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white transition-all shadow-md shadow-cyan-900/10 hover:shadow-cyan-500/20 cursor-pointer"
                         >
                           🌐 {language === "ms" ? "Lihat Demo" : "Live Preview"}
-                        </a>
+                        </button>
                       )}
                       <a
                         href={`https://wa.me/60136632092?text=Hi%20Danial,%20saya%20berminat%20dengan%20projek%20${encodeURIComponent(item.title)}%20(${item.category})%20dan%20mahu%20bertanya%20tentang%20servis%20seperti%20ini.`}
@@ -545,6 +543,106 @@ function GalleryContent() {
           })}
         </div>
       </div>
+
+      {/* Live Preview Modal */}
+      {activeDemo && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 bg-zinc-950/80 backdrop-blur-md transition-all duration-300">
+          <div className="relative w-full h-full max-w-6xl rounded-2xl bg-zinc-900 border border-zinc-800 shadow-2xl flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+            {/* Modal Header */}
+            <div className="flex items-center justify-between px-4 py-3.5 border-b border-zinc-850 bg-zinc-950/60">
+              {/* Left Side: Mock browser controls */}
+              <div className="flex items-center gap-3 w-1/3">
+                <div className="flex gap-1.5 shrink-0">
+                  <button 
+                    onClick={() => setActiveDemo(null)}
+                    className="w-3.5 h-3.5 rounded-full bg-rose-500 hover:bg-rose-600 transition-colors cursor-pointer" 
+                  />
+                  <div className="w-3.5 h-3.5 rounded-full bg-amber-500/60" />
+                  <div className="w-3.5 h-3.5 rounded-full bg-emerald-500/60" />
+                </div>
+                {/* URL Bar */}
+                <div className="hidden md:flex items-center gap-1.5 px-3 py-1 rounded-lg bg-zinc-900 border border-zinc-800/80 text-[10px] text-zinc-455 font-mono select-all w-full max-w-xs truncate">
+                  <span className="text-emerald-500">🔒</span>
+                  <span className="truncate">{activeDemo.url}</span>
+                </div>
+              </div>
+
+              {/* Center: Device responsive switcher */}
+              <div className="flex items-center gap-1 bg-zinc-900 border border-zinc-800/80 p-0.5 rounded-xl">
+                <button
+                  onClick={() => setPreviewMode("desktop")}
+                  className={`px-3 py-1.5 rounded-lg text-[10px] font-bold tracking-wider flex items-center gap-1 transition-all cursor-pointer ${
+                    previewMode === "desktop"
+                      ? "bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-md shadow-cyan-900/10"
+                      : "text-zinc-450 hover:text-white"
+                  }`}
+                >
+                  🖥️ {language === "ms" ? "DESKTOP" : "DESKTOP"}
+                </button>
+                <button
+                  onClick={() => setPreviewMode("tablet")}
+                  className={`px-3 py-1.5 rounded-lg text-[10px] font-bold tracking-wider flex items-center gap-1 transition-all cursor-pointer ${
+                    previewMode === "tablet"
+                      ? "bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-md shadow-cyan-900/10"
+                      : "text-zinc-450 hover:text-white"
+                  }`}
+                >
+                  📱 TABLET
+                </button>
+                <button
+                  onClick={() => setPreviewMode("mobile")}
+                  className={`px-3 py-1.5 rounded-lg text-[10px] font-bold tracking-wider flex items-center gap-1 transition-all cursor-pointer ${
+                    previewMode === "mobile"
+                      ? "bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-md shadow-cyan-900/10"
+                      : "text-zinc-450 hover:text-white"
+                  }`}
+                >
+                  📞 {language === "ms" ? "TELEFON" : "MOBILE"}
+                </button>
+              </div>
+
+              {/* Right Side: Action controls */}
+              <div className="flex items-center gap-2.5 w-1/3 justify-end">
+                <a
+                  href={activeDemo.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1.5 rounded-lg bg-zinc-900 hover:bg-zinc-850 text-zinc-350 border border-zinc-850 hover:border-zinc-800 text-[10px] font-bold tracking-wider flex items-center gap-1 transition-colors cursor-pointer"
+                >
+                  ↗️ {language === "ms" ? "Buka Tab Baru" : "Open Tab"}
+                </a>
+                <button
+                  onClick={() => setActiveDemo(null)}
+                  className="px-3 py-1.5 rounded-lg bg-rose-950/30 hover:bg-rose-900/40 text-rose-455 border border-rose-500/20 text-[10px] font-bold tracking-wider transition-colors cursor-pointer"
+                >
+                  ✕ {language === "ms" ? "TUTUP" : "CLOSE"}
+                </button>
+              </div>
+            </div>
+
+            {/* Iframe Viewport Container */}
+            <div className="flex-1 bg-zinc-950 p-4 flex justify-center items-center overflow-auto relative">
+              {/* Device container frame */}
+              <div
+                className={`h-full w-full bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-300 border border-zinc-800 ${
+                  previewMode === "tablet"
+                    ? "max-w-[768px] aspect-[3/4] max-h-full"
+                    : previewMode === "mobile"
+                    ? "max-w-[375px] aspect-[9/19] max-h-full"
+                    : "max-w-full"
+                }`}
+              >
+                <iframe
+                  src={activeDemo.url}
+                  className="w-full h-full border-0 no-invert"
+                  title={activeDemo.title}
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
