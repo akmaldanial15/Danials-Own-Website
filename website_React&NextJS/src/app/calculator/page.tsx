@@ -436,6 +436,10 @@ export default function PricingCalculator() {
                         <div className="space-y-0.5 pr-2 flex-1">
                           <p className="text-xs font-semibold text-zinc-200 leading-tight">{addon.name}</p>
                           <p className="text-[9px] text-zinc-400 uppercase tracking-wider font-bold">{displayType}</p>
+                          {/* @ts-ignore */}
+                          {addon.description && (
+                            <p className="text-[10px] text-zinc-400 mt-1.5 leading-relaxed">{addon.description}</p>
+                          )}
                           
                           {/* Maintenance Sub-Toggle */}
                           {isMaintenance && isChecked && (

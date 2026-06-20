@@ -369,29 +369,29 @@ export const bespokePackages = {
 
 export const addOns = {
   ms: [
-    { id: "email", name: "Setup E-mel Perniagaan", price: 150, type: "sekali-bayar" },
-    { id: "seo", name: "Naik Taraf SEO Asas", price: 200, type: "sekali-bayar" },
-    { id: "maintenance", name: "Penyelenggaraan Bulanan", price: 80, type: "bulanan" },
-    { id: "std-hosting", name: "Hosting Standard + Domain (.com/.my) (1 Tahun)", price: 250, type: "tahunan" },
-    { id: "premium-hosting", name: "Hosting Premium + Domain (.com/.my) (1 Tahun)", price: 450, type: "tahunan" },
-    { id: "gateway", name: "Setup Payment Gateway", price: 500, type: "sekali-bayar" },
-    { id: "security", name: "Kawalan Keselamatan & Hardening Sistem Lanjutan", price: 500, type: "sekali-bayar" },
-    { id: "api-integration", name: "Integrasi API Pihak Ketiga", price: 400, type: "sekali-bayar" },
-    { id: "backup-system", name: "Sistem Backup Awan Automatik", price: 250, type: "sekali-bayar" },
-    { id: "multilingual", name: "Sistem Dwi-Bahasa (Multi-Lang)", price: 300, type: "sekali-bayar" },
-    { id: "ai-agents", name: "Ejen & Robot Pintar AI", price: 1000, type: "sekali-bayar" }
+    { id: "email", name: "Setup E-mel Perniagaan", price: 150, type: "sekali-bayar", description: "E-mel dengan nama domain perniagaan anda sendiri (cth: contact@syarikat.com) untuk imej profesional." },
+    { id: "seo", name: "Naik Taraf SEO Asas", price: 200, type: "sekali-bayar", description: "Pendaftaran Google Search Console, penyerahan peta laman (sitemap), dan persediaan struktur kata kunci asas." },
+    { id: "maintenance", name: "Penyelenggaraan Bulanan", price: 80, type: "bulanan", description: "Sokongan teknikal bulanan untuk membaiki ralat sistem, mengemas kini teks/gambar, dan memantau prestasi." },
+    { id: "std-hosting", name: "Hosting Standard + Domain (.com/.my) (1 Tahun)", price: 250, type: "tahunan", description: "Pakej paling jimat untuk hosting stabil & domain formal. Subdomain percuma sedia ada mempunyai had kapasiti sangat rendah & nama domain tidak formal." },
+    { id: "premium-hosting", name: "Hosting Premium + Domain (.com/.my) (1 Tahun)", price: 450, type: "tahunan", description: "Prestasi pelayan lebih pantas dengan kapasiti storan & lebar jalur yang lebih besar untuk trafik sederhana tinggi." },
+    { id: "gateway", name: "Setup Payment Gateway", price: 500, type: "sekali-bayar", description: "Integrasi FPX perbankan atas talian & kad kredit (ToyyibPay/Stripe) untuk menerima bayaran langsung." },
+    { id: "security", name: "Kawalan Keselamatan & Hardening Sistem Lanjutan", price: 500, type: "sekali-bayar", description: "Perlindungan dinding api (firewall), perlindungan serangan DDoS, dan pengukuhan kod pangkalan data." },
+    { id: "api-integration", name: "Integrasi API Pihak Ketiga", price: 400, type: "sekali-bayar", description: "Menghubungkan laman web anda dengan perisian luaran, sistem CRM, penghantaran SMS, atau perakaunan." },
+    { id: "backup-system", name: "Sistem Backup Awan Automatik", price: 250, type: "sekali-bayar", description: "Penyimpanan sandaran automatik harian/mingguan ke storan awan selamat untuk mengelakkan kehilangan data." },
+    { id: "multilingual", name: "Sistem Dwi-Bahasa (Multi-Lang)", price: 300, type: "sekali-bayar", description: "Sokongan berbilang bahasa (cth: BM & EN) dengan suis penukar bahasa interaktif." },
+    { id: "ai-agents", name: "Ejen & Robot Pintar AI", price: 1000, type: "sekali-bayar", description: "Integrasi ejen AI perbualan pintar, bot auto-reply, atau alatan automasi pintar kustom." }
   ],
   en: [
-    { id: "email", name: "Business Email Setup", price: 150, type: "one-time" },
-    { id: "seo", name: "Basic SEO Upgrade", price: 200, type: "one-time" },
-    { id: "maintenance", name: "Monthly Maintenance", price: 80, type: "monthly" },
-    { id: "std-hosting", name: "Standard Hosting + Domain (.com/.my) (1 Year)", price: 250, type: "yearly" },
-    { id: "premium-hosting", name: "Premium Hosting + Domain (.com/.my) (1 Year)", price: 450, type: "yearly" },
-    { id: "gateway", name: "Payment Gateway Setup", price: 500, type: "one-time" },
-    { id: "security", name: "Advanced Security & Enterprise System Hardening", price: 500, type: "one-time" },
-    { id: "api-integration", name: "Custom API & Webhook Integration", price: 400, type: "one-time" },
-    { id: "backup-system", name: "Automated Cloud Backup System", price: 250, type: "one-time" },
-    { id: "multilingual", name: "Multi-Language (Bilingual) Integration", price: 300, type: "one-time" },
-    { id: "ai-agents", name: "AI Tools & Autonomous Agents", price: 1000, type: "one-time" }
+    { id: "email", name: "Business Email Setup", price: 150, type: "one-time", description: "Domain-matching corporate email address (e.g., contact@company.com) for a highly professional image." },
+    { id: "seo", name: "Basic SEO Upgrade", price: 200, type: "one-time", description: "Google Search Console registration, sitemap indexing submissions, and basic keyword tags structuring." },
+    { id: "maintenance", name: "Monthly Maintenance", price: 80, type: "monthly", description: "Ongoing monthly technical support to fix random bugs, implement copy updates, and keep servers secure." },
+    { id: "std-hosting", name: "Standard Hosting + Domain (.com/.my) (1 Year)", price: 250, type: "yearly", description: "Minimum recommended package for stable hosting & a proper domain. Free hosting options have extremely low resource limits & non-proper domains." },
+    { id: "premium-hosting", name: "Premium Hosting + Domain (.com/.my) (1 Year)", price: 450, type: "yearly", description: "High-performance server resources with larger storage & bandwidth caps, optimized for moderate-to-high traffic." },
+    { id: "gateway", name: "Payment Gateway Setup", price: 500, type: "one-time", description: "FPX online banking & credit card gateway integration (e.g., Stripe/ToyyibPay) to collect instant client payments." },
+    { id: "security", name: "Advanced Security & Enterprise System Hardening", price: 500, type: "one-time", description: "Web application firewall, DDoS protection rulesets, database security hardening, and access log tracking." },
+    { id: "api-integration", name: "Custom API & Webhook Integration", price: 400, type: "one-time", description: "Seamless data synchronization with external CRMs, custom SMS gateways, internal tools, or bookkeeping APIs." },
+    { id: "backup-system", name: "Automated Cloud Backup System", price: 250, type: "one-time", description: "Scheduled automated daily or weekly backups direct to secure cloud nodes to prevent any critical data loss." },
+    { id: "multilingual", name: "Multi-Language (Bilingual) Integration", price: 300, type: "one-time", description: "Bilingual toggle features (e.g., English and Malay translation sync) matching your visitor preferences." },
+    { id: "ai-agents", name: "AI Tools & Autonomous Agents", price: 1000, type: "one-time", description: "Deploy smart conversational AI chatbots, auto-responders, or custom document auto-generating workflows." }
   ]
 };
