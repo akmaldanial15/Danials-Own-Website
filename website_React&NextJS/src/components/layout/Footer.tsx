@@ -99,16 +99,11 @@ export default function Footer() {
               rel="noopener noreferrer" 
               className="inline-flex items-center gap-3 p-2.5 bg-zinc-900/60 hover:bg-zinc-850 rounded-xl border border-zinc-800 transition-all group"
             >
-              <div className="w-10 h-10 bg-white rounded p-0.5 flex flex-col justify-between shrink-0">
-                <div className="flex justify-between">
-                  <div className="w-3.5 h-3.5 bg-black rounded-[1px]"></div>
-                  <div className="w-3.5 h-3.5 bg-black rounded-[1px]"></div>
-                </div>
-                <div className="flex justify-between">
-                  <div className="w-3.5 h-3.5 bg-black rounded-[1px]"></div>
-                  <div className="w-2.5 h-2.5 bg-indigo-600 rounded-[1px]"></div>
-                </div>
-              </div>
+              <img 
+                src="/images/whatsapp-qr-clean.png" 
+                alt="WhatsApp QR Code" 
+                className="w-10 h-10 object-contain rounded bg-white p-0.5 shrink-0" 
+              />
               <div className="text-left">
                 <p className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider leading-none">{t("qrTitle")}</p>
                 <p className="text-xs text-zinc-250 font-semibold group-hover:text-purple-400 transition-colors">{t("qrSubtitle")}</p>

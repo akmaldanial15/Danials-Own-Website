@@ -61,6 +61,126 @@ const bespokeDetails = {
         { label: "Bayaran", value: "50% / 20% / 30%" },
         { label: "SEO & Kelajuan", value: "Optimum Optimum" }
       ]
+    },
+    "custom-site": {
+      deliverables: [
+        "Sistem web & pangkalan data kustom",
+        "Aplikasi Android (.APK) / Web bersepadu",
+        "Integrasi API & Webhook tanpa had",
+        "Ejen automasi AI & AI Chatbot",
+        "Dashboard admin panel kustom",
+        "Reka bentuk UI/UX eksklusif (Figma-to-Code)"
+      ],
+      specs: [
+        { label: "Siap dlm", value: "Mengikut Skop" },
+        { label: "Semakan", value: "Tanpa Had (Reka Bentuk)" },
+        { label: "Sokongan", value: "60-90 Hari Waranti" },
+        { label: "Teknologi", value: "Next.js / Node.js / Android" },
+        { label: "Bayaran", value: "Fasa Projek Dinamik" },
+        { label: "SEO & Kelajuan", value: "Skala Enterprise" }
+      ]
+    },
+    "starter-admin": {
+      deliverables: [
+        "Papan pemuka (admin dashboard) ringkas",
+        "Kemas kini teks, huraian & imej",
+        "Urus senarai produk / perkhidmatan",
+        "Sistem log masuk admin yang selamat",
+        "Antara muka mesra pengguna & responsif"
+      ],
+      specs: [
+        { label: "Siap dlm", value: "7-14 Hari" },
+        { label: "Semakan", value: "4x Revisions" },
+        { label: "Sokongan", value: "30 Hari Waranti" },
+        { label: "Teknologi", value: "Next.js / Node.js / Database" },
+        { label: "Bayaran", value: "50% / 20% / 30%" },
+        { label: "SEO & Kelajuan", value: "Optimum Asas" }
+      ]
+    },
+    "booking-system": {
+      deliverables: [
+        "Sistem tempahan slot & kalendar bersepadu",
+        "Log pesanan perkhidmatan & pelanggan",
+        "Notifikasi e-mel / WhatsApp untuk tempahan baru",
+        "Pengurusan borang permintaan kustom",
+        "Dashboard kawalan tempahan untuk admin"
+      ],
+      specs: [
+        { label: "Siap dlm", value: "14-21 Hari" },
+        { label: "Semakan", value: "4x Revisions" },
+        { label: "Sokongan", value: "30 Hari Waranti" },
+        { label: "Teknologi", value: "Next.js / Node.js / Database" },
+        { label: "Bayaran", value: "50% / 20% / 30%" },
+        { label: "SEO & Kelajuan", value: "Optimum Standard" }
+      ]
+    },
+    "database-system": {
+      deliverables: [
+        "Struktur database hubungan (relational)",
+        "Sistem carian, tapisan & isihan data maju",
+        "Log rekod transaksi & aktiviti pengguna",
+        "Eksport data ke fail CSV / Excel",
+        "Panel pengurusan database yang selamat"
+      ],
+      specs: [
+        { label: "Siap dlm", value: "14-21 Hari" },
+        { label: "Semakan", value: "4x Revisions" },
+        { label: "Sokongan", value: "30 Hari Waranti" },
+        { label: "Teknologi", value: "Next.js / PostgreSQL / MySQL" },
+        { label: "Bayaran", value: "50% / 20% / 30%" },
+        { label: "SEO & Kelajuan", value: "Optimum Standard" }
+      ]
+    },
+    "inventory-system": {
+      deliverables: [
+        "Pengurusan katalog produk & tahap stok",
+        "Sistem kemasukan stok masuk & keluar",
+        "Notifikasi amaran stok rendah",
+        "Laporan inventori & aliran stok asas",
+        "Dashboard pengurusan stok untuk kakitangan"
+      ],
+      specs: [
+        { label: "Siap dlm", value: "21-30 Hari" },
+        { label: "Semakan", value: "4x Revisions" },
+        { label: "Sokongan", value: "30 Hari Waranti" },
+        { label: "Teknologi", value: "Next.js / Node.js / Relational DB" },
+        { label: "Bayaran", value: "50% / 20% / 30%" },
+        { label: "SEO & Kelajuan", value: "Optimum Standard" }
+      ]
+    },
+    "custom-app": {
+      deliverables: [
+        "Aplikasi Android (.APK) asli / hibrid",
+        "Sistem database awan masa nyata (real-time)",
+        "Notifikasi tolak (push notifications) telefon",
+        "Panel admin web bersepadu penuh",
+        "Log masuk selamat untuk pengguna & pekerja"
+      ],
+      specs: [
+        { label: "Siap dlm", value: "30-45 Hari" },
+        { label: "Semakan", value: "6x Revisions" },
+        { label: "Sokongan", value: "60 Hari Waranti" },
+        { label: "Teknologi", value: "React Native / Next.js / Android" },
+        { label: "Bayaran", value: "50% / 20% / 30%" },
+        { label: "SEO & Kelajuan", value: "Skala Enterprise" }
+      ]
+    },
+    "ai-automation": {
+      deliverables: [
+        "Chatbot AI pintar dengan konteks perniagaan",
+        "Automasi mesej auto-reply WhatsApp",
+        "Penjana PDF & dokumen automatik",
+        "Carian pintar semantik (vector search)",
+        "Automasi kerja & aliran tugas (workflows)"
+      ],
+      specs: [
+        { label: "Siap dlm", value: "14-30 Hari" },
+        { label: "Semakan", value: "Semakan Fleksibel" },
+        { label: "Sokongan", value: "30 Hari Waranti" },
+        { label: "Teknologi", value: "OpenAI / Anthropic APIs / Node.js" },
+        { label: "Bayaran", value: "50% / 20% / 30%" },
+        { label: "SEO & Kelajuan", value: "Skala Enterprise" }
+      ]
     }
   },
   en: {
@@ -116,6 +236,126 @@ const bespokeDetails = {
         { label: "Payment", value: "50% / 20% / 30%" },
         { label: "SEO & Speed", value: "Max Optimized" }
       ]
+    },
+    "custom-site": {
+      deliverables: [
+        "Tailor-made code & custom database schemas",
+        "Integrated Web Systems & Android App (.APK)",
+        "Unlimited API & Webhook integrations",
+        "Autonomous AI agents & custom AI chatbots",
+        "Fully bespoke admin panels & dashboards",
+        "Figma-to-Code exclusive pixel-perfect UI/UX"
+      ],
+      specs: [
+        { label: "Delivery", value: "Scope Dependent" },
+        { label: "Revisions", value: "Unlimited (Design Phase)" },
+        { label: "Support", value: "60-90 Days Warranty" },
+        { label: "Technology", value: "Next.js / Node.js / Android APK" },
+        { label: "Payment", value: "Dynamic Project Milestones" },
+        { label: "SEO & Speed", value: "Enterprise Grade" }
+      ]
+    },
+    "starter-admin": {
+      deliverables: [
+        "Simple administrative control dashboard",
+        "Edit website copy texts and images",
+        "Manage service / product listings",
+        "Secure administrator login gateway",
+        "User-friendly responsive controls"
+      ],
+      specs: [
+        { label: "Delivery", value: "7-14 Days" },
+        { label: "Revisions", value: "4 Sessions" },
+        { label: "Support", value: "30 Days Warranty" },
+        { label: "Technology", value: "Next.js / Node.js / Database" },
+        { label: "Payment", value: "50% / 20% / 30%" },
+        { label: "SEO & Speed", value: "Basic Optimized" }
+      ]
+    },
+    "booking-system": {
+      deliverables: [
+        "Interactive slot booking & calendar",
+        "Customer and booking order records log",
+        "Email / WhatsApp alerts for new bookings",
+        "Custom request forms management",
+        "Admin control panel for booking schedules"
+      ],
+      specs: [
+        { label: "Delivery", value: "14-21 Days" },
+        { label: "Revisions", value: "4 Sessions" },
+        { label: "Support", value: "30 Days Warranty" },
+        { label: "Technology", value: "Next.js / Node.js / Database" },
+        { label: "Payment", value: "50% / 20% / 30%" },
+        { label: "SEO & Speed", value: "Standard Optimized" }
+      ]
+    },
+    "database-system": {
+      deliverables: [
+        "Relational database schema structure",
+        "Advanced data search, filter & sort queries",
+        "Transaction logs & user activity audits",
+        "Data exports into CSV / Excel formats",
+        "Secure database administration console"
+      ],
+      specs: [
+        { label: "Delivery", value: "14-21 Days" },
+        { label: "Revisions", value: "4 Sessions" },
+        { label: "Support", value: "30 Days Warranty" },
+        { label: "Technology", value: "Next.js / PostgreSQL / MySQL" },
+        { label: "Payment", value: "50% / 20% / 30%" },
+        { label: "SEO & Speed", value: "Standard Optimized" }
+      ]
+    },
+    "inventory-system": {
+      deliverables: [
+        "Product catalog & inventory level management",
+        "Stock check-in & check-out logs",
+        "Low-stock warning alert indicators",
+        "Inventory reporting & dispatch sheets",
+        "Staff-level stock control dashboard"
+      ],
+      specs: [
+        { label: "Delivery", value: "21-30 Days" },
+        { label: "Revisions", value: "4 Sessions" },
+        { label: "Support", value: "30 Days Warranty" },
+        { label: "Technology", value: "Next.js / Node.js / Relational DB" },
+        { label: "Payment", value: "50% / 20% / 30%" },
+        { label: "SEO & Speed", value: "Standard Optimized" }
+      ]
+    },
+    "custom-app": {
+      deliverables: [
+        "Native / Hybrid Android Mobile App (.APK)",
+        "Real-time synchronized cloud database",
+        "Push notification alerts direct to device",
+        "Fully synchronized web admin console",
+        "Secure client & staff login gateways"
+      ],
+      specs: [
+        { label: "Delivery", value: "30-45 Days" },
+        { label: "Revisions", value: "6 Sessions" },
+        { label: "Support", value: "60 Days Warranty" },
+        { label: "Technology", value: "React Native / Next.js / Android" },
+        { label: "Payment", value: "50% / 20% / 30%" },
+        { label: "SEO & Speed", value: "Enterprise Grade" }
+      ]
+    },
+    "ai-automation": {
+      deliverables: [
+        "Context-aware conversational AI chatbot",
+        "Automated WhatsApp responder setups",
+        "Automated PDF and invoice generation",
+        "Semantic vector search integration",
+        "Custom workflow task automation"
+      ],
+      specs: [
+        { label: "Delivery", value: "14-30 Days" },
+        { label: "Revisions", value: "Flexible Sessions" },
+        { label: "Support", value: "30 Days Warranty" },
+        { label: "Technology", value: "OpenAI / Anthropic APIs / Node.js" },
+        { label: "Payment", value: "50% / 20% / 30%" },
+        { label: "SEO & Speed", value: "Enterprise Grade" }
+      ]
     }
   }
 };
@@ -124,6 +364,12 @@ export default function DetailedServices() {
   const { t, language } = useTranslation();
 
   const currentBespoke = bespokePackages[language];
+  const detailedWebPackages = currentBespoke.filter((pkg) =>
+    ["basic", "standard", "advanced", "custom-site"].includes(pkg.id)
+  );
+  const customSystemsPackages = currentBespoke.filter((pkg) =>
+    ["starter-admin", "booking-system", "database-system", "inventory-system", "custom-app", "ai-automation"].includes(pkg.id)
+  );
 
   return (
     <div className="relative min-h-screen bg-transparent text-zinc-100 py-16 px-4 md:py-24 md:px-8 overflow-hidden">
@@ -239,7 +485,7 @@ export default function DetailedServices() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {currentBespoke.map((pkg) => {
+            {detailedWebPackages.map((pkg) => {
               const structured = bespokeDetails[language][pkg.id as keyof typeof bespokeDetails["ms"]];
 
               return (
@@ -319,6 +565,50 @@ export default function DetailedServices() {
                 </GlowCard>
               );
             })}
+          </div>
+        </div>
+
+        {/* Custom Systems & Apps Section */}
+        <div className="space-y-10">
+          <div className="border-b border-zinc-900 pb-3">
+            <h2 className="text-2xl font-bold text-white flex items-center gap-3">
+              <span className="w-2 h-6 bg-cyan-500 rounded"></span>
+              {language === "ms" ? "Sistem Perniagaan & Aplikasi Kustom" : "Custom Business Systems & Web Apps"}
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {customSystemsPackages.map((pkg) => (
+              <GlowCard key={pkg.id} color="from-cyan-500 to-indigo-500">
+                <div className="space-y-4 flex flex-col justify-between h-full">
+                  <div className="space-y-2.5">
+                    <div className="flex justify-between items-start gap-4">
+                      <h3 className="text-base font-bold text-zinc-100">{pkg.name}</h3>
+                      <span className="text-xs font-bold text-cyan-400 bg-cyan-500/10 px-2.5 py-0.5 rounded border border-cyan-500/10 shrink-0">
+                        {typeof pkg.price === "number" ? `RM${pkg.price.toLocaleString()}+` : pkg.price}
+                      </span>
+                    </div>
+                    <p className="text-xs text-zinc-400 leading-relaxed min-h-[48px]">
+                      {pkg.description}
+                    </p>
+                  </div>
+                  <div className="pt-3 border-t border-zinc-900/40">
+                    <a
+                      href={generateWhatsAppLink({
+                        packageName: pkg.name,
+                        priceText: typeof pkg.price === "number" ? `Mulai RM${pkg.price}` : "Custom Price",
+                        totalEstimate: typeof pkg.price === "number" ? pkg.price : 0
+                      })}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex w-full items-center justify-center py-2.5 rounded-xl text-xs font-semibold bg-zinc-900 border border-zinc-800 text-zinc-350 hover:bg-zinc-800 hover:text-white transition-all"
+                    >
+                      {language === "ms" ? "Bincang Struktur Sistem →" : "Discuss System Structure →"}
+                    </a>
+                  </div>
+                </div>
+              </GlowCard>
+            ))}
           </div>
         </div>
 

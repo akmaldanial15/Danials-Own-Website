@@ -9,7 +9,8 @@ export const portfolioItems = {
       tags: ["Redesign", "SSL Setup", "Speed Setup", "Responsive"],
       description: "Menyusun semula navigasi, memperbetulkan ralat reka bentuk telefon mudah alih, memasang sijil SSL, serta mengoptimumkan kelajuan memuatkan laman web klinik sebanyak 70%.",
       tech: ["HTML5", "Tailwind CSS", "JavaScript", "SSL Certificate", "Lighthouse"],
-      priceClass: "Redesign / Repairs (dari RM250)"
+      priceClass: "Redesign / Repairs (dari RM250)",
+      demoUrl: "https://medium-budget-vibestudio.vercel.app/contact.html"
     },
     {
       id: "rasa-nusantara",
@@ -68,7 +69,8 @@ export const portfolioItems = {
       tags: ["Redesign", "SSL Setup", "Speed Setup", "Responsive"],
       description: "Re-structured site navigation, fixed critical mobile layout bugs, installed SSL certificates, and optimized the clinic's page speed score by 70%.",
       tech: ["HTML5", "Tailwind CSS", "JavaScript", "SSL Certificate", "Lighthouse"],
-      priceClass: "Redesign / Repairs (from RM250)"
+      priceClass: "Redesign / Repairs (from RM250)",
+      demoUrl: "https://medium-budget-vibestudio.vercel.app/contact.html"
     },
     {
       id: "rasa-nusantara",

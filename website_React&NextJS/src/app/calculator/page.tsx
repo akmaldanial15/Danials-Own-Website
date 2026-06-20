@@ -20,6 +20,9 @@ export default function PricingCalculator() {
     setSelectedTab(tab);
     setSelectedPkgId(tab === "budget" ? "budget-basic" : "basic");
     setIncludeBudgetHosting(false);
+    if (tab === "budget") {
+      setSelectedAddOnIds(prev => prev.filter(id => id !== "std-hosting" && id !== "premium-hosting" && id !== "maintenance"));
+    }
   };
 
   // Grouped base packages depending on active language
@@ -41,7 +44,13 @@ export default function PricingCalculator() {
     if (selectedAddOnIds.includes(id)) {
       setSelectedAddOnIds(selectedAddOnIds.filter(addonId => addonId !== id));
     } else {
-      setSelectedAddOnIds([...selectedAddOnIds, id]);
+      let nextList = [...selectedAddOnIds];
+      if (id === "std-hosting") {
+        nextList = nextList.filter(addonId => addonId !== "premium-hosting");
+      } else if (id === "premium-hosting") {
+        nextList = nextList.filter(addonId => addonId !== "std-hosting");
+      }
+      setSelectedAddOnIds([...nextList, id]);
     }
   };
 
@@ -49,6 +58,16 @@ export default function PricingCalculator() {
   const activeAddOns = useMemo(() => {
     return addOns[language].filter(addon => selectedAddOnIds.includes(addon.id));
   }, [selectedAddOnIds, language]);
+
+  // Filter visible addons based on tab category
+  const visibleAddOns = useMemo(() => {
+    return addOns[language].filter(addon => {
+      if (selectedTab === "budget") {
+        return addon.id !== "maintenance" && addon.id !== "std-hosting" && addon.id !== "premium-hosting";
+      }
+      return true;
+    });
+  }, [selectedTab, language]);
 
   // Calculate total one-time price dynamically
   const basePrice = useMemo(() => {
@@ -392,7 +411,7 @@ export default function PricingCalculator() {
                   {language === "ms" ? "CIRI-CIRI TAMBAHAN & ADD-ON" : "ADD-ON FEATURES"}
                 </span>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {addOns[language].map((addon) => {
+                  {visibleAddOns.map((addon) => {
                     const isChecked = selectedAddOnIds.includes(addon.id);
                     const isMaintenance = addon.id === "maintenance";
                     const displayPrice = isMaintenance

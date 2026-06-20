@@ -224,6 +224,20 @@ export const bespokePackages = {
       ]
     },
     {
+      id: "custom-site",
+      name: "Entirely Custom System",
+      price: "Custom",
+      description: "Sistem web kustom sepenuhnya, platform pangkalan data berskala besar, atau aplikasi Android kustom mengikut aliran kerja perniagaan anda.",
+      features: [
+        "Sistem web & pangkalan data kustom sepenuhnya",
+        "Aplikasi Android (.APK) / Web bersepadu",
+        "Integrasi API & Webhook tanpa had",
+        "Ejen automasi AI & AI Chatbot pintar",
+        "Dashboard admin panel kustom sepenuhnya",
+        "Reka bentuk UI/UX eksklusif (Figma-to-Code)"
+      ]
+    },
+    {
       id: "starter-admin",
       name: "Starter Admin Panel",
       price: 800,
@@ -309,6 +323,20 @@ export const bespokePackages = {
       ]
     },
     {
+      id: "custom-site",
+      name: "Entirely Custom System",
+      price: "Custom",
+      description: "Fully custom web systems, large-scale database platforms, or Android applications custom-built to match your exact business flows.",
+      features: [
+        "Tailor-made code & custom database schemas",
+        "Integrated Web Systems & Android App (.APK)",
+        "Unlimited API & Webhook integrations",
+        "Autonomous AI agents & custom AI chatbots",
+        "Fully bespoke admin panels & dashboards",
+        "Figma-to-Code exclusive pixel-perfect UI/UX"
+      ]
+    },
+    {
       id: "starter-admin",
       name: "Starter Admin Panel",
       price: 800,
@@ -349,10 +377,11 @@ export const bespokePackages = {
 
 export const addOns = {
   ms: [
-    { id: "extra-page", name: "Halaman Tambahan", price: 100, type: "sekali-bayar" },
     { id: "email", name: "Setup E-mel Perniagaan", price: 150, type: "sekali-bayar" },
     { id: "seo", name: "Naik Taraf SEO Asas", price: 200, type: "sekali-bayar" },
     { id: "maintenance", name: "Penyelenggaraan Bulanan", price: 80, type: "bulanan" },
+    { id: "std-hosting", name: "Hosting Standard + Domain (.com/.my) (1 Tahun)", price: 250, type: "tahunan" },
+    { id: "premium-hosting", name: "Hosting Premium + Domain (.com/.my) (1 Tahun)", price: 450, type: "tahunan" },
     { id: "gateway", name: "Setup Payment Gateway", price: 500, type: "sekali-bayar" },
     { id: "security", name: "Kawalan Keselamatan & Hardening Sistem Lanjutan", price: 500, type: "sekali-bayar" },
     { id: "api-integration", name: "Integrasi API Pihak Ketiga", price: 400, type: "sekali-bayar" },
@@ -361,10 +390,11 @@ export const addOns = {
     { id: "ai-agents", name: "Ejen & Robot Pintar AI", price: 1000, type: "sekali-bayar" }
   ],
   en: [
-    { id: "extra-page", name: "Extra Page", price: 100, type: "one-time" },
     { id: "email", name: "Business Email Setup", price: 150, type: "one-time" },
     { id: "seo", name: "Basic SEO Upgrade", price: 200, type: "one-time" },
     { id: "maintenance", name: "Monthly Maintenance", price: 80, type: "monthly" },
+    { id: "std-hosting", name: "Standard Hosting + Domain (.com/.my) (1 Year)", price: 250, type: "yearly" },
+    { id: "premium-hosting", name: "Premium Hosting + Domain (.com/.my) (1 Year)", price: 450, type: "yearly" },
     { id: "gateway", name: "Payment Gateway Setup", price: 500, type: "one-time" },
     { id: "security", name: "Advanced Security & Enterprise System Hardening", price: 500, type: "one-time" },
     { id: "api-integration", name: "Custom API & Webhook Integration", price: 400, type: "one-time" },
