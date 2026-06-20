@@ -39,6 +39,8 @@ export default function PricingCalculator() {
     return all.find(p => p.id === selectedPkgId) || all[0];
   }, [selectedPkgId, budgetPackagesList, customPackagesList]);
 
+  const isBudget = currentPackage.id.startsWith("budget-");
+
   // Handle addon toggles
   const handleAddOnToggle = (id: string) => {
     if (selectedAddOnIds.includes(id)) {
@@ -179,7 +181,6 @@ export default function PricingCalculator() {
     // Format description text inside URL parameters
     const customSummary = [];
     if (maintenanceInfo.fee > 0) {
-      const isBudget = currentPackage.id.startsWith("budget-");
       const cycleUnit = isBudget || maintenanceCycle === "monthly"
         ? (language === "ms" ? "bulan" : "month")
         : (language === "ms" ? "tahun" : "year");
@@ -189,6 +190,24 @@ export default function PricingCalculator() {
           : `Maintenance: RM${maintenanceInfo.fee}/${cycleUnit} (${maintenanceInfo.term})`
       );
     }
+    
+    // Domain & Hosting details for WhatsApp summary
+    if (isBudget) {
+      customSummary.push(
+        includeBudgetHosting
+          ? (language === "ms" ? "Domain & Hosting: Pakej Berbayar (+RM18/bln)" : "Domain & Hosting: Package Paid (+RM18/mo)")
+          : (language === "ms" ? "Domain & Hosting: PERCUMA (Subdomain / Had Sangat Terhad)" : "Domain & Hosting: FREE (Subdomain / Extremely Low limits)")
+      );
+    } else {
+      if (selectedAddOnIds.includes("std-hosting")) {
+        customSummary.push(language === "ms" ? "Domain & Hosting: Pakej Standard (+RM250/thn)" : "Domain & Hosting: Standard Package (+RM250/yr)");
+      } else if (selectedAddOnIds.includes("premium-hosting")) {
+        customSummary.push(language === "ms" ? "Domain & Hosting: Pakej Premium (+RM450/thn)" : "Domain & Hosting: Premium Package (+RM450/yr)");
+      } else {
+        customSummary.push(language === "ms" ? "Domain & Hosting: PERCUMA (Subdomain / Had Sangat Terhad)" : "Domain & Hosting: FREE (Subdomain / Extremely Low limits)");
+      }
+    }
+
     customSummary.push(
       language === "ms"
         ? `Fasa Bayaran: Deposit RM${paymentMilestones.depositVal.toLocaleString()} (${paymentMilestones.depositPct}%), Draf RM${paymentMilestones.majorEditVal.toLocaleString()} (${paymentMilestones.majorEditPct}%), Pelancaran RM${paymentMilestones.launchVal.toLocaleString()} (${paymentMilestones.launchPct}%)`
@@ -522,12 +541,51 @@ export default function PricingCalculator() {
                     </div>
                   )}
 
+                  {/* Domain & Hosting Line */}
+                  <div className="border-t border-zinc-900/50 pt-3 space-y-1">
+                    <div className="flex justify-between items-start text-[10px] text-zinc-400 font-bold uppercase tracking-wider">
+                      <span>Domain & Hosting</span>
+                    </div>
+                    <div className="flex justify-between items-center text-xs text-zinc-400">
+                      {isBudget ? (
+                        includeBudgetHosting ? (
+                          <>
+                            <span>{language === "ms" ? "Domain Kustom & Hosting Pakej" : "Custom Domain & Staged Hosting"}</span>
+                            <span className="font-semibold text-zinc-200">{language === "ms" ? "Termasuk (+RM18/bln)" : "Included (+RM18/mo)"}</span>
+                          </>
+                        ) : (
+                          <>
+                            <span className="text-amber-500/90 font-medium">⚠️ {language === "ms" ? "Hosting & Domain Percuma" : "Free Hosting & Domain"}</span>
+                            <span className="font-semibold text-amber-500/90">{language === "ms" ? "Had Sangat Rendah (.vercel.app)" : "Extremely Low Limits (.vercel.app)"}</span>
+                          </>
+                        )
+                      ) : (
+                        selectedAddOnIds.includes("std-hosting") ? (
+                          <>
+                            <span>{language === "ms" ? "Hosting Standard + Domain (.com/.my)" : "Standard Hosting + Domain (.com/.my)"}</span>
+                            <span className="font-semibold text-zinc-200">+RM250</span>
+                          </>
+                        ) : selectedAddOnIds.includes("premium-hosting") ? (
+                          <>
+                            <span>{language === "ms" ? "Hosting Premium + Domain (.com/.my)" : "Premium Hosting + Domain (.com/.my)"}</span>
+                            <span className="font-semibold text-zinc-200">+RM450</span>
+                          </>
+                        ) : (
+                          <>
+                            <span className="text-amber-500/90 font-medium">⚠️ {language === "ms" ? "Hosting & Domain Percuma" : "Free Hosting & Domain"}</span>
+                            <span className="font-semibold text-amber-500/90">{language === "ms" ? "Had Sangat Rendah (.vercel.app)" : "Extremely Low Limits (.vercel.app)"}</span>
+                          </>
+                        )
+                      )}
+                    </div>
+                  </div>
+
                   {/* Add-ons List */}
-                  {activeAddOns.filter(addon => addon.id !== "maintenance").length > 0 && (
+                  {activeAddOns.filter(addon => addon.id !== "maintenance" && addon.id !== "std-hosting" && addon.id !== "premium-hosting").length > 0 && (
                     <div className="border-t border-zinc-900/50 pt-3 space-y-2">
                       <p className="text-[10px] text-zinc-400 font-bold uppercase tracking-wider">{t("summaryAddons")}</p>
                       {activeAddOns
-                        .filter(addon => addon.id !== "maintenance")
+                        .filter(addon => addon.id !== "maintenance" && addon.id !== "std-hosting" && addon.id !== "premium-hosting")
                         .map((addon) => (
                           <div key={addon.id} className="flex justify-between items-center text-xs text-zinc-400">
                             <span>{addon.name}</span>

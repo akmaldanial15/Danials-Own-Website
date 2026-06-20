@@ -75,8 +75,8 @@ export const translations = {
     fixesHeader: "Website Fix & Upgrade",
     fixesDesc: "Sudah ada website tapi bermasalah? Kami membaiki kesilapan kod, isu responsif peranti mudah alih, pepijat pangkalan data, atau ralat pelayan dengan harga tetap yang berpatutan.",
     btnDiscussFix: "Bincang Masalah →",
-    supportNoteTitle: "Nota Penting Penghantaran:",
-    supportNoteText: "Pakej Budget (Fast-Track) biasanya siap dalam tempoh 1 ke 5 hari bekerja selepas kandungan diterima (boleh jadi lebih singkat/cepat sekiranya saya tidak sibuk). Revisions merujuk kepada pembetulan teks/susun atur sahaja.",
+    supportNoteTitle: "Nota Penting Penghantaran & Harga Pakej:",
+    supportNoteText: "Pakej Budget (Fast-Track) biasanya siap dalam tempoh 1 ke 5 hari bekerja selepas kandungan diterima (boleh jadi lebih singkat/cepat sekiranya saya tidak sibuk). Sila ambil perhatian bahawa harga yang tertera adalah harga asas (minimum) sahaja, dan boleh bertambah sekiranya anda memerlukan fungsi tambahan atau suntingan di luar skop asal.",
 
     // Custom Page
     customHeader: "Laman Web & Sistem Detailed",
@@ -217,8 +217,8 @@ export const translations = {
     fixesHeader: "Website Fix & Upgrade Catalog",
     fixesDesc: "Got a website bug? We repair code errors, mobile layout issues, database anomalies, or server script problems at affordable fixed prices.",
     btnDiscussFix: "Discuss Issue →",
-    supportNoteTitle: "Important Delivery Note:",
-    supportNoteText: "Budget (Fast-Track) packages are typically completed within 1 to 5 working days once content is received (can be completed shorter if I am not busy). Revisions refer to basic text/layout edits only.",
+    supportNoteTitle: "Important Delivery & Pricing Note:",
+    supportNoteText: "Budget (Fast-Track) packages are typically completed within 1 to 5 working days once content is received (can be completed shorter if I am not busy). Please note that the listed prices are base (minimum) rates and may increase if you request additional features, custom scope, or integrations.",
 
     // Custom Page
     customHeader: "Detailed Websites & Systems",
