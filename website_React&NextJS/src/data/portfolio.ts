@@ -1,16 +1,16 @@
 export const portfolioItems = {
   ms: [
     {
-      id: "clinic-upgrade",
-      title: "Klinik Pergigian Dr. Zul",
-      subtitle: "Reka Semula Laman Web & Baik Pulih SSL",
-      category: "Web (Redesign & Upgrades)",
-      image: "/images/portfolio-clinic.jpg",
-      tags: ["Redesign", "SSL Setup", "Speed Setup", "Responsive"],
-      description: "Menyusun semula navigasi, memperbetulkan ralat reka bentuk telefon mudah alih, memasang sijil SSL, serta mengoptimumkan kelajuan memuatkan laman web klinik sebanyak 70%.",
-      tech: ["HTML5", "Tailwind CSS", "JavaScript", "SSL Certificate", "Lighthouse"],
-      priceClass: "Redesign / Repairs (dari RM250)",
-      demoUrl: "https://medium-budget-vibestudio.vercel.app/contact.html"
+      id: "vibe-studio",
+      title: "Vibe Interior Studio",
+      subtitle: "Laman Web Profil Japandi Minimalis",
+      category: "Web (From Scratch)",
+      image: "/images/portfolio-vibe.png",
+      tags: ["Minimalist Design", "Japandi Style", "4-Page Profile", "Responsive"],
+      description: "Laman web profil korporat premium 4-halaman (Home, Services, Portfolio, Contact) untuk studio reka bentuk dalaman Japandi. Dibina mengikut struktur Pakej Medium Budget (RM699) dengan tapisan portfolio interaktif, reka bentuk minimalis mewah yang responsif, dan widget WhatsApp bersepadu untuk rundingan pelanggan terus.",
+      tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+      priceClass: "Medium Budget (dari RM699)",
+      demoUrl: "https://medium-budget-vibestudio.vercel.app/"
     },
     {
       id: "rasa-nusantara",
@@ -61,16 +61,16 @@ export const portfolioItems = {
   ],
   en: [
     {
-      id: "clinic-upgrade",
-      title: "Dr. Zul Dental Clinic",
-      subtitle: "Website Redesign & SSL Recovery",
-      category: "Web (Redesign & Upgrades)",
-      image: "/images/portfolio-clinic.jpg",
-      tags: ["Redesign", "SSL Setup", "Speed Setup", "Responsive"],
-      description: "Re-structured site navigation, fixed critical mobile layout bugs, installed SSL certificates, and optimized the clinic's page speed score by 70%.",
-      tech: ["HTML5", "Tailwind CSS", "JavaScript", "SSL Certificate", "Lighthouse"],
-      priceClass: "Redesign / Repairs (from RM250)",
-      demoUrl: "https://medium-budget-vibestudio.vercel.app/contact.html"
+      id: "vibe-studio",
+      title: "Vibe Interior Studio",
+      subtitle: "Japandi Minimalist Interior Design Website",
+      category: "Web (From Scratch)",
+      image: "/images/portfolio-vibe.png",
+      tags: ["Minimalist Design", "Japandi Style", "4-Page Profile", "Responsive"],
+      description: "A premium 4-page corporate profile website (Home, Services, Portfolio, Contact) built for a luxury Japandi interior design studio. Structured under the Medium Budget (RM699) plan featuring an interactive filtered portfolio, responsive minimalist layout, and a WhatsApp floating widget for direct consultations.",
+      tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+      priceClass: "Medium Budget (from RM699)",
+      demoUrl: "https://medium-budget-vibestudio.vercel.app/"
     },
     {
       id: "rasa-nusantara",

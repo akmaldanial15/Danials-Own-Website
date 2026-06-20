@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useTranslation } from "@/hooks/useTranslation";
 
 export default function Footer() {
@@ -13,7 +14,17 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         {/* Brand Column */}
         <div className="space-y-4">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2.5">
+            <div className="relative w-6 h-6 shrink-0">
+              <Image
+                src="/logo.png"
+                alt="Danial's Web & Systems Logo"
+                fill
+                sizes="24px"
+                className="object-contain"
+                unoptimized
+              />
+            </div>
             <span className="text-lg font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
               {"DANIAL'S"}
             </span>

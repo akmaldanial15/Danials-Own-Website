@@ -108,7 +108,7 @@ export default function Home() {
               </p>
               <div className="mt-6 flex items-baseline gap-2 text-zinc-300">
                 <span className="text-xs text-zinc-500">{t("fromText")}</span>
-                <span className="text-2xl font-bold text-white">RM1,899 - RM3,500+</span>
+                <span className="text-2xl font-bold text-white">RM1,899 - RM4,800+</span>
               </div>
             </div>
             <div className="mt-8">

@@ -14,8 +14,7 @@ export const fastTrackPackages = {
         "Kemas kini menu/kandungan secara manual dicaj RM40+ setiap sesi (tiada admin console, maks 4 kali setahun)",
         "Hosting & Domain Kustom: Pilihan (Optional) tetapi sangat disyorkan",
         "Subdomain & Hosting Percuma disediakan (jika tiada domain sendiri)",
-        "Siap dalam 2 - 4 hari bekerja",
-        "Penghantaran ekspres (< 24 jam) dicaj tambahan"
+        "Siap dalam 1 - 3 hari bekerja (boleh jadi lambat sedikit jika saya sibuk/banyak client, dan boleh jadi sangat cepat siap jika saya tiada client/tidak sibuk)"
       ]
     },
     {
@@ -31,8 +30,7 @@ export const fastTrackPackages = {
         "Termasuk 6 kali suntingan / kemas kini asas setahun (di bawah pelan maintenance)",
         "Hosting & Domain Kustom: Pilihan (Optional) tetapi sangat disyorkan",
         "Subdomain & Hosting Percuma disediakan (jika tiada domain sendiri)",
-        "Siap dalam 2 - 4 hari bekerja",
-        "Penghantaran ekspres (< 24 jam) dicaj tambahan"
+        "Siap dalam 2 - 4 hari bekerja"
       ]
     },
     {
@@ -50,8 +48,7 @@ export const fastTrackPackages = {
         "Hosting & Domain Kustom: Pilihan dari RM78/bulan (sekali pelan penyelenggaraan)",
         "Termasuk 4 kali suntingan / kemas kini asas (sebelum pelancaran)",
         "Percuma 6 kali suntingan asas & 1 kali reka semula (redesign) ringan setahun",
-        "Siap dalam 2 - 4 hari bekerja",
-        "Penghantaran ekspres (< 24 jam) dicaj tambahan"
+        "Siap dalam 2 - 4 hari bekerja"
       ]
     },
     {
@@ -71,8 +68,7 @@ export const fastTrackPackages = {
         "Hosting & Domain Kustom: Pilihan dari RM78/bulan (sekali pelan penyelenggaraan)",
         "Termasuk 4 kali suntingan / kemas kini asas (sebelum pelancaran)",
         "Percuma 6 kali suntingan asas & 1 kali reka semula (redesign) ringan setahun",
-        "Siap dalam 3 - 5 hari bekerja (proses integrasi admin panel)",
-        "Penghantaran ekspres tersedia untuk caj tambahan"
+        "Siap dalam 3 - 5 hari bekerja (proses integrasi admin panel)"
       ]
     }
   ],
@@ -91,8 +87,7 @@ export const fastTrackPackages = {
         "Manual menu/content updates charged at RM40+ per session (no admin console, max 4 times/year)",
         "Custom Domain & Hosting: Optional but highly recommended",
         "Free Subdomain & Hosting provided (if no custom domain is used)",
-        "Delivered within 2 - 4 working days",
-        "Express delivery (< 24 hours) available for extra fee"
+        "Delivered within 1 - 3 working days (might be slightly slower if I'm busy/have many clients, or could be done very quickly if I have no clients/am not busy)"
       ]
     },
     {
@@ -108,8 +103,7 @@ export const fastTrackPackages = {
         "Includes 6 basic edits/updates per year (under standard maintenance)",
         "Custom Domain & Hosting: Optional but highly recommended",
         "Free Subdomain & Hosting provided (if no custom domain is used)",
-        "Delivered within 2 - 4 working days",
-        "Express delivery (< 24 hours) available for extra fee"
+        "Delivered within 2 - 4 working days"
       ]
     },
     {
@@ -127,8 +121,7 @@ export const fastTrackPackages = {
         "Custom Domain & Hosting: Option from RM78/month (including maintenance)",
         "Includes 4 basic edits/updates (before launch/release)",
         "Includes 6 basic edits/updates & 1 free light redesign per year",
-        "Delivered within 2 - 4 working days",
-        "Express delivery (< 24 hours) available for extra fee"
+        "Delivered within 2 - 4 working days"
       ]
     },
     {
@@ -148,8 +141,7 @@ export const fastTrackPackages = {
         "Custom Domain & Hosting: Option from RM78/month (including maintenance)",
         "Includes 4 basic edits/updates (before launch/release)",
         "Includes 6 basic edits/updates & 1 free light redesign per year",
-        "Delivered within 3 - 5 working days (due to admin panel setup)",
-        "Express delivery available for extra fee"
+        "Delivered within 3 - 5 working days (due to admin panel setup)"
       ]
     }
   ]

@@ -18,7 +18,7 @@ const bespokeDetails = {
         "Reka bentuk estetik human-centric"
       ],
       specs: [
-        { label: "Siap dlm", value: "7-14 Hari" },
+        { label: "Siap dlm", value: "7-14 Hari Bekerja" },
         { label: "Semakan", value: "2x Revisions" },
         { label: "Sokongan", value: "14 Hari Waranti" },
         { label: "Teknologi", value: "Framework / Vanilla (Pilihan)" },
@@ -36,7 +36,7 @@ const bespokeDetails = {
         "Optimasi kelajuan Lighthouse"
       ],
       specs: [
-        { label: "Siap dlm", value: "14-21 Hari" },
+        { label: "Siap dlm", value: "14-21 Hari Bekerja" },
         { label: "Semakan", value: "4x Revisions" },
         { label: "Sokongan", value: "30 Hari Waranti" },
         { label: "Teknologi", value: "Framework / Vanilla (Pilihan)" },
@@ -54,7 +54,7 @@ const bespokeDetails = {
         "Struktur SEO termaju & e-mel perniagaan"
       ],
       specs: [
-        { label: "Siap dlm", value: "21-30 Hari" },
+        { label: "Siap dlm", value: "21-30 Hari Bekerja" },
         { label: "Semakan", value: "7x Revisions" },
         { label: "Sokongan", value: "60 Hari Waranti" },
         { label: "Teknologi", value: "Framework / Vanilla (Pilihan)" },
@@ -89,7 +89,7 @@ const bespokeDetails = {
         "Antara muka mesra pengguna & responsif"
       ],
       specs: [
-        { label: "Siap dlm", value: "7-14 Hari" },
+        { label: "Siap dlm", value: "7-14 Hari Bekerja" },
         { label: "Semakan", value: "4x Revisions" },
         { label: "Sokongan", value: "30 Hari Waranti" },
         { label: "Teknologi", value: "Next.js / Node.js / Database" },
@@ -106,7 +106,7 @@ const bespokeDetails = {
         "Dashboard kawalan tempahan untuk admin"
       ],
       specs: [
-        { label: "Siap dlm", value: "14-21 Hari" },
+        { label: "Siap dlm", value: "14-21 Hari Bekerja" },
         { label: "Semakan", value: "4x Revisions" },
         { label: "Sokongan", value: "30 Hari Waranti" },
         { label: "Teknologi", value: "Next.js / Node.js / Database" },
@@ -123,7 +123,7 @@ const bespokeDetails = {
         "Panel pengurusan database yang selamat"
       ],
       specs: [
-        { label: "Siap dlm", value: "14-21 Hari" },
+        { label: "Siap dlm", value: "14-21 Hari Bekerja" },
         { label: "Semakan", value: "4x Revisions" },
         { label: "Sokongan", value: "30 Hari Waranti" },
         { label: "Teknologi", value: "Next.js / PostgreSQL / MySQL" },
@@ -140,7 +140,7 @@ const bespokeDetails = {
         "Dashboard pengurusan stok untuk kakitangan"
       ],
       specs: [
-        { label: "Siap dlm", value: "21-30 Hari" },
+        { label: "Siap dlm", value: "21-30 Hari Bekerja" },
         { label: "Semakan", value: "4x Revisions" },
         { label: "Sokongan", value: "30 Hari Waranti" },
         { label: "Teknologi", value: "Next.js / Node.js / Relational DB" },
@@ -157,7 +157,7 @@ const bespokeDetails = {
         "Log masuk selamat untuk pengguna & pekerja"
       ],
       specs: [
-        { label: "Siap dlm", value: "30-45 Hari" },
+        { label: "Siap dlm", value: "30-45 Hari Bekerja" },
         { label: "Semakan", value: "6x Revisions" },
         { label: "Sokongan", value: "60 Hari Waranti" },
         { label: "Teknologi", value: "React Native / Next.js / Android" },
@@ -174,7 +174,7 @@ const bespokeDetails = {
         "Automasi kerja & aliran tugas (workflows)"
       ],
       specs: [
-        { label: "Siap dlm", value: "14-30 Hari" },
+        { label: "Siap dlm", value: "14-30 Hari Bekerja" },
         { label: "Semakan", value: "Semakan Fleksibel" },
         { label: "Sokongan", value: "30 Hari Waranti" },
         { label: "Teknologi", value: "OpenAI / Anthropic APIs / Node.js" },
@@ -193,7 +193,7 @@ const bespokeDetails = {
         "Human-centric aesthetic design"
       ],
       specs: [
-        { label: "Delivery", value: "7-14 Days" },
+        { label: "Delivery", value: "7-14 Business Days" },
         { label: "Revisions", value: "2 Sessions" },
         { label: "Support", value: "14 Days Warranty" },
         { label: "Technology", value: "Framework / Vanilla (Your Choice)" },
@@ -211,7 +211,7 @@ const bespokeDetails = {
         "Lighthouse speed optimizations"
       ],
       specs: [
-        { label: "Delivery", value: "14-21 Days" },
+        { label: "Delivery", value: "14-21 Business Days" },
         { label: "Revisions", value: "4 Sessions" },
         { label: "Support", value: "30 Days Warranty" },
         { label: "Technology", value: "Framework / Vanilla (Your Choice)" },
@@ -229,7 +229,7 @@ const bespokeDetails = {
         "Advanced SEO structure & business email"
       ],
       specs: [
-        { label: "Delivery", value: "21-30 Days" },
+        { label: "Delivery", value: "21-30 Business Days" },
         { label: "Revisions", value: "7 Sessions" },
         { label: "Support", value: "60 Days Warranty" },
         { label: "Technology", value: "Framework / Vanilla (Your Choice)" },
@@ -264,7 +264,7 @@ const bespokeDetails = {
         "User-friendly responsive controls"
       ],
       specs: [
-        { label: "Delivery", value: "7-14 Days" },
+        { label: "Delivery", value: "7-14 Business Days" },
         { label: "Revisions", value: "4 Sessions" },
         { label: "Support", value: "30 Days Warranty" },
         { label: "Technology", value: "Next.js / Node.js / Database" },
@@ -281,7 +281,7 @@ const bespokeDetails = {
         "Admin control panel for booking schedules"
       ],
       specs: [
-        { label: "Delivery", value: "14-21 Days" },
+        { label: "Delivery", value: "14-21 Business Days" },
         { label: "Revisions", value: "4 Sessions" },
         { label: "Support", value: "30 Days Warranty" },
         { label: "Technology", value: "Next.js / Node.js / Database" },
@@ -298,7 +298,7 @@ const bespokeDetails = {
         "Secure database administration console"
       ],
       specs: [
-        { label: "Delivery", value: "14-21 Days" },
+        { label: "Delivery", value: "14-21 Business Days" },
         { label: "Revisions", value: "4 Sessions" },
         { label: "Support", value: "30 Days Warranty" },
         { label: "Technology", value: "Next.js / PostgreSQL / MySQL" },
@@ -315,7 +315,7 @@ const bespokeDetails = {
         "Staff-level stock control dashboard"
       ],
       specs: [
-        { label: "Delivery", value: "21-30 Days" },
+        { label: "Delivery", value: "21-30 Business Days" },
         { label: "Revisions", value: "4 Sessions" },
         { label: "Support", value: "30 Days Warranty" },
         { label: "Technology", value: "Next.js / Node.js / Relational DB" },
@@ -332,7 +332,7 @@ const bespokeDetails = {
         "Secure client & staff login gateways"
       ],
       specs: [
-        { label: "Delivery", value: "30-45 Days" },
+        { label: "Delivery", value: "30-45 Business Days" },
         { label: "Revisions", value: "6 Sessions" },
         { label: "Support", value: "60 Days Warranty" },
         { label: "Technology", value: "React Native / Next.js / Android" },
@@ -349,7 +349,7 @@ const bespokeDetails = {
         "Custom workflow task automation"
       ],
       specs: [
-        { label: "Delivery", value: "14-30 Days" },
+        { label: "Delivery", value: "14-30 Business Days" },
         { label: "Revisions", value: "Flexible Sessions" },
         { label: "Support", value: "30 Days Warranty" },
         { label: "Technology", value: "OpenAI / Anthropic APIs / Node.js" },
@@ -609,6 +609,23 @@ export default function DetailedServices() {
                 </div>
               </GlowCard>
             ))}
+          </div>
+        </div>
+
+        {/* Staging & Delivery Notes */}
+        <div className="p-6 rounded-2xl bg-zinc-900/20 border border-zinc-900 max-w-4xl mx-auto flex items-start gap-4">
+          <svg className="w-6 h-6 text-purple-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <div className="space-y-1 text-xs sm:text-sm text-zinc-400">
+            <p className="font-bold text-zinc-200">
+              {language === "ms" ? "Nota Penghantaran & Tempoh Siap:" : "Important Staging & Delivery Notes:"}
+            </p>
+            <p className="leading-relaxed">
+              {language === "ms"
+                ? "Semua tempoh siap dikira dalam hari bekerja (hari perniagaan). Tempoh ini boleh menjadi lebih singkat atau cepat sekiranya slot saya kosong / saya tidak sibuk dengan projek pelanggan lain."
+                : "All delivery schedules are estimated in business working days. Completion times can be significantly shorter if my slots are open and I am not busy with other client queues."}
+            </p>
           </div>
         </div>
 

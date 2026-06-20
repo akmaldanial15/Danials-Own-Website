@@ -42,7 +42,7 @@ export default function SystemsAppsServices() {
     },
     {
       name: isMs ? "Pembangunan Web + Aplikasi Android" : "Custom Web + Android App",
-      price: "RM3,500+",
+      price: "RM4,800+",
       desc: isMs
         ? "Sistem modular tersuai yang berjalan selari antara laman web admin dan aplikasi mudah alih Android."
         : "Custom synchronized system bridging a web platform and an Android mobile application."

@@ -76,7 +76,7 @@ export const translations = {
     fixesDesc: "Sudah ada website tapi bermasalah? Kami membaiki kesilapan kod, isu responsif peranti mudah alih, pepijat pangkalan data, atau ralat pelayan dengan harga tetap yang berpatutan.",
     btnDiscussFix: "Bincang Masalah →",
     supportNoteTitle: "Nota Penting Penghantaran:",
-    supportNoteText: "Pakej Budget (Fast-Track) biasanya siap dalam tempoh 2 ke 4 hari bekerja selepas kandungan diterima. Penghantaran ekspres (bawah 24 jam) memerlukan caj tambahan. Revisions merujuk kepada pembetulan teks/susun atur sahaja.",
+    supportNoteText: "Pakej Budget (Fast-Track) biasanya siap dalam tempoh 1 ke 5 hari bekerja selepas kandungan diterima (boleh jadi lebih singkat/cepat sekiranya saya tidak sibuk). Revisions merujuk kepada pembetulan teks/susun atur sahaja.",
 
     // Custom Page
     customHeader: "Laman Web & Sistem Detailed",
@@ -218,7 +218,7 @@ export const translations = {
     fixesDesc: "Got a website bug? We repair code errors, mobile layout issues, database anomalies, or server script problems at affordable fixed prices.",
     btnDiscussFix: "Discuss Issue →",
     supportNoteTitle: "Important Delivery Note:",
-    supportNoteText: "Budget (Fast-Track) packages are typically completed within 2 to 4 working days once content is received. Express delivery (under 24 hours) is available for an extra fee. Revisions refer to basic text/layout edits only.",
+    supportNoteText: "Budget (Fast-Track) packages are typically completed within 1 to 5 working days once content is received (can be completed shorter if I am not busy). Revisions refer to basic text/layout edits only.",
 
     // Custom Page
     customHeader: "Detailed Websites & Systems",

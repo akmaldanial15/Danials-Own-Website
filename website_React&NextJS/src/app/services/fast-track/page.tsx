@@ -15,12 +15,11 @@ const packageDetails = {
         "Penyelenggaraan cover ralat teknikal sahaja"
       ],
       specs: [
-        { label: "Siap dlm", value: "2-4 Hari" },
+        { label: "Siap dlm", value: "1-3 Hari Bekerja" },
         { label: "Bayaran", value: "100% Upfront" },
         { label: "Maintenance", value: "Min RM40/bln" },
         { label: "Kontrak", value: "2 Tahun" },
-        { label: "Suntingan", value: "Tiada" },
-        { label: "Ekspres", value: "Tersedia (Caj extra)" }
+        { label: "Suntingan", value: "Tiada" }
       ]
     },
     "budget-standard": {
@@ -30,7 +29,7 @@ const packageDetails = {
         "Subdomain & Hosting Percuma"
       ],
       specs: [
-        { label: "Siap dlm", value: "2-4 Hari" },
+        { label: "Siap dlm", value: "2-4 Hari Bekerja" },
         { label: "Bayaran", value: "100% Upfront" },
         { label: "Maintenance", value: "Min RM50/bln" },
         { label: "Kontrak", value: "2 Tahun" },
@@ -46,7 +45,7 @@ const packageDetails = {
         "Tiada Admin Login Panel"
       ],
       specs: [
-        { label: "Siap dlm", value: "2-4 Hari" },
+        { label: "Siap dlm", value: "2-4 Hari Bekerja" },
         { label: "Bayaran", value: "60% / 20% / 20%" },
         { label: "Maintenance", value: "Min RM60/bln" },
         { label: "Kontrak", value: "1 Tahun" },
@@ -64,7 +63,7 @@ const packageDetails = {
         "Pesanan masuk automatik ke WhatsApp/Telegram"
       ],
       specs: [
-        { label: "Siap dlm", value: "3-5 Hari" },
+        { label: "Siap dlm", value: "3-5 Hari Bekerja" },
         { label: "Bayaran", value: "60% / 20% / 20%" },
         { label: "Maintenance", value: "Min RM60/bln" },
         { label: "Kontrak", value: "1 Tahun" },
@@ -81,12 +80,11 @@ const packageDetails = {
         "Maintenance covers technical bug fixes only"
       ],
       specs: [
-        { label: "Delivery", value: "2-4 Days" },
+        { label: "Delivery", value: "1-3 Business Days" },
         { label: "Payment", value: "100% Upfront" },
         { label: "Maintenance", value: "Min RM40/mo" },
         { label: "Contract", value: "2 Years" },
-        { label: "Basic Edits", value: "None" },
-        { label: "Express", value: "Available (Extra)" }
+        { label: "Basic Edits", value: "None" }
       ]
     },
     "budget-standard": {
@@ -96,7 +94,7 @@ const packageDetails = {
         "Free Subdomain & Hosting"
       ],
       specs: [
-        { label: "Delivery", value: "2-4 Days" },
+        { label: "Delivery", value: "2-4 Business Days" },
         { label: "Payment", value: "100% Upfront" },
         { label: "Maintenance", value: "Min RM50/mo" },
         { label: "Contract", value: "2 Years" },
@@ -112,7 +110,7 @@ const packageDetails = {
         "No Admin Login Panel"
       ],
       specs: [
-        { label: "Delivery", value: "2-4 Days" },
+        { label: "Delivery", value: "2-4 Business Days" },
         { label: "Payment", value: "60% / 20% / 20%" },
         { label: "Maintenance", value: "Min RM60/mo" },
         { label: "Contract", value: "1 Year" },
@@ -130,7 +128,7 @@ const packageDetails = {
         "Order notifications routed to WhatsApp/Telegram"
       ],
       specs: [
-        { label: "Delivery", value: "3-5 Days" },
+        { label: "Delivery", value: "3-5 Business Days" },
         { label: "Payment", value: "60% / 20% / 20%" },
         { label: "Maintenance", value: "Min RM60/mo" },
         { label: "Contract", value: "1 Year" },
@@ -185,7 +183,7 @@ export default function FastTrackServices() {
           {/* Card 1: Quick Launch */}
           <div className="relative group p-8 md:p-10 rounded-3xl bg-zinc-900/40 border border-zinc-850 hover:border-cyan-500/30 hover:bg-zinc-900/60 hover:shadow-[0_10px_30px_rgba(16,185,129,0.08)] transition-all duration-300">
             <div className="absolute top-6 right-6 text-[10px] font-mono font-bold tracking-widest text-cyan-400 bg-cyan-500/10 px-2.5 py-0.5 rounded-full border border-cyan-500/10 uppercase">
-              2-4 DAYS
+              1-5 DAYS
             </div>
             <div className="space-y-4">
               <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20 shadow-[0_0_25px_rgba(16,185,129,0.15)] transition-transform duration-300 group-hover:scale-110 p-2">
@@ -197,8 +195,8 @@ export default function FastTrackServices() {
                 </h3>
                 <p className="text-xs sm:text-sm text-zinc-405 leading-relaxed">
                   {language === "ms" 
-                     ? "Sedia dilancarkan dalam tempoh 2 hingga 4 hari bekerja sahaja. Sesuai untuk pelancaran profil perniagaan ekspres."
-                     : "Ready to go live in just 2 to 4 working days. Perfect for quick market entry or corporate profiles."}
+                     ? "Sedia dilancarkan dalam tempoh 1 hingga 5 hari bekerja sahaja. Sesuai untuk pelancaran profil perniagaan dengan pantas."
+                     : "Ready to go live in just 1 to 5 working days. Perfect for launching your business profile quickly."}
                 </p>
               </div>
             </div>
