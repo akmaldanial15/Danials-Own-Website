@@ -380,6 +380,11 @@ const bespokeDetails = {
 
 export default function DetailedServices() {
   const { t, language } = useTranslation();
+  const [expandedCards, setExpandedCards] = React.useState<Record<string, boolean>>({});
+
+  const toggleCard = (id: string) => {
+    setExpandedCards((prev) => ({ ...prev, [id]: !prev[id] }));
+  };
 
   const currentBespoke = bespokePackages[language];
   const detailedWebPackages = currentBespoke.filter((pkg) =>
@@ -505,14 +510,19 @@ export default function DetailedServices() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {detailedWebPackages.map((pkg) => {
               const structured = bespokeDetails[language][pkg.id as keyof typeof bespokeDetails["ms"]];
+              const deliverables = (structured && structured.deliverables) || pkg.features || [];
+              const hasMoreInfo = deliverables.length > 4 || (structured && structured.specs && structured.specs.length > 0);
+              const isExpanded = !!expandedCards[pkg.id];
+              const visibleDeliverables = hasMoreInfo ? deliverables.slice(0, 4) : deliverables;
+              const hiddenDeliverables = hasMoreInfo ? deliverables.slice(4) : [];
 
               return (
                 <GlowCard key={pkg.id} color="from-purple-500 to-indigo-600">
-                  <div className="flex flex-col justify-between h-full space-y-6">
+                  <div className="flex flex-col justify-between h-full space-y-5">
                     <div className="space-y-4">
                       <div className="space-y-2">
                         <h3 className="text-xl font-bold text-white tracking-tight">{pkg.name}</h3>
-                        <p className="text-zinc-300 text-[12.5px] leading-relaxed min-h-[48px]">
+                        <p className="text-zinc-300 text-[12.5px] leading-relaxed min-h-[38px]">
                           {pkg.description}
                         </p>
                       </div>
@@ -525,13 +535,13 @@ export default function DetailedServices() {
                       </div>
 
                       {/* Scope & Features Checklist */}
-                      {((structured && structured.deliverables) || pkg.features) && (
+                      {deliverables.length > 0 && (
                         <div className="space-y-2.5">
                           <span className="text-[11px] text-zinc-400 font-bold uppercase tracking-wider">
-                            {language === "ms" ? "Skop & Keupayaan" : "Scope & Features"}
+                            {language === "ms" ? "Skop & Ciri Utama" : "Core Scope & Features"}
                           </span>
                           <ul className="space-y-2 text-[13px] text-zinc-250">
-                            {((structured && structured.deliverables) || pkg.features).map((feature, i) => (
+                            {visibleDeliverables.map((feature, i) => (
                               <li key={i} className="flex items-start gap-2">
                                 <svg className="w-3.5 h-3.5 text-purple-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
@@ -543,24 +553,65 @@ export default function DetailedServices() {
                         </div>
                       )}
 
-                      {/* Specs & Terms Grid */}
-                      {structured && structured.specs.length > 0 && (
-                        <div className="space-y-2.5 pt-3 border-t border-zinc-900/50">
-                          <span className="text-xs text-zinc-300 font-bold uppercase tracking-wider">
-                            {language === "ms" ? "Spesifikasi Pembangunan" : "Development Specs"}
-                          </span>
-                          <div className="grid grid-cols-2 gap-1.5">
-                            {structured.specs.map((spec, i) => (
-                              <div key={i} className="p-2 rounded-xl bg-zinc-950/40 border border-zinc-900/60 flex flex-col justify-center min-h-[50px]">
-                                <span className="text-zinc-400 font-bold uppercase text-[9.5px] tracking-wider leading-none">
-                                  {spec.label}
-                                </span>
-                                <span className="text-white font-extrabold text-[12.5px] mt-1 leading-tight">
-                                  {spec.value}
-                                </span>
+                      {/* Toggle Details Button */}
+                      {hasMoreInfo && (
+                        <div className="pt-1">
+                          <button
+                            onClick={() => toggleCard(pkg.id)}
+                            className="inline-flex items-center gap-1.5 text-xs text-purple-400 hover:text-purple-300 font-bold focus:outline-none transition-colors duration-200 cursor-pointer select-none bg-purple-500/5 hover:bg-purple-500/10 px-3 py-1.5 rounded-lg border border-purple-500/10"
+                          >
+                            <span>{isExpanded ? (language === "ms" ? "Sembunyikan Info ▲" : "Hide Details ▲") : (language === "ms" ? "Lihat Perincian Penuh ▼" : "Show Full Details ▼")}</span>
+                          </button>
+                        </div>
+                      )}
+
+                      {/* Collapsible Content */}
+                      {hasMoreInfo && (
+                        <div 
+                          className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                            isExpanded 
+                              ? 'max-h-[800px] opacity-100 border-t border-zinc-900/50 pt-4 mt-3 space-y-4' 
+                              : 'max-h-0 opacity-0 pointer-events-none'
+                          }`}
+                        >
+                          {hiddenDeliverables.length > 0 && (
+                            <div className="space-y-2">
+                              <span className="text-[11px] text-zinc-400 font-bold uppercase tracking-wider">
+                                {language === "ms" ? "Ciri Tambahan" : "Additional Features"}
+                              </span>
+                              <ul className="space-y-2 text-[13px] text-zinc-250">
+                                {hiddenDeliverables.map((feature, i) => (
+                                  <li key={i} className="flex items-start gap-2">
+                                    <svg className="w-3.5 h-3.5 text-purple-400/80 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span className="leading-snug text-zinc-300">{feature}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+
+                          {/* Specs & Terms Grid inside collapsible */}
+                          {structured && structured.specs.length > 0 && (
+                            <div className="space-y-2.5">
+                              <span className="text-xs text-zinc-350 font-bold uppercase tracking-wider">
+                                {language === "ms" ? "Spesifikasi Pembangunan" : "Development Specs"}
+                              </span>
+                              <div className="grid grid-cols-2 gap-1.5">
+                                {structured.specs.map((spec, i) => (
+                                  <div key={i} className="p-2 rounded-xl bg-zinc-950/40 border border-zinc-900/60 flex flex-col justify-center min-h-[50px]">
+                                    <span className="text-zinc-400 font-bold uppercase text-[9.5px] tracking-wider leading-none">
+                                      {spec.label}
+                                    </span>
+                                    <span className="text-white font-extrabold text-[12.5px] mt-1 leading-tight">
+                                      {spec.value}
+                                    </span>
+                                  </div>
+                                ))}
                               </div>
-                            ))}
-                          </div>
+                            </div>
+                          )}
                         </div>
                       )}
                     </div>
