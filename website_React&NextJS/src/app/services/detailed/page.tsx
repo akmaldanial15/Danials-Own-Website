@@ -21,7 +21,7 @@ const bespokeDetails = {
         { label: "Siap dlm", value: "7-14 Hari Bekerja" },
         { label: "Semakan", value: "2x Revisions" },
         { label: "Sokongan", value: "14 Hari Waranti" },
-        { label: "Teknologi", value: "Framework / Vanilla (Pilihan)" },
+        { label: "Teknologi", value: "HTML5 / CSS3 / Vanilla JS" },
         { label: "Bayaran", value: "50% / 20% / 30%" },
         { label: "SEO & Kelajuan", value: "Optimum Asas" }
       ]
@@ -196,7 +196,7 @@ const bespokeDetails = {
         { label: "Delivery", value: "7-14 Business Days" },
         { label: "Revisions", value: "2 Sessions" },
         { label: "Support", value: "14 Days Warranty" },
-        { label: "Technology", value: "Framework / Vanilla (Your Choice)" },
+        { label: "Technology", value: "HTML5 / CSS3 / Vanilla JS" },
         { label: "Payment", value: "50% / 20% / 30%" },
         { label: "SEO & Speed", value: "Basic Optimized" }
       ]
