@@ -30,10 +30,10 @@ export const portfolioItems = {
       subtitle: "Kolej TVET & Portal Pendidikan",
       category: "Web (Redesign & Upgrades)",
       image: "/images/portfolio-admin.jpg",
-      tags: ["Redesign", "Huge Upgrade", "Institutional Website"],
-      description: "Pembinaan semula (huge upgrade) laman web rasmi Institut Wawasan untuk reka bentuk yang lebih profesional, moden dan responsif. Menguruskan maklumat program TVET, pendaftaran, dan struktur navigasi yang dipertingkatkan.",
-      tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
-      priceClass: "Standard Website (dari RM1,499)",
+      tags: ["Redesign", "Huge Upgrade", "Database System"],
+      description: "Pembinaan semula dan naik taraf portal rasmi Institut Wawasan di bawah Pakej Advanced (RM2,899). Dilengkapi dengan sistem pangkalan data bersepadu, portal log masuk (login) berasingan untuk staf dan pentadbir (admin) bagi menguruskan program TVET, rekod pelajar, dan maklumat kursus secara dinamik.",
+      tech: ["Next.js", "Tailwind CSS", "Node.js", "Database System", "Login System"],
+      priceClass: "Advanced Website (dari RM2,899)",
       demoUrl: "https://www.iwawasan.com.my"
     },
     {
@@ -91,10 +91,10 @@ export const portfolioItems = {
       subtitle: "TVET College & Education Portal",
       category: "Web (Redesign & Upgrades)",
       image: "/images/portfolio-admin.jpg",
-      tags: ["Redesign", "Huge Upgrade", "Institutional Website"],
-      description: "A major upgrade and redesign of the official Institut Wawasan website, featuring a professional, modern, and fully responsive layout. Streamlines TVET course catalogs, student portals, and optimized navigation.",
-      tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
-      priceClass: "Standard Website (from RM1,499)",
+      tags: ["Redesign", "Huge Upgrade", "Database System"],
+      description: "A major upgrade and redesign of the official Institut Wawasan website under the Advanced Plan (RM2,899). Integrated with a robust database system featuring separate login portals for staff and administrators (admin) to dynamically manage TVET programs, course structures, and student records.",
+      tech: ["Next.js", "Tailwind CSS", "Node.js", "Database System", "Login System"],
+      priceClass: "Advanced Website (from RM2,899)",
       demoUrl: "https://www.iwawasan.com.my"
     },
     {
