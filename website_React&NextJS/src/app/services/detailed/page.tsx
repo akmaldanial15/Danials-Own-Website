@@ -17,7 +17,7 @@ const bespokeDetails = {
         "Sangat responsif (keserasian 100% peranti)",
         "Integrasi Google Maps & Pautan WhatsApp",
         "Persediaan SEO terancang",
-        "Reka bentuk estetik yang ikhlas & teliti"
+        "Reka bentuk estetik dengan ketelitian tinggi"
       ],
       specs: [
         { label: "Siap dlm", value: "7-14 Hari Bekerja" },
@@ -200,7 +200,7 @@ const bespokeDetails = {
         "100% cross-device display compatibility",
         "Google Maps & WhatsApp link integration",
         "Planned SEO setup",
-        "Meticulous & sincere aesthetic design"
+        "Meticulous & professional aesthetic design"
       ],
       specs: [
         { label: "Delivery", value: "7-14 Business Days" },
@@ -444,10 +444,10 @@ export default function DetailedServices() {
             </div>
           </div>
 
-          {/* Card 2: Meticulous UX & Sincerity */}
+          {/* Card 2: Meticulous UX & Professionalism */}
           <div className="relative group p-8 md:p-10 rounded-3xl bg-zinc-900/40 border border-zinc-850 hover:border-purple-500/30 hover:bg-zinc-900/60 hover:shadow-[0_10px_30px_rgba(168,85,247,0.08)] transition-all duration-300">
             <div className="absolute top-6 right-6 text-[10px] font-mono font-bold tracking-widest text-purple-400 bg-purple-500/10 px-2.5 py-0.5 rounded-full border border-purple-500/10 uppercase">
-              {language === "ms" ? "KEMASAN TELITI & IKHLAS" : "METICULOUS CRAFTSMANSHIP"}
+              {language === "ms" ? "KEMASAN TELITI & PROFESIONAL" : "METICULOUS CRAFTSMANSHIP"}
             </div>
             <div className="space-y-4">
               <div className="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center border border-purple-500/20 shadow-[0_0_25px_rgba(168,85,247,0.15)] transition-transform duration-300 group-hover:scale-110 p-2.5">
