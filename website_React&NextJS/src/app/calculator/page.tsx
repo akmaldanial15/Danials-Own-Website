@@ -14,6 +14,7 @@ export default function PricingCalculator() {
   const [extraPages, setExtraPages] = useState(0);
   const [maintenanceCycle, setMaintenanceCycle] = useState<"monthly" | "yearly">("monthly");
   const [includeBudgetHosting, setIncludeBudgetHosting] = useState(false);
+  const [hostingTier, setHostingTier] = useState<"standard" | "premium">("standard");
 
   // Synchronize first package selection when switching tabs
   const handleTabChange = (tab: "budget" | "bespoke") => {
@@ -21,7 +22,7 @@ export default function PricingCalculator() {
     setSelectedPkgId(tab === "budget" ? "budget-basic" : "basic");
     setIncludeBudgetHosting(false);
     if (tab === "budget") {
-      setSelectedAddOnIds(prev => prev.filter(id => id !== "std-hosting" && id !== "premium-hosting" && id !== "maintenance"));
+      setSelectedAddOnIds(prev => prev.filter(id => id !== "hosting" && id !== "maintenance"));
     }
   };
 
@@ -46,26 +47,40 @@ export default function PricingCalculator() {
     if (selectedAddOnIds.includes(id)) {
       setSelectedAddOnIds(selectedAddOnIds.filter(addonId => addonId !== id));
     } else {
-      let nextList = [...selectedAddOnIds];
-      if (id === "std-hosting") {
-        nextList = nextList.filter(addonId => addonId !== "premium-hosting");
-      } else if (id === "premium-hosting") {
-        nextList = nextList.filter(addonId => addonId !== "std-hosting");
-      }
-      setSelectedAddOnIds([...nextList, id]);
+      setSelectedAddOnIds([...selectedAddOnIds, id]);
     }
   };
 
   // Get selected addon details based on active language
   const activeAddOns = useMemo(() => {
-    return addOns[language].filter(addon => selectedAddOnIds.includes(addon.id));
-  }, [selectedAddOnIds, language]);
+    return addOns[language]
+      .filter(addon => selectedAddOnIds.includes(addon.id))
+      .map(addon => {
+        if (addon.id === "hosting") {
+          return {
+            ...addon,
+            name: hostingTier === "standard" 
+              ? (language === "ms" ? "Hosting Standard + Domain (.com/.my) (1 Tahun)" : "Standard Hosting + Domain (.com/.my) (1 Year)")
+              : (language === "ms" ? "Hosting Premium + Domain (.com/.my) (1 Tahun)" : "Premium Hosting + Domain (.com/.my) (1 Year)"),
+            price: hostingTier === "standard" ? 250 : 450,
+            description: hostingTier === "standard"
+              ? (language === "ms" 
+                  ? "Sangat disyorkan untuk web profesional. Pilihan hosting percuma sedia ada sangat terhad, sering lambat (sleep mode), tiada jaminan kestabilan server, & menggunakan subdomain tidak formal (.vercel.app)."
+                  : "Highly recommended for professional sites. The default free hosting option is highly restricted, prone to server sleep mode (cold starts), lacks uptime guarantees, and forces a non-professional subdomain (.vercel.app).")
+              : (language === "ms"
+                  ? "Prestasi pelayan lebih pantas dengan kapasiti storan & lebar jalur yang lebih besar untuk trafik sederhana tinggi."
+                  : "High-performance server resources with larger storage & bandwidth caps, optimized for moderate-to-high traffic.")
+          };
+        }
+        return addon;
+      });
+  }, [selectedAddOnIds, language, hostingTier]);
 
   // Filter visible addons based on tab category
   const visibleAddOns = useMemo(() => {
     return addOns[language].filter(addon => {
       if (selectedTab === "budget") {
-        return addon.id !== "maintenance" && addon.id !== "std-hosting" && addon.id !== "premium-hosting";
+        return addon.id !== "maintenance" && addon.id !== "hosting";
       }
       return true;
     });
@@ -199,10 +214,12 @@ export default function PricingCalculator() {
           : (language === "ms" ? "Domain & Hosting: PERCUMA (Subdomain / Had Sangat Terhad)" : "Domain & Hosting: FREE (Subdomain / Extremely Low limits)")
       );
     } else {
-      if (selectedAddOnIds.includes("std-hosting")) {
-        customSummary.push(language === "ms" ? "Domain & Hosting: Pakej Standard (+RM250/thn)" : "Domain & Hosting: Standard Package (+RM250/yr)");
-      } else if (selectedAddOnIds.includes("premium-hosting")) {
-        customSummary.push(language === "ms" ? "Domain & Hosting: Pakej Premium (+RM450/thn)" : "Domain & Hosting: Premium Package (+RM450/yr)");
+      if (selectedAddOnIds.includes("hosting")) {
+        if (hostingTier === "standard") {
+          customSummary.push(language === "ms" ? "Domain & Hosting: Pakej Standard (+RM250/thn)" : "Domain & Hosting: Standard Package (+RM250/yr)");
+        } else {
+          customSummary.push(language === "ms" ? "Domain & Hosting: Pakej Premium (+RM450/thn)" : "Domain & Hosting: Premium Package (+RM450/yr)");
+        }
       } else {
         customSummary.push(language === "ms" ? "Domain & Hosting: PERCUMA (Sangat Terhad & Sangat Tidak Disyorkan - .vercel.app)" : "Domain & Hosting: FREE (Highly Restricted & Strongly Not Recommended - .vercel.app)");
       }
@@ -433,14 +450,35 @@ export default function PricingCalculator() {
                   {visibleAddOns.map((addon) => {
                     const isChecked = selectedAddOnIds.includes(addon.id);
                     const isMaintenance = addon.id === "maintenance";
+                    const isHosting = addon.id === "hosting";
+                    
                     const displayPrice = isMaintenance
                       ? (maintenanceCycle === "monthly" ? 80 : 700)
-                      : addon.price;
+                      : isHosting
+                        ? (hostingTier === "standard" ? 250 : 450)
+                        : addon.price;
+                        
                     const displayType = isMaintenance
                       ? (maintenanceCycle === "monthly"
                           ? (language === "ms" ? "bulanan" : "monthly")
                           : (language === "ms" ? "tahunan" : "yearly"))
                       : addon.type.replace("-", " ");
+
+                    const addonName = isHosting
+                      ? (hostingTier === "standard"
+                          ? (language === "ms" ? "Hosting Standard + Domain" : "Standard Hosting + Domain")
+                          : (language === "ms" ? "Hosting Premium + Domain" : "Premium Hosting + Domain"))
+                      : addon.name;
+
+                    const addonDesc = isHosting
+                      ? (hostingTier === "standard"
+                          ? (language === "ms"
+                              ? "Sangat disyorkan untuk web profesional. Pilihan hosting percuma sedia ada sangat terhad, sering lambat (sleep mode), tiada jaminan kestabilan server, & menggunakan subdomain tidak formal (.vercel.app)."
+                              : "Highly recommended for professional sites. The default free hosting option is highly restricted, prone to server sleep mode (cold starts), lacks uptime guarantees, and forces a non-professional subdomain (.vercel.app).")
+                          : (language === "ms"
+                              ? "Prestasi pelayan lebih pantas dengan kapasiti storan & lebar jalur yang lebih besar untuk trafik sederhana tinggi."
+                              : "High-performance server resources with larger storage & bandwidth caps, optimized for moderate-to-high traffic."))
+                      : addon.description;
 
                     return (
                       <div
@@ -453,11 +491,42 @@ export default function PricingCalculator() {
                         }`}
                       >
                         <div className="space-y-0.5 pr-2 flex-1">
-                          <p className="text-xs font-semibold text-zinc-200 leading-tight">{addon.name}</p>
+                          <p className="text-xs font-semibold text-zinc-200 leading-tight">{addonName}</p>
                           <p className="text-[9px] text-zinc-400 uppercase tracking-wider font-bold">{displayType}</p>
                           {/* @ts-ignore */}
-                          {addon.description && (
-                            <p className="text-[10px] text-zinc-400 mt-1.5 leading-relaxed">{addon.description}</p>
+                          {addonDesc && (
+                            <p className="text-[10px] text-zinc-400 mt-1.5 leading-relaxed">{addonDesc}</p>
+                          )}
+                          
+                          {/* Hosting Sub-Toggle */}
+                          {isHosting && isChecked && (
+                            <div 
+                              className="mt-2 inline-flex gap-1 bg-zinc-950/80 p-0.5 rounded-lg border border-zinc-900"
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              <button
+                                type="button"
+                                onClick={() => setHostingTier("standard")}
+                                className={`px-2 py-0.5 rounded text-[8px] font-bold uppercase transition-all cursor-pointer ${
+                                  hostingTier === "standard"
+                                    ? "bg-purple-600 text-white"
+                                    : "text-zinc-400 hover:text-zinc-200"
+                                }`}
+                              >
+                                {language === "ms" ? "Standard" : "Standard"}
+                              </button>
+                              <button
+                                type="button"
+                                onClick={() => setHostingTier("premium")}
+                                className={`px-2 py-0.5 rounded text-[8px] font-bold uppercase transition-all cursor-pointer ${
+                                  hostingTier === "premium"
+                                    ? "bg-purple-600 text-white"
+                                    : "text-zinc-400 hover:text-zinc-200"
+                                }`}
+                              >
+                                {language === "ms" ? "Premium" : "Premium"}
+                              </button>
+                            </div>
                           )}
                           
                           {/* Maintenance Sub-Toggle */}
@@ -560,16 +629,18 @@ export default function PricingCalculator() {
                           </>
                         )
                       ) : (
-                        selectedAddOnIds.includes("std-hosting") ? (
-                          <>
-                            <span>{language === "ms" ? "Hosting Standard + Domain (.com/.my)" : "Standard Hosting + Domain (.com/.my)"}</span>
-                            <span className="font-semibold text-zinc-200">+RM250</span>
-                          </>
-                        ) : selectedAddOnIds.includes("premium-hosting") ? (
-                          <>
-                            <span>{language === "ms" ? "Hosting Premium + Domain (.com/.my)" : "Premium Hosting + Domain (.com/.my)"}</span>
-                            <span className="font-semibold text-zinc-200">+RM450</span>
-                          </>
+                        selectedAddOnIds.includes("hosting") ? (
+                          hostingTier === "standard" ? (
+                            <>
+                              <span>{language === "ms" ? "Hosting Standard + Domain (.com/.my)" : "Standard Hosting + Domain (.com/.my)"}</span>
+                              <span className="font-semibold text-zinc-200">+RM250</span>
+                            </>
+                          ) : (
+                            <>
+                              <span>{language === "ms" ? "Hosting Premium + Domain (.com/.my)" : "Premium Hosting + Domain (.com/.my)"}</span>
+                              <span className="font-semibold text-zinc-200">+RM450</span>
+                            </>
+                          )
                         ) : (
                           <>
                             <span className="text-rose-500 font-bold">⚠️ {language === "ms" ? "Hosting Percuma (Sangat Terhad)" : "Free Hosting (Highly Restricted)"}</span>
@@ -581,11 +652,11 @@ export default function PricingCalculator() {
                   </div>
 
                   {/* Add-ons List */}
-                  {activeAddOns.filter(addon => addon.id !== "maintenance" && addon.id !== "std-hosting" && addon.id !== "premium-hosting").length > 0 && (
+                  {activeAddOns.filter(addon => addon.id !== "maintenance" && addon.id !== "hosting").length > 0 && (
                     <div className="border-t border-zinc-900/50 pt-3 space-y-2">
                       <p className="text-[10px] text-zinc-400 font-bold uppercase tracking-wider">{t("summaryAddons")}</p>
                       {activeAddOns
-                        .filter(addon => addon.id !== "maintenance" && addon.id !== "std-hosting" && addon.id !== "premium-hosting")
+                        .filter(addon => addon.id !== "maintenance" && addon.id !== "hosting")
                         .map((addon) => (
                           <div key={addon.id} className="flex justify-between items-center text-xs text-zinc-400">
                             <span>{addon.name}</span>
