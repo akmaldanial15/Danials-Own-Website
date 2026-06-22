@@ -126,11 +126,23 @@ function GalleryContent() {
 
                     {/* Floating Indicators */}
                     <div className="absolute top-3 left-3 z-20 flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-zinc-950/85 border border-zinc-800/50 backdrop-blur-sm text-[8px] font-mono text-zinc-400 tracking-wider pointer-events-none">
-                      <span className="relative flex h-1.5 w-1.5">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
-                      </span>
-                      LIVE PREVIEW
+                      {item.inProgress ? (
+                        <>
+                          <span className="relative flex h-1.5 w-1.5">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-amber-500"></span>
+                          </span>
+                          {language === "ms" ? "BELUM SIAP (DEMO)" : "IN PROGRESS (DEMO)"}
+                        </>
+                      ) : (
+                        <>
+                          <span className="relative flex h-1.5 w-1.5">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+                          </span>
+                          LIVE PREVIEW
+                        </>
+                      )}
                     </div>
 
                     <div className="absolute bottom-3 right-3 z-20 flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-zinc-950/85 border border-zinc-800/50 backdrop-blur-sm text-[8px] font-mono text-zinc-400 tracking-wider pointer-events-none">
@@ -365,7 +377,9 @@ function GalleryContent() {
                           onClick={() => setActiveDemo({ url: item.demoUrl!, title: item.title })}
                           className="inline-flex flex-1 items-center justify-center px-4 py-3 rounded-xl text-xs font-semibold bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white transition-all shadow-md shadow-cyan-900/10 hover:shadow-cyan-500/20 cursor-pointer"
                         >
-                          🌐 {language === "ms" ? "Lihat Demo" : "Live Preview"}
+                          🌐 {item.inProgress 
+                            ? (language === "ms" ? "Lihat Demo (Belum Siap)" : "View Demo (In Progress)")
+                            : (language === "ms" ? "Lihat Demo" : "Live Preview")}
                         </button>
                       )}
                       <a

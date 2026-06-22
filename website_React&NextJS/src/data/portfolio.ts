@@ -58,6 +58,19 @@ export const portfolioItems = {
       tech: ["HTML5", "CSS3", "JavaScript", "SQLite", "Stripe API"],
       priceClass: "Value System (dari RM1,899)",
       demoUrl: "https://lvinasflorist.pythonanywhere.com/"
+    },
+    {
+      id: "ikan-laga",
+      title: "Ikan Laga Website",
+      subtitle: "Portal Rujukan & Tempahan Ikan Laga (Semi-Collab)",
+      category: "Web (From Scratch)",
+      image: "/images/portfolio-betta.png",
+      tags: ["Catalog & Articles", "Ordering System", "In Progress"],
+      description: "Sebuah laman web portal artikel panduan penjagaan dan sistem pesanan ikan laga. Projek kolaborasi (semi-terlibat) yang sedang dalam pembangunan (belum siap sepenuhnya) yang mempamerkan fungsi katalog tersusun dan integrasi aliran tempahan dinamik.",
+      tech: ["Next.js", "Tailwind CSS", "HTML5", "CSS3", "JavaScript"],
+      priceClass: "Advanced Website (dari RM2,899)",
+      demoUrl: "https://ikan-laga-website.vercel.app/",
+      inProgress: true
     }
   ],
   en: [
@@ -119,6 +132,19 @@ export const portfolioItems = {
       tech: ["HTML5", "CSS3", "JavaScript", "SQLite", "Stripe API"],
       priceClass: "Value System (from RM1,899)",
       demoUrl: "https://lvinasflorist.pythonanywhere.com/"
+    },
+    {
+      id: "ikan-laga",
+      title: "Ikan Laga Website",
+      subtitle: "Betta Fish Articles & Ordering Portal (Semi-Collab)",
+      category: "Web (From Scratch)",
+      image: "/images/portfolio-betta.png",
+      tags: ["Catalog & Articles", "Ordering System", "In Progress"],
+      description: "An educational article library and ordering system for betta fish hobbyists. This is a collaborative (semi-involved) project currently under development (not finished yet) demonstrating modular catalogs and interactive workflow design.",
+      tech: ["Next.js", "Tailwind CSS", "HTML5", "CSS3", "JavaScript"],
+      priceClass: "Advanced Website (from RM2,899)",
+      demoUrl: "https://ikan-laga-website.vercel.app/",
+      inProgress: true
     }
   ]
 };
