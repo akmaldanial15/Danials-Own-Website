@@ -494,13 +494,13 @@ export default function DetailedServices() {
                     <div className="space-y-4">
                       <div className="space-y-2">
                         <h3 className="text-xl font-bold text-white tracking-tight">{pkg.name}</h3>
-                        <p className="text-xs text-zinc-400 leading-relaxed min-h-[48px]">
+                        <p className="text-zinc-300 text-[12.5px] leading-relaxed min-h-[48px]">
                           {pkg.description}
                         </p>
                       </div>
                       
                       <div className="flex items-baseline gap-1 py-1.5 border-y border-zinc-900/60">
-                        <span className="text-[10px] text-zinc-550 font-medium">{t("fromText")}</span>
+                        <span className="text-[11px] text-zinc-400 font-medium">{t("fromText")}</span>
                         <span className="text-2xl font-black text-white">
                           {typeof pkg.price === "number" ? `RM${pkg.price.toLocaleString()}` : pkg.price}
                         </span>
@@ -508,17 +508,17 @@ export default function DetailedServices() {
 
                       {/* Scope & Features Checklist */}
                       {((structured && structured.deliverables) || pkg.features) && (
-                        <div className="space-y-2">
-                          <span className="text-[9px] text-zinc-550 font-bold uppercase tracking-wider">
+                        <div className="space-y-2.5">
+                          <span className="text-[11px] text-zinc-400 font-bold uppercase tracking-wider">
                             {language === "ms" ? "Skop & Keupayaan" : "Scope & Features"}
                           </span>
-                          <ul className="space-y-2 text-xs text-zinc-350">
+                          <ul className="space-y-2 text-[13px] text-zinc-250">
                             {((structured && structured.deliverables) || pkg.features).map((feature, i) => (
                               <li key={i} className="flex items-start gap-2">
                                 <svg className="w-3.5 h-3.5 text-purple-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                                 </svg>
-                                <span className="leading-snug">{feature}</span>
+                                <span className="leading-snug text-zinc-200">{feature}</span>
                               </li>
                             ))}
                           </ul>
@@ -527,17 +527,17 @@ export default function DetailedServices() {
 
                       {/* Specs & Terms Grid */}
                       {structured && structured.specs.length > 0 && (
-                        <div className="space-y-2 pt-3 border-t border-zinc-900/50">
-                          <span className="text-[10.5px] text-zinc-400 font-bold uppercase tracking-wider">
+                        <div className="space-y-2.5 pt-3 border-t border-zinc-900/50">
+                          <span className="text-xs text-zinc-300 font-bold uppercase tracking-wider">
                             {language === "ms" ? "Spesifikasi Pembangunan" : "Development Specs"}
                           </span>
                           <div className="grid grid-cols-2 gap-1.5">
                             {structured.specs.map((spec, i) => (
-                              <div key={i} className="p-2 rounded-xl bg-zinc-950/40 border border-zinc-900/60 flex flex-col justify-center min-h-[46px]">
-                                <span className="text-zinc-400 font-bold uppercase text-[9px] tracking-wider leading-none">
+                              <div key={i} className="p-2 rounded-xl bg-zinc-950/40 border border-zinc-900/60 flex flex-col justify-center min-h-[50px]">
+                                <span className="text-zinc-400 font-bold uppercase text-[9.5px] tracking-wider leading-none">
                                   {spec.label}
                                 </span>
-                                <span className="text-zinc-100 font-extrabold text-[11.5px] mt-1 leading-tight">
+                                <span className="text-white font-extrabold text-[12.5px] mt-1 leading-tight">
                                   {spec.value}
                                 </span>
                               </div>
