@@ -528,16 +528,16 @@ export default function DetailedServices() {
                       {/* Specs & Terms Grid */}
                       {structured && structured.specs.length > 0 && (
                         <div className="space-y-2 pt-3 border-t border-zinc-900/50">
-                          <span className="text-[9px] text-zinc-550 font-bold uppercase tracking-wider">
+                          <span className="text-[10.5px] text-zinc-400 font-bold uppercase tracking-wider">
                             {language === "ms" ? "Spesifikasi Pembangunan" : "Development Specs"}
                           </span>
                           <div className="grid grid-cols-2 gap-1.5">
                             {structured.specs.map((spec, i) => (
-                              <div key={i} className="p-2 rounded-xl bg-zinc-950/40 border border-zinc-900/60 flex flex-col justify-center min-h-[44px]">
-                                <span className="text-zinc-550 font-bold uppercase text-[7px] tracking-wider leading-none">
+                              <div key={i} className="p-2 rounded-xl bg-zinc-950/40 border border-zinc-900/60 flex flex-col justify-center min-h-[46px]">
+                                <span className="text-zinc-400 font-bold uppercase text-[9px] tracking-wider leading-none">
                                   {spec.label}
                                 </span>
-                                <span className="text-zinc-200 font-extrabold text-[10px] mt-1 leading-tight">
+                                <span className="text-zinc-100 font-extrabold text-[11.5px] mt-1 leading-tight">
                                   {spec.value}
                                 </span>
                               </div>
