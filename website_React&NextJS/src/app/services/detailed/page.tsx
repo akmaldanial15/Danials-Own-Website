@@ -35,6 +35,8 @@ const bespokeDetails = {
         "Galeri multimedia (lebih banyak gambar)",
         "Sokongan main semula video latar belakang (video playback)",
         "Integrasi Google Maps & Pautan WhatsApp",
+        "Sistem Pesanan (WhatsApp/Telegram) & Tanpa Panel Admin",
+        "Kemaskini kandungan di masa depan disunting manual (caj dikenakan)",
         "Keserasian paparan semua peranti (responsif)",
         "Borang hubungan interaktif",
         "Optimasi kelajuan Lighthouse"
@@ -52,8 +54,8 @@ const bespokeDetails = {
       deliverables: [
         "Laman web 7-10+ Halaman",
         "Reka bentuk kustom premium terperinci",
-        "Halaman admin (urus kandungan)",
-        "Senarai produk / servis dinamik",
+        "Sistem E-Dagang Mini (Mini E-Commerce) & Dashboard Admin",
+        "Katalog produk/servis dinamik (E-dagang skala besar memerlukan Sistem Kustom Penuh)",
         "Galeri multimedia (lebih banyak gambar)",
         "Sokongan main semula video latar belakang (video playback)",
         "Integrasi Google Maps & Pautan WhatsApp",
@@ -217,6 +219,8 @@ const bespokeDetails = {
         "Rich image gallery & media showcase",
         "Background video playback support (video playback)",
         "Google Maps & WhatsApp link integration",
+        "Integrated Ordering System (WhatsApp/Telegram) & No Admin Panel",
+        "Future content updates require manual edits (chargeable)",
         "Cross-device display compatibility",
         "Interactive contact forms",
         "Lighthouse speed optimizations"
@@ -234,8 +238,8 @@ const bespokeDetails = {
       deliverables: [
         "7-10+ pages website",
         "Detailed premium custom design",
-        "Admin page website (manage content)",
-        "Dynamic product / service listing",
+        "Mini E-Commerce & Custom Admin Dashboard",
+        "Dynamic product/service listing (Large-scale e-commerce requires Entirely Custom System)",
         "Rich image gallery & media showcase",
         "Background video playback support (video playback)",
         "Google Maps & WhatsApp link integration",
