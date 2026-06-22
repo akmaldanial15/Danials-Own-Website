@@ -34,15 +34,21 @@ export default function Navbar() {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <nav className={`fixed z-50 transition-all duration-500 w-full ${
-      scrolled 
-        ? "top-0 left-0 bg-zinc-950/85 backdrop-blur-lg border-b border-zinc-800/40 shadow-lg shadow-zinc-950/40 lg:top-3 lg:left-1/2 lg:-translate-x-1/2 lg:w-[calc(100%-2.5rem)] lg:max-w-6xl lg:rounded-full lg:border lg:border-zinc-800/50 lg:px-4" 
-        : "top-0 left-0 bg-transparent border-b border-transparent lg:top-0 lg:px-0"
-    }`}>
+    <nav 
+      className={`fixed z-50 transition-all duration-700 w-full ${
+        scrolled 
+          ? "top-0 left-0 bg-zinc-950/85 backdrop-blur-lg border-b border-zinc-800/40 shadow-lg shadow-zinc-950/40 lg:top-3 lg:left-1/2 lg:-translate-x-1/2 lg:w-[calc(100%-2.5rem)] lg:max-w-6xl lg:rounded-full lg:border lg:border-zinc-800/50 lg:px-4" 
+          : "top-0 left-0 bg-transparent border-b border-transparent lg:top-0 lg:left-1/2 lg:-translate-x-1/2 lg:w-full lg:max-w-none lg:rounded-none lg:border lg:border-transparent lg:px-0"
+      }`}
+      style={{ transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`flex items-center justify-between transition-all duration-500 ${
-          scrolled ? "h-14 md:h-16" : "h-16 md:h-20"
-        }`}>
+        <div 
+          className={`flex items-center justify-between transition-all duration-700 ${
+            scrolled ? "h-14 md:h-16" : "h-16 md:h-20"
+          }`}
+          style={{ transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)" }}
+        >
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center gap-2.5 group">

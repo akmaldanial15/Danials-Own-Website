@@ -6,11 +6,12 @@ export const portfolioItems = {
       subtitle: "Laman Web Profil Japandi Minimalis",
       category: "Web (From Scratch)",
       image: "/images/portfolio-vibe.png",
-      tags: ["Minimalist Design", "Japandi Style", "4-Page Profile", "Responsive"],
-      description: "Laman web profil korporat premium 4-halaman (Home, Services, Portfolio, Contact) untuk studio reka bentuk dalaman Japandi. Dibina mengikut struktur Pakej Medium Budget (RM699) dengan tapisan portfolio interaktif, reka bentuk minimalis mewah yang responsif, dan widget WhatsApp bersepadu untuk rundingan pelanggan terus.",
+      tags: ["Demo Konsep", "Minimalist Design", "Japandi Style", "4-Page Profile", "Responsive"],
+      description: "Laman web profil korporat premium 4-halaman (Home, Services, Portfolio, Contact) untuk studio reka bentuk dalaman Japandi. Dibina mengikut struktur Pakej Medium Budget (RM699) sebagai demonstrasi konsep reka bentuk dengan tapisan portfolio interaktif, reka bentuk minimalis mewah yang responsif, dan widget WhatsApp bersepadu.",
       tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
       priceClass: "Medium Budget (dari RM699)",
-      demoUrl: "https://medium-budget-vibestudio.vercel.app/"
+      demoUrl: "https://medium-budget-vibestudio.vercel.app/",
+      isConcept: true
     },
     {
       id: "rasa-nusantara",
@@ -18,11 +19,12 @@ export const portfolioItems = {
       subtitle: "Artisan Cafe & Bakery",
       category: "Web (From Scratch)",
       image: "/images/portfolio-cafe.jpg",
-      tags: ["Landing Page", "WhatsApp Booking", "Vanilla JS"],
-      description: "Landing page 1-halaman bajet super (RM299) untuk kafe roti artisan. Ciri tempahan automatik terus ke WhatsApp (simulasi). Tiada dashboard admin, kemas kini menu secara manual dicaj RM40+ (maksimum 4 kali setahun). Pelan penyelenggaraan hanya melindungi ralat/error teknikal tiba-tiba.",
+      tags: ["Demo Konsep", "Landing Page", "WhatsApp Booking", "Vanilla JS"],
+      description: "Landing page 1-halaman bajet super (RM299) untuk kafe roti artisan, dibina sebagai contoh templat reka bentuk. Ciri tempahan automatik terus ke WhatsApp (simulasi). Tiada dashboard admin, kemas kini menu secara manual dicaj RM40+ (maksimum 4 kali setahun). Pelan penyelenggaraan hanya melindungi ralat/error teknikal tiba-tiba.",
       tech: ["HTML5", "CSS3", "JavaScript", "WhatsApp Integration"],
       priceClass: "Super Budget (dari RM299)",
-      demoUrl: "https://nusantara-website.vercel.app/"
+      demoUrl: "https://nusantara-website.vercel.app/",
+      isConcept: true
     },
     {
       id: "admin-management",
@@ -80,11 +82,12 @@ export const portfolioItems = {
       subtitle: "Japandi Minimalist Interior Design Website",
       category: "Web (From Scratch)",
       image: "/images/portfolio-vibe.png",
-      tags: ["Minimalist Design", "Japandi Style", "4-Page Profile", "Responsive"],
-      description: "A premium 4-page corporate profile website (Home, Services, Portfolio, Contact) built for a luxury Japandi interior design studio. Structured under the Medium Budget (RM699) plan featuring an interactive filtered portfolio, responsive minimalist layout, and a WhatsApp floating widget for direct consultations.",
+      tags: ["Concept Demo", "Minimalist Design", "Japandi Style", "4-Page Profile", "Responsive"],
+      description: "A premium 4-page corporate profile website (Home, Services, Portfolio, Contact) built as a design concept showcase for a Japandi interior design studio. Structured under the Medium Budget (RM699) plan featuring an interactive filtered portfolio, responsive minimalist layout, and a WhatsApp floating widget.",
       tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
       priceClass: "Medium Budget (from RM699)",
-      demoUrl: "https://medium-budget-vibestudio.vercel.app/"
+      demoUrl: "https://medium-budget-vibestudio.vercel.app/",
+      isConcept: true
     },
     {
       id: "rasa-nusantara",
@@ -92,11 +95,12 @@ export const portfolioItems = {
       subtitle: "Artisan Cafe & Bakery",
       category: "Web (From Scratch)",
       image: "/images/portfolio-cafe.jpg",
-      tags: ["Landing Page", "WhatsApp Booking", "Vanilla JS"],
-      description: "A 1-page super budget (RM299) landing page built for an artisan bakery. Features simulated automatic ordering redirected directly to WhatsApp. Since there is no admin console, manual menu updates are charged at RM40+ (max 4 updates/year under the maintenance plan). The maintenance plan only covers sudden system errors.",
+      tags: ["Concept Demo", "Landing Page", "WhatsApp Booking", "Vanilla JS"],
+      description: "A 1-page super budget (RM299) landing page built as a design showcase template for an artisan bakery. Features simulated automatic ordering redirected directly to WhatsApp. Since there is no admin console, manual menu updates are charged at RM40+ (max 4 updates/year under the maintenance plan).",
       tech: ["HTML5", "CSS3", "JavaScript", "WhatsApp Integration"],
       priceClass: "Super Budget (from RM299)",
-      demoUrl: "https://nusantara-website.vercel.app/"
+      demoUrl: "https://nusantara-website.vercel.app/",
+      isConcept: true
     },
     {
       id: "admin-management",

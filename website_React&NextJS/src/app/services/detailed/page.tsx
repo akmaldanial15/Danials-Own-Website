@@ -29,6 +29,7 @@ const bespokeDetails = {
     },
     "standard": {
       deliverables: [
+        "Termasuk semua ciri Detailed Basic Website",
         "Laman web 4-6 Halaman",
         "Reka bentuk kustom premium (dari kosong)",
         "Halaman Utama, Mengenai, Servis, Galeri & Hubungi",
@@ -50,6 +51,7 @@ const bespokeDetails = {
     },
     "advanced": {
       deliverables: [
+        "Termasuk semua ciri Detailed Standard Website",
         "Laman web 7-10+ Halaman",
         "Reka bentuk kustom premium terperinci",
         "Sistem E-Dagang Mini (Mini E-Commerce) & Dashboard Admin",
@@ -211,6 +213,7 @@ const bespokeDetails = {
     },
     "standard": {
       deliverables: [
+        "Includes all Detailed Basic Website features",
         "4-6 pages website",
         "Premium custom design from scratch",
         "Home, About, Services, Gallery & Contact pages",
@@ -232,6 +235,7 @@ const bespokeDetails = {
     },
     "advanced": {
       deliverables: [
+        "Includes all Detailed Standard Website features",
         "7-10+ pages website",
         "Detailed premium custom design",
         "Mini E-Commerce & Custom Admin Dashboard",

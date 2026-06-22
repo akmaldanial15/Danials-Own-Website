@@ -21,11 +21,26 @@ export default function Home() {
       <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full glow-blur-purple z-0 pointer-events-none" />
       <div className="absolute bottom-[20%] right-[-10%] w-[50%] h-[50%] rounded-full glow-blur-cyan z-0 pointer-events-none" />
 
-      {/* Central light beam (Huly style) */}
-      <div className="absolute left-1/2 top-0 -translate-x-1/2 w-[3px] h-[950px] bg-gradient-to-b from-indigo-500 via-purple-500 to-transparent z-0 pointer-events-none opacity-40 blur-[1px]">
-        <div className="absolute top-[15%] left-1/2 -translate-x-1/2 w-[160px] h-[500px] rounded-full bg-purple-500/10 blur-[90px]" />
-        <div className="absolute top-[35%] left-1/2 -translate-x-1/2 w-[240px] h-[400px] rounded-full bg-indigo-500/10 blur-[110px]" />
-        <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[4px] h-[600px] bg-white/20 blur-[2px]" />
+      {/* Background Glow Orbs (separated from the line to prevent browser clipping/layout bugs) */}
+      <div className="absolute left-1/2 top-0 -translate-x-1/2 w-full max-w-7xl h-[950px] pointer-events-none overflow-hidden z-0 select-none">
+        <div className="absolute top-[15%] left-1/2 -translate-x-1/2 w-[350px] h-[350px] rounded-full bg-purple-500/5 blur-[80px]" />
+        <div className="absolute top-[35%] left-1/2 -translate-x-1/2 w-[450px] h-[450px] rounded-full bg-indigo-500/5 blur-[100px]" />
+      </div>
+
+      {/* Premium Vertical Glow Line */}
+      <div className="absolute left-1/2 top-0 -translate-x-1/2 w-[10px] h-[950px] pointer-events-none z-0 select-none">
+        {/* Outer ambient glow line (wide, blurry, very soft) */}
+        <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-[6px] bg-gradient-to-b from-indigo-500 via-purple-500 to-transparent opacity-20 blur-[3px]" />
+        {/* Inner intense glow core (medium width, medium blur) */}
+        <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-[3px] bg-gradient-to-b from-indigo-500 via-purple-500 to-transparent opacity-45 blur-[1px]" />
+        {/* Core solid beam (fine 1px line, white in code -> black in browser) */}
+        <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-[1px] bg-gradient-to-b from-white/40 via-white/80 to-transparent" />
+        
+        {/* Animated Light Pulse (Scan) - Black/Dark in code -> White/Light glow in browser */}
+        <div className="absolute left-1/2 -translate-x-1/2 w-[2px] h-[120px] bg-gradient-to-b from-transparent via-zinc-950/80 to-transparent blur-[0.5px] animate-beam-pulse">
+          {/* Glowing particle head - Black in code -> White dot in browser */}
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[4px] h-[4px] rounded-full bg-zinc-950 shadow-[0_0_8px_rgba(0,0,0,0.8)]" />
+        </div>
       </div>
 
       {/* 1. HERO SECTION */}
@@ -252,7 +267,15 @@ export default function Home() {
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-amber-500"></span>
                           </span>
-                          {language === "ms" ? "BELUM SIAP (DEMO)" : "IN PROGRESS (DEMO)"}
+                          {language === "ms" ? "DALAM PEMBANGUNAN" : "IN DEVELOPMENT"}
+                        </>
+                      ) : item.isConcept ? (
+                        <>
+                          <span className="relative flex h-1.5 w-1.5">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-indigo-500"></span>
+                          </span>
+                          {language === "ms" ? "DEMO KONSEP" : "CONCEPT DEMO"}
                         </>
                       ) : (
                         <>
@@ -321,7 +344,7 @@ export default function Home() {
                       className="inline-flex flex-1 items-center justify-center px-4 py-2.5 rounded-xl text-xs font-semibold bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white transition-all shadow-md shadow-cyan-900/10 hover:shadow-cyan-500/20 cursor-pointer"
                     >
                       🌐 {item.inProgress 
-                        ? (language === "ms" ? "Lihat Demo (Belum Siap)" : "View Demo (In Progress)")
+                        ? (language === "ms" ? "Pratonton Pembangunan" : "Preview Development")
                         : (language === "ms" ? "Lihat Demo" : "Live Preview")}
                     </button>
                   )}

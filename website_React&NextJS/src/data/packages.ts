@@ -190,6 +190,7 @@ export const bespokePackages = {
       price: 1499,
       description: "Sesuai untuk perniagaan kecil (SME), agensi perkhidmatan, atau jenama baru yang mahu membina imej penjenamaan yang kukuh dan profesional di internet.",
       features: [
+        "Termasuk semua ciri Detailed Basic Website",
         "Laman web 4-6 halaman",
         "Sesuai untuk: SME, Syarikat Perkhidmatan & Agensi",
         "Reka bentuk kustom premium (dari kosong)",
@@ -209,6 +210,7 @@ export const bespokePackages = {
       price: 2899,
       description: "Sesuai untuk syarikat korporat, katalog pameran, ejen hartanah, atau bisnes yang memerlukan paparan katalog produk/servis dinamik serta admin panel pengurusan.",
       features: [
+        "Termasuk semua ciri Detailed Standard Website",
         "Laman web 7-10+ halaman",
         "Sesuai untuk: Syarikat Korporat, Katalog Showcase & Bisnes Dinamik",
         "Reka bentuk kustom premium terperinci",
@@ -296,6 +298,7 @@ export const bespokePackages = {
       price: 1499,
       description: "Best for small-to-medium businesses (SMEs), service agencies, or new startups seeking solid, professional branding.",
       features: [
+        "Includes all Detailed Basic Website features",
         "4-6 pages website",
         "Best for: SMEs, Service Companies & Agencies",
         "Premium custom design from scratch",
@@ -315,6 +318,7 @@ export const bespokePackages = {
       price: 2899,
       description: "Best for corporate entities, product catalogs, real estate showcases, or businesses requiring dynamic product/service listings and content management dashboards.",
       features: [
+        "Includes all Detailed Standard Website features",
         "7-10+ pages website",
         "Best for: Corporate Sites, Product Catalogs & Dynamic Businesses",
         "Detailed premium custom design",

@@ -116,3 +116,28 @@ body {
 details summary::-webkit-details-marker {
   display: none;
 }
+
+/* Premium sliding light pulse for vertical background line */
+@keyframes beam-pulse {
+  0% {
+    top: 0%;
+    transform: translate(-50%, -100%);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    top: 100%;
+    transform: translate(-50%, 0%);
+    opacity: 0;
+  }
+}
+
+.animate-beam-pulse {
+  animation: beam-pulse 10s linear infinite;
+}
+
