@@ -204,7 +204,7 @@ export default function PricingCalculator() {
       } else if (selectedAddOnIds.includes("premium-hosting")) {
         customSummary.push(language === "ms" ? "Domain & Hosting: Pakej Premium (+RM450/thn)" : "Domain & Hosting: Premium Package (+RM450/yr)");
       } else {
-        customSummary.push(language === "ms" ? "Domain & Hosting: PERCUMA (Subdomain / Had Sangat Terhad)" : "Domain & Hosting: FREE (Subdomain / Extremely Low limits)");
+        customSummary.push(language === "ms" ? "Domain & Hosting: PERCUMA (Sangat Terhad & Sangat Tidak Disyorkan - .vercel.app)" : "Domain & Hosting: FREE (Highly Restricted & Strongly Not Recommended - .vercel.app)");
       }
     }
 
@@ -555,8 +555,8 @@ export default function PricingCalculator() {
                           </>
                         ) : (
                           <>
-                            <span className="text-amber-500/90 font-medium">⚠️ {language === "ms" ? "Hosting & Domain Percuma" : "Free Hosting & Domain"}</span>
-                            <span className="font-semibold text-amber-500/90">{language === "ms" ? "Had Sangat Rendah (.vercel.app)" : "Extremely Low Limits (.vercel.app)"}</span>
+                            <span className="text-rose-500 font-bold">⚠️ {language === "ms" ? "Hosting Percuma (Sangat Terhad)" : "Free Hosting (Highly Restricted)"}</span>
+                            <span className="font-extrabold text-rose-500">{language === "ms" ? "Sangat Tidak Disyorkan (.vercel.app)" : "Strongly Not Recommended (.vercel.app)"}</span>
                           </>
                         )
                       ) : (
@@ -572,8 +572,8 @@ export default function PricingCalculator() {
                           </>
                         ) : (
                           <>
-                            <span className="text-amber-500/90 font-medium">⚠️ {language === "ms" ? "Hosting & Domain Percuma" : "Free Hosting & Domain"}</span>
-                            <span className="font-semibold text-amber-500/90">{language === "ms" ? "Had Sangat Rendah (.vercel.app)" : "Extremely Low Limits (.vercel.app)"}</span>
+                            <span className="text-rose-500 font-bold">⚠️ {language === "ms" ? "Hosting Percuma (Sangat Terhad)" : "Free Hosting (Highly Restricted)"}</span>
+                            <span className="font-extrabold text-rose-500">{language === "ms" ? "Sangat Tidak Disyorkan (.vercel.app)" : "Strongly Not Recommended (.vercel.app)"}</span>
                           </>
                         )
                       )}
