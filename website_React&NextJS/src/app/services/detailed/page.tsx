@@ -14,6 +14,7 @@ const bespokeDetails = {
         "Laman web kustom 1-3 Halaman",
         "HTML, CSS & JavaScript (diuji mendalam)",
         "Sangat responsif (keserasian 100% peranti)",
+        "Integrasi Google Maps & Pautan WhatsApp",
         "Persediaan SEO terancang",
         "Reka bentuk estetik human-centric"
       ],
@@ -31,8 +32,11 @@ const bespokeDetails = {
         "Laman web 4-6 Halaman",
         "Reka bentuk kustom premium (dari kosong)",
         "Halaman Utama, Mengenai, Servis, Galeri & Hubungi",
+        "Galeri multimedia (lebih banyak gambar)",
+        "Sokongan main semula video latar belakang (video playback)",
+        "Integrasi Google Maps & Pautan WhatsApp",
         "Keserasian paparan semua peranti (responsif)",
-        "Borang hubungan & pautan WhatsApp",
+        "Borang hubungan interaktif",
         "Optimasi kelajuan Lighthouse"
       ],
       specs: [
@@ -50,6 +54,9 @@ const bespokeDetails = {
         "Reka bentuk kustom premium terperinci",
         "Halaman admin (urus kandungan)",
         "Senarai produk / servis dinamik",
+        "Galeri multimedia (lebih banyak gambar)",
+        "Sokongan main semula video latar belakang (video playback)",
+        "Integrasi Google Maps & Pautan WhatsApp",
         "Optimasi kelajuan maksimum",
         "Struktur SEO termaju & e-mel perniagaan"
       ],
@@ -189,6 +196,7 @@ const bespokeDetails = {
         "1-3 pages custom website",
         "HTML, CSS & JavaScript (deeply tested)",
         "100% cross-device display compatibility",
+        "Google Maps & WhatsApp link integration",
         "Planned SEO setup",
         "Human-centric aesthetic design"
       ],
@@ -206,8 +214,11 @@ const bespokeDetails = {
         "4-6 pages website",
         "Premium custom design from scratch",
         "Home, About, Services, Gallery & Contact pages",
+        "Rich image gallery & media showcase",
+        "Background video playback support (video playback)",
+        "Google Maps & WhatsApp link integration",
         "Cross-device display compatibility",
-        "Interactive forms & WhatsApp integrations",
+        "Interactive contact forms",
         "Lighthouse speed optimizations"
       ],
       specs: [
@@ -225,6 +236,9 @@ const bespokeDetails = {
         "Detailed premium custom design",
         "Admin page website (manage content)",
         "Dynamic product / service listing",
+        "Rich image gallery & media showcase",
+        "Background video playback support (video playback)",
+        "Google Maps & WhatsApp link integration",
         "Maximum speed optimization",
         "Advanced SEO structure & business email"
       ],
