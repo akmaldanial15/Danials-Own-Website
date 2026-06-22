@@ -13,7 +13,6 @@ const bespokeDetails = {
       deliverables: [
         "Laman web kustom 1-3 Halaman",
         "HTML, CSS & JavaScript (diuji mendalam)",
-        "Hosting Percuma & Subdomain (.vercel.app - Sangat Terhad & Tiada Domain Kustom)",
         "Sangat responsif (keserasian 100% peranti)",
         "Integrasi Google Maps & Pautan WhatsApp",
         "Persediaan SEO terancang",
@@ -196,7 +195,6 @@ const bespokeDetails = {
       deliverables: [
         "1-3 pages custom website",
         "HTML, CSS & JavaScript (deeply tested)",
-        "Free Hosting & Subdomain (.vercel.app - Highly Restricted & No Custom Domain)",
         "100% cross-device display compatibility",
         "Google Maps & WhatsApp link integration",
         "Planned SEO setup",
@@ -642,11 +640,13 @@ export default function DetailedServices() {
                 <>
                   <li><strong>Tempoh Siap & Kadar Asas:</strong> Semua tempoh siap dikira dalam hari bekerja. Tempoh boleh menjadi lebih singkat sekiranya saya tidak sibuk dengan projek pelanggan lain. Harga yang tertera adalah harga minimum asas sahaja.</li>
                   <li><strong>Polisi Reka Bentuk Kustom (Custom Design):</strong> Anda dialu-alukan untuk meminta reka bentuk kustom. Sekiranya anda mempunyai visual gaya estetika tersendiri, <strong>sangat disyorkan</strong> untuk menyediakan contoh gambar (screenshot), pautan web rujukan, atau reka bentuk Figma. Jika tiada contoh, anda boleh serahkan keputusan reka bentuk sepenuhnya kepada saya (Danial).</li>
+                  <li><strong>Sistem Domain & Hosting:</strong> Secara lalai (default), semua pakej menggunakan hosting staging percuma dengan subdomain (.vercel.app) yang mempunyai prestasi terhad. Pembelian hosting standard/premium dan domain kustom (.com/.my) adalah add-on berasingan yang boleh dipilih dalam pricing calculator.</li>
                 </>
               ) : (
                 <>
                   <li><strong>Delivery & Base Rates:</strong> Completion times are calculated in business working days. Delivery can be faster if slots are open. Displayed prices represent base minimum rates only.</li>
                   <li><strong>Custom Design Policy:</strong> You are welcome to request custom designs. If you have a specific visual aesthetic in mind, it is <strong>highly recommended</strong> to provide screenshot examples, competitor website links, or Figma mockups. If no references are provided, you can leave all design decisions entirely to me (Danial).</li>
+                  <li><strong>Domain & Hosting Policy:</strong> By default, all packages are deployed on free staging hosting with a subdomain (.vercel.app) which carries performance limitations. Dedicated high-performance hosting and custom domains (.com/.my) are available as separate add-ons in the pricing calculator.</li>
                 </>
               )}
             </ul>
