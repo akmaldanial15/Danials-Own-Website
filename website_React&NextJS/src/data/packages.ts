@@ -369,7 +369,8 @@ export const bespokePackages = {
 
 export const addOns = {
   ms: [
-    { id: "email", name: "Setup E-mel Perniagaan", price: 150, type: "sekali-bayar", description: "E-mel dengan nama domain perniagaan anda sendiri (cth: contact@syarikat.com) untuk imej profesional." },
+    { id: "email-basic", name: "Setup E-mel Perniagaan (Basic - Zoho)", price: 150, type: "sekali-bayar", description: "Setup e-mel rasmi guna Zoho Mail (cth: contact@syarikat.com). Kos lesen Zoho Mail (~RM56/tahun per user) dibayar terus oleh pelanggan." },
+    { id: "email-premium", name: "Setup E-mel Perniagaan (Premium - Gmail)", price: 250, type: "sekali-bayar", description: "Setup e-mel rasmi guna Google Workspace (Gmail premium & Drive 30GB). Kos lesen Google (~RM336/tahun per user) dibayar terus oleh pelanggan." },
     { id: "seo", name: "Naik Taraf SEO Asas", price: 200, type: "sekali-bayar", description: "Pendaftaran Google Search Console, penyerahan peta laman (sitemap), dan persediaan struktur kata kunci asas." },
     { id: "maintenance", name: "Penyelenggaraan Bulanan", price: 80, type: "bulanan", description: "Sokongan teknikal bulanan untuk membaiki ralat sistem, mengemas kini teks/gambar, dan memantau prestasi." },
     { id: "std-hosting", name: "Hosting Standard + Domain (.com/.my) (1 Tahun)", price: 250, type: "tahunan", description: "Sangat disyorkan untuk web profesional. Pilihan hosting percuma sedia ada sangat terhad, sering lambat (sleep mode), tiada jaminan kestabilan server, & menggunakan subdomain tidak formal (.vercel.app)." },
@@ -382,7 +383,8 @@ export const addOns = {
     { id: "ai-agents", name: "Ejen & Robot Pintar AI", price: 1000, type: "sekali-bayar", description: "Integrasi ejen AI perbualan pintar, bot auto-reply, atau alatan automasi pintar kustom." }
   ],
   en: [
-    { id: "email", name: "Business Email Setup", price: 150, type: "one-time", description: "Domain-matching corporate email address (e.g., contact@company.com) for a highly professional image." },
+    { id: "email-basic", name: "Business Email Setup (Basic - Zoho)", price: 150, type: "one-time", description: "Official domain-matching email setup via Zoho Mail (e.g. contact@company.com). Zoho license fee (~RM56/year per user) is paid directly by client." },
+    { id: "email-premium", name: "Business Email Setup (Premium - Gmail)", price: 250, type: "one-time", description: "Official domain-matching email setup via Google Workspace (Gmail UI & Drive 30GB). Google license fee (~RM336/year per user) is paid directly by client." },
     { id: "seo", name: "Basic SEO Upgrade", price: 200, type: "one-time", description: "Google Search Console registration, sitemap indexing submissions, and basic keyword tags structuring." },
     { id: "maintenance", name: "Monthly Maintenance", price: 80, type: "monthly", description: "Ongoing monthly technical support to fix random bugs, implement copy updates, and keep servers secure." },
     { id: "std-hosting", name: "Standard Hosting + Domain (.com/.my) (1 Year)", price: 250, type: "yearly", description: "Highly recommended for professional sites. The default free hosting option is highly restricted, prone to server sleep mode (cold starts), lacks uptime guarantees, and forces a non-professional subdomain (.vercel.app)." },
