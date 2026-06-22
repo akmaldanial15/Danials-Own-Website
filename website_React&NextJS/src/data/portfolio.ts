@@ -26,14 +26,15 @@ export const portfolioItems = {
     },
     {
       id: "admin-management",
-      title: "Portal Pengurusan Pentadbiran",
-      subtitle: "Penjadualan Staf & Sumber",
-      category: "Web (From Scratch)",
+      title: "Institut Wawasan",
+      subtitle: "Kolej TVET & Portal Pendidikan",
+      category: "Web (Redesign & Upgrades)",
       image: "/images/portfolio-admin.jpg",
-      tags: ["React", "Tailwind CSS", "Dashboard"],
-      description: "Dashboard bersih untuk kakitangan pentadbiran. Memantau temujanji, mengurus jadual bilik mesyuarat, dan dilengkapi reka bentuk moden gelap/terang.",
-      tech: ["React.js", "Tailwind CSS", "Chart.js", "LocalStorage API"],
-      priceClass: "Standard Website (dari RM1,499)"
+      tags: ["Redesign", "Huge Upgrade", "Institutional Website"],
+      description: "Pembinaan semula (huge upgrade) laman web rasmi Institut Wawasan untuk reka bentuk yang lebih profesional, moden dan responsif. Menguruskan maklumat program TVET, pendaftaran, dan struktur navigasi yang dipertingkatkan.",
+      tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+      priceClass: "Standard Website (dari RM1,499)",
+      demoUrl: "https://www.iwawasan.com.my"
     },
     {
       id: "future-excellence",
@@ -86,14 +87,15 @@ export const portfolioItems = {
     },
     {
       id: "admin-management",
-      title: "Administrative Management Portal",
-      subtitle: "Staff & Resource Scheduling",
-      category: "Web (From Scratch)",
+      title: "Institut Wawasan",
+      subtitle: "TVET College & Education Portal",
+      category: "Web (Redesign & Upgrades)",
       image: "/images/portfolio-admin.jpg",
-      tags: ["React", "Tailwind CSS", "Dashboard"],
-      description: "A clean dashboard for administrative staff. Tracks appointments, manages resource scheduling, and features a light/dark mode design system.",
-      tech: ["React.js", "Tailwind CSS", "Chart.js", "LocalStorage API"],
-      priceClass: "Standard Website (from RM1,499)"
+      tags: ["Redesign", "Huge Upgrade", "Institutional Website"],
+      description: "A major upgrade and redesign of the official Institut Wawasan website, featuring a professional, modern, and fully responsive layout. Streamlines TVET course catalogs, student portals, and optimized navigation.",
+      tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+      priceClass: "Standard Website (from RM1,499)",
+      demoUrl: "https://www.iwawasan.com.my"
     },
     {
       id: "future-excellence",
