@@ -13,6 +13,7 @@ const bespokeDetails = {
       deliverables: [
         "Laman web kustom 1-3 Halaman",
         "HTML, CSS & JavaScript (diuji mendalam)",
+        "Hosting Percuma & Subdomain (.vercel.app - Sangat Terhad & Tiada Domain Kustom)",
         "Sangat responsif (keserasian 100% peranti)",
         "Integrasi Google Maps & Pautan WhatsApp",
         "Persediaan SEO terancang",
@@ -195,6 +196,7 @@ const bespokeDetails = {
       deliverables: [
         "1-3 pages custom website",
         "HTML, CSS & JavaScript (deeply tested)",
+        "Free Hosting & Subdomain (.vercel.app - Highly Restricted & No Custom Domain)",
         "100% cross-device display compatibility",
         "Google Maps & WhatsApp link integration",
         "Planned SEO setup",
