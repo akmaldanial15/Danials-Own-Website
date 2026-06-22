@@ -181,7 +181,7 @@ export const bespokePackages = {
         "Keserasian paparan 100% semua peranti (responsif)",
         "Integrasi Google Maps & Pautan WhatsApp",
         "Persediaan SEO terancang",
-        "Reka bentuk estetik human-centric",
+        "Reka bentuk estetik yang ikhlas & teliti",
         "2 kali semakan (revisions)"
       ]
     },
@@ -288,7 +288,7 @@ export const bespokePackages = {
         "100% cross-device display compatibility",
         "Google Maps & WhatsApp link integration",
         "Planned SEO setup",
-        "Human-centric aesthetic design",
+        "Meticulous & sincere aesthetic design",
         "2 revisions"
       ]
     },

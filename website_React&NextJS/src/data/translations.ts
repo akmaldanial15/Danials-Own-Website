@@ -42,7 +42,7 @@ export const translations = {
     pathFastTitle: "Laluan Fast-Track",
     pathBespokeTitle: "Detailed (Web & Sistem)",
     pathFastDesc: "Website korporat premium & pembetulan pepijat (bug fixes) pantas. Ideal untuk permulaan segera dengan bajet tetap dan templat teroptimum.",
-    pathBespokeDesc: "Laman web dan sistem kustom yang dibina dengan ketelitian tinggi, reka bentuk mesra manusia (human-centric), keserasian tinggi di semua peranti (responsif), dan diuji secara mendalam sebelum penyerahan.",
+    pathBespokeDesc: "Laman web dan sistem kustom yang dibina dengan ketelitian tinggi, reka bentuk estetik yang ikhlas & teliti, keserasian tinggi di semua peranti (responsif), dan diuji secara mendalam sebelum penyerahan.",
     fromText: "Bermula dari",
     btnFastTrack: "Lihat Pakej Mampu Milik →",
     btnBespoke: "Lihat Pakej Detailed →",
@@ -80,10 +80,10 @@ export const translations = {
 
     // Custom Page
     customHeader: "Laman Web & Sistem Detailed",
-    customDesc: "Bukan sekadar laman web biasa. Kami membina sistem kustom dari kosong dengan pengoptimuman kelajuan penuh, keserasian perkakasan yang sangat diuji, dan sentuhan reka bentuk mesra manusia.",
+    customDesc: "Bukan sekadar laman web biasa. Kami membina sistem kustom dari kosong dengan pengoptimuman kelajuan penuh, keserasian perkakasan yang sangat diuji, dan kemasan reka bentuk yang teliti & ikhlas.",
     pitch1Title: "Ketelitian & Kualiti Maksimum",
     pitch1Desc: "Kami meluangkan masa ekstra untuk menguji laman web anda pada pelbagai saiz skrin mudah alih dan pelayar web bagi memastikan keserasian 100% tanpa sebarang ralat.",
-    pitch2Title: "Reka Bentuk Human-Centric",
+    pitch2Title: "Estetik & Kemasan Teliti",
     pitch2Desc: "Direka khas mengikut psikologi pengguna anda. Alur navigasi yang lancar, susun atur visual yang mesra mata, dan penjenamaan yang eksklusif untuk menaikkan nilai jenama.",
     pitch3Title: "Pengoptimuman & Database",
     pitch3Desc: "Kod yang sangat bersih (clean code) untuk kelajuan maksima, persediaan SEO terancang, pangkalan data yang cekap, dan integrasi automasi bertaraf dunia.",
@@ -184,7 +184,7 @@ export const translations = {
     pathFastTitle: "Fast-Track Path",
     pathBespokeTitle: "Detailed (Web & Systems)",
     pathFastDesc: "Premium corporate websites & rapid bug fixes. Ideal for a quick start with a fixed budget and optimized templates.",
-    pathBespokeDesc: "Custom websites and business systems built with extreme attention to detail, highly human-centric design, absolute compatibility across all devices, and rigorous testing.",
+    pathBespokeDesc: "Custom websites and business systems built with extreme attention to detail, meticulous and sincere styling, absolute compatibility across all devices, and rigorous testing.",
     fromText: "Starting from",
     btnFastTrack: "View Budget Packages →",
     btnBespoke: "Explore Detailed Tier →",
@@ -222,10 +222,10 @@ export const translations = {
 
     // Custom Page
     customHeader: "Detailed Websites & Systems",
-    customDesc: "Not just any template. We build tailor-made digital systems from scratch with ultimate speed optimizations, intensive cross-device testing, and human-centric UI design.",
+    customDesc: "Not just any template. We build tailor-made digital systems from scratch with ultimate speed optimizations, intensive cross-device testing, and meticulous, sincere UI design.",
     pitch1Title: "Rigorous Device Testing",
     pitch1Desc: "We dedicate extra time to test your website across dozens of mobile screens and web browsers to ensure flawless layout compatibility.",
-    pitch2Title: "Human-Centric UX",
+    pitch2Title: "Aesthetic & Meticulous Styling",
     pitch2Desc: "Crafted around user psychology. Clean navigation, visually comfortable styling, and professional layouts that enhance trust and credibility.",
     pitch3Title: "Performance & Databases",
     pitch3Desc: "Clean code practices for maximum performance, structured SEO metadata, stable relational databases, and world-class API integrations.",
