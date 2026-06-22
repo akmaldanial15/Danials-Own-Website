@@ -34,10 +34,8 @@ const bespokeDetails = {
         "Halaman Utama, Mengenai, Servis, Galeri & Hubungi",
         "Galeri multimedia (lebih banyak gambar)",
         "Sokongan main semula video latar belakang (video playback)",
-        "Integrasi Google Maps & Pautan WhatsApp",
         "Sistem Pesanan (WhatsApp/Telegram) & Tanpa Panel Admin",
         "Kemaskini kandungan di masa depan disunting manual (caj dikenakan)",
-        "Keserasian paparan semua peranti (responsif)",
         "Borang hubungan interaktif",
         "Optimasi kelajuan Lighthouse"
       ],
@@ -218,10 +216,8 @@ const bespokeDetails = {
         "Home, About, Services, Gallery & Contact pages",
         "Rich image gallery & media showcase",
         "Background video playback support (video playback)",
-        "Google Maps & WhatsApp link integration",
         "Integrated Ordering System (WhatsApp/Telegram) & No Admin Panel",
         "Future content updates require manual edits (chargeable)",
-        "Cross-device display compatibility",
         "Interactive contact forms",
         "Lighthouse speed optimizations"
       ],
