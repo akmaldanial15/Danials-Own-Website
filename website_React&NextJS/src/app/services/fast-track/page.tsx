@@ -406,15 +406,27 @@ export default function FastTrackServices() {
         </div>
 
         {/* Support note */}
-        <div className="p-6 rounded-2xl bg-zinc-900/20 border border-zinc-900 max-w-3xl mx-auto flex items-start gap-4">
+        <div className="p-6 rounded-2xl bg-zinc-900/20 border border-zinc-900 max-w-4xl mx-auto flex items-start gap-4">
           <svg className="w-6 h-6 text-cyan-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          <div className="space-y-1 text-xs sm:text-sm text-zinc-400">
-            <p className="font-bold text-zinc-200">{t("supportNoteTitle")}</p>
-            <p className="leading-relaxed">
-              {t("supportNoteText")}
+          <div className="space-y-3 text-xs sm:text-sm text-zinc-400">
+            <p className="font-bold text-zinc-200 text-sm">
+              {language === "ms" ? "Nota Penting Fast-Track & Polisi Reka Bentuk:" : "Important Fast-Track & Design Notes:"}
             </p>
+            <ul className="list-disc pl-5 space-y-2.5 leading-relaxed text-zinc-300">
+              {language === "ms" ? (
+                <>
+                  <li><strong>Tempoh Siap & Kos:</strong> Pakej bajet biasanya siap dalam tempoh 1 ke 5 hari bekerja selepas semua kandungan lengkap diterima.</li>
+                  <li><strong>Polisi Reka Bentuk Pakej Bajet:</strong> Untuk pakej <strong>Super Budget (RM299)</strong> dan <strong>Medium Budget (RM699)</strong>, reka bentuk kustom sepenuhnya dari kosong (seperti mengikut fail Figma kustom atau screenshot contoh dari pelanggan) <strong>tidak disokong</strong> kerana harga pakej yang sangat mampu milik. Pakej bajet ini menggunakan templat reka bentuk sedia ada yang telah dioptimumkan, dan keputusan reka bentuk akhir ditentukan oleh saya.</li>
+                </>
+              ) : (
+                <>
+                  <li><strong>Delivery & Pricing:</strong> Budget packages are typically completed in 1 to 5 business days after all content is received.</li>
+                  <li><strong>Budget Design Policy:</strong> For the <strong>Super Budget (RM299)</strong> and <strong>Medium Budget (RM699)</strong> plans, custom design matching from scratch (such as following custom client Figma mockups or screenshot references) is <strong>not supported</strong> due to the low price points. These plans use pre-made optimized templates, and final design layout decisions are made by me.</li>
+                </>
+              )}
+            </ul>
           </div>
         </div>
       </div>

@@ -633,15 +633,23 @@ export default function DetailedServices() {
           <svg className="w-6 h-6 text-purple-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          <div className="space-y-1 text-xs sm:text-sm text-zinc-400">
-            <p className="font-bold text-zinc-200">
-              {language === "ms" ? "Nota Penghantaran, Tempoh Siap & Harga Pakej:" : "Important Delivery, Staging & Pricing Notes:"}
+          <div className="space-y-3 text-xs sm:text-sm text-zinc-400">
+            <p className="font-bold text-zinc-200 text-sm">
+              {language === "ms" ? "Nota Penting Penghantaran, Harga & Polisi Reka Bentuk:" : "Important Delivery, Pricing & Design Notes:"}
             </p>
-            <p className="leading-relaxed">
-              {language === "ms"
-                ? "Semua tempoh siap dikira dalam hari bekerja (hari perniagaan). Tempoh ini boleh menjadi lebih singkat atau cepat sekiranya slot saya kosong / saya tidak sibuk dengan projek pelanggan lain. Sila ambil perhatian bahawa harga yang dipaparkan adalah harga asas (minimum) sahaja, dan boleh bertambah sekiranya terdapat permintaan fungsi tambahan atau keperluan khas yang lebih kompleks."
-                : "All delivery schedules are estimated in business working days. Completion times can be significantly shorter if my slots are open and I am not busy with other client queues. Please note that the displayed prices are base (minimum) rates and can increase if you request extra features, custom database structures, or complex third-party API integrations."}
-            </p>
+            <ul className="list-disc pl-5 space-y-2.5 leading-relaxed text-zinc-300">
+              {language === "ms" ? (
+                <>
+                  <li><strong>Tempoh Siap & Kadar Asas:</strong> Semua tempoh siap dikira dalam hari bekerja. Tempoh boleh menjadi lebih singkat sekiranya saya tidak sibuk dengan projek pelanggan lain. Harga yang tertera adalah harga minimum asas sahaja.</li>
+                  <li><strong>Polisi Reka Bentuk Kustom (Custom Design):</strong> Anda dialu-alukan untuk meminta reka bentuk kustom. Sekiranya anda mempunyai visual gaya estetika tersendiri, <strong>sangat disyorkan</strong> untuk menyediakan contoh gambar (screenshot), pautan web rujukan, atau reka bentuk Figma. Jika tiada contoh, anda boleh serahkan keputusan reka bentuk sepenuhnya kepada saya (Danial).</li>
+                </>
+              ) : (
+                <>
+                  <li><strong>Delivery & Base Rates:</strong> Completion times are calculated in business working days. Delivery can be faster if slots are open. Displayed prices represent base minimum rates only.</li>
+                  <li><strong>Custom Design Policy:</strong> You are welcome to request custom designs. If you have a specific visual aesthetic in mind, it is <strong>highly recommended</strong> to provide screenshot examples, competitor website links, or Figma mockups. If no references are provided, you can leave all design decisions entirely to me (Danial).</li>
+                </>
+              )}
+            </ul>
           </div>
         </div>
 
