@@ -73,15 +73,15 @@ const bespokeDetails = {
     },
     "custom-site": {
       deliverables: [
-        "Hampir semua jenis sistem & fungsi boleh dibina (Almost anything!)",
-        "Sistem web & pangkalan data kustom sepenuhnya",
+        "Hampir semua perisian, sistem, AI, atau API boleh dibina (Almost anything!)",
+        "Sistem web & pangkalan data kustom sepenuhnya (SaaS / Web App)",
         "Aplikasi Android (.APK) / Web bersepadu",
-        "Integrasi API & Webhook tanpa had",
+        "Pembangunan API kustom & Integrasi Webhook tanpa had",
         "Ejen automasi AI & AI Chatbot pintar",
         "Dashboard admin panel kustom sepenuhnya",
         "Reka bentuk UI/UX eksklusif (Figma-to-Code)",
-        "Sokongan integrasi perkakasan (IoT/Printer/Scanner) & SMS Gateway",
         "Penyelesaian digital bersepadu & pelayan awan (Cloud Servers)",
+        "Integrasi Perkakasan & IoT (Mikrokontroler/Sensor) - [Akan Datang]",
         "Prestasi gred perusahaan (Enterprise) & diuji secara mendalam"
       ],
       specs: [
@@ -261,15 +261,15 @@ const bespokeDetails = {
     },
     "custom-site": {
       deliverables: [
-        "Almost any custom logic, system, or feature can be built!",
-        "Tailor-made code & custom database schemas",
+        "Almost any custom software, system, AI, or API can be built!",
+        "Fully custom web systems & databases (SaaS / Web App)",
         "Integrated Web Systems & Android App (.APK)",
-        "Unlimited API & Webhook integrations",
+        "Custom API development & unlimited Webhook integrations",
         "Autonomous AI agents & custom AI chatbots",
         "Fully bespoke admin panels & dashboards",
-        "Figma-to-Code exclusive pixel-perfect UI/UX",
-        "Hardware integration (IoT, printers, scanners) & SMS services",
-        "End-to-end cloud server architecture & system management",
+        "Figma-to-Code exclusive pixel-perfect premium UI/UX",
+        "End-to-end cloud server architecture & system scaling",
+        "Hardware & IoT Integration (Microcontrollers/Sensors) - [Coming Soon]",
         "Enterprise-grade performance, scalability & extreme stress testing"
       ],
       specs: [
