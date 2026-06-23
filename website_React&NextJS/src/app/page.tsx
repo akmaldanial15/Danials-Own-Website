@@ -45,19 +45,38 @@ export default function Home() {
 
       {/* 1. HERO SECTION */}
       <section className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 md:pt-20 text-center">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-zinc-200 leading-tight">
-          {t("heroTitle")}{" "}
-          <span className="bg-gradient-to-r from-purple-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent text-glow animate-pulse duration-[3000ms]">
-            {t("heroTitleSpan")}
-          </span>{" "}
-          {t("heroTitleEnd")}
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-zinc-200 leading-tight animate-slide-up delay-100">
+          {language === "ms" ? (
+            <>
+              Bina{" "}
+              <span className="bg-gradient-to-r from-purple-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent text-glow">
+                Laman Web
+              </span>{" "}
+              &amp;{" "}
+              <span className="bg-gradient-to-r from-cyan-400 via-teal-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent text-glow">
+                Sistem Perniagaan
+              </span>{" "}
+              <span className="text-zinc-150">Premium</span>
+            </>
+          ) : (
+            <>
+              Build{" "}
+              <span className="bg-gradient-to-r from-purple-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent text-glow">
+                Premium Websites
+              </span>{" "}
+              &amp;{" "}
+              <span className="bg-gradient-to-r from-cyan-400 via-teal-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent text-glow">
+                Business Systems
+              </span>
+            </>
+          )}
         </h1>
-        <p className="mt-6 max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-zinc-400 leading-relaxed">
+        <p className="mt-6 max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-zinc-400 leading-relaxed animate-slide-up delay-200">
           {t("heroDesc")}
         </p>
 
         {/* Pulsing Pill CTA Button */}
-        <div className="mt-8 flex justify-center">
+        <div className="mt-8 flex justify-center animate-slide-up delay-300">
           <div className="relative group">
             <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-purple-600 via-pink-500 to-cyan-500 opacity-60 blur-md group-hover:opacity-100 transition duration-300 animate-pulse" />
             <Link
@@ -70,10 +89,12 @@ export default function Home() {
         </div>
 
         {/* Floating Dashboard Mockup Panel */}
-        <DashboardMockup />
+        <div className="animate-scale-up delay-400">
+          <DashboardMockup />
+        </div>
 
         {/* Micro-Features List below Dashboard */}
-        <p className="mt-12 text-xs sm:text-sm text-zinc-500 tracking-wide">
+        <p className="mt-12 text-xs sm:text-sm text-zinc-500 tracking-wide animate-fade-in delay-500">
           {language === "ms" 
             ? "Semua yang anda perlukan untuk pertumbuhan digital:" 
             : "Everything you need for productive business growth:"}
@@ -85,7 +106,7 @@ export default function Home() {
         </p>
 
         {/* The Split Choice Cards */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto text-left">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto text-left animate-slide-up delay-600">
           {/* Path A: Cheap & Fast */}
           <GlowCard color="from-cyan-500 to-blue-500">
             <div>

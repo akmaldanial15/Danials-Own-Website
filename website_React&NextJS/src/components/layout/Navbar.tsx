@@ -35,7 +35,7 @@ export default function Navbar() {
 
   return (
     <nav 
-      className={`fixed z-50 transition-all duration-700 w-full ${
+      className={`fixed z-50 transition-all duration-700 w-full animate-slide-down ${
         scrolled 
           ? "top-0 left-0 bg-zinc-950/85 backdrop-blur-lg border-b border-zinc-800/40 shadow-lg shadow-zinc-950/40 lg:top-3 lg:left-1/2 lg:-translate-x-1/2 lg:w-[calc(100%-2.5rem)] lg:max-w-6xl lg:rounded-full lg:border lg:border-zinc-800/50 lg:px-4" 
           : "top-0 left-0 bg-transparent border-b border-transparent lg:top-0 lg:left-1/2 lg:-translate-x-1/2 lg:w-full lg:max-w-none lg:rounded-none lg:border lg:border-transparent lg:px-0"
