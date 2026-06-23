@@ -73,12 +73,16 @@ const bespokeDetails = {
     },
     "custom-site": {
       deliverables: [
-        "Sistem web & pangkalan data kustom",
+        "Hampir semua jenis sistem & fungsi boleh dibina (Almost anything!)",
+        "Sistem web & pangkalan data kustom sepenuhnya",
         "Aplikasi Android (.APK) / Web bersepadu",
         "Integrasi API & Webhook tanpa had",
-        "Ejen automasi AI & AI Chatbot",
-        "Dashboard admin panel kustom",
-        "Reka bentuk UI/UX eksklusif (Figma-to-Code)"
+        "Ejen automasi AI & AI Chatbot pintar",
+        "Dashboard admin panel kustom sepenuhnya",
+        "Reka bentuk UI/UX eksklusif (Figma-to-Code)",
+        "Sokongan integrasi perkakasan (IoT/Printer/Scanner) & SMS Gateway",
+        "Penyelesaian digital bersepadu & pelayan awan (Cloud Servers)",
+        "Prestasi gred perusahaan (Enterprise) & diuji secara mendalam"
       ],
       specs: [
         { label: "Siap dlm", value: "Mengikut Skop" },
@@ -257,12 +261,16 @@ const bespokeDetails = {
     },
     "custom-site": {
       deliverables: [
+        "Almost any custom logic, system, or feature can be built!",
         "Tailor-made code & custom database schemas",
         "Integrated Web Systems & Android App (.APK)",
         "Unlimited API & Webhook integrations",
         "Autonomous AI agents & custom AI chatbots",
         "Fully bespoke admin panels & dashboards",
-        "Figma-to-Code exclusive pixel-perfect UI/UX"
+        "Figma-to-Code exclusive pixel-perfect UI/UX",
+        "Hardware integration (IoT, printers, scanners) & SMS services",
+        "End-to-end cloud server architecture & system management",
+        "Enterprise-grade performance, scalability & extreme stress testing"
       ],
       specs: [
         { label: "Delivery", value: "Scope Dependent" },

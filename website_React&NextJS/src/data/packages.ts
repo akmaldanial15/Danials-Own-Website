@@ -230,12 +230,16 @@ export const bespokePackages = {
       price: "Custom",
       description: "Sistem web kustom sepenuhnya, platform pangkalan data berskala besar, atau aplikasi Android kustom mengikut aliran kerja perniagaan anda.",
       features: [
+        "Hampir semua jenis sistem & fungsi boleh dibina (Almost anything!)",
         "Sistem web & pangkalan data kustom sepenuhnya",
         "Aplikasi Android (.APK) / Web bersepadu",
         "Integrasi API & Webhook tanpa had",
         "Ejen automasi AI & AI Chatbot pintar",
         "Dashboard admin panel kustom sepenuhnya",
-        "Reka bentuk UI/UX eksklusif (Figma-to-Code)"
+        "Reka bentuk UI/UX eksklusif (Figma-to-Code)",
+        "Sokongan integrasi perkakasan (IoT/Printer/Scanner) & SMS Gateway",
+        "Penyelesaian digital bersepadu & pelayan awan (Cloud Servers)",
+        "Prestasi gred perusahaan (Enterprise) & diuji secara mendalam"
       ]
     },
     {
@@ -338,12 +342,16 @@ export const bespokePackages = {
       price: "Custom",
       description: "Fully custom web systems, large-scale database platforms, or Android applications custom-built to match your exact business flows.",
       features: [
+        "Almost any custom logic, system, or feature can be built!",
         "Tailor-made code & custom database schemas",
         "Integrated Web Systems & Android App (.APK)",
         "Unlimited API & Webhook integrations",
         "Autonomous AI agents & custom AI chatbots",
         "Fully bespoke admin panels & dashboards",
-        "Figma-to-Code exclusive pixel-perfect UI/UX"
+        "Figma-to-Code exclusive pixel-perfect UI/UX",
+        "Hardware integration (IoT, printers, scanners) & SMS services",
+        "End-to-end cloud server architecture & system management",
+        "Enterprise-grade performance, scalability & extreme stress testing"
       ]
     },
     {
