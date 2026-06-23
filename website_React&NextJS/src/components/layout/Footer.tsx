@@ -66,19 +66,23 @@ export default function Footer() {
         {/* Payment Terms Column */}
         <div className="space-y-4">
           <h4 className="text-sm font-semibold text-zinc-200 uppercase tracking-wider">{t("paymentTermsTitle")}</h4>
-          <div className="space-y-3 bg-zinc-900/40 p-4 rounded-xl border border-zinc-850">
-            <div className="flex items-center justify-between text-xs border-b border-zinc-805 pb-2">
-              <span className="text-zinc-400 font-medium">{t("depositMula")}</span>
-              <span className="text-purple-400 font-semibold">{t("sebelumMula")}</span>
-            </div>
-            <div className="flex items-center justify-between text-xs border-b border-zinc-805 pb-2">
-              <span className="text-zinc-400 font-medium">{t("draftPreview")}</span>
-              <span className="text-purple-400 font-semibold">{t("selepasDraft")}</span>
-            </div>
-            <div className="flex items-center justify-between text-xs">
-              <span className="text-zinc-400 font-medium">{t("penyerahan")}</span>
-              <span className="text-purple-400 font-semibold">{t("sebelumLaunch")}</span>
-            </div>
+          <div className="bg-zinc-900/40 p-4 rounded-xl border border-zinc-850">
+            <table className="w-full text-xs border-collapse">
+              <tbody>
+                <tr className="border-b border-zinc-800/40">
+                  <td className="pb-2.5 text-zinc-400 font-medium text-left align-top pr-3">{t("depositMula")}</td>
+                  <td className="pb-2.5 text-purple-400 font-semibold text-right align-top">{t("sebelumMula")}</td>
+                </tr>
+                <tr className="border-b border-zinc-800/40">
+                  <td className="py-2.5 text-zinc-400 font-medium text-left align-top pr-3">{t("draftPreview")}</td>
+                  <td className="py-2.5 text-purple-400 font-semibold text-right align-top">{t("selepasDraft")}</td>
+                </tr>
+                <tr>
+                  <td className="pt-2.5 text-zinc-400 font-medium text-left align-top pr-3">{t("penyerahan")}</td>
+                  <td className="pt-2.5 text-purple-400 font-semibold text-right align-top">{t("sebelumLaunch")}</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <p className="text-[11px] text-zinc-650 leading-relaxed">
             {t("footerNote")}
