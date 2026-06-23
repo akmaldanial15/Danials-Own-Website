@@ -268,62 +268,62 @@ export default function PricingCalculator() {
 
   const renderSummaryContent = (isMobileDrawer = false) => {
     return (
-      <div className={`space-y-4 ${isMobileDrawer ? 'text-zinc-100' : ''}`}>
+      <div className={`space-y-4 ${isMobileDrawer ? 'text-zinc-150' : ''}`}>
         {/* Base Package Line */}
         <div className="flex justify-between items-start gap-4">
           <div className="space-y-0.5">
-            <p className="text-xs font-bold text-zinc-200">{currentPackage.name}</p>
-            <p className="text-[10px] text-zinc-400 uppercase font-semibold">{t("summaryBasePkg")}</p>
+            <p className="text-xs font-bold text-zinc-100">{currentPackage.name}</p>
+            <p className="text-[10px] text-zinc-300 uppercase font-semibold">{t("summaryBasePkg")}</p>
           </div>
-          <span className="text-xs font-bold text-zinc-200 shrink-0">
+          <span className="text-xs font-bold text-zinc-100 shrink-0">
             {typeof currentPackage.price === "number" ? `RM${currentPackage.price.toLocaleString()}` : "Custom"}
           </span>
         </div>
 
         {/* Extra Pages Line */}
         {extraPages > 0 && (
-          <div className="flex justify-between items-center text-xs text-zinc-400 border-t border-zinc-900/50 pt-3">
+          <div className="flex justify-between items-center text-xs text-zinc-300 border-t border-zinc-900/50 pt-3">
             <span>{extraPages}x {t("summaryExtraPages")}</span>
-            <span className="font-semibold text-zinc-200">+RM{extraPagesTotal}</span>
+            <span className="font-semibold text-zinc-100">+RM{extraPagesTotal}</span>
           </div>
         )}
 
         {/* Domain & Hosting Line */}
         <div className="border-t border-zinc-900/50 pt-3 space-y-1">
-          <div className="flex justify-between items-start text-[10px] text-zinc-400 font-bold uppercase tracking-wider">
+          <div className="flex justify-between items-start text-[10px] text-zinc-300 font-bold uppercase tracking-wider">
             <span>Domain & Hosting</span>
           </div>
-          <div className="flex justify-between items-center text-xs text-zinc-400">
+          <div className="text-xs text-zinc-350">
              {isBudget ? (
                includeBudgetHosting ? (
-                 <>
+                 <div className="flex justify-between items-center w-full">
                    <span>{language === "ms" ? "Domain Kustom & Hosting Pakej" : "Custom Domain & Staged Hosting"}</span>
-                   <span className="font-semibold text-zinc-200">{language === "ms" ? "Termasuk (+RM18/bln)" : "Included (+RM18/mo)"}</span>
-                 </>
+                   <span className="font-semibold text-zinc-155">{language === "ms" ? "Termasuk (+RM18/bln)" : "Included (+RM18/mo)"}</span>
+                 </div>
                ) : (
-                 <>
+                 <div className="flex flex-col gap-0.5 w-full text-left">
                    <span className="text-rose-500 font-bold">⚠️ {language === "ms" ? "Hosting Percuma (Sangat Terhad)" : "Free Hosting (Highly Restricted)"}</span>
-                   <span className="font-extrabold text-rose-500">{language === "ms" ? "Sangat Tidak Disyorkan (.vercel.app)" : "Strongly Not Recommended (.vercel.app)"}</span>
-                 </>
+                   <span className="text-[10px] font-extrabold text-rose-500 leading-tight">{language === "ms" ? "Sangat Tidak Disyorkan (.vercel.app)" : "Strongly Not Recommended (.vercel.app)"}</span>
+                 </div>
                )
              ) : (
                selectedAddOnIds.includes("hosting") ? (
                  hostingTier === "standard" ? (
-                   <>
+                   <div className="flex justify-between items-center w-full">
                      <span>{language === "ms" ? "Hosting Standard + Domain (.com/.my)" : "Standard Hosting + Domain (.com/.my)"}</span>
-                     <span className="font-semibold text-zinc-200">+RM250</span>
-                   </>
+                     <span className="font-semibold text-zinc-155">+RM250</span>
+                   </div>
                  ) : (
-                   <>
+                   <div className="flex justify-between items-center w-full">
                      <span>{language === "ms" ? "Hosting Premium + Domain (.com/.my)" : "Premium Hosting + Domain (.com/.my)"}</span>
-                     <span className="font-semibold text-zinc-200">+RM450</span>
-                   </>
+                     <span className="font-semibold text-zinc-155">+RM450</span>
+                   </div>
                  )
                ) : (
-                 <>
+                 <div className="flex flex-col gap-0.5 w-full text-left">
                    <span className="text-rose-500 font-bold">⚠️ {language === "ms" ? "Hosting Percuma (Sangat Terhad)" : "Free Hosting (Highly Restricted)"}</span>
-                   <span className="font-extrabold text-rose-500">{language === "ms" ? "Sangat Tidak Disyorkan (.vercel.app)" : "Strongly Not Recommended (.vercel.app)"}</span>
-                 </>
+                   <span className="text-[10px] font-extrabold text-rose-500 leading-tight">{language === "ms" ? "Sangat Tidak Disyorkan (.vercel.app)" : "Strongly Not Recommended (.vercel.app)"}</span>
+                 </div>
                )
              )}
           </div>
@@ -332,13 +332,13 @@ export default function PricingCalculator() {
         {/* Add-ons List */}
         {activeAddOns.filter(addon => addon.id !== "maintenance" && addon.id !== "hosting").length > 0 && (
           <div className="border-t border-zinc-900/50 pt-3 space-y-2">
-            <p className="text-[10px] text-zinc-400 font-bold uppercase tracking-wider">{t("summaryAddons")}</p>
+            <p className="text-[10px] text-zinc-300 font-bold uppercase tracking-wider">{t("summaryAddons")}</p>
             {activeAddOns
                .filter(addon => addon.id !== "maintenance" && addon.id !== "hosting")
                .map((addon) => (
-                 <div key={addon.id} className="flex justify-between items-center text-xs text-zinc-400">
+                 <div key={addon.id} className="flex justify-between items-center text-xs text-zinc-300">
                    <span>{addon.name}</span>
-                   <span className="font-medium text-zinc-200">+RM{addon.price}</span>
+                   <span className="font-medium text-zinc-155">+RM{addon.price}</span>
                  </div>
                ))}
           </div>
@@ -346,7 +346,7 @@ export default function PricingCalculator() {
 
         {/* One-Time Total Price */}
         <div className="border-t border-zinc-900 pt-4 flex justify-between items-baseline gap-4">
-          <span className="text-xs font-bold text-zinc-400">{t("summaryTotal")}</span>
+          <span className="text-xs font-bold text-zinc-300">{t("summaryTotal")}</span>
           <div className="text-right">
             <span className="text-2xl font-black text-glow text-white">
               RM{oneTimeTotal.toLocaleString()}
@@ -365,7 +365,7 @@ export default function PricingCalculator() {
                 RM{maintenanceInfo.fee}/{currentPackage.id.startsWith("budget-") || maintenanceCycle === "monthly" ? (language === "ms" ? "bln" : "mo") : (language === "ms" ? "thn" : "yr")}
               </span>
             </div>
-            <p className="text-[10px] text-zinc-400 leading-none font-medium">
+            <p className="text-[10px] text-zinc-300 leading-none font-medium">
               * {maintenanceInfo.term} {maintenanceInfo.isMandatory ? `(${language === "ms" ? "Wajib" : "Mandatory"})` : ""}
             </p>
 
@@ -389,21 +389,21 @@ export default function PricingCalculator() {
 
         {/* Payment Milestone Split Breakdown details */}
         <div className="border-t border-zinc-900/80 pt-4 space-y-2.5">
-          <span className="text-[10px] text-zinc-400 font-bold uppercase tracking-widest block">
+          <span className="text-[10px] text-zinc-300 font-bold uppercase tracking-widest block">
             {language === "ms" ? "Pecahan Fasa Bayaran" : "Milestone Payment Schedule"}
           </span>
           <div className="grid grid-cols-3 gap-1.5 bg-zinc-900/40 p-2 rounded-xl border border-zinc-900/60">
             <div className="text-center p-1">
-              <span className="text-[9px] text-zinc-400 uppercase font-bold tracking-wider block">Deposit ({paymentMilestones.depositPct}%)</span>
-              <span className="text-xs font-black text-zinc-200 mt-0.5 block">RM{paymentMilestones.depositVal.toLocaleString()}</span>
+              <span className="text-[9px] text-zinc-300 uppercase font-bold tracking-wider block">Deposit ({paymentMilestones.depositPct}%)</span>
+              <span className="text-xs font-black text-zinc-150 mt-0.5 block">RM{paymentMilestones.depositVal.toLocaleString()}</span>
             </div>
             <div className="text-center p-1 border-x border-zinc-900/80">
-              <span className="text-[9px] text-zinc-400 uppercase font-bold tracking-wider block">Edit ({paymentMilestones.majorEditPct}%)</span>
-              <span className="text-xs font-black text-zinc-200 mt-0.5 block">RM{paymentMilestones.majorEditVal.toLocaleString()}</span>
+              <span className="text-[9px] text-zinc-300 uppercase font-bold tracking-wider block">Edit ({paymentMilestones.majorEditPct}%)</span>
+              <span className="text-xs font-black text-zinc-150 mt-0.5 block">RM{paymentMilestones.majorEditVal.toLocaleString()}</span>
             </div>
             <div className="text-center p-1">
-              <span className="text-[9px] text-zinc-400 uppercase font-bold tracking-wider block">Launch ({paymentMilestones.launchPct}%)</span>
-              <span className="text-xs font-black text-zinc-200 mt-0.5 block">RM{paymentMilestones.launchVal.toLocaleString()}</span>
+              <span className="text-[9px] text-zinc-300 uppercase font-bold tracking-wider block">Launch ({paymentMilestones.launchPct}%)</span>
+              <span className="text-xs font-black text-zinc-150 mt-0.5 block">RM{paymentMilestones.launchVal.toLocaleString()}</span>
             </div>
           </div>
         </div>
@@ -411,12 +411,12 @@ export default function PricingCalculator() {
         {/* ServersCamp Quick Equivalency Conversion Column */}
         <div className="border-t border-zinc-900/80 pt-4 grid grid-cols-2 gap-4 text-center">
           <div className="p-2 rounded-xl bg-zinc-900/30 border border-zinc-900/60">
-            <span className="text-[9px] text-zinc-400 font-bold uppercase tracking-wider block">{language === "ms" ? "KADAR HARIAN" : "DAILY EQUIVALENT"}</span>
-            <span className="text-xs font-black text-zinc-200 mt-1 block">RM{dailyValue}</span>
+            <span className="text-[9px] text-zinc-300 font-bold uppercase tracking-wider block">{language === "ms" ? "KADAR HARIAN" : "DAILY EQUIVALENT"}</span>
+            <span className="text-xs font-black text-zinc-150 mt-1 block">RM{dailyValue}</span>
           </div>
           <div className="p-2 rounded-xl bg-zinc-900/30 border border-zinc-900/60">
-            <span className="text-[9px] text-zinc-400 font-bold uppercase tracking-wider block">{language === "ms" ? "KADAR SEJAM" : "HOURLY EQUIVALENT"}</span>
-            <span className="text-xs font-black text-zinc-200 mt-1 block">RM{hourlyValue}</span>
+            <span className="text-[9px] text-zinc-300 font-bold uppercase tracking-wider block">{language === "ms" ? "KADAR SEJAM" : "HOURLY EQUIVALENT"}</span>
+            <span className="text-xs font-black text-zinc-150 mt-1 block">RM{hourlyValue}</span>
           </div>
         </div>
 
@@ -491,7 +491,7 @@ export default function PricingCalculator() {
             {t("calcHeader")}
           </h1>
 
-          <p className="text-zinc-400 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+          <p className="text-zinc-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
             {t("calcDesc")}
           </p>
 
@@ -509,7 +509,7 @@ export default function PricingCalculator() {
               
               {/* Tab Selector (inspired by ServersCamp estimate console) */}
               <div className="space-y-4">
-                <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-widest leading-none">
+                <span className="text-[10px] text-zinc-300 font-bold uppercase tracking-widest leading-none">
                   {language === "ms" ? "FASA / KATEGORI PROJEK" : "PROJECT CATEGORY TIER"}
                 </span>
                 <div className="grid grid-cols-2 gap-3 p-1 rounded-2xl bg-zinc-900/30 border border-zinc-900/80">
@@ -518,11 +518,11 @@ export default function PricingCalculator() {
                     className={`flex flex-col items-center justify-center p-4 rounded-xl transition-all duration-350 ${
                       selectedTab === "bespoke"
                         ? "bg-zinc-900 text-purple-400 border border-purple-500/20 shadow-md"
-                        : "text-zinc-400 hover:text-zinc-200"
+                        : "text-zinc-300 hover:text-zinc-100"
                     }`}
                   >
                     <span className="text-sm font-bold">{language === "ms" ? "Detailed Website" : "Detailed Bespoke"}</span>
-                    <span className="text-[10px] text-zinc-400 mt-1 uppercase tracking-wider font-semibold">
+                    <span className="text-[10px] text-zinc-300 mt-1 uppercase tracking-wider font-semibold">
                       {language === "ms" ? "Reka Bentuk Kustom & Sistem" : "Fully Custom & Web Systems"}
                     </span>
                   </button>
@@ -531,11 +531,11 @@ export default function PricingCalculator() {
                     className={`flex flex-col items-center justify-center p-4 rounded-xl transition-all duration-350 ${
                       selectedTab === "budget"
                         ? "bg-zinc-900 text-purple-400 border border-purple-500/20 shadow-md"
-                        : "text-zinc-400 hover:text-zinc-200"
+                        : "text-zinc-300 hover:text-zinc-100"
                     }`}
                   >
                     <span className="text-sm font-bold">{language === "ms" ? "Pakej Fast-Track" : "Fast-Track Budget"}</span>
-                    <span className="text-[10px] text-zinc-400 mt-1 uppercase tracking-wider font-semibold">
+                    <span className="text-[10px] text-zinc-300 mt-1 uppercase tracking-wider font-semibold">
                       {language === "ms" ? "Mampu Milik & Templat Pantas" : "Budget-Friendly Templates"}
                     </span>
                   </button>
@@ -544,7 +544,7 @@ export default function PricingCalculator() {
 
               {/* Package Select Grid */}
               <div className="space-y-4">
-                <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-widest leading-none">
+                <span className="text-[10px] text-zinc-300 font-bold uppercase tracking-widest leading-none">
                   {language === "ms" ? "PILIH PAKEJ ASAS" : "CHOOSE BASE PLAN"}
                 </span>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
@@ -563,8 +563,8 @@ export default function PricingCalculator() {
                     >
                       <div className="flex justify-between items-start gap-4 w-full">
                         <div className="space-y-1">
-                          <h4 className="text-xs font-bold text-zinc-200 leading-tight">{pkg.name}</h4>
-                          <p className="text-[10px] text-zinc-400 leading-relaxed line-clamp-2">
+                          <h4 className="text-xs font-bold text-zinc-100 leading-tight">{pkg.name}</h4>
+                          <p className="text-[11px] text-zinc-350 leading-relaxed line-clamp-2">
                             {pkg.description}
                           </p>
                         </div>
@@ -577,7 +577,7 @@ export default function PricingCalculator() {
                       </div>
 
                       <div className="mt-3 pt-2 border-t border-zinc-900/60 w-full flex items-baseline gap-1">
-                        <span className="text-[9px] text-zinc-500 font-bold uppercase tracking-wider">{t("fromText")}</span>
+                        <span className="text-[9px] text-zinc-300 font-bold uppercase tracking-wider">{t("fromText")}</span>
                         <span className="text-sm font-black text-white text-glow">
                           {typeof pkg.price === "number" ? `RM${pkg.price.toLocaleString()}` : pkg.price}
                         </span>
@@ -590,7 +590,7 @@ export default function PricingCalculator() {
               {/* Extra Pages Counter */}
               <div className="p-6 rounded-2xl bg-zinc-900/20 border border-zinc-900/80 space-y-4">
                 <div className="flex justify-between items-center border-b border-zinc-900/40 pb-3">
-                  <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-widest leading-none">
+                  <span className="text-[10px] text-zinc-300 font-bold uppercase tracking-widest leading-none">
                     {language === "ms" ? "HALAMAN TAMBAHAN" : "EXTRA PAGE SLIDER"}
                   </span>
                   <span className="text-[9px] font-bold text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">
@@ -602,7 +602,7 @@ export default function PricingCalculator() {
                   <div className="flex items-center bg-zinc-950 border border-zinc-900 rounded-xl p-1 shrink-0">
                     <button
                       onClick={() => setExtraPages(Math.max(0, extraPages - 1))}
-                      className="w-9 h-9 flex items-center justify-center text-lg font-bold text-zinc-400 hover:text-white rounded-lg hover:bg-zinc-900 transition-colors"
+                      className="w-9 h-9 flex items-center justify-center text-lg font-bold text-zinc-300 hover:text-white rounded-lg hover:bg-zinc-900 transition-colors"
                     >
                       -
                     </button>
@@ -611,12 +611,12 @@ export default function PricingCalculator() {
                     </span>
                     <button
                       onClick={() => setExtraPages(Math.min(20, extraPages + 1))}
-                      className="w-9 h-9 flex items-center justify-center text-lg font-bold text-zinc-400 hover:text-white rounded-lg hover:bg-zinc-900 transition-colors"
+                      className="w-9 h-9 flex items-center justify-center text-lg font-bold text-zinc-300 hover:text-white rounded-lg hover:bg-zinc-900 transition-colors"
                     >
                       +
                     </button>
                   </div>
-                  <p className="text-xs text-zinc-400 leading-relaxed">
+                  <p className="text-xs text-zinc-300 leading-relaxed">
                     {t("pageCounterDesc")}
                   </p>
                 </div>
@@ -624,7 +624,7 @@ export default function PricingCalculator() {
 
               {/* Add-on features */}
               <div className="space-y-4">
-                <span className="text-[10px] text-zinc-400 font-bold uppercase tracking-widest leading-none">
+                <span className="text-[10px] text-zinc-300 font-bold uppercase tracking-widest leading-none">
                   {language === "ms" ? "CIRI-CIRI TAMBAHAN & ADD-ON" : "ADD-ON FEATURES"}
                 </span>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -698,7 +698,7 @@ export default function PricingCalculator() {
                           isChecked ? "max-h-[180px] opacity-100 mt-2.5 pt-2 border-t border-zinc-900/50" : "max-h-0 opacity-0 pointer-events-none"
                         }`}>
                           {addonDesc && (
-                            <p className="text-[10px] text-zinc-400 leading-relaxed">{addonDesc}</p>
+                            <p className="text-[11px] text-zinc-350 leading-relaxed">{addonDesc}</p>
                           )}
                           
                           {/* Hosting Sub-Toggle */}
@@ -713,8 +713,8 @@ export default function PricingCalculator() {
                                 className={`px-2 py-0.5 rounded text-[8px] font-bold uppercase transition-all cursor-pointer ${
                                   hostingTier === "standard"
                                     ? "bg-purple-600 text-white"
-                                    : "text-zinc-400 hover:text-zinc-200"
-                                }`}
+                                    : "text-zinc-300 hover:text-zinc-100"
+                                  }`}
                               >
                                 {language === "ms" ? "Standard" : "Standard"}
                               </button>
@@ -724,7 +724,7 @@ export default function PricingCalculator() {
                                 className={`px-2 py-0.5 rounded text-[8px] font-bold uppercase transition-all cursor-pointer ${
                                   hostingTier === "premium"
                                     ? "bg-purple-600 text-white"
-                                    : "text-zinc-400 hover:text-zinc-200"
+                                    : "text-zinc-300 hover:text-zinc-100"
                                 }`}
                               >
                                 {language === "ms" ? "Premium" : "Premium"}
@@ -744,7 +744,7 @@ export default function PricingCalculator() {
                                 className={`px-2 py-0.5 rounded text-[8px] font-bold uppercase transition-all cursor-pointer ${
                                   maintenanceCycle === "monthly"
                                     ? "bg-purple-600 text-white"
-                                    : "text-zinc-400 hover:text-zinc-200"
+                                    : "text-zinc-300 hover:text-zinc-100"
                                 }`}
                               >
                                 {language === "ms" ? "Bulanan" : "Monthly"}
@@ -755,7 +755,7 @@ export default function PricingCalculator() {
                                 className={`px-2 py-0.5 rounded text-[8px] font-bold uppercase transition-all cursor-pointer ${
                                   maintenanceCycle === "yearly"
                                     ? "bg-purple-600 text-white"
-                                    : "text-zinc-400 hover:text-zinc-200"
+                                    : "text-zinc-300 hover:text-zinc-100"
                                 }`}
                               >
                                 {language === "ms" ? "Tahunan (Jimat)" : "Yearly (Save)"}
@@ -775,7 +775,7 @@ export default function PricingCalculator() {
               <div className="p-6 rounded-2xl bg-zinc-950 border border-zinc-850/80 shadow-2xl relative overflow-hidden">
                 <div className="absolute top-[-10%] right-[-10%] w-[150px] h-[150px] rounded-full bg-purple-500/5 blur-2xl pointer-events-none" />
                 
-                <h3 className="text-xs font-bold text-zinc-350 border-b border-zinc-900 pb-3 uppercase tracking-wider mb-5">
+                <h3 className="text-xs font-bold text-zinc-150 border-b border-zinc-900 pb-3 uppercase tracking-wider mb-5">
                   {t("summaryTitle")}
                 </h3>
 
@@ -783,8 +783,8 @@ export default function PricingCalculator() {
               </div>
 
               {/* Service Terms checklist */}
-              <div className="p-6 rounded-2xl bg-zinc-900/10 border border-zinc-900/80 space-y-3 text-xs text-zinc-400">
-                <p className="font-bold text-zinc-400">{t("calcTermsTitle")}</p>
+              <div className="p-6 rounded-2xl bg-zinc-900/10 border border-zinc-900/80 space-y-3 text-xs text-zinc-350">
+                <p className="font-bold text-zinc-200">{t("calcTermsTitle")}</p>
                 <ul className="space-y-2 list-disc pl-4 leading-relaxed">
                   <li>{t("calcTerm1")}</li>
                   <li>{t("calcTerm2")}</li>
