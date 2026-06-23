@@ -87,7 +87,7 @@ const bespokeDetails = {
       specs: [
         { label: "Siap dlm", value: "Mengikut Skop" },
         { label: "Semakan", value: "Tanpa Had (Reka Bentuk)" },
-        { label: "Sokongan", value: "60-90 Hari Waranti" },
+        { label: "Sokongan", value: "Custom (SLA / Waranti)" },
         { label: "Teknologi", value: "Next.js / Node.js / Android" },
         { label: "Bayaran", value: "Fasa Projek Dinamik" },
         { label: "SEO & Kelajuan", value: "Skala Enterprise" }
@@ -275,7 +275,7 @@ const bespokeDetails = {
       specs: [
         { label: "Delivery", value: "Scope Dependent" },
         { label: "Revisions", value: "Unlimited (Design Phase)" },
-        { label: "Support", value: "60-90 Days Warranty" },
+        { label: "Support", value: "Custom (SLA / Warranty)" },
         { label: "Technology", value: "Next.js / Node.js / Android APK" },
         { label: "Payment", value: "Dynamic Project Milestones" },
         { label: "SEO & Speed", value: "Enterprise Grade" }
