@@ -5,6 +5,8 @@ import GlowCard from "@/components/ui/GlowCard";
 import { fastTrackPackages, quickFixes } from "@/data/packages";
 import { generateWhatsAppLink, generateQuickFixLink } from "@/utils/whatsapp";
 import { useTranslation } from "@/hooks/useTranslation";
+import ScrollReveal from "@/components/ui/ScrollReveal";
+
 
 const packageDetails = {
   ms: {
@@ -181,88 +183,97 @@ export default function FastTrackServices() {
         {/* Infographic Section: Why Fast-Track? */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {/* Card 1: Quick Launch */}
-          <div className="relative group p-8 md:p-10 rounded-3xl bg-zinc-900/40 border border-zinc-850 hover:border-cyan-500/30 hover:bg-zinc-900/60 hover:shadow-[0_10px_30px_rgba(16,185,129,0.08)] transition-all duration-300">
-            <div className="absolute top-6 right-6 text-[10px] font-mono font-bold tracking-widest text-cyan-400 bg-cyan-500/10 px-2.5 py-0.5 rounded-full border border-cyan-500/10 uppercase">
-              1-5 DAYS
-            </div>
-            <div className="space-y-4">
-              <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20 shadow-[0_0_25px_rgba(16,185,129,0.15)] transition-transform duration-300 group-hover:scale-110 p-2">
-                <img src="/images/icons/rocket.png" alt="Rocket Icon" className="w-full h-full object-contain no-invert" />
+          <ScrollReveal animation="slide-up" delay={0}>
+            <div className="relative group p-8 md:p-10 rounded-3xl bg-zinc-900/40 border border-zinc-850 hover:border-cyan-500/30 hover:bg-zinc-900/60 hover:shadow-[0_10px_30px_rgba(16,185,129,0.08)] transition-all duration-300 h-full">
+              <div className="absolute top-6 right-6 text-[10px] font-mono font-bold tracking-widest text-cyan-400 bg-cyan-500/10 px-2.5 py-0.5 rounded-full border border-cyan-500/10 uppercase">
+                1-5 DAYS
               </div>
-              <div className="space-y-2">
-                <h3 className="text-xl font-extrabold text-zinc-150">
-                  {language === "ms" ? "Pelancaran Segera" : "Quick Launch"}
-                </h3>
-                <p className="text-xs sm:text-sm text-zinc-405 leading-relaxed">
-                  {language === "ms" 
-                     ? "Sedia dilancarkan dalam tempoh 1 hingga 5 hari bekerja sahaja. Sesuai untuk pelancaran profil perniagaan dengan pantas."
-                     : "Ready to go live in just 1 to 5 working days. Perfect for launching your business profile quickly."}
-                </p>
+              <div className="space-y-4">
+                <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20 shadow-[0_0_25px_rgba(16,185,129,0.15)] transition-transform duration-300 group-hover:scale-110 p-2">
+                  <img src="/images/icons/rocket.png" alt="Rocket Icon" className="w-full h-full object-contain no-invert" />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-xl font-extrabold text-zinc-150">
+                    {language === "ms" ? "Pelancaran Segera" : "Quick Launch"}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-zinc-405 leading-relaxed">
+                    {language === "ms" 
+                       ? "Sedia dilancarkan dalam tempoh 1 hingga 5 hari bekerja sahaja. Sesuai untuk pelancaran profil perniagaan dengan pantas."
+                       : "Ready to go live in just 1 to 5 working days. Perfect for launching your business profile quickly."}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Card 2: Budget Friendly */}
-          <div className="relative group p-8 md:p-10 rounded-3xl bg-zinc-900/40 border border-zinc-850 hover:border-purple-500/30 hover:bg-zinc-900/60 hover:shadow-[0_10px_30px_rgba(59,130,246,0.08)] transition-all duration-300">
-            <div className="absolute top-6 right-6 text-[10px] font-mono font-bold tracking-widest text-purple-400 bg-purple-500/10 px-2.5 py-0.5 rounded-full border border-purple-500/10 uppercase">
-              FROM RM299
-            </div>
-            <div className="space-y-4">
-              <div className="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center border border-purple-500/20 shadow-[0_0_25px_rgba(59,130,246,0.15)] transition-transform duration-300 group-hover:scale-110 p-2">
-                <img src="/images/icons/money_bag.png" alt="Money Bag Icon" className="w-full h-full object-contain no-invert" />
+          <ScrollReveal animation="slide-up" delay={100}>
+            <div className="relative group p-8 md:p-10 rounded-3xl bg-zinc-900/40 border border-zinc-850 hover:border-purple-500/30 hover:bg-zinc-900/60 hover:shadow-[0_10px_30px_rgba(59,130,246,0.08)] transition-all duration-300 h-full">
+              <div className="absolute top-6 right-6 text-[10px] font-mono font-bold tracking-widest text-purple-400 bg-purple-500/10 px-2.5 py-0.5 rounded-full border border-purple-500/10 uppercase">
+                FROM RM299
               </div>
-              <div className="space-y-2">
-                <h3 className="text-xl font-extrabold text-zinc-150">
-                  {language === "ms" ? "Paling Mampu Milik" : "Budget Friendly"}
-                </h3>
-                <p className="text-xs sm:text-sm text-zinc-405 leading-relaxed">
-                  {language === "ms" 
-                    ? "Penyelesaian digital paling mesra bajet dengan bayaran sekali sahaja tanpa caj tersembunyi."
-                    : "Highly budget-friendly plans with one-time payment and no hidden custom build fees."}
-                </p>
+              <div className="space-y-4">
+                <div className="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center border border-purple-500/20 shadow-[0_0_25px_rgba(59,130,246,0.15)] transition-transform duration-300 group-hover:scale-110 p-2">
+                  <img src="/images/icons/money_bag.png" alt="Money Bag Icon" className="w-full h-full object-contain no-invert" />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-xl font-extrabold text-zinc-150">
+                    {language === "ms" ? "Paling Mampu Milik" : "Budget Friendly"}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-zinc-405 leading-relaxed">
+                    {language === "ms" 
+                      ? "Penyelesaian digital paling mesra bajet dengan bayaran sekali sahaja tanpa caj tersembunyi."
+                      : "Highly budget-friendly plans with one-time payment and no hidden custom build fees."}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Card 3: Simplicity Focus */}
-          <div className="relative group p-8 md:p-10 rounded-3xl bg-zinc-900/40 border border-zinc-850 hover:border-indigo-500/30 hover:bg-zinc-900/60 hover:shadow-[0_10px_30px_rgba(139,92,246,0.08)] transition-all duration-300">
-            <div className="absolute top-6 right-6 text-[10px] font-mono font-bold tracking-widest text-indigo-400 bg-indigo-500/10 px-2.5 py-0.5 rounded-full border border-indigo-500/10 uppercase">
-              CLEAN CODE
-            </div>
-            <div className="space-y-4">
-              <div className="w-14 h-14 rounded-2xl bg-indigo-500/10 flex items-center justify-center border border-indigo-500/20 shadow-[0_0_25px_rgba(139,92,246,0.15)] transition-transform duration-300 group-hover:scale-110 p-2">
-                <img src="/images/icons/sparkles.png" alt="Sparkles Icon" className="w-full h-full object-contain no-invert" />
+          <ScrollReveal animation="slide-up" delay={200}>
+            <div className="relative group p-8 md:p-10 rounded-3xl bg-zinc-900/40 border border-zinc-850 hover:border-indigo-500/30 hover:bg-zinc-900/60 hover:shadow-[0_10px_30px_rgba(139,92,246,0.08)] transition-all duration-300 h-full">
+              <div className="absolute top-6 right-6 text-[10px] font-mono font-bold tracking-widest text-indigo-400 bg-indigo-500/10 px-2.5 py-0.5 rounded-full border border-indigo-500/10 uppercase">
+                CLEAN CODE
               </div>
-              <div className="space-y-2">
-                <h3 className="text-xl font-extrabold text-zinc-150">
-                  {language === "ms" ? "Fokus Simplicity" : "Simplicity Focus"}
-                </h3>
-                <p className="text-xs sm:text-sm text-zinc-405 leading-relaxed">
-                  {language === "ms" 
-                    ? "Reka bentuk minimalis berimpak tinggi. Fokus kepada navigasi yang bersih dan mesra pengguna."
-                    : "High-impact, clean layouts. Focusing on essential features and frictionless user experiences."}
-                </p>
+              <div className="space-y-4">
+                <div className="w-14 h-14 rounded-2xl bg-indigo-500/10 flex items-center justify-center border border-indigo-500/20 shadow-[0_0_25px_rgba(139,92,246,0.15)] transition-transform duration-300 group-hover:scale-110 p-2">
+                  <img src="/images/icons/sparkles.png" alt="Sparkles Icon" className="w-full h-full object-contain no-invert" />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-xl font-extrabold text-zinc-150">
+                    {language === "ms" ? "Fokus Simplicity" : "Simplicity Focus"}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-zinc-405 leading-relaxed">
+                    {language === "ms" 
+                      ? "Reka bentuk minimalis berimpak tinggi. Fokus kepada navigasi yang bersih dan mesra pengguna."
+                      : "High-impact, clean layouts. Focusing on essential features and frictionless user experiences."}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
 
         {/* Website Packages Grid */}
         <div className="space-y-10">
-          <h2 className="text-2xl font-bold text-white border-b border-zinc-900 pb-3 flex items-center gap-3">
-            <span className="w-2 h-6 bg-cyan-500 rounded"></span>
-            {t("pkgHeader")}
-          </h2>
+          <ScrollReveal className="border-b border-zinc-900 pb-3">
+            <h2 className="text-2xl font-bold text-white flex items-center gap-3">
+              <span className="w-2 h-6 bg-cyan-500 rounded"></span>
+              {t("pkgHeader")}
+            </h2>
+          </ScrollReveal>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {currentPackages.map((pkg) => {
+            {currentPackages.map((pkg, idx) => {
               const structured = packageDetails[language][pkg.id as keyof typeof packageDetails["ms"]] || {
                 deliverables: pkg.features,
                 specs: []
               };
 
               return (
-                <GlowCard key={pkg.id} color="from-cyan-500 to-indigo-500">
+                <ScrollReveal key={pkg.id} animation="slide-up" delay={idx * 100}>
+                  <GlowCard color="from-cyan-500 to-indigo-500">
                   <div className="space-y-5 flex flex-col justify-between h-full">
                     <div className="space-y-4">
                       <div>
@@ -332,6 +343,7 @@ export default function FastTrackServices() {
                     </div>
                   </div>
                 </GlowCard>
+              </ScrollReveal>
               );
             })}
           </div>
@@ -340,7 +352,7 @@ export default function FastTrackServices() {
 
         {/* App & Template Systems Section (Coming Soon) */}
         <div className="space-y-8">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-zinc-900 pb-3">
+          <ScrollReveal className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-zinc-900 pb-3">
             <h2 className="text-2xl font-bold text-white flex items-center gap-3">
               <span className="w-2 h-6 bg-purple-500 rounded"></span>
               {language === "ms" ? "Sistem App & Templat Kustom" : "Custom App & Template Systems"}
@@ -348,65 +360,67 @@ export default function FastTrackServices() {
             <span className="text-xs text-purple-400 font-bold bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/20 uppercase tracking-wider animate-pulse">
               {language === "ms" ? "Akan Datang" : "Coming Soon"}
             </span>
-          </div>
+          </ScrollReveal>
 
-          <div className="p-8 md:p-10 rounded-3xl bg-zinc-900/20 border border-zinc-900 max-w-4xl mx-auto relative overflow-hidden flex flex-col md:flex-row gap-8 items-center">
-            {/* Ambient subtle glow background */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] h-[250px] bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
+          <ScrollReveal animation="scale-up" className="w-full">
+            <div className="p-8 md:p-10 rounded-3xl bg-zinc-900/20 border border-zinc-900 max-w-4xl mx-auto relative overflow-hidden flex flex-col md:flex-row gap-8 items-center">
+              {/* Ambient subtle glow background */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] h-[250px] bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
 
-            <div className="flex-1 space-y-4 text-left">
-              <h3 className="text-xl font-extrabold text-zinc-150">
-                {language === "ms" ? "Sistem Templat Boleh Diubah Suai" : "Fully Customizable Template Builds"}
-              </h3>
-              <p className="text-xs sm:text-sm text-zinc-405 leading-relaxed">
-                {language === "ms" 
-                  ? "Penyelesaian pantas yang fleksibel. Sesuai untuk membina sistem tersuai sama ada berasaskan laman web (web-based) mahupun bukan web (non-web systems). Direka khas agar boleh diubah suai dengan mudah mengikut keperluan operasi unik perniagaan anda."
-                  : "A highly flexible and rapid system build. Perfect for implementing custom systems that can run either as a standard web platform or non-web application. Fully tailored to match your specific operational guidelines."}
-              </p>
-              
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-zinc-350 pt-2">
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-purple-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span>{language === "ms" ? "Sistem Laman Web (Web Systems)" : "Web-Based Systems"}</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-purple-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span>{language === "ms" ? "Aplikasi Bukan Web (Non-Web Apps)" : "Non-Web Operations"}</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-purple-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span>{language === "ms" ? "Struktur Templat Kustom" : "Customizable Blueprints"}</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-purple-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span>{language === "ms" ? "Integrasi Pangkalan Data SQLite/Lite" : "SQLite / Lightweight DB Sync"}</span>
-                </li>
-              </ul>
+              <div className="flex-1 space-y-4 text-left">
+                <h3 className="text-xl font-extrabold text-zinc-150">
+                  {language === "ms" ? "Sistem Templat Boleh Diubah Suai" : "Fully Customizable Template Builds"}
+                </h3>
+                <p className="text-xs sm:text-sm text-zinc-405 leading-relaxed">
+                  {language === "ms" 
+                    ? "Penyelesaian pantas yang fleksibel. Sesuai untuk membina sistem tersuai sama ada berasaskan laman web (web-based) mahupun bukan web (non-web systems). Direka khas agar boleh diubah suai dengan mudah mengikut keperluan operasi unik perniagaan anda."
+                    : "A highly flexible and rapid system build. Perfect for implementing custom systems that can run either as a standard web platform or non-web application. Fully tailored to match your specific operational guidelines."}
+                </p>
+                
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-zinc-350 pt-2">
+                  <li className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-purple-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>{language === "ms" ? "Sistem Laman Web (Web Systems)" : "Web-Based Systems"}</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-purple-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>{language === "ms" ? "Aplikasi Bukan Web (Non-Web Apps)" : "Non-Web Operations"}</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-purple-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>{language === "ms" ? "Struktur Templat Kustom" : "Customizable Blueprints"}</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-purple-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>{language === "ms" ? "Integrasi Pangkalan Data SQLite/Lite" : "SQLite / Lightweight DB Sync"}</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="shrink-0 w-full sm:w-auto">
+                <a
+                  href="https://wa.me/60136632092?text=Hai%20Danial,%20saya%20berminat%20nak%20bincang%20pasal%20Sistem%20App/Templat%20Kustom."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex w-full sm:w-auto items-center justify-center px-5 py-3 rounded-xl text-xs font-bold bg-purple-600 hover:bg-purple-500 text-white transition-all shadow-md shadow-purple-950/20 animate-pulse"
+                >
+                  {language === "ms" ? "Bincang Idea Projek" : "Discuss Project Idea"}
+                </a>
+              </div>
             </div>
-
-            <div className="shrink-0 w-full sm:w-auto">
-              <a
-                href="https://wa.me/60136632092?text=Hai%20Danial,%20saya%20berminat%20nak%20bincang%20pasal%20Sistem%20App/Templat%20Kustom."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex w-full sm:w-auto items-center justify-center px-5 py-3 rounded-xl text-xs font-bold bg-purple-600 hover:bg-purple-500 text-white transition-all shadow-md shadow-purple-950/20 animate-pulse"
-              >
-                {language === "ms" ? "Bincang Idea Projek" : "Discuss Project Idea"}
-              </a>
-            </div>
-          </div>
+          </ScrollReveal>
         </div>
 
         {/* Support note */}
-        <div className="p-6 rounded-2xl bg-zinc-900/20 border border-zinc-900 max-w-4xl mx-auto flex items-start gap-4">
+        <ScrollReveal className="p-6 rounded-2xl bg-zinc-900/20 border border-zinc-900 max-w-4xl mx-auto flex items-start gap-4">
           <svg className="w-6 h-6 text-cyan-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
@@ -418,7 +432,7 @@ export default function FastTrackServices() {
               {language === "ms" ? (
                 <>
                   <li><strong>Tempoh Siap & Kos:</strong> Pakej bajet biasanya siap dalam tempoh 1 ke 5 hari bekerja selepas semua kandungan lengkap diterima.</li>
-                  <li><strong>Polisi Reka Bentuk Pakej Bajet:</strong> Untuk pakej <strong>Super Budget (RM299)</strong> dan <strong>Medium Budget (RM699)</strong>, reka bentuk kustom sepenuhnya dari kosong (seperti mengikut fail Figma kustom atau screenshot contoh dari pelanggan) <strong>tidak disokong</strong> kerana harga pakej yang sangat mampu milik. Pakej bajet ini menggunakan templat reka bentuk sedia ada yang telah dioptimumkan, dan keputusan reka bentuk akhir ditentukan oleh saya.</li>
+                  <li><strong>Polisi Reka Bentuk Pakej Bajet:</strong> Untuk pakej <strong>Super Budget (RM299)</strong> and <strong>Medium Budget (RM699)</strong>, reka bentuk kustom sepenuhnya dari kosong (seperti mengikut fail Figma kustom atau screenshot contoh dari pelanggan) <strong>tidak disokong</strong> kerana harga pakej yang sangat mampu milik. Pakej bajet ini menggunakan templat reka bentuk sedia ada yang telah dioptimumkan, dan keputusan reka bentuk akhir ditentukan oleh saya.</li>
                 </>
               ) : (
                 <>
@@ -428,7 +442,7 @@ export default function FastTrackServices() {
               )}
             </ul>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </div>
   );

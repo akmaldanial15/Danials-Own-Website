@@ -6,6 +6,8 @@ import GlowCard from "@/components/ui/GlowCard";
 import { bespokePackages } from "@/data/packages";
 import { generateWhatsAppLink } from "@/utils/whatsapp";
 import { useTranslation } from "@/hooks/useTranslation";
+import ScrollReveal from "@/components/ui/ScrollReveal";
+
 
 const bespokeDetails = {
   ms: {
@@ -435,69 +437,75 @@ export default function DetailedServices() {
         {/* Value Pitch Section: Why Detailed? */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {/* Card 1: Rigorous Device Testing */}
-          <div className="relative group p-8 md:p-10 rounded-3xl bg-zinc-900/40 border border-zinc-850 hover:border-cyan-500/30 hover:bg-zinc-900/60 hover:shadow-[0_10px_30px_rgba(6,182,212,0.08)] transition-all duration-300">
-            <div className="absolute top-6 right-6 text-[10px] font-mono font-bold tracking-widest text-cyan-400 bg-cyan-500/10 px-2.5 py-0.5 rounded-full border border-cyan-500/10 uppercase">
-              {language === "ms" ? "SELAMAT" : "SECURE"}
-            </div>
-            <div className="space-y-4">
-              <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20 shadow-[0_0_25px_rgba(6,182,212,0.15)] transition-transform duration-300 group-hover:scale-110 p-2.5">
-                <img src="/images/icons/shield.png" alt="Shield Icon" className="w-full h-full object-contain no-invert" />
+          <ScrollReveal animation="slide-up" delay={0}>
+            <div className="relative group p-8 md:p-10 rounded-3xl bg-zinc-900/40 border border-zinc-850 hover:border-cyan-500/30 hover:bg-zinc-900/60 hover:shadow-[0_10px_30px_rgba(6,182,212,0.08)] transition-all duration-300 h-full">
+              <div className="absolute top-6 right-6 text-[10px] font-mono font-bold tracking-widest text-cyan-400 bg-cyan-500/10 px-2.5 py-0.5 rounded-full border border-cyan-500/10 uppercase">
+                {language === "ms" ? "SELAMAT" : "SECURE"}
               </div>
-              <div className="space-y-2">
-                <h3 className="text-xl font-extrabold text-zinc-150">
-                  {t("pitch1Title")}
-                </h3>
-                <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
-                  {t("pitch1Desc")}
-                </p>
+              <div className="space-y-4">
+                <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20 shadow-[0_0_25px_rgba(6,182,212,0.15)] transition-transform duration-300 group-hover:scale-110 p-2.5">
+                  <img src="/images/icons/shield.png" alt="Shield Icon" className="w-full h-full object-contain no-invert" />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-xl font-extrabold text-zinc-150">
+                    {t("pitch1Title")}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+                    {t("pitch1Desc")}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Card 2: Meticulous UX & Professionalism */}
-          <div className="relative group p-8 md:p-10 rounded-3xl bg-zinc-900/40 border border-zinc-850 hover:border-purple-500/30 hover:bg-zinc-900/60 hover:shadow-[0_10px_30px_rgba(168,85,247,0.08)] transition-all duration-300">
-            <div className="absolute top-6 right-6 text-[10px] font-mono font-bold tracking-widest text-purple-400 bg-purple-500/10 px-2.5 py-0.5 rounded-full border border-purple-500/10 uppercase">
-              {language === "ms" ? "KEMASAN TELITI & PROFESIONAL" : "METICULOUS CRAFTSMANSHIP"}
-            </div>
-            <div className="space-y-4">
-              <div className="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center border border-purple-500/20 shadow-[0_0_25px_rgba(168,85,247,0.15)] transition-transform duration-300 group-hover:scale-110 p-2.5">
-                <img src="/images/icons/ux.png" alt="UX Icon" className="w-full h-full object-contain no-invert" />
+          <ScrollReveal animation="slide-up" delay={100}>
+            <div className="relative group p-8 md:p-10 rounded-3xl bg-zinc-900/40 border border-zinc-850 hover:border-purple-500/30 hover:bg-zinc-900/60 hover:shadow-[0_10px_30px_rgba(168,85,247,0.08)] transition-all duration-300 h-full">
+              <div className="absolute top-6 right-6 text-[10px] font-mono font-bold tracking-widest text-purple-400 bg-purple-500/10 px-2.5 py-0.5 rounded-full border border-purple-500/10 uppercase">
+                {language === "ms" ? "KEMASAN TELITI & PROFESIONAL" : "METICULOUS CRAFTSMANSHIP"}
               </div>
-              <div className="space-y-2">
-                <h3 className="text-xl font-extrabold text-zinc-150">
-                  {t("pitch2Title")}
-                </h3>
-                <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
-                  {t("pitch2Desc")}
-                </p>
+              <div className="space-y-4">
+                <div className="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center border border-purple-500/20 shadow-[0_0_25px_rgba(168,85,247,0.15)] transition-transform duration-300 group-hover:scale-110 p-2.5">
+                  <img src="/images/icons/ux.png" alt="UX Icon" className="w-full h-full object-contain no-invert" />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-xl font-extrabold text-zinc-150">
+                    {t("pitch2Title")}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+                    {t("pitch2Desc")}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Card 3: Performance & Databases */}
-          <div className="relative group p-8 md:p-10 rounded-3xl bg-zinc-900/40 border border-zinc-850 hover:border-indigo-500/30 hover:bg-zinc-900/60 hover:shadow-[0_10px_30px_rgba(99,102,241,0.08)] transition-all duration-300">
-            <div className="absolute top-6 right-6 text-[10px] font-mono font-bold tracking-widest text-indigo-400 bg-indigo-500/10 px-2.5 py-0.5 rounded-full border border-indigo-500/10 uppercase">
-              {language === "ms" ? "LAJU & STABIL" : "ULTRA-FAST"}
-            </div>
-            <div className="space-y-4">
-              <div className="w-14 h-14 rounded-2xl bg-indigo-500/10 flex items-center justify-center border border-indigo-500/20 shadow-[0_0_25px_rgba(99,102,241,0.15)] transition-transform duration-300 group-hover:scale-110 p-2.5">
-                <img src="/images/icons/lightning.png" alt="Lightning Icon" className="w-full h-full object-contain no-invert" />
+          <ScrollReveal animation="slide-up" delay={200}>
+            <div className="relative group p-8 md:p-10 rounded-3xl bg-zinc-900/40 border border-zinc-850 hover:border-indigo-500/30 hover:bg-zinc-900/60 hover:shadow-[0_10px_30px_rgba(99,102,241,0.08)] transition-all duration-300 h-full">
+              <div className="absolute top-6 right-6 text-[10px] font-mono font-bold tracking-widest text-indigo-400 bg-indigo-500/10 px-2.5 py-0.5 rounded-full border border-indigo-500/10 uppercase">
+                {language === "ms" ? "LAJU & STABIL" : "ULTRA-FAST"}
               </div>
-              <div className="space-y-2">
-                <h3 className="text-xl font-extrabold text-zinc-150">
-                  {t("pitch3Title")}
-                </h3>
-                <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
-                  {t("pitch3Desc")}
-                </p>
+              <div className="space-y-4">
+                <div className="w-14 h-14 rounded-2xl bg-indigo-500/10 flex items-center justify-center border border-indigo-500/20 shadow-[0_0_25px_rgba(99,102,241,0.15)] transition-transform duration-300 group-hover:scale-110 p-2.5">
+                  <img src="/images/icons/lightning.png" alt="Lightning Icon" className="w-full h-full object-contain no-invert" />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-xl font-extrabold text-zinc-150">
+                    {t("pitch3Title")}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+                    {t("pitch3Desc")}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
 
         {/* Packages Grid */}
         <div className="space-y-10">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-zinc-900 pb-3">
+          <ScrollReveal className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-zinc-900 pb-3">
             <h2 className="text-2xl font-bold text-white flex items-center gap-3">
               <span className="w-2 h-6 bg-purple-500 rounded"></span>
               {t("pkgCustomHeader")}
@@ -508,15 +516,16 @@ export default function DetailedServices() {
             >
               {t("btnCalcCustom")}
             </Link>
-          </div>
+          </ScrollReveal>
 
           <div className="flex flex-col gap-6">
-            {detailedWebPackages.map((pkg) => {
+            {detailedWebPackages.map((pkg, idx) => {
               const structured = bespokeDetails[language][pkg.id as keyof typeof bespokeDetails["ms"]];
               const deliverables = (structured && structured.deliverables) || pkg.features || [];
 
               return (
-                <GlowCard key={pkg.id} color="from-purple-500 to-indigo-600">
+                <ScrollReveal key={pkg.id} animation="slide-up" delay={idx * 150}>
+                  <GlowCard color="from-purple-500 to-indigo-600">
                   <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-8 items-stretch w-full">
                     {/* Left Section: Title, Description, Price (Columns 1-4) */}
                     <div className="col-span-12 lg:col-span-4 flex flex-col justify-between space-y-4">
@@ -593,6 +602,7 @@ export default function DetailedServices() {
                     </div>
                   </div>
                 </GlowCard>
+              </ScrollReveal>
               );
             })}
           </div>
@@ -600,50 +610,52 @@ export default function DetailedServices() {
 
         {/* Custom Systems & Apps Section */}
         <div className="space-y-10">
-          <div className="border-b border-zinc-900 pb-3">
+          <ScrollReveal className="border-b border-zinc-900 pb-3">
             <h2 className="text-2xl font-bold text-white flex items-center gap-3">
               <span className="w-2 h-6 bg-cyan-500 rounded"></span>
               {language === "ms" ? "Sistem Perniagaan & Aplikasi Kustom" : "Custom Business Systems & Web Apps"}
             </h2>
-          </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {customSystemsPackages.map((pkg) => (
-              <GlowCard key={pkg.id} color="from-cyan-500 to-indigo-500">
-                <div className="space-y-4 flex flex-col justify-between h-full">
-                  <div className="space-y-2.5">
-                    <div className="flex justify-between items-start gap-4">
-                      <h3 className="text-base font-bold text-zinc-100">{pkg.name}</h3>
-                      <span className="text-xs font-bold text-cyan-400 bg-cyan-500/10 px-2.5 py-0.5 rounded border border-cyan-500/10 shrink-0">
-                        {typeof pkg.price === "number" ? `RM${pkg.price.toLocaleString()}+` : pkg.price}
-                      </span>
+            {customSystemsPackages.map((pkg, idx) => (
+              <ScrollReveal key={pkg.id} animation="slide-up" delay={(idx % 3) * 150}>
+                <GlowCard color="from-cyan-500 to-indigo-500">
+                  <div className="space-y-4 flex flex-col justify-between h-full">
+                    <div className="space-y-2.5">
+                      <div className="flex justify-between items-start gap-4">
+                        <h3 className="text-base font-bold text-zinc-100">{pkg.name}</h3>
+                        <span className="text-xs font-bold text-cyan-400 bg-cyan-500/10 px-2.5 py-0.5 rounded border border-cyan-500/10 shrink-0">
+                          {typeof pkg.price === "number" ? `RM${pkg.price.toLocaleString()}+` : pkg.price}
+                        </span>
+                      </div>
+                      <p className="text-xs text-zinc-400 leading-relaxed min-h-[48px]">
+                        {pkg.description}
+                      </p>
                     </div>
-                    <p className="text-xs text-zinc-400 leading-relaxed min-h-[48px]">
-                      {pkg.description}
-                    </p>
+                    <div className="pt-3 border-t border-zinc-900/40">
+                      <a
+                        href={generateWhatsAppLink({
+                          packageName: pkg.name,
+                          priceText: typeof pkg.price === "number" ? `Mulai RM${pkg.price}` : "Custom Price",
+                          totalEstimate: typeof pkg.price === "number" ? pkg.price : 0
+                        })}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex w-full items-center justify-center py-2.5 rounded-xl text-xs font-semibold bg-zinc-900 border border-zinc-800 text-zinc-350 hover:bg-zinc-800 hover:text-white transition-all"
+                      >
+                        {language === "ms" ? "Bincang Struktur Sistem →" : "Discuss System Structure →"}
+                      </a>
+                    </div>
                   </div>
-                  <div className="pt-3 border-t border-zinc-900/40">
-                    <a
-                      href={generateWhatsAppLink({
-                        packageName: pkg.name,
-                        priceText: typeof pkg.price === "number" ? `Mulai RM${pkg.price}` : "Custom Price",
-                        totalEstimate: typeof pkg.price === "number" ? pkg.price : 0
-                      })}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex w-full items-center justify-center py-2.5 rounded-xl text-xs font-semibold bg-zinc-900 border border-zinc-800 text-zinc-350 hover:bg-zinc-800 hover:text-white transition-all"
-                    >
-                      {language === "ms" ? "Bincang Struktur Sistem →" : "Discuss System Structure →"}
-                    </a>
-                  </div>
-                </div>
-              </GlowCard>
+                </GlowCard>
+              </ScrollReveal>
             ))}
           </div>
         </div>
 
         {/* Staging, Delivery & Pricing Notes */}
-        <div className="p-6 rounded-2xl bg-zinc-900/20 border border-zinc-900 max-w-4xl mx-auto flex items-start gap-4">
+        <ScrollReveal className="p-6 rounded-2xl bg-zinc-900/20 border border-zinc-900 max-w-4xl mx-auto flex items-start gap-4">
           <svg className="w-6 h-6 text-purple-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
@@ -667,10 +679,10 @@ export default function DetailedServices() {
               )}
             </ul>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Process Steps Info */}
-        <div className="p-8 rounded-2xl bg-zinc-900/20 border border-zinc-900 max-w-4xl mx-auto space-y-6">
+        <ScrollReveal className="p-8 rounded-2xl bg-zinc-900/20 border border-zinc-900 max-w-4xl mx-auto space-y-6">
           <h3 className="text-lg font-bold text-white text-center">{t("processTitle")}</h3>
           
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 text-center">
@@ -703,7 +715,7 @@ export default function DetailedServices() {
               <p className="text-[10px] text-zinc-550 leading-relaxed">{t("step4Desc")}</p>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </div>
   );

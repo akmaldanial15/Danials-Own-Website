@@ -4,6 +4,8 @@ import React from "react";
 import GlowCard from "@/components/ui/GlowCard";
 import { useLanguage } from "@/context/LanguageContext";
 import { generateWhatsAppLink } from "@/utils/whatsapp";
+import ScrollReveal from "@/components/ui/ScrollReveal";
+
 
 export default function SystemsAppsServices() {
   const { language } = useLanguage();
@@ -115,47 +117,52 @@ export default function SystemsAppsServices() {
 
         {/* System Package Options Grid */}
         <div className="space-y-6">
-          <h2 className="text-2xl font-bold text-white border-b border-zinc-900 pb-3 flex items-center gap-2">
-            <span className="w-1.5 h-6 bg-purple-500 rounded"></span>
-            {isMs ? "Pilihan Pakej Sistem" : "System Package Options"}
-          </h2>
+          <ScrollReveal className="border-b border-zinc-900 pb-3">
+            <h2 className="text-2xl font-bold text-white flex items-center gap-2">
+              <span className="w-1.5 h-6 bg-purple-500 rounded"></span>
+              {isMs ? "Pilihan Pakej Sistem" : "System Package Options"}
+            </h2>
+          </ScrollReveal>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {systemPackages.map((pkg, i) => (
-              <GlowCard key={i} color="from-purple-500 to-indigo-500">
-                <div className="space-y-4 flex flex-col justify-between h-full">
-                  <div className="space-y-2.5">
-                    <div className="flex justify-between items-start gap-4">
-                      <h3 className="text-base font-bold text-zinc-100">{pkg.name}</h3>
-                      <span className="text-xs font-bold text-purple-400 bg-purple-500/10 px-2.5 py-0.5 rounded border border-purple-500/10 shrink-0">
-                        {pkg.price}
-                      </span>
+              <ScrollReveal key={i} animation="slide-up" delay={i * 100}>
+                <GlowCard color="from-purple-500 to-indigo-500">
+                  <div className="space-y-4 flex flex-col justify-between h-full">
+                    <div className="space-y-2.5">
+                      <div className="flex justify-between items-start gap-4">
+                        <h3 className="text-base font-bold text-zinc-100">{pkg.name}</h3>
+                        <span className="text-xs font-bold text-purple-400 bg-purple-500/10 px-2.5 py-0.5 rounded border border-purple-500/10 shrink-0">
+                          {pkg.price}
+                        </span>
+                      </div>
+                      <p className="text-xs text-zinc-400 leading-relaxed min-h-[48px]">
+                        {pkg.desc}
+                      </p>
                     </div>
-                    <p className="text-xs text-zinc-400 leading-relaxed min-h-[48px]">
-                      {pkg.desc}
-                    </p>
+                    <div className="pt-3 border-t border-zinc-900/40">
+                      <a
+                        href={generateWhatsAppLink({
+                          packageName: pkg.name,
+                          priceText: `Mulai ${pkg.price}`,
+                          totalEstimate: parseFloat(pkg.price.replace(/[^0-9.]/g, "")) || 1500
+                        })}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex w-full items-center justify-center py-2.5 rounded-xl text-xs font-semibold bg-zinc-905 border border-zinc-800 text-zinc-350 hover:bg-zinc-900 hover:text-white transition-all"
+                      >
+                        {isMs ? "Tempah / Bincang Struktur →" : "Book / Discuss Structure →"}
+                      </a>
+                    </div>
                   </div>
-                  <div className="pt-3 border-t border-zinc-900/40">
-                    <a
-                      href={generateWhatsAppLink({
-                        packageName: pkg.name,
-                        priceText: `Mulai ${pkg.price}`,
-                        totalEstimate: parseFloat(pkg.price.replace(/[^0-9.]/g, "")) || 1500
-                      })}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex w-full items-center justify-center py-2.5 rounded-xl text-xs font-semibold bg-zinc-905 border border-zinc-800 text-zinc-350 hover:bg-zinc-900 hover:text-white transition-all"
-                    >
-                      {isMs ? "Tempah / Bincang Struktur →" : "Book / Discuss Structure →"}
-                    </a>
-                  </div>
-                </div>
-              </GlowCard>
+                </GlowCard>
+              </ScrollReveal>
             ))}
           </div>
         </div>
 
         {/* Systems We Can Build (Checklist Grid) */}
-        <div className="p-6 md:p-8 rounded-2xl bg-zinc-900/40 border border-zinc-850 hover:border-zinc-800 transition-all space-y-6">
+        <ScrollReveal className="p-6 md:p-8 rounded-2xl bg-zinc-900/40 border border-zinc-850 hover:border-zinc-800 transition-all space-y-6">
           <h2 className="text-xl font-bold text-white border-b border-zinc-800 pb-3 flex items-center gap-2">
             <span className="w-1.5 h-5 bg-cyan-500 rounded"></span>
             {isMs ? "Jenis Sistem Yang Boleh Kami Bina" : "Systems We Can Build"}
@@ -170,10 +177,10 @@ export default function SystemsAppsServices() {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Notes & Disclaimers Box */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto pt-8 border-t border-zinc-900">
+        <ScrollReveal className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto pt-8 border-t border-zinc-900">
           {/* Notes column */}
           <div className="space-y-4 text-xs sm:text-sm text-zinc-400">
             <p className="font-bold text-zinc-200">{isMs ? "Nota Penting Projek:" : "Important Project Notes:"}</p>
@@ -192,26 +199,28 @@ export default function SystemsAppsServices() {
               <li>{isMs ? "Terma Bayaran Peringkat: 50% sebelum mula, 20% selepas draf suntingan utama pertama disiapkan, dan 30% sebelum penyerahan kod sumber rasmi." : "Phased Milestones: 50% deposit before start, 20% after first major edit review, 30% before final production code handover."}</li>
             </ul>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Big CTA QR Card */}
-        <div className="max-w-md mx-auto p-6 md:p-8 rounded-2xl bg-gradient-to-r from-purple-950/30 via-indigo-950/20 to-cyan-950/10 border border-purple-500/20 relative overflow-hidden text-center space-y-4 shadow-xl">
-          <h3 className="text-xl font-bold text-white">{isMs ? "Rancang Sistem Anda" : "Plan Your System"}</h3>
-          <p className="text-xs text-zinc-400 leading-relaxed">
-            {isMs 
-              ? "Klik butang di bawah untuk membincangkan rangka pangkalan data, reka bentuk menu dashboard, atau integrasi aplikasi Android dengan Danial."
-              : "Click the button below to discuss database blueprints, dashboard menu navigation, or Android sync integration with Danial."}
-          </p>
-          <a
-            href="https://wa.me/60136632092?text=Hai%20Danial,%20saya%20nak%20bincang%20untuk%20bina%20sistem/app%20kustom%20saya."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-md hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all duration-300"
-          >
-            {isMs ? "Bincang Sistem di WhatsApp" : "Discuss System on WhatsApp"}
-          </a>
-          <div className="text-[10px] text-zinc-500 font-mono">0136632092</div>
-        </div>
+        <ScrollReveal animation="scale-up" className="max-w-md mx-auto w-full">
+          <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-r from-purple-950/30 via-indigo-950/20 to-cyan-950/10 border border-purple-500/20 relative overflow-hidden text-center space-y-4 shadow-xl">
+            <h3 className="text-xl font-bold text-white">{isMs ? "Rancang Sistem Anda" : "Plan Your System"}</h3>
+            <p className="text-xs text-zinc-400 leading-relaxed">
+              {isMs 
+                ? "Klik butang di bawah untuk membincangkan rangka pangkalan data, reka bentuk menu dashboard, atau integrasi aplikasi Android dengan Danial."
+                : "Click the button below to discuss database blueprints, dashboard menu navigation, or Android sync integration with Danial."}
+            </p>
+            <a
+              href="https://wa.me/60136632092?text=Hai%20Danial,%20saya%20nak%20bincang%20untuk%20bina%20sistem/app%20kustom%20saya."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-full items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-md hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all duration-300"
+            >
+              {isMs ? "Bincang Sistem di WhatsApp" : "Discuss System on WhatsApp"}
+            </a>
+            <div className="text-[10px] text-zinc-550 font-mono">0136632092</div>
+          </div>
+        </ScrollReveal>
       </div>
     </div>
   );

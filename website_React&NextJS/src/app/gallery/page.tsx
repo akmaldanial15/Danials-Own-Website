@@ -4,6 +4,7 @@ import React, { useState, useMemo, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { portfolioItems } from "@/data/portfolio";
 import { useTranslation } from "@/hooks/useTranslation";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 function GalleryContent() {
   const { t, language } = useTranslation();
@@ -117,17 +118,20 @@ function GalleryContent() {
 
         {/* Gallery Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {filteredItems.map((item) => {
+          {filteredItems.map((item, index) => {
             // Determine column span for Bento Grid layout
             const isLargeCard = item.id === "ivinas-florist";
             
             return (
-              <div 
-                key={item.id} 
-                className={`group rounded-2xl bg-zinc-900/35 border border-zinc-850 hover:border-purple-500/30 transition-all duration-500 flex flex-col justify-between overflow-hidden shadow-xl hover:shadow-[0_0_30px_rgba(59,130,246,0.08)] ${
-                  isLargeCard ? "md:col-span-2" : "md:col-span-1"
-                }`}
+              <ScrollReveal
+                key={item.id}
+                animation="slide-up"
+                delay={(index % 3) * 100}
+                className={isLargeCard ? "md:col-span-2" : "md:col-span-1"}
               >
+                <div 
+                  className="group rounded-2xl bg-zinc-900/35 border border-zinc-850 hover:border-purple-500/30 transition-all duration-500 flex flex-col justify-between overflow-hidden shadow-xl hover:shadow-[0_0_30px_rgba(59,130,246,0.08)] w-full h-full"
+                >
                 {/* Visual Showcase (High-Fidelity Mockups based on Huly theme) */}
                 {item.demoUrl ? (
                   <div
@@ -422,7 +426,8 @@ function GalleryContent() {
                     </div>
                   </div>
                 </div>
-              </div>
+                </div>
+              </ScrollReveal>
             );
           })}
         </div>

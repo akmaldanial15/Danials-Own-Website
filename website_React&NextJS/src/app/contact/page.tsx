@@ -3,6 +3,8 @@
 import React, { useState, useMemo } from "react";
 import { PHONE_NUMBER } from "@/utils/whatsapp";
 import { useTranslation } from "@/hooks/useTranslation";
+import ScrollReveal from "@/components/ui/ScrollReveal";
+
 
 export default function Contact() {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
@@ -115,7 +117,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 max-w-5xl mx-auto">
           
           {/* Card 1: WhatsApp with REAL QR (7 cols for nice spacing) */}
-          <div className="md:col-span-7 p-6 sm:p-10 rounded-3xl bg-zinc-950/80 border border-zinc-850 shadow-2xl relative overflow-hidden flex flex-col justify-between space-y-8 group">
+          <ScrollReveal className="md:col-span-7 p-6 sm:p-10 rounded-3xl bg-zinc-950/80 border border-zinc-850 shadow-2xl relative overflow-hidden flex flex-col justify-between space-y-8 group" animation="slide-up" delay={0}>
             <div className="absolute -inset-[1px] rounded-3xl bg-gradient-to-tr from-emerald-500/30 via-teal-500/10 to-transparent opacity-10 blur-[2px] -z-10" />
             
             <div className="space-y-4">
@@ -171,10 +173,10 @@ export default function Contact() {
               </svg>
               {t("btnWhatsAppStart")}
             </a>
-          </div>
+          </ScrollReveal>
 
           {/* Card 2: Email & Support Channels (5 cols) */}
-          <div className="md:col-span-5 p-6 sm:p-10 rounded-3xl bg-zinc-950/80 border border-zinc-850 shadow-2xl relative overflow-hidden flex flex-col justify-between space-y-8 group">
+          <ScrollReveal className="md:col-span-5 p-6 sm:p-10 rounded-3xl bg-zinc-950/80 border border-zinc-850 shadow-2xl relative overflow-hidden flex flex-col justify-between space-y-8 group" animation="slide-up" delay={150}>
             <div className="absolute -inset-[1px] rounded-3xl bg-gradient-to-tr from-purple-500/30 via-indigo-500/10 to-transparent opacity-10 blur-[2px] -z-10" />
             
             <div className="space-y-4">
@@ -201,8 +203,8 @@ export default function Contact() {
                 </div>
                 <div className="min-w-0">
                   <p className="text-[9px] text-zinc-550 font-bold uppercase tracking-wider">{t("emailLabel")}</p>
-                  <a href="mailto:danialwebsystems@gmail.com" className="text-xs sm:text-sm font-bold text-zinc-200 hover:text-purple-400 transition-colors block truncate">
-                    danialwebsystems@gmail.com
+                  <a href="mailto:businesscornia@gmail.com" className="text-xs sm:text-sm font-bold text-zinc-200 hover:text-purple-400 transition-colors block truncate">
+                    businesscornia@gmail.com
                   </a>
                 </div>
               </div>
@@ -228,41 +230,43 @@ export default function Contact() {
                 <div>
                   <p className="text-[9px] text-zinc-550 font-bold uppercase tracking-wider">{language === "ms" ? "WAKTU BEKERJA" : "WORKING HOURS"}</p>
                   <p className="text-xs sm:text-sm font-bold text-zinc-200">
-                    {language === "ms" ? "Isnin - Ahad (9.00 AM - 10.00 PM)" : "Mon - Sun (9:00 AM - 10:00 PM)"}
+                    {language === "ms" ? "Isnin - Ahad (Tersedia hampir bila-bila masa)" : "Mon - Sun (Available almost anytime)"}
                   </p>
                 </div>
               </div>
             </div>
 
             <a
-              href="mailto:danialwebsystems@gmail.com"
+              href="mailto:businesscornia@gmail.com"
               className="inline-flex w-full items-center justify-center px-4 py-3.5 rounded-2xl text-xs font-extrabold bg-zinc-900 hover:bg-zinc-850 text-zinc-200 border border-zinc-800 hover:border-zinc-700 transition-all duration-300 cursor-pointer"
             >
               {t("btnEmailStart")}
             </a>
-          </div>
+          </ScrollReveal>
 
         </div>
 
         {/* FAQs accordion section */}
         <div className="space-y-8 max-w-4xl mx-auto pt-8">
-          <h2 className="text-2xl font-black text-white flex items-center gap-3 border-b border-zinc-900 pb-4">
-            <span className="w-2.5 h-6 bg-purple-500 rounded-sm"></span>
-            {t("faqHeader")}
-          </h2>
+          <ScrollReveal className="border-b border-zinc-900 pb-4">
+            <h2 className="text-2xl font-black text-white flex items-center gap-3">
+              <span className="w-2.5 h-6 bg-purple-500 rounded-sm"></span>
+              {t("faqHeader")}
+            </h2>
+          </ScrollReveal>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => {
               const isSelected = activeFaq === index;
               return (
-                <div 
-                  key={index} 
-                  className={`rounded-2xl border transition-all duration-355 overflow-hidden ${
-                    isSelected 
-                      ? "bg-zinc-900/20 border-purple-500/30 shadow-[0_4px_25px_rgba(168,85,247,0.02)]" 
-                      : "bg-zinc-950 border-zinc-900 hover:border-zinc-850"
-                  }`}
-                >
+                <ScrollReveal key={index} animation="slide-up" delay={index * 100}>
+                  <div 
+                    className={`rounded-2xl border transition-all duration-355 overflow-hidden ${
+                      isSelected 
+                        ? "bg-zinc-900/20 border-purple-500/30 shadow-[0_4px_25px_rgba(168,85,247,0.02)]" 
+                        : "bg-zinc-950 border-zinc-900 hover:border-zinc-850"
+                    }`}
+                  >
                   <button
                     onClick={() => toggleFaq(index)}
                     className="w-full flex items-center justify-between p-5 text-left font-bold text-sm sm:text-base text-zinc-200 hover:text-white transition-colors"
@@ -281,7 +285,8 @@ export default function Contact() {
                       {faq.a}
                     </p>
                   </div>
-                </div>
+                  </div>
+                </ScrollReveal>
               );
             })}
           </div>

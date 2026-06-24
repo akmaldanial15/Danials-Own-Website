@@ -103,7 +103,7 @@ export default function Footer() {
               <svg className="w-4 h-4 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              <a href="mailto:danialwebsystems@gmail.com" className="hover:text-zinc-200 transition-colors">danialwebsystems@gmail.com</a>
+              <a href="mailto:businesscornia@gmail.com" className="hover:text-zinc-200 transition-colors">businesscornia@gmail.com</a>
             </p>
           </div>
           

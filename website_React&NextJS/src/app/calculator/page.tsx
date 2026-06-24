@@ -4,6 +4,8 @@ import React, { useState, useMemo } from "react";
 import { fastTrackPackages, bespokePackages, addOns } from "@/data/packages";
 import { generateWhatsAppLink } from "@/utils/whatsapp";
 import { useTranslation } from "@/hooks/useTranslation";
+import ScrollReveal from "@/components/ui/ScrollReveal";
+
 
 export default function PricingCalculator() {
   const { t, language } = useTranslation();
@@ -505,7 +507,7 @@ export default function PricingCalculator() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
             {/* Configurator Form (7 columns) */}
-            <div className="lg:col-span-7 space-y-10">
+            <ScrollReveal className="lg:col-span-7 space-y-10" animation="slide-up" delay={0}>
               
               {/* Tab Selector (inspired by ServersCamp estimate console) */}
               <div className="space-y-4">
@@ -768,10 +770,10 @@ export default function PricingCalculator() {
                   })}
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Sticky Pricing Summary Card (5 columns) - Desktop only */}
-            <div className="hidden lg:block lg:col-span-5 lg:sticky lg:top-24 space-y-6">
+            <ScrollReveal className="hidden lg:block lg:col-span-5 lg:sticky lg:top-24 space-y-6" animation="scale-up" delay={150}>
               <div className="p-6 rounded-2xl bg-zinc-950 border border-zinc-850/80 shadow-2xl relative overflow-hidden">
                 <div className="absolute top-[-10%] right-[-10%] w-[150px] h-[150px] rounded-full bg-purple-500/5 blur-2xl pointer-events-none" />
                 
@@ -791,7 +793,7 @@ export default function PricingCalculator() {
                   <li>{t("calcTerm3")}</li>
                 </ul>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
 

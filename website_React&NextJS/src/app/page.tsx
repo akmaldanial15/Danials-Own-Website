@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import GlowCard from "@/components/ui/GlowCard";
 import DashboardMockup from "@/components/home/DashboardMockup";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 import { portfolioItems } from "@/data/portfolio";
 import { useTranslation } from "@/hooks/useTranslation";
 
@@ -161,91 +162,99 @@ export default function Home() {
 
       {/* 2. BENTO GRID CORE SERVICES */}
       <section className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-32">
-        <div className="text-center max-w-3xl mx-auto">
+        <ScrollReveal className="text-center max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             {t("bentoHeader")}
           </h2>
           <p className="mt-4 text-zinc-400 text-sm sm:text-base">
             {t("bentoDesc")}
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Bento Grid */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Card 1: Custom Systems (Col span 2) */}
-          <div className="md:col-span-2 p-6 rounded-2xl bg-zinc-900/40 border border-zinc-850 hover:border-zinc-800 transition-all flex flex-col justify-between group">
-            <div>
-              <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 font-bold mb-5">
-                01
+          <ScrollReveal className="md:col-span-2" animation="slide-up" delay={100}>
+            <div className="p-6 rounded-2xl bg-zinc-900/40 border border-zinc-850 hover:border-zinc-800 transition-all flex flex-col justify-between group h-full w-full">
+              <div>
+                <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 font-bold mb-5">
+                  01
+                </div>
+                <h3 className="text-xl font-bold text-zinc-100">{t("service1Title")}</h3>
+                <p className="mt-2 text-sm text-zinc-400 leading-relaxed">
+                  {t("service1Desc")}
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-zinc-100">{t("service1Title")}</h3>
-              <p className="mt-2 text-sm text-zinc-400 leading-relaxed">
-                {t("service1Desc")}
-              </p>
+              <div className="mt-6 flex flex-wrap gap-2">
+                <span className="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-medium">Dashboard</span>
+                <span className="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-medium">Database</span>
+                <span className="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-medium">Inventory</span>
+                <span className="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-medium">Booking</span>
+              </div>
             </div>
-            <div className="mt-6 flex flex-wrap gap-2">
-              <span className="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-medium">Dashboard</span>
-              <span className="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-medium">Database</span>
-              <span className="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-medium">Inventory</span>
-              <span className="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-medium">Booking</span>
-            </div>
-          </div>
+          </ScrollReveal>
 
           {/* Card 2: Android App Integration */}
-          <div className="p-6 rounded-2xl bg-zinc-900/40 border border-zinc-850 hover:border-zinc-800 transition-all flex flex-col justify-between">
-            <div>
-              <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold mb-5">
-                02
+          <ScrollReveal animation="slide-up" delay={200}>
+            <div className="p-6 rounded-2xl bg-zinc-900/40 border border-zinc-850 hover:border-zinc-800 transition-all flex flex-col justify-between h-full w-full">
+              <div>
+                <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold mb-5">
+                  02
+                </div>
+                <h3 className="text-xl font-bold text-zinc-100">{t("service2Title")}</h3>
+                <p className="mt-2 text-sm text-zinc-400 leading-relaxed">
+                  {t("service2Desc")}
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-zinc-100">{t("service2Title")}</h3>
-              <p className="mt-2 text-sm text-zinc-400 leading-relaxed">
-                {t("service2Desc")}
-              </p>
+              <span className="self-start text-[11px] px-2.5 py-1 rounded bg-cyan-950/30 text-cyan-400 font-semibold border border-cyan-500/20">
+                Web & App Sync
+              </span>
             </div>
-            <span className="self-start text-[11px] px-2.5 py-1 rounded bg-cyan-950/30 text-cyan-400 font-semibold border border-cyan-500/20">
-              Web & App Sync
-            </span>
-          </div>
+          </ScrollReveal>
 
           {/* Card 3: AI Agents */}
-          <div className="p-6 rounded-2xl bg-zinc-900/40 border border-zinc-850 hover:border-zinc-800 transition-all flex flex-col justify-between">
-            <div>
-              <div className="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 font-bold mb-5">
-                03
+          <ScrollReveal animation="slide-up" delay={100}>
+            <div className="p-6 rounded-2xl bg-zinc-900/40 border border-zinc-850 hover:border-zinc-800 transition-all flex flex-col justify-between h-full w-full">
+              <div>
+                <div className="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 font-bold mb-5">
+                  03
+                </div>
+                <h3 className="text-xl font-bold text-zinc-100">{t("service3Title")}</h3>
+                <p className="mt-2 text-sm text-zinc-400 leading-relaxed">
+                  {t("service3Desc")}
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-zinc-100">{t("service3Title")}</h3>
-              <p className="mt-2 text-sm text-zinc-400 leading-relaxed">
-                {t("service3Desc")}
-              </p>
+              <span className="self-start text-[11px] px-2.5 py-1 rounded bg-indigo-950/30 text-indigo-400 font-semibold border border-indigo-500/20">
+                AI Powered
+              </span>
             </div>
-            <span className="self-start text-[11px] px-2.5 py-1 rounded bg-indigo-950/30 text-indigo-400 font-semibold border border-indigo-500/20">
-              AI Powered
-            </span>
-          </div>
+          </ScrollReveal>
 
           {/* Card 4: Quick Website Repairs (Col span 2) */}
-          <div className="md:col-span-2 p-6 rounded-2xl bg-zinc-900/40 border border-zinc-850 hover:border-zinc-800 transition-all flex flex-col justify-between">
-            <div>
-              <div className="w-10 h-10 rounded-xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-rose-400 font-bold mb-5">
-                04
+          <ScrollReveal className="md:col-span-2" animation="slide-up" delay={200}>
+            <div className="p-6 rounded-2xl bg-zinc-900/40 border border-zinc-850 hover:border-zinc-800 transition-all flex flex-col justify-between h-full w-full">
+              <div>
+                <div className="w-10 h-10 rounded-xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-rose-400 font-bold mb-5">
+                  04
+                </div>
+                <h3 className="text-xl font-bold text-zinc-100">{t("service4Title")}</h3>
+                <p className="mt-2 text-sm text-zinc-400 leading-relaxed">
+                  {t("service4Desc")}
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-zinc-100">{t("service4Title")}</h3>
-              <p className="mt-2 text-sm text-zinc-400 leading-relaxed">
-                {t("service4Desc")}
-              </p>
+              <div className="mt-6 flex flex-wrap gap-2">
+                <span className="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-medium">SSL / Server Fix</span>
+                <span className="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-medium">Layout Responsive</span>
+                <span className="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-medium">Bug Fixing</span>
+              </div>
             </div>
-            <div className="mt-6 flex flex-wrap gap-2">
-              <span className="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-medium">SSL / Server Fix</span>
-              <span className="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-medium">Layout Responsive</span>
-              <span className="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-medium">Bug Fixing</span>
-            </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* 3. PORTFOLIO PREVIEW */}
       <section className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-32">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <ScrollReveal className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-white">{t("galleryHeader")}</h2>
             <p className="mt-2 text-zinc-400 text-sm max-w-lg">
@@ -258,166 +267,170 @@ export default function Home() {
           >
             {t("galleryLink")}
           </Link>
-        </div>
+        </ScrollReveal>
 
         {/* Portfolio Cards Grid */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {featuredPortfolio.map((item) => (
-            <div key={item.id} className="group rounded-2xl bg-zinc-900/30 border border-zinc-850 overflow-hidden hover:border-zinc-800 transition-all flex flex-col justify-between">
-              {/* Image box representation */}
-              <div className="relative aspect-video w-full bg-zinc-950 flex items-center justify-center p-8 border-b border-zinc-850">
-                {item.demoUrl ? (
-                  <div
-                    onClick={() => setActiveDemo({ url: item.demoUrl!, title: item.title })}
-                    className="absolute inset-0 overflow-hidden bg-zinc-950 cursor-pointer select-none group/live z-0"
-                  >
-                    <iframe
-                      src={item.demoUrl}
-                      className="w-[200%] h-[200%] border-0 no-invert pointer-events-none scale-50 origin-top-left absolute top-0 left-0 opacity-60 group-hover:opacity-100 transition-opacity duration-300"
-                      title={`${item.title} Live Mini Preview`}
-                      loading="lazy"
-                    />
-                    {/* Overlay blocker */}
-                    <div className="absolute inset-0 bg-transparent z-10" />
+          {featuredPortfolio.map((item, index) => (
+            <ScrollReveal key={item.id} animation="slide-up" delay={index * 150}>
+              <div className="group rounded-2xl bg-zinc-900/30 border border-zinc-850 overflow-hidden hover:border-zinc-800 transition-all flex flex-col justify-between h-full w-full">
+                {/* Image box representation */}
+                <div className="relative aspect-video w-full bg-zinc-950 flex items-center justify-center p-8 border-b border-zinc-850">
+                  {item.demoUrl ? (
+                    <div
+                      onClick={() => setActiveDemo({ url: item.demoUrl!, title: item.title })}
+                      className="absolute inset-0 overflow-hidden bg-zinc-950 cursor-pointer select-none group/live z-0"
+                    >
+                      <iframe
+                        src={item.demoUrl}
+                        className="w-[200%] h-[200%] border-0 no-invert pointer-events-none scale-50 origin-top-left absolute top-0 left-0 opacity-60 group-hover:opacity-100 transition-opacity duration-300"
+                        title={`${item.title} Live Mini Preview`}
+                        loading="lazy"
+                      />
+                      {/* Overlay blocker */}
+                      <div className="absolute inset-0 bg-transparent z-10" />
+                      
+                      {/* Floating indicators */}
+                      <div className="absolute top-3 left-3 z-20 flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-zinc-950/85 border border-zinc-800/50 backdrop-blur-sm text-[8px] font-mono text-zinc-400 tracking-wider pointer-events-none">
+                        {item.inProgress ? (
+                          <>
+                            <span className="relative flex h-1.5 w-1.5">
+                              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-amber-500"></span>
+                            </span>
+                            {language === "ms" ? "DALAM PEMBANGUNAN" : "IN DEVELOPMENT"}
+                          </>
+                        ) : item.isConcept ? (
+                          <>
+                            <span className="relative flex h-1.5 w-1.5">
+                              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-indigo-500"></span>
+                            </span>
+                            {language === "ms" ? "DEMO KONSEP" : "CONCEPT DEMO"}
+                          </>
+                        ) : (
+                          <>
+                            <span className="relative flex h-1.5 w-1.5">
+                              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+                            </span>
+                            LIVE PREVIEW
+                          </>
+                        )}
+                      </div>
+                      
+                      <div className="absolute bottom-3 right-3 z-20 flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-zinc-950/85 border border-zinc-800/50 backdrop-blur-sm text-[8px] font-mono text-zinc-400 tracking-wider pointer-events-none">
+                        <span>CLICK TO INTERACT ➔</span>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="w-full h-full rounded-lg border border-zinc-800 border-dashed p-4 flex flex-col justify-between relative overflow-hidden bg-zinc-950/50">
+                      <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/5 to-cyan-500/5 z-0" />
+                      <div className="relative z-10 flex justify-between items-center text-xs text-zinc-650">
+                        <span>{"DANIAL'S PROJECT WIREFRAME"}</span>
+                        <span>ACTIVE SCREEN</span>
+                      </div>
+                      <div className="relative z-10 text-center my-auto">
+                        <p className="text-xl font-bold text-zinc-200">{item.title}</p>
+                        <p className="text-xs text-zinc-500 font-medium mt-1">{item.subtitle}</p>
+                      </div>
+                      <div className="relative z-10 flex gap-2">
+                        {item.tags.slice(0, 2).map((t) => (
+                          <span key={t} className="text-[10px] px-2 py-0.5 rounded bg-zinc-900 text-zinc-400 border border-zinc-80">
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+                <div className="p-6 flex-grow flex flex-col justify-between">
+                  <div className="space-y-3">
+                    <div className="flex justify-between items-start gap-4">
+                      <div>
+                        <span className="text-[10px] uppercase tracking-wider font-bold text-purple-400">{item.category}</span>
+                        <h3 className="text-lg font-bold text-white mt-1">{item.title}</h3>
+                      </div>
+                      <span className="text-xs font-semibold text-zinc-400 px-2.5 py-1 rounded-full bg-zinc-900 border border-zinc-800">
+                        {item.priceClass}
+                      </span>
+                    </div>
+                    <p className="mt-3 text-zinc-400 text-sm leading-relaxed">{item.description}</p>
                     
-                    {/* Floating indicators */}
-                    <div className="absolute top-3 left-3 z-20 flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-zinc-950/85 border border-zinc-800/50 backdrop-blur-sm text-[8px] font-mono text-zinc-400 tracking-wider pointer-events-none">
-                      {item.inProgress ? (
-                        <>
-                          <span className="relative flex h-1.5 w-1.5">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-amber-500"></span>
-                          </span>
-                          {language === "ms" ? "DALAM PEMBANGUNAN" : "IN DEVELOPMENT"}
-                        </>
-                      ) : item.isConcept ? (
-                        <>
-                          <span className="relative flex h-1.5 w-1.5">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-indigo-500"></span>
-                          </span>
-                          {language === "ms" ? "DEMO KONSEP" : "CONCEPT DEMO"}
-                        </>
-                      ) : (
-                        <>
-                          <span className="relative flex h-1.5 w-1.5">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
-                          </span>
-                          LIVE PREVIEW
-                        </>
-                      )}
-                    </div>
-                    
-                    <div className="absolute bottom-3 right-3 z-20 flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-zinc-950/85 border border-zinc-800/50 backdrop-blur-sm text-[8px] font-mono text-zinc-400 tracking-wider pointer-events-none">
-                      <span>CLICK TO INTERACT ➔</span>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="w-full h-full rounded-lg border border-zinc-800 border-dashed p-4 flex flex-col justify-between relative overflow-hidden bg-zinc-950/50">
-                    <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/5 to-cyan-500/5 z-0" />
-                    <div className="relative z-10 flex justify-between items-center text-xs text-zinc-650">
-                      <span>{"DANIAL'S PROJECT WIREFRAME"}</span>
-                      <span>ACTIVE SCREEN</span>
-                    </div>
-                    <div className="relative z-10 text-center my-auto">
-                      <p className="text-xl font-bold text-zinc-200">{item.title}</p>
-                      <p className="text-xs text-zinc-500 font-medium mt-1">{item.subtitle}</p>
-                    </div>
-                    <div className="relative z-10 flex gap-2">
-                      {item.tags.slice(0, 2).map((t) => (
-                        <span key={t} className="text-[10px] px-2 py-0.5 rounded bg-zinc-900 text-zinc-400 border border-zinc-80">
+                    {/* Tech stack */}
+                    <div className="mt-6 flex flex-wrap gap-2">
+                      {item.tech.map((t) => (
+                        <span key={t} className="text-xs px-2.5 py-1 rounded bg-zinc-900 text-zinc-350 border border-zinc-85">
                           {t}
                         </span>
                       ))}
                     </div>
                   </div>
-                )}
-              </div>
-              <div className="p-6 flex-grow flex flex-col justify-between">
-                <div className="space-y-3">
-                  <div className="flex justify-between items-start gap-4">
-                    <div>
-                      <span className="text-[10px] uppercase tracking-wider font-bold text-purple-400">{item.category}</span>
-                      <h3 className="text-lg font-bold text-white mt-1">{item.title}</h3>
-                    </div>
-                    <span className="text-xs font-semibold text-zinc-400 px-2.5 py-1 rounded-full bg-zinc-900 border border-zinc-800">
-                      {item.priceClass}
-                    </span>
-                  </div>
-                  <p className="mt-3 text-zinc-400 text-sm leading-relaxed">{item.description}</p>
-                  
-                  {/* Tech stack */}
-                  <div className="mt-6 flex flex-wrap gap-2">
-                    {item.tech.map((t) => (
-                      <span key={t} className="text-xs px-2.5 py-1 rounded bg-zinc-900 text-zinc-350 border border-zinc-85">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                </div>
 
-                {/* Action buttons */}
-                <div className="mt-6 pt-4 border-t border-zinc-900/60 flex gap-3">
-                  {item.demoUrl && (
-                    <button
-                      onClick={() => setActiveDemo({ url: item.demoUrl!, title: item.title })}
-                      className="inline-flex flex-1 items-center justify-center px-4 py-2.5 rounded-xl text-xs font-semibold bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white transition-all shadow-md shadow-cyan-900/10 hover:shadow-cyan-500/20 cursor-pointer"
+                  {/* Action buttons */}
+                  <div className="mt-6 pt-4 border-t border-zinc-900/60 flex gap-3">
+                    {item.demoUrl && (
+                      <button
+                        onClick={() => setActiveDemo({ url: item.demoUrl!, title: item.title })}
+                        className="inline-flex flex-1 items-center justify-center px-4 py-2.5 rounded-xl text-xs font-semibold bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white transition-all shadow-md shadow-cyan-900/10 hover:shadow-cyan-500/20 cursor-pointer"
+                      >
+                        🌐 {item.inProgress 
+                          ? (language === "ms" ? "Pratonton Pembangunan" : "Preview Development")
+                          : (language === "ms" ? "Lihat Demo" : "Live Preview")}
+                      </button>
+                    )}
+                    <a
+                      href={`https://wa.me/60136632092?text=Hi%20Danial,%20saya%20berminat%20dengan%20projek%20${encodeURIComponent(item.title)}%20(${item.category})%20dan%20mahu%20bertanya%20tentang%20servis%20seperti%20ini.`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`inline-flex items-center justify-center px-4 py-2.5 rounded-xl text-xs font-semibold bg-zinc-900 hover:bg-zinc-850 text-zinc-350 border border-zinc-850 hover:border-zinc-800 transition-all hover:text-white ${
+                        item.demoUrl ? "w-1/2" : "w-full"
+                      }`}
                     >
-                      🌐 {item.inProgress 
-                        ? (language === "ms" ? "Pratonton Pembangunan" : "Preview Development")
-                        : (language === "ms" ? "Lihat Demo" : "Live Preview")}
-                    </button>
-                  )}
-                  <a
-                    href={`https://wa.me/60136632092?text=Hi%20Danial,%20saya%20berminat%20dengan%20projek%20${encodeURIComponent(item.title)}%20(${item.category})%20dan%20mahu%20bertanya%20tentang%20servis%20seperti%20ini.`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`inline-flex items-center justify-center px-4 py-2.5 rounded-xl text-xs font-semibold bg-zinc-900 hover:bg-zinc-850 text-zinc-350 border border-zinc-850 hover:border-zinc-800 transition-all hover:text-white ${
-                      item.demoUrl ? "w-1/2" : "w-full"
-                    }`}
-                  >
-                    {language === "ms" ? "Tanya Servis" : "Inquire Service"}
-                  </a>
+                      {language === "ms" ? "Tanya Servis" : "Inquire Service"}
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </section>
 
       {/* 4. BUDGET CALCULATOR CTA */}
       <section className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-32">
-        <div className="p-8 md:p-12 rounded-3xl bg-gradient-to-r from-purple-950/30 via-indigo-950/20 to-cyan-950/10 border border-purple-500/20 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-[300px] h-[300px] rounded-full bg-purple-500/5 blur-3xl pointer-events-none" />
-          <div className="relative z-10 max-w-2xl text-left">
-            <span className="text-xs px-2.5 py-1 rounded-full bg-purple-500/10 text-purple-400 font-semibold border border-purple-500/20">
-              {t("calcCtaTag")}
-            </span>
-            <h2 className="text-2xl md:text-3xl font-bold text-white mt-4 leading-tight">
-              {t("calcCtaTitle")}
-            </h2>
-            <p className="mt-3 text-zinc-400 text-sm md:text-base leading-relaxed">
-              {t("calcCtaDesc")}
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                href="/calculator"
-                className="px-5 py-3 rounded-xl text-sm font-semibold bg-purple-600 hover:bg-purple-500 text-white transition-all shadow-md shadow-purple-900/20"
-              >
-                {t("btnCalcCta")}
-              </Link>
-              <a
-                href="https://wa.me/60136632092"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-5 py-3 rounded-xl text-sm font-semibold bg-zinc-900 hover:bg-zinc-850 text-zinc-200 border border-zinc-850 transition-all"
-              >
-                {t("btnWhatsAppCta")}
-              </a>
+        <ScrollReveal animation="scale-up" className="w-full">
+          <div className="p-8 md:p-12 rounded-3xl bg-gradient-to-r from-purple-950/30 via-indigo-950/20 to-cyan-950/10 border border-purple-500/20 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-[300px] h-[300px] rounded-full bg-purple-500/5 blur-3xl pointer-events-none" />
+            <div className="relative z-10 max-w-2xl text-left">
+              <span className="text-xs px-2.5 py-1 rounded-full bg-purple-500/10 text-purple-400 font-semibold border border-purple-500/20">
+                {t("calcCtaTag")}
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mt-4 leading-tight">
+                {t("calcCtaTitle")}
+              </h2>
+              <p className="mt-3 text-zinc-400 text-sm md:text-base leading-relaxed">
+                {t("calcCtaDesc")}
+              </p>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Link
+                  href="/calculator"
+                  className="px-5 py-3 rounded-xl text-sm font-semibold bg-purple-600 hover:bg-purple-500 text-white transition-all shadow-md shadow-purple-900/20"
+                >
+                  {t("btnCalcCta")}
+                </Link>
+                <a
+                  href="https://wa.me/60136632092"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-3 rounded-xl text-sm font-semibold bg-zinc-900 hover:bg-zinc-850 text-zinc-200 border border-zinc-850 transition-all"
+                >
+                  {t("btnWhatsAppCta")}
+                </a>
+              </div>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Live Preview Modal */}

@@ -4,6 +4,8 @@ import React, { useState, useEffect } from "react";
 import GlowCard from "@/components/ui/GlowCard";
 import { useLanguage } from "@/context/LanguageContext";
 import { generateQuickFixLink } from "@/utils/whatsapp";
+import ScrollReveal from "@/components/ui/ScrollReveal";
+
 
 interface DiagnosticIssue {
   id: string;
@@ -580,14 +582,14 @@ export default function WebsiteFixServices() {
           </div>
 
           {/* Grid Selector Buttons with glossy design - Scrollable on mobile/tablet, Grid on PC */}
-          <div className="flex lg:grid lg:grid-cols-8 gap-3 overflow-x-auto lg:overflow-x-visible pb-3 lg:pb-0 snap-x snap-mandatory scrollbar-none [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+          <ScrollReveal className="flex lg:grid lg:grid-cols-8 gap-3 overflow-x-auto lg:overflow-x-visible pb-3 lg:pb-0 snap-x snap-mandatory scrollbar-none [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {diagnosticIssues.map((issue) => {
               const isActive = issue.id === activeIssueId;
               return (
                 <button
                   key={issue.id}
                   onClick={() => setActiveIssueId(issue.id)}
-                  className={`relative group p-3 lg:p-4 rounded-xl border flex flex-col items-center justify-center gap-2 lg:gap-3 text-center transition-all duration-350 select-none shrink-0 w-[120px] sm:w-[140px] lg:w-full snap-center ${
+                  className={`relative group p-3 lg:p-4 rounded-xl border flex flex-col items-center justify-center gap-2 lg:gap-3 text-center transition-all duration-355 select-none shrink-0 w-[120px] sm:w-[140px] lg:w-full snap-center ${
                     isActive 
                       ? `bg-zinc-900/90 ${issue.activeBorder} shadow-[0_4px_20px_rgba(16,185,129,0.08)]`
                       : "backdrop-blur-md bg-zinc-950/40 border-zinc-900/80 hover:border-zinc-800 hover:bg-zinc-900/30 text-zinc-400 group-hover:text-zinc-200"
@@ -611,23 +613,24 @@ export default function WebsiteFixServices() {
                 </button>
               );
             })}
-          </div>
+          </ScrollReveal>
 
           {/* Dynamic Console Telemetry Detail Box - futuristic diagnostics screen */}
-          <div className="relative rounded-2xl p-[1px] bg-zinc-900/40 overflow-hidden shadow-2xl">
-            {/* Ambient live color glow border */}
-            <div className={`absolute -inset-px rounded-2xl bg-gradient-to-r ${activeIssue.glowColor} opacity-20 blur-sm`} />
-            
-            {/* Futuristic Grid Overlay */}
-            <div 
-              className="absolute inset-0 opacity-[0.03] pointer-events-none" 
-              style={{
-                backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px)",
-                backgroundSize: "16px 16px"
-              }}
-            />
-            
-            <div className="relative rounded-[15px] bg-zinc-950/95 p-6 md:p-8 border border-zinc-850 flex flex-col lg:flex-row gap-8 justify-between items-stretch">
+          <ScrollReveal animation="scale-up" className="w-full">
+            <div className="relative rounded-2xl p-[1px] bg-zinc-900/40 overflow-hidden shadow-2xl">
+              {/* Ambient live color glow border */}
+              <div className={`absolute -inset-px rounded-2xl bg-gradient-to-r ${activeIssue.glowColor} opacity-20 blur-sm`} />
+              
+              {/* Futuristic Grid Overlay */}
+              <div 
+                className="absolute inset-0 opacity-[0.03] pointer-events-none" 
+                style={{
+                  backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px)",
+                  backgroundSize: "16px 16px"
+                }}
+              />
+              
+              <div className="relative rounded-[15px] bg-zinc-950/95 p-6 md:p-8 border border-zinc-850 flex flex-col lg:flex-row gap-8 justify-between items-stretch">
               
               {/* Left Panel: Telemetry Widgets */}
               <div className="w-full lg:w-2/5 flex flex-col justify-between gap-6 border-b lg:border-b-0 lg:border-r border-zinc-900 pb-6 lg:pb-0 lg:pr-8 relative">
@@ -785,14 +788,15 @@ export default function WebsiteFixServices() {
                   </span>
                 </div>
               </div>
-
+              
+              </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
 
         {/* 2. 4-PILLAR SERVICE CATEGORIES (INFOGRAPHIC TIERS) */}
         <div className="space-y-8">
-          <div className="text-center md:text-left space-y-2">
+          <ScrollReveal className="text-center md:text-left space-y-2">
             <h2 className="text-2xl font-extrabold text-white flex items-center justify-center md:justify-start gap-2">
               <span className="w-1.5 h-6 bg-indigo-500 rounded"></span>
               {isMs ? "Kategori Pembaikan Tersusun" : "Structured Service Offerings"}
@@ -802,7 +806,7 @@ export default function WebsiteFixServices() {
                 ? "Pecahan kepakaran membaiki, membina, dan menyelenggara sistem laman web secara profesional."
                 : "Professional classifications of our code debugging, performance optimization, and backend engineering."}
             </p>
-          </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {servicePillars.map((pillar, idx) => {
@@ -813,7 +817,8 @@ export default function WebsiteFixServices() {
               if (pillar.themeColor === "fuchsia") dotColor = "text-fuchsia-400";
 
               return (
-                <GlowCard key={idx} color={pillar.glowColor} className="group">
+                <ScrollReveal key={idx} animation="slide-up" delay={idx * 100}>
+                  <GlowCard color={pillar.glowColor} className="group">
                   <div className="space-y-5 h-full flex flex-col justify-between">
                     <div className="space-y-3">
                       {/* Badge header */}
@@ -839,14 +844,15 @@ export default function WebsiteFixServices() {
                     </div>
                   </div>
                 </GlowCard>
-              );
-            })}
+              </ScrollReveal>
+            );
+          })}
           </div>
         </div>
 
         {/* 3. WEBSITE UPGRADE & MODERNIZATION HUB */}
         <div className="space-y-12">
-          <div className="text-center md:text-left space-y-2">
+          <ScrollReveal className="text-center md:text-left space-y-2">
             <h2 className="text-2xl font-extrabold text-white flex items-center justify-center md:justify-start gap-2">
               <span className="w-1.5 h-6 bg-cyan-500 rounded"></span>
               {isMs ? "Pemodenan & Naik Taraf Website" : "Website Upgrade & Modernization"}
@@ -856,12 +862,13 @@ export default function WebsiteFixServices() {
                 ? "Bawa laman web lama anda ke era moden dengan framework berprestasi tinggi, reka bentuk premium, database, dan integrasi automatik."
                 : "Transform legacy sites into modern, high-performance web applications with premium UI/UX, databases, and custom API workflows."}
             </p>
-          </div>
+          </ScrollReveal>
 
           {/* Grid of Upgrade Packages */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {upgradePackages.map((pkg) => (
-              <GlowCard key={pkg.id} color={pkg.glowColor} className="group">
+            {upgradePackages.map((pkg, idx) => (
+              <ScrollReveal key={pkg.id} animation="slide-up" delay={idx * 100}>
+                <GlowCard color={pkg.glowColor} className="group">
                 <div className="space-y-5 h-full flex flex-col justify-between">
                   <div className="space-y-4">
                     {/* Badge & Price Header */}
@@ -919,11 +926,12 @@ export default function WebsiteFixServices() {
                   </div>
                 </div>
               </GlowCard>
+            </ScrollReveal>
             ))}
           </div>
 
           {/* Comparison Subsection: Why Upgrade? */}
-          <div className="space-y-6 pt-6">
+          <ScrollReveal className="space-y-6 pt-6">
             <div className="text-center space-y-2">
               <span className="text-[9px] font-mono tracking-widest text-cyan-400 uppercase block">
                 {isMs ? "ANALISIS PERBANDINGAN" : "PERFORMANCE GAP ANALYSIS"}
@@ -1005,12 +1013,12 @@ export default function WebsiteFixServices() {
                 </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
 
         {/* 4. 4-STEP PROCESS TIMELINE INFOGRAPHIC */}
         <div className="space-y-8">
-          <div className="text-center md:text-left space-y-2">
+          <ScrollReveal className="text-center md:text-left space-y-2">
             <h2 className="text-2xl font-extrabold text-white flex items-center justify-center md:justify-start gap-2">
               <span className="w-1.5 h-6 bg-purple-500 rounded"></span>
               {isMs ? "Proses Pembaikan Transparan" : "Transparent Work Pipeline"}
@@ -1020,7 +1028,7 @@ export default function WebsiteFixServices() {
                 ? "Aliran kerja 4 langkah mudah untuk diagnosis masalah kod sehingga penyerahan semula."
                 : "A simple 4-step workflow mapping out initial script analysis to final live server launch."}
             </p>
-          </div>
+          </ScrollReveal>
 
           {/* Timeline Grid layout */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
@@ -1029,39 +1037,40 @@ export default function WebsiteFixServices() {
             <div className="absolute top-[28px] left-[10%] right-[10%] h-[1px] border-t border-dashed border-zinc-800 z-0 hidden md:block" />
 
             {processTimeline.map((item, i) => (
-              <div 
-                key={i} 
-                className="relative z-10 p-5 rounded-2xl bg-zinc-950/80 border border-zinc-900 hover:border-zinc-800 transition-all duration-300 flex flex-col justify-between gap-4 group"
-              >
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    {/* Floating number count */}
-                    <span className="text-2xl font-black bg-gradient-to-r from-cyan-400 to-indigo-500 bg-clip-text text-transparent opacity-80 group-hover:scale-105 transition-transform duration-300">
-                      {item.step}
-                    </span>
-                    
-                    {/* Small visual tag chip */}
-                    <span className="text-[8px] font-mono tracking-widest uppercase text-zinc-500 bg-zinc-900 border border-zinc-850 px-2 py-0.5 rounded">
-                      {item.tag}
-                    </span>
+              <ScrollReveal key={i} animation="slide-up" delay={i * 100}>
+                <div 
+                  className="relative z-10 p-5 rounded-2xl bg-zinc-950/80 border border-zinc-900 hover:border-zinc-800 transition-all duration-300 flex flex-col justify-between gap-4 group h-full"
+                >
+                  <div className="space-y-3">
+                    <div className="flex justify-between items-center">
+                      {/* Floating number count */}
+                      <span className="text-2xl font-black bg-gradient-to-r from-cyan-400 to-indigo-500 bg-clip-text text-transparent opacity-80 group-hover:scale-105 transition-transform duration-300">
+                        {item.step}
+                      </span>
+                      
+                      {/* Small visual tag chip */}
+                      <span className="text-[8px] font-mono tracking-widest uppercase text-zinc-500 bg-zinc-900 border border-zinc-850 px-2 py-0.5 rounded">
+                        {item.tag}
+                      </span>
+                    </div>
+
+                    <h3 className="text-sm sm:text-base font-bold text-white group-hover:text-cyan-400 transition-colors flex items-center gap-2">
+                      {item.icon("w-4 h-4 text-cyan-400 shrink-0")}
+                      {item.title}
+                    </h3>
+
+                    <p className="text-xs text-zinc-450 leading-relaxed">
+                      {item.desc}
+                    </p>
                   </div>
-
-                  <h3 className="text-sm sm:text-base font-bold text-white group-hover:text-cyan-400 transition-colors flex items-center gap-2">
-                    {item.icon("w-4 h-4 text-cyan-400 shrink-0")}
-                    {item.title}
-                  </h3>
-
-                  <p className="text-xs text-zinc-450 leading-relaxed">
-                    {item.desc}
-                  </p>
                 </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
 
         {/* Notes & Terms Box */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto pt-8 border-t border-zinc-900">
+        <ScrollReveal className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto pt-8 border-t border-zinc-900">
           {/* Notes column */}
           <div className="space-y-4 text-xs sm:text-sm text-zinc-450">
             <p className="font-bold text-zinc-200 flex items-center gap-2">
@@ -1085,27 +1094,29 @@ export default function WebsiteFixServices() {
               <li>{isMs ? "Pembaikan Kecil / Kos Bawah RM500: Pembayaran penuh diperlukan sebelum kerja pembaikan bermula." : "Small Fixes / Under RM500: Full payment is required upfront before work starts."}</li>
             </ul>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Big CTA QR Card */}
-        <div className="max-w-md mx-auto p-6 md:p-8 rounded-2xl bg-gradient-to-r from-purple-950/20 via-indigo-950/10 to-cyan-950/10 border border-purple-500/20 relative overflow-hidden text-center space-y-4 shadow-xl">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/5 rounded-full blur-3xl" />
-          <h3 className="text-xl font-bold text-white">{isMs ? "Mula Pembaikan Sekarang" : "Start Website Fix Now"}</h3>
-          <p className="text-xs text-zinc-450 leading-relaxed">
-            {isMs 
-              ? "Hantar tangkapan skrin ralat atau bincangkan masalah hosting anda terus dengan Danial di WhatsApp."
-              : "Click below to share screenshots of your website errors or consult your hosting settings directly with Danial."}
-          </p>
-          <a
-            href="https://wa.me/60136632092?text=Hai%20Danial,%20saya%20nak%20bincang%20untuk%20repair/upgrade%20website%20saya."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-extrabold bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-400 hover:to-indigo-400 text-zinc-950 shadow-md hover:shadow-[0_4px_20px_rgba(124,58,237,0.25)] transition-all duration-300 cursor-pointer"
-          >
-            {isMs ? "Hubungi Danial di WhatsApp" : "Contact Danial via WhatsApp"}
-          </a>
-          <div className="text-[10px] text-zinc-650 font-mono">0136632092</div>
-        </div>
+        <ScrollReveal animation="scale-up" className="max-w-md mx-auto w-full">
+          <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-r from-purple-950/20 via-indigo-950/10 to-cyan-950/10 border border-purple-500/20 relative overflow-hidden text-center space-y-4 shadow-xl">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/5 rounded-full blur-3xl" />
+            <h3 className="text-xl font-bold text-white">{isMs ? "Mula Pembaikan Sekarang" : "Start Website Fix Now"}</h3>
+            <p className="text-xs text-zinc-450 leading-relaxed">
+              {isMs 
+                ? "Hantar tangkapan skrin ralat atau bincangkan masalah hosting anda terus dengan Danial di WhatsApp."
+                : "Click below to share screenshots of your website errors or consult your hosting settings directly with Danial."}
+            </p>
+            <a
+              href="https://wa.me/60136632092?text=Hai%20Danial,%20saya%20nak%20bincang%20untuk%20repair/upgrade%20website%20saya."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-full items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-extrabold bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-400 hover:to-indigo-400 text-zinc-950 shadow-md hover:shadow-[0_4px_20px_rgba(124,58,237,0.25)] transition-all duration-300 cursor-pointer"
+            >
+              {isMs ? "Hubungi Danial di WhatsApp" : "Contact Danial via WhatsApp"}
+            </a>
+            <div className="text-[10px] text-zinc-650 font-mono">0136632092</div>
+          </div>
+        </ScrollReveal>
       </div>
     </div>
   );
