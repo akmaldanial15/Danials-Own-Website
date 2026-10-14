@@ -30,36 +30,37 @@ export default function MainHomePage() {
     .slice(0, 4);
 
   return (
-    <div className="space-y-20 sm:space-y-28 lg:space-y-36 pb-24">
+    <div className="space-y-24 sm:space-y-32 lg:space-y-40 pb-28">
       {/* 1. HERO SECTION */}
-      <section className="pt-8 sm:pt-14 lg:pt-18 border-b border-[#EBEFE8] pb-16 sm:pb-24">
-        <div className="ms-container">
+      <section className="relative pt-8 sm:pt-16 lg:pt-20 pb-16 sm:pb-24 overflow-hidden">
+        <div className="ms-container relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             {/* Left Content (7 cols) */}
-            <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div className="lg:col-span-7 space-y-7 text-center lg:text-left">
               {/* Eyebrow */}
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E8F0EB] text-[#087A68] text-xs font-extrabold tracking-widest uppercase">
+              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-black tracking-widest uppercase shadow-[0_0_20px_rgba(16,185,129,0.2)]">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
                 <span>{t("heroEyebrow")}</span>
               </div>
 
               {/* Main Headline */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#18201D] tracking-tight leading-[1.12]">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[68px] font-black text-white tracking-tight leading-[1.08]">
                 {t("heroHeadlinePart1")}{" "}
-                <span className="text-[#2457E6] underline decoration-[#D5E0FF] decoration-4 underline-offset-4">
+                <span className="ms-gradient-text block sm:inline drop-shadow-[0_0_35px_rgba(6,182,212,0.4)]">
                   {t("heroHeadlineHighlight")}
                 </span>
               </h1>
 
               {/* Subcopy */}
-              <p className="text-base sm:text-lg text-[#52605A] leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              <p className="text-base sm:text-lg text-zinc-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium">
                 {t("heroSubcopy")}
               </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
                 <Link
                   href="/pricing"
-                  className="ms-btn-primary w-full sm:w-auto text-sm py-3.5 px-6 rounded-xl"
+                  className="ms-btn-primary w-full sm:w-auto text-sm py-4 px-8 font-black uppercase tracking-wider"
                 >
                   {t("heroPrimaryCta")} →
                 </Link>
@@ -67,28 +68,26 @@ export default function MainHomePage() {
                   href={siteConfig.contact.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="ms-btn-secondary w-full sm:w-auto text-sm py-3.5 px-6 rounded-xl font-semibold flex items-center justify-center gap-2"
+                  className="ms-btn-secondary w-full sm:w-auto text-sm py-4 px-8 font-bold flex items-center justify-center gap-2.5"
                 >
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                   <span>{t("heroSecondaryCta")}</span>
-                  <svg className="w-4 h-4 text-[#10b981]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
                 </a>
               </div>
 
               {/* Price Anchors Strip */}
-              <div className="pt-4 border-t border-[#DDE1DA] max-w-xl mx-auto lg:mx-0">
-                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 text-xs font-bold text-[#18201D]">
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-[#2457E6]" />
+              <div className="pt-6 border-t border-white/10 max-w-xl mx-auto lg:mx-0">
+                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 text-xs font-bold text-white">
+                  <div className="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_8px_#22D3EE]" />
                     <span>{t("heroAnchorA")}</span>
                   </div>
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-[#087A68]" />
+                  <div className="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34D399]" />
                     <span>{t("heroAnchorB")}</span>
                   </div>
                 </div>
-                <p className="text-[11px] text-[#52605A] mt-1.5 text-center lg:text-left">
+                <p className="text-[11px] text-zinc-400 mt-2.5 text-center lg:text-left">
                   {t("heroAnchorNote")}
                 </p>
               </div>
@@ -104,14 +103,14 @@ export default function MainHomePage() {
 
       {/* 2. CORE SERVICE PILLARS (EDITORIAL SUMMARY) */}
       <section className="ms-container">
-        <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
-          <span className="text-xs font-bold tracking-widest text-[#087A68] uppercase">
-            {language === "ms" ? "Teras Perkhidmatan" : "Core Capabilities"}
+        <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
+          <span className="ms-pill ms-pill-cyan uppercase font-black tracking-widest text-xs">
+            {language === "ms" ? "TERAS PERKHIDMATAN" : "CORE CAPABILITIES"}
           </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#18201D] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
             {language === "ms" ? "Semua keperluan digital anda di satu tempat" : "All your digital essentials under one roof"}
           </h2>
-          <p className="text-xs sm:text-sm text-[#52605A]">
+          <p className="text-xs sm:text-sm text-zinc-400">
             {language === "ms"
               ? "Daripada landing page mudah alih hingga ke sistem pentadbir dan grafik percetakan."
               : "From responsive landing pages to admin systems and print-ready visual assets."}
@@ -122,88 +121,88 @@ export default function MainHomePage() {
           {/* Pillar 1: Web */}
           <Link
             href="/services/websites"
-            className="ms-card p-6 flex flex-col justify-between group hover:border-[#2457E6]"
+            className="ms-card p-6 sm:p-7 flex flex-col justify-between group border-white/10 hover:border-cyan-500/50 hover:shadow-[0_15px_40px_rgba(0,0,0,0.8),0_0_25px_rgba(6,182,212,0.2)]"
           >
-            <div className="space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#EEF2FF] text-[#2457E6] flex items-center justify-center font-extrabold text-sm border border-[#D5E0FF]">
+            <div className="space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-cyan-500/15 text-cyan-300 flex items-center justify-center font-black text-base border border-cyan-500/30 group-hover:scale-110 transition-transform">
                 01
               </div>
-              <h3 className="text-base font-extrabold text-[#18201D] group-hover:text-[#2457E6] transition-colors">
+              <h3 className="text-lg font-black text-white group-hover:text-cyan-300 transition-colors">
                 {t("pillarWebTitle")}
               </h3>
-              <p className="text-xs text-[#52605A] leading-relaxed">
+              <p className="text-xs text-zinc-400 leading-relaxed">
                 {t("pillarWebDesc")}
               </p>
             </div>
-            <div className="pt-4 border-t border-[#F0EFEA] flex items-center justify-between text-xs font-bold text-[#2457E6]">
-              <span>dari RM79</span>
-              <span>Ketahui Lebih Lanjut →</span>
+            <div className="pt-5 border-t border-white/5 flex items-center justify-between text-xs font-bold text-cyan-400 mt-4">
+              <span className="text-sm font-black text-white">dari RM79</span>
+              <span className="group-hover:translate-x-1 transition-transform">Ketahui →</span>
             </div>
           </Link>
 
           {/* Pillar 2: Design */}
           <Link
             href="/services/design"
-            className="ms-card p-6 flex flex-col justify-between group hover:border-[#087A68]"
+            className="ms-card p-6 sm:p-7 flex flex-col justify-between group border-white/10 hover:border-emerald-500/50 hover:shadow-[0_15px_40px_rgba(0,0,0,0.8),0_0_25px_rgba(16,185,129,0.2)]"
           >
-            <div className="space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#E6F4F1] text-[#087A68] flex items-center justify-center font-extrabold text-sm border border-[#C4E6DF]">
+            <div className="space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-500/15 text-emerald-300 flex items-center justify-center font-black text-base border border-emerald-500/30 group-hover:scale-110 transition-transform">
                 02
               </div>
-              <h3 className="text-base font-extrabold text-[#18201D] group-hover:text-[#087A68] transition-colors">
+              <h3 className="text-lg font-black text-white group-hover:text-emerald-300 transition-colors">
                 {t("pillarDesignTitle")}
               </h3>
-              <p className="text-xs text-[#52605A] leading-relaxed">
+              <p className="text-xs text-zinc-400 leading-relaxed">
                 {t("pillarDesignDesc")}
               </p>
             </div>
-            <div className="pt-4 border-t border-[#F0EFEA] flex items-center justify-between text-xs font-bold text-[#087A68]">
-              <span>dari RM5</span>
-              <span>Ketahui Lebih Lanjut →</span>
+            <div className="pt-5 border-t border-white/5 flex items-center justify-between text-xs font-bold text-emerald-400 mt-4">
+              <span className="text-sm font-black text-white">dari RM5</span>
+              <span className="group-hover:translate-x-1 transition-transform">Ketahui →</span>
             </div>
           </Link>
 
           {/* Pillar 3: Fix */}
           <Link
             href="/services/website-fix"
-            className="ms-card p-6 flex flex-col justify-between group hover:border-[#2457E6]"
+            className="ms-card p-6 sm:p-7 flex flex-col justify-between group border-white/10 hover:border-purple-500/50 hover:shadow-[0_15px_40px_rgba(0,0,0,0.8),0_0_25px_rgba(168,85,247,0.2)]"
           >
-            <div className="space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#FAF5FF] text-[#9333ea] flex items-center justify-center font-extrabold text-sm border border-[#E9D5FF]">
+            <div className="space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-purple-500/15 text-purple-300 flex items-center justify-center font-black text-base border border-purple-500/30 group-hover:scale-110 transition-transform">
                 03
               </div>
-              <h3 className="text-base font-extrabold text-[#18201D] group-hover:text-[#9333ea] transition-colors">
+              <h3 className="text-lg font-black text-white group-hover:text-purple-300 transition-colors">
                 {t("pillarRepairTitle")}
               </h3>
-              <p className="text-xs text-[#52605A] leading-relaxed">
+              <p className="text-xs text-zinc-400 leading-relaxed">
                 {t("pillarRepairDesc")}
               </p>
             </div>
-            <div className="pt-4 border-t border-[#F0EFEA] flex items-center justify-between text-xs font-bold text-[#9333ea]">
-              <span>dari RM29</span>
-              <span>Ketahui Lebih Lanjut →</span>
+            <div className="pt-5 border-t border-white/5 flex items-center justify-between text-xs font-bold text-purple-400 mt-4">
+              <span className="text-sm font-black text-white">dari RM29</span>
+              <span className="group-hover:translate-x-1 transition-transform">Ketahui →</span>
             </div>
           </Link>
 
           {/* Pillar 4: Systems */}
           <Link
             href="/services/systems-apps"
-            className="ms-card p-6 flex flex-col justify-between group hover:border-[#2457E6]"
+            className="ms-card p-6 sm:p-7 flex flex-col justify-between group border-white/10 hover:border-amber-500/50 hover:shadow-[0_15px_40px_rgba(0,0,0,0.8),0_0_25px_rgba(245,158,11,0.2)]"
           >
-            <div className="space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#FEF3C7] text-[#D97706] flex items-center justify-center font-extrabold text-sm border border-[#FDE68A]">
+            <div className="space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-amber-500/15 text-amber-300 flex items-center justify-center font-black text-base border border-amber-500/30 group-hover:scale-110 transition-transform">
                 04
               </div>
-              <h3 className="text-base font-extrabold text-[#18201D] group-hover:text-[#D97706] transition-colors">
+              <h3 className="text-lg font-black text-white group-hover:text-amber-300 transition-colors">
                 {t("pillarSystemsTitle")}
               </h3>
-              <p className="text-xs text-[#52605A] leading-relaxed">
+              <p className="text-xs text-zinc-400 leading-relaxed">
                 {t("pillarSystemsDesc")}
               </p>
             </div>
-            <div className="pt-4 border-t border-[#F0EFEA] flex items-center justify-between text-xs font-bold text-[#D97706]">
-              <span>dari RM499</span>
-              <span>Ketahui Lebih Lanjut →</span>
+            <div className="pt-5 border-t border-white/5 flex items-center justify-between text-xs font-bold text-amber-400 mt-4">
+              <span className="text-sm font-black text-white">dari RM499</span>
+              <span className="group-hover:translate-x-1 transition-transform">Ketahui →</span>
             </div>
           </Link>
         </div>
@@ -211,14 +210,14 @@ export default function MainHomePage() {
 
       {/* 3. TWO GRAPHIC DESIGN PATHWAYS (SECTION 04 OF PROMPT) */}
       <section className="ms-container">
-        <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
-          <span className="text-xs font-bold tracking-widest text-[#087A68] uppercase">
-            {language === "ms" ? "Fokus Servis Visual" : "Visual Service Focus"}
+        <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
+          <span className="ms-pill ms-pill-emerald uppercase font-black tracking-widest text-xs">
+            {language === "ms" ? "FOKUS SERVIS VISUAL" : "VISUAL SERVICE FOCUS"}
           </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#18201D] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
             {t("pathwayTitle")}
           </h2>
-          <p className="text-xs sm:text-sm text-[#52605A]">
+          <p className="text-xs sm:text-sm text-zinc-400">
             {t("pathwaySubtitle")}
           </p>
         </div>
@@ -228,15 +227,15 @@ export default function MainHomePage() {
 
       {/* 4. FEATURED WORK SHOWCASE (SECTION 14 OF PROMPT) */}
       <section className="ms-container">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 pb-4 border-b border-[#DDE1DA]">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 pb-4 border-b border-white/10">
           <div>
-            <span className="text-xs font-bold tracking-widest text-[#087A68] uppercase">
-              {language === "ms" ? "Portfolio & Konsep" : "Portfolio & Concepts"}
+            <span className="ms-pill ms-pill-cyan uppercase font-black tracking-widest text-xs mb-2">
+              {language === "ms" ? "PORTFOLIO & KONSEP" : "PORTFOLIO & CONCEPTS"}
             </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#18201D] tracking-tight mt-1">
-              {language === "ms" ? "Contoh Hasil Kerja Sebenar & Konsep" : "Selected Work & Concepts"}
+            <h2 className="text-2xl sm:text-4xl font-black text-white tracking-tight mt-2">
+              {language === "ms" ? "Contoh Hasil Kerja & Demo Konsep" : "Selected Work & Concepts"}
             </h2>
-            <p className="text-xs text-[#52605A] mt-1">
+            <p className="text-xs text-zinc-400 mt-1">
               {language === "ms"
                 ? "Semua status projek dilabelkan secara telus: demo konsep, projek naik taraf, atau contoh rekaan."
                 : "All project statuses are transparently labelled: concept demo, preview, or sample."}
@@ -245,7 +244,7 @@ export default function MainHomePage() {
 
           <Link
             href="/gallery"
-            className="text-xs font-bold text-[#2457E6] hover:underline shrink-0"
+            className="text-xs font-extrabold text-cyan-400 hover:text-cyan-300 hover:underline shrink-0"
           >
             {language === "ms" ? "Lihat Semua Hasil Kerja (7 Projek) →" : "View Full Portfolio (7 Projects) →"}
           </Link>
@@ -264,21 +263,21 @@ export default function MainHomePage() {
 
       {/* 5. PRICING PREVIEW (SECTION 13 OF PROMPT) */}
       <section className="ms-container">
-        <div className="text-center max-w-2xl mx-auto mb-10 space-y-2">
-          <span className="text-xs font-bold tracking-widest text-[#087A68] uppercase">
-            {language === "ms" ? "Ketelusan Kos" : "Transparent Pricing"}
+        <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
+          <span className="ms-pill ms-pill-emerald uppercase font-black tracking-widest text-xs">
+            {language === "ms" ? "KETELUSAN KOS" : "TRANSPARENT PRICING"}
           </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#18201D] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
             {language === "ms" ? "Pakej Jelas Mengikut Keperluan Anda" : "Structured Packages Tailored to Your Stage"}
           </h2>
-          <p className="text-xs sm:text-sm text-[#52605A]">
+          <p className="text-xs sm:text-sm text-zinc-400">
             {language === "ms"
               ? "Pilih kategori untuk melihat perincian skop, peruntukan suntingan, dan sempadan pakej."
               : "Select a category to view scope deliverables, revision limits, and inclusions."}
           </p>
 
           {/* Category Tabs */}
-          <div className="inline-flex p-1 rounded-xl bg-[#FAF9F5] border border-[#DDE1DA] gap-1 mt-4">
+          <div className="inline-flex p-1.5 rounded-full bg-white/5 border border-white/10 gap-1.5 mt-6">
             {[
               { id: "website", label: language === "ms" ? "Laman Web" : "Websites" },
               { id: "design_express", label: "Design Express" },
@@ -289,10 +288,10 @@ export default function MainHomePage() {
                 key={tab.id}
                 type="button"
                 onClick={() => setPricingCategoryTab(tab.id as ServiceCategory)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                className={`px-4 py-2 rounded-full text-xs font-black transition-all cursor-pointer ${
                   pricingCategoryTab === tab.id
-                    ? "bg-[#2457E6] text-white shadow-xs"
-                    : "text-[#52605A] hover:text-[#18201D]"
+                    ? "bg-gradient-to-r from-cyan-500 to-emerald-500 text-black shadow-lg"
+                    : "text-zinc-400 hover:text-white"
                 }`}
               >
                 {tab.label}
@@ -308,10 +307,10 @@ export default function MainHomePage() {
           ))}
         </div>
 
-        <div className="mt-10 text-center">
+        <div className="mt-12 text-center">
           <Link
             href="/pricing"
-            className="ms-btn-secondary text-xs py-3 px-6 rounded-xl font-bold inline-flex items-center gap-1.5"
+            className="ms-btn-secondary text-xs py-3.5 px-8 font-black uppercase tracking-wider inline-flex items-center gap-2"
           >
             <span>{language === "ms" ? "Buka Katalog Harga & Jadual Lengkap" : "Open Full Pricing Catalogue"}</span>
             <span>→</span>
@@ -320,13 +319,13 @@ export default function MainHomePage() {
       </section>
 
       {/* 6. FOUR-STEP PROCESS (SECTION 17 OF PROMPT) */}
-      <section className="bg-[#FAF9F5] border-y border-[#EBEFE8] py-16 sm:py-20">
-        <div className="ms-container">
+      <section className="ms-container">
+        <div className="p-8 sm:p-14 rounded-3xl bg-[#0E1424]/80 backdrop-blur-2xl border border-white/10 shadow-2xl">
           <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
-            <span className="text-xs font-bold tracking-widest text-[#087A68] uppercase">
+            <span className="ms-pill ms-pill-cyan uppercase font-black tracking-widest text-xs">
               {t("processEyebrow")}
             </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#18201D] tracking-tight">
+            <h2 className="text-2xl sm:text-4xl font-black text-white tracking-tight mt-2">
               {t("processTitle")}
             </h2>
           </div>
@@ -338,12 +337,12 @@ export default function MainHomePage() {
               { num: "03", title: t("processStep3Title"), desc: t("processStep3Desc") },
               { num: "04", title: t("processStep4Title"), desc: t("processStep4Desc") },
             ].map((step, idx) => (
-              <div key={idx} className="p-6 rounded-xl bg-[#FFFFFF] border border-[#DDE1DA] space-y-3">
-                <span className="text-xs font-mono font-extrabold text-[#2457E6] px-2 py-0.5 rounded bg-[#EEF2FF] border border-[#D5E0FF] inline-block">
+              <div key={idx} className="p-6 rounded-2xl bg-white/5 border border-white/10 space-y-3 hover:border-cyan-500/40 transition-colors">
+                <span className="text-xs font-mono font-black text-cyan-300 px-2.5 py-1 rounded-full bg-cyan-500/15 border border-cyan-500/30 inline-block">
                   {step.num}
                 </span>
-                <h3 className="font-extrabold text-sm text-[#18201D]">{step.title}</h3>
-                <p className="text-xs text-[#52605A] leading-relaxed">{step.desc}</p>
+                <h3 className="font-black text-sm text-white">{step.title}</h3>
+                <p className="text-xs text-zinc-400 leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -352,47 +351,47 @@ export default function MainHomePage() {
 
       {/* 7. FOUNDER / REASON TO WORK WITH DANIAL (SECTION 17 OF PROMPT) */}
       <section className="ms-container">
-        <div className="ms-card p-8 sm:p-12 border-2 border-[#DDE1DA] bg-[#FFFFFF] shadow-sm">
+        <div className="ms-card p-8 sm:p-14 border border-white/15 bg-[#0E1424]/90 backdrop-blur-2xl shadow-2xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-8 space-y-4">
-              <span className="text-xs font-bold tracking-widest text-[#087A68] uppercase">
+            <div className="lg:col-span-8 space-y-5">
+              <span className="ms-pill ms-pill-emerald uppercase font-black tracking-widest text-xs">
                 {t("founderEyebrow")}
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#18201D] tracking-tight">
+              <h2 className="text-2xl sm:text-4xl font-black text-white tracking-tight">
                 {t("founderTitle")}
               </h2>
-              <blockquote className="text-base sm:text-lg font-medium text-[#18201D] leading-relaxed italic border-l-3 border-[#2457E6] pl-4">
+              <blockquote className="text-base sm:text-lg font-semibold text-zinc-200 leading-relaxed italic border-l-4 border-cyan-400 pl-4 py-1">
                 &ldquo;{t("founderQuote")}&rdquo;
               </blockquote>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 text-xs font-bold text-[#18201D]">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 text-xs font-bold text-zinc-300">
                 <div className="flex items-center gap-2">
-                  <span className="text-[#087A68]">✓</span>
+                  <span className="text-emerald-400 font-black">✓</span>
                   <span>{t("founderPoint1")}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[#087A68]">✓</span>
+                  <span className="text-emerald-400 font-black">✓</span>
                   <span>{t("founderPoint2")}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[#087A68]">✓</span>
+                  <span className="text-emerald-400 font-black">✓</span>
                   <span>{t("founderPoint3")}</span>
                 </div>
               </div>
             </div>
 
-            <div className="lg:col-span-4 flex flex-col items-center justify-center p-6 rounded-2xl bg-[#FAF9F5] border border-[#EBEFE8] text-center space-y-3">
-              <div className="w-16 h-16 rounded-full bg-[#17251F] text-white flex items-center justify-center font-extrabold text-xl">
+            <div className="lg:col-span-4 flex flex-col items-center justify-center p-8 rounded-2xl bg-white/5 border border-white/10 text-center space-y-4">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-tr from-cyan-500 to-emerald-500 text-black flex items-center justify-center font-black text-3xl shadow-[0_0_30px_rgba(6,182,212,0.4)]">
                 D
               </div>
               <div>
-                <h4 className="font-extrabold text-base text-[#18201D]">Danial</h4>
-                <p className="text-xs text-[#52605A]">{siteConfig.name}</p>
+                <h4 className="font-black text-lg text-white">Danial</h4>
+                <p className="text-xs text-zinc-400">{siteConfig.name}</p>
               </div>
               <a
                 href={siteConfig.contact.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ms-btn-primary text-xs py-2 px-4 rounded-xl font-bold"
+                className="ms-btn-primary text-xs py-2.5 px-6 font-extrabold uppercase tracking-wider"
               >
                 {language === "ms" ? "WhatsApp Terus →" : "Chat on WhatsApp →"}
               </a>
@@ -403,14 +402,14 @@ export default function MainHomePage() {
 
       {/* 8. TOP FAQ SECTION (SECTION 17 OF PROMPT) */}
       <section className="ms-container">
-        <div className="text-center max-w-2xl mx-auto mb-10 space-y-2">
-          <span className="text-xs font-bold tracking-widest text-[#087A68] uppercase">
+        <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
+          <span className="ms-pill ms-pill-cyan uppercase font-black tracking-widest text-xs">
             FAQ
           </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#18201D] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
             {language === "ms" ? "Soalan Lazim Sebelum Memulakan Projek" : "Frequently Asked Questions"}
           </h2>
-          <p className="text-xs sm:text-sm text-[#52605A]">
+          <p className="text-xs sm:text-sm text-zinc-400">
             {language === "ms"
               ? "Jawapan telus berkenaan skop RM79, suntingan RM5, fail editable, dan domain/hosting."
               : "Clear answers regarding RM79 scope, RM5 edits, editable files, and domain/hosting."}
@@ -424,35 +423,37 @@ export default function MainHomePage() {
 
       {/* 9. CLOSING PROJECT CTA */}
       <section className="ms-container">
-        <div className="rounded-3xl bg-[#17251F] text-white p-8 sm:p-14 text-center space-y-6 relative overflow-hidden shadow-2xl">
-          <div className="relative z-10 max-w-2xl mx-auto space-y-3">
-            <span className="ms-pill ms-pill-teal">
+        <div className="rounded-3xl bg-gradient-to-b from-[#0E1424] via-[#111A30] to-[#070A12] border border-cyan-500/40 p-8 sm:p-16 text-center space-y-7 relative overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.9),0_0_50px_rgba(6,182,212,0.2)]">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-cyan-500/15 rounded-full blur-[100px] pointer-events-none" />
+
+          <div className="relative z-10 max-w-2xl mx-auto space-y-4">
+            <span className="ms-pill ms-pill-emerald uppercase font-black tracking-widest text-xs">
               {language === "ms" ? "LANGKAH SETERUSNYA" : "READY TO START"}
             </span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
+            <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
               {language === "ms"
                 ? "Sedia untuk jadikan idea anda lebih profesional?"
                 : "Ready to give your business an unmistakably professional look?"}
             </h2>
-            <p className="text-xs sm:text-sm text-[#A3B1AB] leading-relaxed">
+            <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-medium">
               {language === "ms"
                 ? "Kongsikan keperluan anda sekarang. Kami sedia membantu mencadangkan pakej paling berbaloi mengikut bajet anda."
                 : "Share your brief with us. We'll recommend the most cost-effective package aligned with your budget."}
             </p>
           </div>
 
-          <div className="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+          <div className="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
             <a
               href={siteConfig.contact.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="ms-btn-primary w-full sm:w-auto text-xs py-3.5 px-6 rounded-xl font-bold"
+              className="ms-btn-primary w-full sm:w-auto text-xs py-4 px-8 font-black uppercase tracking-wider"
             >
               {language === "ms" ? "Bincang Terus di WhatsApp →" : "Chat on WhatsApp →"}
             </a>
             <Link
               href="/calculator"
-              className="ms-btn-secondary w-full sm:w-auto text-xs py-3.5 px-6 rounded-xl font-bold bg-[#293832] text-white border-[#3b4c45] hover:bg-[#3b4c45]"
+              className="ms-btn-secondary w-full sm:w-auto text-xs py-4 px-8 font-black uppercase tracking-wider"
             >
               {language === "ms" ? "Kira Anggaran Projek" : "Calculate Estimate"}
             </Link>

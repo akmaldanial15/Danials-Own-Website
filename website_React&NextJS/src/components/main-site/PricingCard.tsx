@@ -16,13 +16,13 @@ export default function PricingCard({ item, featured = false }: PricingCardProps
   const getStatusBadgeClass = (status: PackageItem["priceStatus"]) => {
     switch (status) {
       case "owner_anchor":
-        return "bg-[#E6F4F1] text-[#087A68] border-[#C4E6DF]";
+        return "bg-emerald-500/20 text-emerald-300 border-emerald-500/40 shadow-[0_0_10px_rgba(16,185,129,0.3)]";
       case "provisional":
-        return "bg-[#F0EFEA] text-[#43504B] border-[#DDE1DA]";
+        return "bg-white/10 text-zinc-300 border-white/15";
       case "quote_required":
-        return "bg-[#EEF2FF] text-[#2457E6] border-[#D5E0FF]";
+        return "bg-cyan-500/20 text-cyan-300 border-cyan-500/40 shadow-[0_0_10px_rgba(6,182,212,0.3)]";
       default:
-        return "bg-[#F0EFEA] text-[#52605A] border-[#DDE1DA]";
+        return "bg-white/10 text-zinc-300 border-white/15";
     }
   };
 
@@ -38,15 +38,15 @@ export default function PricingCard({ item, featured = false }: PricingCardProps
 
   return (
     <div
-      className={`ms-card p-6 sm:p-7 flex flex-col justify-between relative transition-all ${
+      className={`ms-card p-6 sm:p-7 flex flex-col justify-between relative transition-all duration-300 ${
         featured
-          ? "border-2 border-[#2457E6] shadow-md ring-4 ring-[#2457E6]/5"
-          : "hover:border-[#cbd3c7]"
+          ? "border-2 border-cyan-400 shadow-[0_15px_40px_rgba(0,0,0,0.8),0_0_30px_rgba(6,182,212,0.3)] ring-2 ring-cyan-400/20"
+          : "hover:border-emerald-500/40 hover:shadow-[0_15px_40px_rgba(0,0,0,0.8),0_0_25px_rgba(16,185,129,0.15)]"
       }`}
     >
       {featured && (
-        <div className="absolute -top-3 left-6 px-2.5 py-0.5 rounded-full bg-[#2457E6] text-white text-[10px] font-extrabold tracking-wide uppercase shadow-xs">
-          {language === "ms" ? "Cadangan Bisnes Kecil" : "Recommended for Small Biz"}
+        <div className="absolute -top-3 left-6 px-3 py-1 rounded-full bg-gradient-to-r from-cyan-500 to-emerald-500 text-black text-[10px] font-black tracking-wider uppercase shadow-lg">
+          {language === "ms" ? "★ Cadangan Bisnes Kecil" : "★ Recommended for Small Biz"}
         </div>
       )}
 
@@ -54,15 +54,15 @@ export default function PricingCard({ item, featured = false }: PricingCardProps
         {/* Header: Title & Status Badge */}
         <div className="flex items-start justify-between gap-3 pt-1">
           <div>
-            <h3 className="text-xl font-extrabold text-[#18201D] tracking-tight">
+            <h3 className="text-xl font-black text-white tracking-tight">
               {item.title[language]}
             </h3>
-            <p className="text-xs text-[#52605A] mt-1 line-clamp-2">
+            <p className="text-xs text-zinc-400 mt-1 line-clamp-2">
               {item.subtitle[language]}
             </p>
           </div>
           <span
-            className={`text-[10px] font-bold px-2 py-0.5 rounded-md border shrink-0 ${getStatusBadgeClass(
+            className={`text-[10px] font-extrabold px-2.5 py-1 rounded-full border shrink-0 ${getStatusBadgeClass(
               item.priceStatus
             )}`}
           >
@@ -70,71 +70,60 @@ export default function PricingCard({ item, featured = false }: PricingCardProps
           </span>
         </div>
 
-        {/* Price Block */}
-        <div className="pt-2 pb-3 border-b border-[#F0EFEA]">
+        {/* Price display */}
+        <div className="pt-2 pb-2 border-y border-white/10">
           <div className="flex items-baseline gap-1.5">
-            {item.priceType === "starting_from" && (
-              <span className="text-xs text-[#52605A] font-medium">
-                {language === "ms" ? "dari" : "from"}
-              </span>
-            )}
-            <span className="text-3xl font-extrabold text-[#18201D] tracking-tight">
-              {item.currency}{item.price}
+            <span className="text-xs font-bold text-zinc-400">
+              {item.priceType === "starting_from" ? (language === "ms" ? "Dari" : "From") : ""}
             </span>
-            <span className="text-xs text-[#52605A] font-medium">
+            <span className="text-3xl sm:text-4xl font-black text-white tracking-tight">
+              RM{item.price}
+            </span>
+            <span className="text-xs font-semibold text-zinc-400">
               {item.priceUnit[language]}
             </span>
           </div>
-          <p className="text-[11px] text-[#52605A] mt-1.5 leading-snug">
-            {item.suitableFor[language]}
+          <p className="text-[11px] text-zinc-400 mt-1">
+            {item.revisionRounds[language]}
           </p>
         </div>
 
         {/* Inclusions */}
         <div className="space-y-2 pt-1">
-          <div className="text-[11px] font-bold uppercase tracking-wider text-[#18201D]">
-            {language === "ms" ? "Skop Termasuk:" : "What's Included:"}
+          <div className="text-[11px] font-bold uppercase tracking-wider text-emerald-400">
+            {language === "ms" ? "Apa yang termasuk:" : "What's included:"}
           </div>
-          <ul className="space-y-1.5 text-xs text-[#52605A]">
+          <ul className="space-y-1.5 text-xs text-zinc-300">
             {item.includedItems[language].map((inc, i) => (
               <li key={i} className="flex items-start gap-2">
-                <span className="text-[#087A68] font-bold shrink-0 mt-0.5">✓</span>
+                <span className="text-emerald-400 font-bold shrink-0 mt-0.5">✓</span>
                 <span className="leading-snug">{inc}</span>
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Revision Allowance */}
-        <div className="pt-3 border-t border-[#F0EFEA] flex items-center gap-2 text-xs">
-          <svg className="w-4 h-4 text-[#2457E6] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-          </svg>
-          <span className="font-semibold text-[#18201D]">
-            {item.revisionRounds[language]}
+        {/* Scope Boundary / Exclusions note */}
+        <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-[11px] text-zinc-400 leading-relaxed">
+          <span className="font-bold text-white block mb-0.5">
+            {language === "ms" ? "Sempadan Skop:" : "Scope Boundary:"}
           </span>
-        </div>
-
-        {/* Scope Boundary */}
-        <div className="p-3 rounded-lg bg-[#FAF9F5] border border-[#EBEFE8] text-[11px] text-[#52605A] leading-relaxed">
-          <strong className="text-[#18201D] block mb-0.5">
-            {language === "ms" ? "Had Sempadan Skop:" : "Scope Boundary:"}
-          </strong>
           {item.scopeBoundary[language]}
         </div>
       </div>
 
-      {/* Action Button */}
-      <div className="pt-5 mt-4 border-t border-[#F0EFEA]">
+      {/* Action */}
+      <div className="pt-6 mt-4 border-t border-white/10">
         <Link
           href={actionHref}
-          className={`w-full text-center text-xs py-3 rounded-xl font-bold transition-all block ${
+          className={`w-full py-3 px-4 rounded-xl text-xs font-extrabold flex items-center justify-center gap-1.5 transition-all ${
             featured
               ? "ms-btn-primary"
               : "ms-btn-secondary"
           }`}
         >
-          {actionText} →
+          <span>{actionText}</span>
+          <span>→</span>
         </Link>
       </div>
     </div>

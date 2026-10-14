@@ -81,7 +81,7 @@ export const portfolioCatalog: PortfolioItem[] = [
       ms: "Dihasilkan sebagai demonstrasi konsep reka bentuk web berprofil tinggi. Memaparkan susunan visual tenang, penapis portfolio berasingan, seksyen perkhidmatan terperinci, dan borang permohonan sebut harga yang kemas.",
       en: "Crafted as a visual design demonstration of an editorial studio website. Features tranquil visual rhythm, filtered portfolio showcase, detailed services, and a sleek contact brief module.",
     },
-    thumbnail: "/images/portfolio-vibe.png",
+    thumbnail: "/main-site/images/hero_web_showcase.jpg",
     demoUrl: "https://medium-budget-vibestudio.vercel.app/",
     relatedServiceId: "w3-business-website",
     featured: true,
@@ -121,10 +121,10 @@ export const portfolioCatalog: PortfolioItem[] = [
       ms: "Demonstrasi landing page padat untuk bisnes F&B kecil. Mengandungi pengenalan jenama, senarai menu terpilih, waktu operasi, dan pautan satu klik untuk pelanggan memesan hidangan terus melalui WhatsApp.",
       en: "Compact landing page demonstration for local food artisans. Highlights brand story, signature menu cards, operating hours, and one-tap WhatsApp order routing.",
     },
-    thumbnail: "/images/portfolio-vibe.png", // Will use fallback or styled preview
+    thumbnail: "/main-site/images/hero_web_showcase.jpg",
     demoUrl: "https://nusantara-website.vercel.app/",
     relatedServiceId: "w1-landing-starter",
-    featured: true,
+    featured: false,
     sortOrder: 2,
     highlightType: "web",
     specifications: {
@@ -137,7 +137,7 @@ export const portfolioCatalog: PortfolioItem[] = [
   // 3. Kopi Petang — Menu & Promo Poster (Custom Poster)
   {
     id: "kopi-petang-poster",
-    title: "Kopi Petang Cafe & Roastery",
+    title: "Noku Artisanal Matcha & Coffee (Poster)",
     category: "poster_menu",
     categoryLabel: {
       ms: "Poster & Menu Custom",
@@ -161,7 +161,7 @@ export const portfolioCatalog: PortfolioItem[] = [
       ms: "Contoh rekaan Pathway B (Design Custom) khas untuk peniaga kafe. Mengutamakan tipografi tajam, ruang pernafasan visual, kod QR pesanan yang sah, dan saiz cetak A4/A3 dengan margin selamat.",
       en: "Sample demonstrating Pathway B (Design Custom) for F&B ventures. Prioritises sharp typography, intentional whitespace, verified order QR, and print-safe A4/A3 margin preparation.",
     },
-    thumbnail: "/images/portfolio-vibe.png",
+    thumbnail: "/main-site/images/hero_poster_art.jpg",
     relatedServiceId: "c1-custom-poster",
     featured: true,
     sortOrder: 3,
@@ -173,10 +173,10 @@ export const portfolioCatalog: PortfolioItem[] = [
     },
   },
 
-  // 4. Parfum Botanica — Label & Packaging Design
+  // 4. L'Essence — Label & Packaging Design
   {
     id: "parfum-botanica-label",
-    title: "Parfum Botanica — Luxury Fragrance",
+    title: "L'Essence — Minimal Luxury Packaging",
     category: "logo_packaging",
     categoryLabel: {
       ms: "Label & Packaging",
@@ -200,13 +200,13 @@ export const portfolioCatalog: PortfolioItem[] = [
       ms: "Contoh rekaan pelekat fizikal di bawah Pakej C5 Label & Packaging. Menggabungkan maklumat isipadu (50ml / 1.7 fl.oz), nota haruman, logo jenama, dan ruang selamat untuk percetakan foil emas.",
       en: "Packaging demonstration under Package C5. Combines volume metrics, fragrance notes, brand typography, and safe zones for metallic foil finish options.",
     },
-    thumbnail: "/images/portfolio-vibe.png",
+    thumbnail: "/main-site/images/gallery_packaging_art.jpg",
     relatedServiceId: "c5-label-packaging",
     featured: true,
     sortOrder: 4,
     highlightType: "graphic",
     specifications: {
-      format: "Label Pelekat 60 x 90 mm",
+      format: "Label Pelekat 60 x 90 mm + Kotak",
       deliverables: "PDF Vektor Siap Cetak (dengan bleed 2mm)",
       scope: "Susun Atur Die-line Fizikal",
     },
@@ -215,7 +215,7 @@ export const portfolioCatalog: PortfolioItem[] = [
   // 5. Sambal Tok Nek — Express Background Cutout & Price Update
   {
     id: "sambal-tok-nek-edit",
-    title: "Sambal Garing Tok Nek (Suntingan Express)",
+    title: "Suntingan & Buang Background (Design Express)",
     category: "design_express",
     categoryLabel: {
       ms: "Design Express",
@@ -232,16 +232,16 @@ export const portfolioCatalog: PortfolioItem[] = [
       en: "Product background isolation (cutout), lighting balance, and updated promotional price tag.",
     },
     shortDescription: {
-      ms: "Demonstrasi servis Express RM5: botol sambal dipotong bersih daripada latar belakang meja dapur dan diletakkan pada latar studio putih.",
-      en: "RM5 Express demo: home-shot condiment jar cleanly isolated from busy background onto crisp studio white.",
+      ms: "Demonstrasi servis Express RM5: subjek dipotong bersih daripada latar belakang berselerak kepada format PNG telus/studio.",
+      en: "RM5 Express demo: subject cleanly isolated from messy background into crisp PNG cutout with studio shadow.",
     },
     fullDescription: {
       ms: "Menunjukkan skop sebenar Pathway A (Design Express). Sesuai untuk peniaga online yang mengambil gambar produk menggunakan telefon dan mahu latar belakang dibersihkan, saiz diselaraskan, dan harga baharu dimasukkan.",
       en: "Demonstrates true Pathway A (Design Express) scope. Ideal for online merchants photographing goods on phones wanting clean white isolation, uniform framing, and updated price callouts.",
     },
-    thumbnail: "/images/portfolio-vibe.png",
+    thumbnail: "/main-site/images/hero_edit_sample.jpg",
     relatedServiceId: "e1-single-image",
-    featured: false,
+    featured: true,
     sortOrder: 5,
     highlightType: "before_after",
     specifications: {
@@ -251,42 +251,42 @@ export const portfolioCatalog: PortfolioItem[] = [
     },
   },
 
-  // 6. Institut Wawasan — Portal TVET (Redesign & Database Preview)
+  // 6. Nexus Admin — Business Dashboard & System
   {
     id: "institut-wawasan",
-    title: "Institut Wawasan Portal",
+    title: "Nexus Admin — Business Dashboard",
     category: "systems",
     categoryLabel: {
       ms: "Sistem & Portal Web",
-      en: "Systems & Web Portal",
+      en: "System & Web Portal",
     },
-    tags: ["Projek Naik Taraf", "Pangkalan Data", "Portal TVET", "Admin"],
+    tags: ["Sistem Pentadbir", "Pangkalan Data", "Kanban Order", "Aplikasi Web"],
     projectStatus: "project_preview",
     statusLabel: {
-      ms: "Pratonton Projek",
+      ms: "Pratonton Sistem",
       en: "Project Preview",
     },
     contribution: {
-      ms: "Penstrukturan semula portal rasmi, integrasi pangkalan data kursus, dan modul semakan pelajar.",
-      en: "Portal structural redesign, course database schema integration, and student verification workflow.",
+      ms: "Antaramuka panel admin gelap berprestasi tinggi, carta visualisasi data dan pengurusan pesanan.",
+      en: "High-performance dark admin panel UI, data visualization charts, and order management.",
     },
     shortDescription: {
-      ms: "Naik taraf portal maklumat pendidikan TVET dengan sistem pangkalan data kursus dan rekod pelajar.",
-      en: "Educational TVET institutional portal upgrade with dynamic course database and student records.",
+      ms: "Sistem pengurusan pesanan, inventori dan visualisasi pendapatan masa nyata.",
+      en: "Real-time order management, inventory tracking, and revenue data visualization system.",
     },
     fullDescription: {
-      ms: "Contoh kerja di bawah kategori Sistem & Pembaikan Laman Web. Menggantikan struktur portal lama dengan antara muka yang responsif, pangkalan data berstruktur, dan portal kemasukan data yang mudah dikendalikan kakitangan.",
-      en: "Exemplifies our Systems & Website Redesign capabilities. Replaces legacy framework with responsive interface, structured relational database, and straightforward staff entry portals.",
+      ms: "Pratonton sistem pengurusan perniagaan di bawah pakej Systems & Apps. Memuatkan papan kanban pesanan, penjejakan aktiviti langsung, analitik jualan, dan antaramuka responsif untuk telefon dan desktop.",
+      en: "Business management system preview under Systems & Apps. Features order kanban, live activity feed, revenue analytics, and responsive desktop/mobile interfaces.",
     },
-    thumbnail: "/images/portfolio-vibe.png",
+    thumbnail: "/main-site/images/hero_dashboard_system.jpg",
     relatedServiceId: "s1-admin-panel",
-    featured: false,
+    featured: true,
     sortOrder: 6,
     highlightType: "web",
     specifications: {
       format: "Web Application + Database",
       deliverables: "Portal Bersepadu + Pengurusan Data",
-      scope: "Naik Taraf Portal & Pangkalan Data",
+      scope: "Sistem & Pangkalan Data Responsif",
     },
   },
 

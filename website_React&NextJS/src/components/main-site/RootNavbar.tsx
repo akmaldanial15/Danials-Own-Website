@@ -91,46 +91,49 @@ export default function RootNavbar() {
     <header
       className={`sticky top-0 z-40 w-full transition-all duration-300 ${
         scrolled
-          ? "bg-[#F7F6F2]/90 backdrop-blur-md border-b border-[#DDE1DA] shadow-xs"
-          : "bg-[#F7F6F2] border-b border-[#EBEFE8]"
+          ? "bg-[#070A12]/85 backdrop-blur-2xl border-b border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.8)]"
+          : "bg-transparent border-b border-white/5"
       }`}
     >
       <div className="ms-container">
-        <div className="flex items-center justify-between h-18">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link
             href="/"
             className="flex items-center gap-3 group focus:outline-hidden"
             aria-label="Danial's Web & Systems Homepage"
           >
-            <div className="relative w-8 h-8 rounded-lg overflow-hidden shrink-0 transition-transform group-hover:scale-105">
+            <div className="relative w-9 h-9 rounded-xl overflow-hidden shrink-0 transition-transform group-hover:scale-105 border border-white/10 shadow-[0_0_15px_rgba(16,185,129,0.3)] bg-[#0E1424] flex items-center justify-center">
               <Image
                 src="/logo.png"
                 alt="Logo"
                 fill
-                sizes="32px"
-                className="object-contain"
+                sizes="36px"
+                className="object-contain p-1"
                 priority
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-extrabold text-[15px] sm:text-base tracking-tight text-[#18201D] group-hover:text-[#2457E6] transition-colors leading-tight">
-                DANIAL&apos;S
-              </span>
-              <span className="text-[9px] uppercase tracking-wider font-semibold text-[#52605A] leading-none">
-                WEB & SYSTEMS
+              <div className="flex items-center gap-1.5">
+                <span className="font-extrabold text-[16px] tracking-tight text-white group-hover:text-cyan-400 transition-colors leading-tight">
+                  DANIAL&apos;S
+                </span>
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              </div>
+              <span className="text-[10px] uppercase tracking-wider font-semibold text-zinc-400 leading-none">
+                WEB • APPS • SYSTEMS • DESIGN
               </span>
             </div>
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-2" aria-label="Main Navigation">
+          <nav className="hidden lg:flex items-center gap-1.5 xl:gap-2" aria-label="Main Navigation">
             <Link
               href="/"
-              className={`px-3 py-2 rounded-lg text-sm font-semibold transition-colors ${
+              className={`px-3.5 py-2 rounded-full text-sm font-semibold transition-all ${
                 isActive("/") && pathname === "/"
-                  ? "text-[#2457E6] bg-[#EEF2FF]"
-                  : "text-[#52605A] hover:text-[#18201D] hover:bg-[#EBEFE8]"
+                  ? "text-cyan-300 bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(6,182,212,0.15)]"
+                  : "text-zinc-300 hover:text-white hover:bg-white/5"
               }`}
             >
               {t("navHome")}
@@ -142,10 +145,10 @@ export default function RootNavbar() {
                 type="button"
                 onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
                 onMouseEnter={() => setServicesDropdownOpen(true)}
-                className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold transition-colors cursor-pointer ${
+                className={`flex items-center gap-1.5 px-3.5 py-2 rounded-full text-sm font-semibold transition-all cursor-pointer ${
                   pathname.startsWith("/services")
-                    ? "text-[#2457E6] bg-[#EEF2FF]"
-                    : "text-[#52605A] hover:text-[#18201D] hover:bg-[#EBEFE8]"
+                    ? "text-cyan-300 bg-cyan-500/10 border border-cyan-500/30"
+                    : "text-zinc-300 hover:text-white hover:bg-white/5"
                 }`}
                 aria-expanded={servicesDropdownOpen}
               >
@@ -167,19 +170,19 @@ export default function RootNavbar() {
               {servicesDropdownOpen && (
                 <div
                   onMouseLeave={() => setServicesDropdownOpen(false)}
-                  className="absolute left-0 top-full pt-2 w-80 z-50 animate-fadeIn"
+                  className="absolute left-0 top-full pt-3 w-88 z-50 animate-fadeIn"
                 >
-                  <div className="bg-[#FFFFFF] border border-[#DDE1DA] rounded-xl p-2 shadow-xl">
-                    <div className="px-3 py-2 border-b border-[#F0EFEA] mb-1 flex items-center justify-between">
-                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#52605A]">
+                  <div className="bg-[#0E1424]/95 backdrop-blur-2xl border border-white/10 rounded-2xl p-2.5 shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
+                    <div className="px-3 py-2 border-b border-white/5 mb-1.5 flex items-center justify-between">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-400">
                         {t("navServices")}
                       </span>
                       <Link
                         href="/services"
                         onClick={() => setServicesDropdownOpen(false)}
-                        className="text-[11px] font-semibold text-[#2457E6] hover:underline"
+                        className="text-[11px] font-bold text-cyan-400 hover:underline"
                       >
-                        {language === "ms" ? "Semua Servis →" : "All Services →"}
+                        {language === "ms" ? "Semua Servis →" : "View All →"}
                       </Link>
                     </div>
 
@@ -189,15 +192,21 @@ export default function RootNavbar() {
                           key={sub.href}
                           href={sub.href}
                           onClick={() => setServicesDropdownOpen(false)}
-                          className="flex items-start justify-between p-2.5 rounded-lg hover:bg-[#F7F6F2] transition-colors group"
+                          className={`flex items-start justify-between p-2.5 rounded-xl transition-all group ${
+                            pathname === sub.href
+                              ? "bg-cyan-500/15 border border-cyan-500/30 text-white"
+                              : "hover:bg-white/5 text-zinc-300 hover:text-white"
+                          }`}
                         >
                           <div>
-                            <div className="text-xs font-bold text-[#18201D] group-hover:text-[#2457E6]">
+                            <div className="font-bold text-xs group-hover:text-cyan-300 transition-colors">
                               {sub.title}
                             </div>
-                            <div className="text-[11px] text-[#52605A] mt-0.5">{sub.desc}</div>
+                            <div className="text-[11px] text-zinc-400 mt-0.5 line-clamp-1">
+                              {sub.desc}
+                            </div>
                           </div>
-                          <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#EEF2FF] text-[#2457E6] border border-[#D5E0FF]">
+                          <span className="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 shrink-0 ml-2">
                             {sub.badge}
                           </span>
                         </Link>
@@ -208,34 +217,64 @@ export default function RootNavbar() {
               )}
             </div>
 
-            {/* Other links */}
-            {navLinks.slice(1).map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`px-3 py-2 rounded-lg text-sm font-semibold transition-colors ${
-                  isActive(link.href)
-                    ? "text-[#2457E6] bg-[#EEF2FF]"
-                    : "text-[#52605A] hover:text-[#18201D] hover:bg-[#EBEFE8]"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            <Link
+              href="/gallery"
+              className={`px-3.5 py-2 rounded-full text-sm font-semibold transition-all ${
+                isActive("/gallery")
+                  ? "text-cyan-300 bg-cyan-500/10 border border-cyan-500/30"
+                  : "text-zinc-300 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              {t("navGallery")}
+            </Link>
+
+            <Link
+              href="/pricing"
+              className={`px-3.5 py-2 rounded-full text-sm font-semibold transition-all ${
+                isActive("/pricing")
+                  ? "text-cyan-300 bg-cyan-500/10 border border-cyan-500/30"
+                  : "text-zinc-300 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              {t("navPricing")}
+            </Link>
+
+            <Link
+              href="/calculator"
+              className={`px-3.5 py-2 rounded-full text-sm font-semibold transition-all ${
+                isActive("/calculator")
+                  ? "text-cyan-300 bg-cyan-500/10 border border-cyan-500/30"
+                  : "text-zinc-300 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              {t("navCalculator")}
+            </Link>
+
+            <Link
+              href="/contact"
+              className={`px-3.5 py-2 rounded-full text-sm font-semibold transition-all ${
+                isActive("/contact")
+                  ? "text-cyan-300 bg-cyan-500/10 border border-cyan-500/30"
+                  : "text-zinc-300 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              {t("navContact")}
+            </Link>
           </nav>
 
-          {/* Right Actions: Lang + CTA */}
+          {/* Right Header Controls */}
           <div className="hidden lg:flex items-center gap-3">
             {/* Language Switcher */}
-            <div className="flex items-center bg-[#FFFFFF] border border-[#DDE1DA] rounded-full p-1 text-xs font-bold">
+            <div className="flex items-center p-1 rounded-full bg-white/5 border border-white/10 text-xs font-bold text-zinc-400">
               <button
                 type="button"
                 onClick={() => setLanguage("ms")}
                 className={`px-2.5 py-1 rounded-full transition-all cursor-pointer ${
                   language === "ms"
-                    ? "bg-[#2457E6] text-white shadow-xs"
-                    : "text-[#52605A] hover:text-[#18201D]"
+                    ? "bg-cyan-500 text-black font-extrabold shadow-sm"
+                    : "hover:text-white"
                 }`}
+                aria-pressed={language === "ms"}
               >
                 BM
               </button>
@@ -244,9 +283,10 @@ export default function RootNavbar() {
                 onClick={() => setLanguage("en")}
                 className={`px-2.5 py-1 rounded-full transition-all cursor-pointer ${
                   language === "en"
-                    ? "bg-[#2457E6] text-white shadow-xs"
-                    : "text-[#52605A] hover:text-[#18201D]"
+                    ? "bg-cyan-500 text-black font-extrabold shadow-sm"
+                    : "hover:text-white"
                 }`}
+                aria-pressed={language === "en"}
               >
                 EN
               </button>
@@ -255,108 +295,126 @@ export default function RootNavbar() {
             {/* Primary Action Button */}
             <Link
               href="/contact"
-              className="ms-btn-primary text-xs py-2.5 px-4.5 rounded-full"
+              className="ms-btn-primary text-xs tracking-wide uppercase font-extrabold"
             >
-              {t("navCtaBtn")}
+              {t("btnDiscuss")}
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex items-center gap-2 lg:hidden">
-            {/* Mobile Lang Toggle */}
             <button
               type="button"
               onClick={() => setLanguage(language === "ms" ? "en" : "ms")}
-              className="px-2.5 py-1 text-xs font-bold bg-[#FFFFFF] border border-[#DDE1DA] rounded-full text-[#18201D]"
+              className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-bold text-cyan-300"
+              aria-label="Tukar Bahasa"
             >
-              {language === "ms" ? "BM" : "EN"}
+              {language.toUpperCase()}
             </button>
 
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-[#18201D] hover:bg-[#EBEFE8] focus:outline-hidden cursor-pointer"
-              aria-label="Toggle Navigation Menu"
+              className="p-2.5 rounded-xl bg-white/5 text-zinc-300 hover:text-white border border-white/10 focus:outline-hidden cursor-pointer"
               aria-expanded={mobileMenuOpen}
+              aria-label="Buka Menu"
             >
-              {mobileMenuOpen ? (
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                {mobileMenuOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              ) : (
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                ) : (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              )}
+                )}
+              </svg>
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Menu Panel */}
+      {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-[#DDE1DA] bg-[#F7F6F2] shadow-xl animate-fadeIn">
-          <div className="ms-container py-5 space-y-4">
-            <div className="space-y-1">
-              <Link
-                href="/"
-                onClick={() => setMobileMenuOpen(false)}
-                className={`block px-3 py-2.5 rounded-lg text-sm font-bold ${
-                  isActive("/") && pathname === "/"
-                    ? "bg-[#2457E6] text-white"
-                    : "text-[#18201D] hover:bg-[#EBEFE8]"
-                }`}
-              >
-                {t("navHome")}
-              </Link>
+        <div className="lg:hidden bg-[#070A12]/98 backdrop-blur-2xl border-b border-white/10 px-5 pt-3 pb-8 animate-fadeIn">
+          <div className="space-y-1">
+            <Link
+              href="/"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`block px-4 py-2.5 rounded-xl text-sm font-semibold ${
+                isActive("/") && pathname === "/" ? "bg-cyan-500/15 text-cyan-300" : "text-zinc-300 hover:bg-white/5"
+              }`}
+            >
+              {t("navHome")}
+            </Link>
 
-              {/* Mobile Services section */}
-              <div className="pt-2 pb-1 px-3">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#52605A]">
-                  {t("navServices")}
-                </span>
+            <div className="py-2">
+              <div className="px-4 text-[11px] font-bold uppercase tracking-wider text-zinc-500 mb-1">
+                {t("navServices")}
               </div>
-              <div className="pl-3 space-y-1">
+              <div className="pl-2 space-y-1">
                 {serviceSublinks.map((sub) => (
                   <Link
                     key={sub.href}
                     href={sub.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-semibold text-[#18201D] hover:bg-[#EBEFE8]"
+                    className="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-semibold text-zinc-300 hover:bg-white/5"
                   >
                     <span>{sub.title}</span>
-                    <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#EEF2FF] text-[#2457E6]">
+                    <span className="text-[10px] font-bold text-emerald-400 bg-emerald-500/15 px-2 py-0.5 rounded-full">
                       {sub.badge}
                     </span>
                   </Link>
                 ))}
               </div>
-
-              {navLinks.slice(1).map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`block px-3 py-2.5 rounded-lg text-sm font-bold ${
-                    isActive(link.href)
-                      ? "bg-[#2457E6] text-white"
-                      : "text-[#18201D] hover:bg-[#EBEFE8]"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
             </div>
 
-            <div className="pt-2 border-t border-[#DDE1DA]">
-              <Link
-                href="/contact"
-                onClick={() => setMobileMenuOpen(false)}
-                className="ms-btn-primary w-full text-center py-3 text-sm rounded-xl"
-              >
-                {t("navCtaBtn")}
-              </Link>
-            </div>
+            <Link
+              href="/gallery"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`block px-4 py-2.5 rounded-xl text-sm font-semibold ${
+                isActive("/gallery") ? "bg-cyan-500/15 text-cyan-300" : "text-zinc-300 hover:bg-white/5"
+              }`}
+            >
+              {t("navGallery")}
+            </Link>
+
+            <Link
+              href="/pricing"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`block px-4 py-2.5 rounded-xl text-sm font-semibold ${
+                isActive("/pricing") ? "bg-cyan-500/15 text-cyan-300" : "text-zinc-300 hover:bg-white/5"
+              }`}
+            >
+              {t("navPricing")}
+            </Link>
+
+            <Link
+              href="/calculator"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`block px-4 py-2.5 rounded-xl text-sm font-semibold ${
+                isActive("/calculator") ? "bg-cyan-500/15 text-cyan-300" : "text-zinc-300 hover:bg-white/5"
+              }`}
+            >
+              {t("navCalculator")}
+            </Link>
+
+            <Link
+              href="/contact"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`block px-4 py-2.5 rounded-xl text-sm font-semibold ${
+                isActive("/contact") ? "bg-cyan-500/15 text-cyan-300" : "text-zinc-300 hover:bg-white/5"
+              }`}
+            >
+              {t("navContact")}
+            </Link>
+          </div>
+
+          <div className="pt-6 border-t border-white/10 mt-4 flex flex-col gap-3">
+            <Link
+              href="/contact"
+              onClick={() => setMobileMenuOpen(false)}
+              className="ms-btn-primary w-full justify-center text-xs"
+            >
+              {t("btnDiscuss")}
+            </Link>
           </div>
         </div>
       )}

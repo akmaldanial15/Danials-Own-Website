@@ -104,181 +104,195 @@ export default function DesignPathwayComparison() {
       {/* Side by side Pathway Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
         {/* Pathway A: Express */}
-        <div className="ms-card p-6 sm:p-8 flex flex-col justify-between border-t-4 border-t-[#087A68]">
+        <div className="ms-card p-6 sm:p-8 flex flex-col justify-between border-t-4 border-t-emerald-400 bg-[#0E1424]/90 backdrop-blur-2xl border-white/10 hover:border-emerald-500/50 hover:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_30px_rgba(16,185,129,0.2)] transition-all duration-300">
           <div className="space-y-4">
             <div className="flex items-center justify-between">
-              <span className="ms-pill ms-pill-teal">
-                {language === "ms" ? "PILIHAN PANTAS" : "RAPID EDIT"}
+              <span className="ms-pill ms-pill-emerald">
+                {language === "ms" ? "⚡ PILIHAN PANTAS" : "⚡ RAPID EDIT"}
               </span>
-              <span className="text-xs font-bold text-[#52605A]">
+              <span className="text-xs font-bold text-zinc-400">
                 {language === "ms" ? "Pakej E1 & E2" : "Packages E1 & E2"}
               </span>
             </div>
 
             <div>
-              <h3 className="text-2xl font-extrabold text-[#18201D] tracking-tight">
+              <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
                 Design Express
               </h3>
-              <p className="text-sm font-semibold text-[#087A68] mt-1">
+              <p className="text-sm font-bold text-emerald-400 mt-1">
                 {language === "ms" ? "Ringkas, cepat dan mesra bajet." : "Focused, fast, and budget-conscious."}
               </p>
             </div>
 
-            <div className="pt-2 flex items-baseline gap-2 border-b border-[#F0EFEA] pb-4">
-              <span className="text-3xl font-extrabold text-[#18201D] tracking-tight">RM5</span>
-              <span className="text-xs text-[#52605A] font-medium">
+            <div className="pt-2 flex items-baseline gap-2 border-b border-white/10 pb-4">
+              <span className="text-4xl font-black text-white tracking-tight">RM5</span>
+              <span className="text-xs text-zinc-400 font-semibold">
                 {language === "ms" ? "/ gambar (pakej asas)" : "/ image (starter tier)"}
               </span>
             </div>
 
-            <p className="text-xs text-[#52605A] leading-relaxed">
+            <p className="text-xs text-zinc-300 leading-relaxed">
               {language === "ms"
-                ? "Sesuai untuk membuang latar belakang produk, menukar harga atau teks pada poster yang sudah ada, dan kemasukan logo atau QR sedia ada."
-                : "Ideal for product cutouts, swapping copy or prices on existing designs, and inserting supplied logos or verified QR codes."}
+                ? "Sesuai untuk membuang latar belakang produk, menukar harga atau teks pada poster sedia ada, saiz semula, dan kemasukan logo atau QR rasmi."
+                : "Ideal for product cutouts, swapping copy or prices on existing designs, resizing, and inserting supplied logos or verified QR codes."}
             </p>
 
-            <ul className="space-y-2 text-xs text-[#18201D] pt-2">
+            <ul className="space-y-2 text-xs text-zinc-200 pt-2">
               <li className="flex items-center gap-2">
-                <span className="text-[#087A68] font-bold">✓</span>
+                <span className="text-emerald-400 font-bold">✓</span>
                 <span>{language === "ms" ? "Siap cepat dengan fail PNG/JPG resolusi tinggi" : "Fast turnaround with high-res PNG/JPG"}</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#087A68] font-bold">✓</span>
+                <span className="text-emerald-400 font-bold">✓</span>
                 <span>{language === "ms" ? "Termasuk 2 kali suntingan kecil dalam skop" : "Includes 2 minor revision rounds"}</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#087A68] font-bold">✓</span>
+                <span className="text-emerald-400 font-bold">✓</span>
                 <span>{language === "ms" ? "Pilihan Duo Bundle: RM8 untuk 2 keping gambar" : "Duo Bundle option: RM8 for 2 images"}</span>
               </li>
             </ul>
           </div>
 
-          <div className="pt-6 mt-6 border-t border-[#F0EFEA]">
+          <div className="pt-6 mt-6 border-t border-white/10">
             <Link
               href="/calculator?category=design_express&package=e1-single-image"
-              className="ms-btn-secondary w-full text-center text-xs py-3 rounded-xl font-bold"
+              className="ms-btn-primary w-full text-center text-xs py-3.5 rounded-xl font-extrabold"
             >
-              {language === "ms" ? "Pilih Design Express" : "Choose Design Express"}
+              {language === "ms" ? "Pilih Design Express →" : "Choose Design Express →"}
             </Link>
           </div>
         </div>
 
         {/* Pathway B: Custom */}
-        <div className="ms-card p-6 sm:p-8 flex flex-col justify-between border-t-4 border-t-[#2457E6]">
+        <div className="ms-card p-6 sm:p-8 flex flex-col justify-between border-t-4 border-t-cyan-400 bg-[#0E1424]/90 backdrop-blur-2xl border-white/10 hover:border-cyan-500/50 hover:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_30px_rgba(6,182,212,0.2)] transition-all duration-300">
           <div className="space-y-4">
             <div className="flex items-center justify-between">
-              <span className="ms-pill ms-pill-blue">
-                {language === "ms" ? "REKA BENTUK TELITI" : "BESPOKE DESIGN"}
+              <span className="ms-pill ms-pill-cyan">
+                {language === "ms" ? "✦ REKA BENTUK TELITI" : "✦ BESPOKE DESIGN"}
               </span>
-              <span className="text-xs font-bold text-[#52605A]">
+              <span className="text-xs font-bold text-zinc-400">
                 {language === "ms" ? "Pakej C1 - C5" : "Packages C1 - C5"}
               </span>
             </div>
 
             <div>
-              <h3 className="text-2xl font-extrabold text-[#18201D] tracking-tight">
+              <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
                 Design Custom
               </h3>
-              <p className="text-sm font-semibold text-[#2457E6] mt-1">
-                {language === "ms" ? "Lebih terperinci, lebih tersusun, mengikut identiti anda." : "Detailed, bespoke, and tailored to your brand identity."}
+              <p className="text-sm font-bold text-cyan-400 mt-1">
+                {language === "ms"
+                  ? "Lebih terperinci, lebih tersusun, mengikut identiti anda."
+                  : "Bespoke, refined, and tailored to your brand identity."}
               </p>
             </div>
 
-            <div className="pt-2 flex items-baseline gap-2 border-b border-[#F0EFEA] pb-4">
-              <span className="text-3xl font-extrabold text-[#18201D] tracking-tight">RM35</span>
-              <span className="text-xs text-[#52605A] font-medium">
-                {language === "ms" ? "anggaran awal bermula" : "starting package estimate"}
+            <div className="pt-2 flex items-baseline gap-2 border-b border-white/10 pb-4">
+              <span className="text-4xl font-black text-white tracking-tight">RM35+</span>
+              <span className="text-xs text-zinc-400 font-semibold">
+                {language === "ms" ? "/ poster atau gubahan gred cetak" : "/ poster or print-grade layout"}
               </span>
             </div>
 
-            <p className="text-xs text-[#52605A] leading-relaxed">
+            <p className="text-xs text-zinc-300 leading-relaxed">
               {language === "ms"
-                ? "Gubahan visual eksklusif dari sifar dengan susunan tipografi tajam, margin cetak format besar, menu kafe, logo perniagaan, dan label bungkusan produk."
-                : "Zero-base bespoke visual composition with refined typography hierarchy, safe print margins, cafe menus, starter logos, and packaging labels."}
+                ? "Dihasilkan secara gubahan rapi untuk poster F&B, menu kedai, banner acara, pembungkusan produk dan identiti logo yang memerlukan perhatian teliti."
+                : "Crafted with careful manual typography for F&B posters, menus, event buntings, packaging labels, and distinctive brand identities."}
             </p>
 
-            <ul className="space-y-2 text-xs text-[#18201D] pt-2">
+            <ul className="space-y-2 text-xs text-zinc-200 pt-2">
               <li className="flex items-center gap-2">
-                <span className="text-[#2457E6] font-bold">✓</span>
-                <span>{language === "ms" ? "Reka bentuk khas mengikut gaya & warna jenama" : "Bespoke styling matching your brand palette"}</span>
+                <span className="text-cyan-400 font-bold">✓</span>
+                <span>{language === "ms" ? "Gubahan visual tersusun & penetapan tipografi tajam" : "Bespoke visual composition & crisp typography"}</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#2457E6] font-bold">✓</span>
-                <span>{language === "ms" ? "3 pusingan semakan draf berperingkat" : "3 structured revision review milestones"}</span>
+                <span className="text-cyan-400 font-bold">✓</span>
+                <span>{language === "ms" ? "Termasuk 3 pusingan semakan terperinci" : "Includes 3 detailed revision milestones"}</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#2457E6] font-bold">✓</span>
-                <span>{language === "ms" ? "Penyediaan saiz cetakan fizikal & margin bleed" : "Physical print dimension & bleed safe zone prep"}</span>
+                <span className="text-cyan-400 font-bold">✓</span>
+                <span>{language === "ms" ? "Spesifikasi sedia cetak 300 DPI dengan margin kilang" : "Print-ready 300 DPI with factory trim margins"}</span>
               </li>
             </ul>
           </div>
 
-          <div className="pt-6 mt-6 border-t border-[#F0EFEA]">
+          <div className="pt-6 mt-6 border-t border-white/10">
             <Link
-              href="/contact?category=design_custom&package=c1-custom-poster"
-              className="ms-btn-primary w-full text-center text-xs py-3 rounded-xl font-bold"
+              href="/calculator?category=design_custom&package=c1-custom-poster"
+              className="ms-btn-secondary w-full text-center text-xs py-3.5 rounded-xl font-extrabold"
             >
-              {language === "ms" ? "Bincang Design Custom" : "Discuss Design Custom"}
+              {language === "ms" ? "Bincang Design Custom →" : "Discuss Design Custom →"}
             </Link>
           </div>
         </div>
       </div>
 
-      {/* Comparison line */}
-      <div className="mt-8 text-center">
-        <p className="text-xs sm:text-sm font-semibold text-[#52605A] italic">
-          &ldquo;{language === "ms"
-            ? "Express untuk keperluan ringkas. Custom untuk susun atur dan identiti yang lebih terperinci."
-            : "Express for focused edits. Custom for bespoke layouts and brand identity."}&rdquo;
+      {/* Comparison One-Liner */}
+      <div className="mt-8 text-center p-4 rounded-2xl bg-white/5 border border-white/10">
+        <p className="text-xs sm:text-sm font-semibold text-zinc-300">
+          💡{" "}
+          <span className="text-white font-extrabold">
+            {language === "ms"
+              ? "Express untuk keperluan ringkas & cepat. Custom untuk susun atur dan identiti yang lebih terperinci."
+              : "Express for fast, narrow edits. Custom for detailed layouts and curated brand identity."}
+          </span>
         </p>
+      </div>
 
-        {/* Toggle Detailed Comparison Table Button */}
+      {/* Expandable Comparison Table Button */}
+      <div className="mt-6 text-center">
         <button
           type="button"
           onClick={() => setShowFullTable(!showFullTable)}
-          className="mt-3 text-xs font-bold text-[#2457E6] hover:underline cursor-pointer inline-flex items-center gap-1"
+          className="inline-flex items-center gap-2 text-xs font-bold text-cyan-400 hover:text-cyan-300 hover:underline cursor-pointer focus:outline-hidden"
+          aria-expanded={showFullTable}
         >
           <span>
             {showFullTable
-              ? (language === "ms" ? "Sembunyikan perbandingan terperinci ↑" : "Hide detailed comparison ↑")
-              : (language === "ms" ? "Buka jadual perbandingan penuh (8 kriteria) ↓" : "View full comparison matrix (8 criteria) ↓")}
+              ? language === "ms"
+                ? "Sembunyikan Jadual Perbandingan Terperinci ▲"
+                : "Hide Detailed Comparison Matrix ▲"
+              : language === "ms"
+              ? "Lihat Jadual Perbandingan 8-Kriteria Lengkap ▼"
+              : "View 8-Criteria Detailed Comparison Matrix ▼"}
           </span>
         </button>
       </div>
 
-      {/* Expandable Comparison Table */}
+      {/* 8-Criteria Matrix Table */}
       {showFullTable && (
-        <div className="mt-8 overflow-x-auto rounded-xl border border-[#DDE1DA] bg-[#FFFFFF] shadow-sm animate-fadeIn">
-          <table className="w-full text-left border-collapse text-xs">
-            <thead>
-              <tr className="bg-[#F0EFEA] border-b border-[#DDE1DA]">
-                <th className="p-3.5 font-bold text-[#18201D] w-1/4">
-                  {language === "ms" ? "Kriteria Penilaian" : "Criteria"}
-                </th>
-                <th className="p-3.5 font-bold text-[#087A68] w-3/8">
-                  Design Express (RM5+)
-                </th>
-                <th className="p-3.5 font-bold text-[#2457E6] w-3/8">
-                  Design Custom (RM35+)
-                </th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-[#F0EFEA]">
-              {criteria.map((item, idx) => (
-                <tr key={idx} className="hover:bg-[#F7F6F2] transition-colors">
-                  <td className="p-3.5 font-semibold text-[#18201D] bg-[#FAF9F5]">
-                    {item.criterion[language]}
-                  </td>
-                  <td className="p-3.5 text-[#52605A] leading-relaxed">
-                    {item.express[language]}
-                  </td>
-                  <td className="p-3.5 text-[#52605A] leading-relaxed">
-                    {item.custom[language]}
-                  </td>
+        <div className="mt-6 rounded-2xl bg-[#0E1424]/90 backdrop-blur-2xl border border-white/10 overflow-hidden shadow-2xl animate-fadeIn">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse text-xs">
+              <thead>
+                <tr className="bg-white/5 border-b border-white/10">
+                  <th className="p-4 font-bold text-zinc-400 w-1/4">
+                    {language === "ms" ? "Kriteria Penilaian" : "Criteria"}
+                  </th>
+                  <th className="p-4 font-extrabold text-emerald-400 w-3/8 bg-emerald-500/5">
+                    Design Express (RM5+)
+                  </th>
+                  <th className="p-4 font-extrabold text-cyan-400 w-3/8 bg-cyan-500/5">
+                    Design Custom (RM35+)
+                  </th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="divide-y divide-white/5">
+                {criteria.map((item, idx) => (
+                  <tr key={idx} className="hover:bg-white/5 transition-colors">
+                    <td className="p-4 font-bold text-white align-top">
+                      {item.criterion[language]}
+                    </td>
+                    <td className="p-4 text-zinc-300 align-top leading-relaxed bg-emerald-500/5">
+                      {item.express[language]}
+                    </td>
+                    <td className="p-4 text-zinc-300 align-top leading-relaxed bg-cyan-500/5">
+                      {item.custom[language]}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       )}
     </div>

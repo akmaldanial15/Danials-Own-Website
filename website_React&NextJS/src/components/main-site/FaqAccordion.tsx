@@ -30,7 +30,9 @@ export default function FaqAccordion({ filterCategory, limit }: FaqAccordionProp
         return (
           <div
             key={item.id}
-            className="ms-card overflow-hidden transition-colors"
+            className={`ms-card overflow-hidden transition-all duration-200 ${
+              isOpen ? "border-cyan-500/40 shadow-[0_10px_30px_rgba(0,0,0,0.6),0_0_20px_rgba(6,182,212,0.15)]" : "border-white/10"
+            }`}
           >
             <button
               type="button"
@@ -38,12 +40,14 @@ export default function FaqAccordion({ filterCategory, limit }: FaqAccordionProp
               className="w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 focus:outline-hidden cursor-pointer"
               aria-expanded={isOpen}
             >
-              <span className="font-extrabold text-sm sm:text-base text-[#18201D] leading-snug">
+              <span className={`font-extrabold text-sm sm:text-base leading-snug transition-colors ${
+                isOpen ? "text-cyan-300" : "text-white hover:text-cyan-300"
+              }`}>
                 {item.question[language]}
               </span>
               <span
-                className={`w-6 h-6 rounded-full bg-[#FAF9F5] border border-[#DDE1DA] flex items-center justify-center shrink-0 transition-transform duration-200 text-xs font-bold text-[#52605A] ${
-                  isOpen ? "rotate-180 bg-[#EEF2FF] text-[#2457E6] border-[#D5E0FF]" : ""
+                className={`w-7 h-7 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 transition-all duration-300 text-xs font-bold ${
+                  isOpen ? "rotate-180 bg-cyan-500/20 text-cyan-300 border-cyan-500/40" : "text-zinc-400"
                 }`}
               >
                 ▼
@@ -51,7 +55,7 @@ export default function FaqAccordion({ filterCategory, limit }: FaqAccordionProp
             </button>
 
             {isOpen && (
-              <div className="px-4 sm:px-5 pb-5 pt-1 border-t border-[#F0EFEA] text-xs sm:text-sm text-[#52605A] leading-relaxed animate-fadeIn">
+              <div className="px-4 sm:px-5 pb-5 pt-1 border-t border-white/5 text-xs sm:text-sm text-zinc-300 leading-relaxed animate-fadeIn">
                 <p>{item.answer[language]}</p>
               </div>
             )}

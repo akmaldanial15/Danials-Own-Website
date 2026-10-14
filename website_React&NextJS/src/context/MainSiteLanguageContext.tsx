@@ -26,6 +26,7 @@ const translations: Record<MainLanguage, Record<string, string>> = {
     navCalculator: "Anggaran Bajet",
     navContact: "Hubungi",
     navCtaBtn: "Bincang Projek",
+    btnDiscuss: "Bincang Projek",
     navLegacyLink: "Versi terdahulu",
 
     // Hero
@@ -139,6 +140,7 @@ const translations: Record<MainLanguage, Record<string, string>> = {
     navCalculator: "Estimator",
     navContact: "Contact",
     navCtaBtn: "Discuss Project",
+    btnDiscuss: "Discuss Project",
     navLegacyLink: "Legacy Version",
 
     // Hero
