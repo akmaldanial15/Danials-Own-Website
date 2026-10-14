@@ -5,20 +5,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const routes = [
     '',
-    '/gallery',
-    '/calculator',
-    '/contact',
-    '/services/custom',
-    '/services/detailed',
-    '/services/fast-track',
-    '/services/systems-apps',
-    '/services/website-fix',
+    '/rajafifi',
+    '/rajafifi/gallery',
+    '/rajafifi/calculator',
+    '/rajafifi/contact',
+    '/rajafifi/services/detailed',
+    '/rajafifi/services/fast-track',
+    '/rajafifi/services/systems-apps',
+    '/rajafifi/services/website-fix',
   ];
 
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: route === '' ? 'daily' : 'weekly',
-    priority: route === '' ? 1.0 : 0.8,
+    changeFrequency: route === '' || route === '/rajafifi' ? 'daily' : 'weekly',
+    priority: route === '/rajafifi' ? 1.0 : 0.8,
   }));
 }

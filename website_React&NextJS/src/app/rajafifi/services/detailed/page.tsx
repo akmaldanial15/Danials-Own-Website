@@ -511,7 +511,7 @@ export default function DetailedServices() {
               {t("pkgCustomHeader")}
             </h2>
             <Link
-              href="/calculator"
+              href="/rajafifi/calculator"
               className="text-xs text-purple-400 hover:text-purple-300 font-semibold bg-purple-500/10 px-3.5 py-1.5 rounded-full border border-purple-500/25 transition-all"
             >
               {t("btnCalcCustom")}

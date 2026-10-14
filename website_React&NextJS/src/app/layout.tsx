@@ -1,9 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import { LanguageProvider } from "@/context/LanguageContext";
-import PageTransition from "@/components/layout/PageTransition";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Danial's Web & Systems | Premium Custom Systems & Websites",
-  description: "Kami membina sistem perniagaan kustom, aplikasi web/Android, dan laman web korporat premium berprestasi tinggi di Malaysia.",
+  title: "Danial's Web & Systems",
+  description: "Web & Systems development.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -27,16 +23,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-transparent text-zinc-100 font-sans">
-        <LanguageProvider>
-          <Navbar />
-          <main className="flex-grow pt-16 md:pt-20">
-            <PageTransition>{children}</PageTransition>
-          </main>
-          <Footer />
-        </LanguageProvider>
+      <body className="min-h-full flex flex-col bg-zinc-950 text-zinc-100 font-sans">
+        {children}
       </body>
     </html>
   );
 }
-

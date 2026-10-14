@@ -46,19 +46,19 @@ export default function Footer() {
           <h4 className="text-sm font-semibold text-zinc-200 uppercase tracking-wider">{t("navTitle")}</h4>
           <ul className="space-y-2.5 text-sm">
             <li>
-              <Link href="/" className="hover:text-zinc-200 transition-colors">{t("navHome")}</Link>
+              <Link href="/rajafifi" className="hover:text-zinc-200 transition-colors">{t("navHome")}</Link>
             </li>
             <li>
-              <Link href="/services/fast-track" className="hover:text-zinc-200 transition-colors">{t("pakejMurah")}</Link>
+              <Link href="/rajafifi/services/fast-track" className="hover:text-zinc-200 transition-colors">{t("pakejMurah")}</Link>
             </li>
             <li>
-              <Link href="/services/detailed" className="hover:text-zinc-200 transition-colors">{t("sistemKustom")}</Link>
+              <Link href="/rajafifi/services/detailed" className="hover:text-zinc-200 transition-colors">{t("sistemKustom")}</Link>
             </li>
             <li>
-              <Link href="/gallery" className="hover:text-zinc-200 transition-colors">{t("navGallery")}</Link>
+              <Link href="/rajafifi/gallery" className="hover:text-zinc-200 transition-colors">{t("navGallery")}</Link>
             </li>
             <li>
-              <Link href="/calculator" className="hover:text-zinc-200 transition-colors">{t("kalkulatorDinamik")}</Link>
+              <Link href="/rajafifi/calculator" className="hover:text-zinc-200 transition-colors">{t("kalkulatorDinamik")}</Link>
             </li>
           </ul>
         </div>
@@ -131,11 +131,11 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-zinc-900 text-center text-xs text-zinc-650 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p>&copy; {currentYear} {t("rightsReserved")}</p>
         <p className="flex gap-4">
-          <Link href="/services/fast-track" className="hover:text-zinc-400">{t("pakejMurah")}</Link>
+          <Link href="/rajafifi/services/fast-track" className="hover:text-zinc-400">{t("pakejMurah")}</Link>
           <span>&middot;</span>
-          <Link href="/services/detailed" className="hover:text-zinc-400">{t("sistemKustom")}</Link>
+          <Link href="/rajafifi/services/detailed" className="hover:text-zinc-400">{t("sistemKustom")}</Link>
           <span>&middot;</span>
-          <Link href="/calculator" className="hover:text-zinc-400">{t("kalkulatorDinamik")}</Link>
+          <Link href="/rajafifi/calculator" className="hover:text-zinc-400">{t("kalkulatorDinamik")}</Link>
         </p>
       </div>
     </footer>

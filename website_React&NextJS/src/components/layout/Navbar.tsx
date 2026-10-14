@@ -26,9 +26,9 @@ export default function Navbar() {
   }, []);
 
   const otherLinks = [
-    { name: t("navGallery"), href: "/gallery" },
-    { name: t("navCalculator"), href: "/calculator" },
-    { name: t("navContact"), href: "/contact" }
+    { name: t("navGallery"), href: "/rajafifi/gallery" },
+    { name: t("navCalculator"), href: "/rajafifi/calculator" },
+    { name: t("navContact"), href: "/rajafifi/contact" }
   ];
 
   const isActive = (path: string) => pathname === path;
@@ -51,7 +51,7 @@ export default function Navbar() {
         >
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center gap-2.5 group">
+            <Link href="/rajafifi" className="flex items-center gap-2.5 group">
               <div className="relative w-8 h-8 md:w-9 md:h-9 shrink-0 transition-transform duration-300 group-hover:scale-105">
                 <Image
                   src="/logo.png"
@@ -77,16 +77,16 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-1.5">
             {/* Home Link */}
             <Link
-              href="/"
+              href="/rajafifi"
               className={`relative px-3.5 py-2 text-sm font-semibold transition-all duration-300 group/link ${
-                isActive("/")
+                isActive("/rajafifi")
                   ? "text-purple-400"
                   : "text-zinc-400 hover:text-zinc-150"
               }`}
             >
               {t("navHome")}
               <span className={`absolute bottom-0 left-3.5 right-3.5 h-[2px] bg-purple-500 rounded-full transition-all duration-300 ${
-                isActive("/") ? "opacity-100 scale-100" : "opacity-0 scale-50 group-hover/link:opacity-65 group-hover/link:scale-100"
+                isActive("/rajafifi") ? "opacity-100 scale-100" : "opacity-0 scale-50 group-hover/link:opacity-65 group-hover/link:scale-100"
               }`} />
             </Link>
 
@@ -94,7 +94,7 @@ export default function Navbar() {
             <div className="relative group">
               <button
                 className={`relative px-3.5 py-2 text-sm font-semibold transition-all duration-300 flex items-center gap-1.5 cursor-pointer ${
-                  pathname.startsWith("/services")
+                  pathname.startsWith("/rajafifi/services")
                     ? "text-purple-400"
                     : "text-zinc-400 hover:text-zinc-150"
                 }`}
@@ -109,16 +109,16 @@ export default function Navbar() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
                 </svg>
                 <span className={`absolute bottom-0 left-3.5 right-3.5 h-[2px] bg-purple-500 rounded-full transition-all duration-300 ${
-                  pathname.startsWith("/services") ? "opacity-100 scale-100" : "opacity-0 scale-50 group-hover:opacity-65 group-hover:scale-100"
+                  pathname.startsWith("/rajafifi/services") ? "opacity-100 scale-100" : "opacity-0 scale-50 group-hover:opacity-65 group-hover:scale-100"
                 }`} />
               </button>
 
               {/* Dropdown Menu */}
               <div className="absolute top-full left-0 mt-2.5 w-64 rounded-2xl bg-zinc-950/95 backdrop-blur-xl border border-zinc-800/60 p-2 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.8)] transition-all duration-300 origin-top-left opacity-0 scale-95 -translate-y-2 invisible group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 group-hover:visible z-50">
                 <Link
-                  href="/services/fast-track"
+                  href="/rajafifi/services/fast-track"
                   className={`block px-4.5 py-2.5 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 ${
-                    isActive("/services/fast-track")
+                    isActive("/rajafifi/services/fast-track")
                       ? "bg-purple-500/10 text-purple-300 border-l-2 border-purple-500 pl-5.5"
                       : "text-zinc-450 hover:text-zinc-150 hover:bg-zinc-900/50 hover:pl-5.5"
                   }`}
@@ -126,9 +126,9 @@ export default function Navbar() {
                   {t("navFastTrack")}
                 </Link>
                 <Link
-                  href="/services/detailed"
+                  href="/rajafifi/services/detailed"
                   className={`block px-4.5 py-2.5 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 ${
-                    isActive("/services/detailed")
+                    isActive("/rajafifi/services/detailed")
                       ? "bg-purple-500/10 text-purple-300 border-l-2 border-purple-500 pl-5.5"
                       : "text-zinc-455 hover:text-zinc-150 hover:bg-zinc-900/50 hover:pl-5.5"
                   }`}
@@ -137,9 +137,9 @@ export default function Navbar() {
                 </Link>
                 <div className="border-t border-zinc-900/60 my-1.5 mx-2"></div>
                 <Link
-                  href="/services/website-fix"
+                  href="/rajafifi/services/website-fix"
                   className={`block px-4.5 py-2.5 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 ${
-                    isActive("/services/website-fix")
+                    isActive("/rajafifi/services/website-fix")
                       ? "bg-purple-500/10 text-purple-300 border-l-2 border-purple-500 pl-5.5"
                       : "text-zinc-455 hover:text-zinc-150 hover:bg-zinc-900/50 hover:pl-5.5"
                   }`}
@@ -147,9 +147,9 @@ export default function Navbar() {
                   {t("navWebsiteFix")}
                 </Link>
                 <Link
-                  href="/services/systems-apps"
+                  href="/rajafifi/services/systems-apps"
                   className={`block px-4.5 py-2.5 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 ${
-                    isActive("/services/systems-apps")
+                    isActive("/rajafifi/services/systems-apps")
                       ? "bg-purple-500/10 text-purple-300 border-l-2 border-purple-500 pl-5.5"
                       : "text-zinc-455 hover:text-zinc-150 hover:bg-zinc-900/50 hover:pl-5.5"
                   }`}
@@ -193,7 +193,7 @@ export default function Navbar() {
             <div className="relative group">
               <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-500 opacity-20 blur-[2px] group-hover:opacity-85 transition duration-500" />
               <Link
-                href="/calculator"
+                href="/rajafifi/calculator"
                 className="relative block px-5 py-2 rounded-full text-xs font-bold bg-zinc-950 text-zinc-250 border border-zinc-800/85 hover:border-zinc-700 hover:text-purple-400 transition duration-300 cursor-pointer shadow-[0_2px_8px_rgba(0,0,0,0.5)]"
               >
                 {t("navButton")}
@@ -238,10 +238,10 @@ export default function Navbar() {
         <div className="px-3 pt-2 pb-5 space-y-1 sm:px-4">
           {/* Home Link */}
           <Link
-            href="/"
+            href="/rajafifi"
             onClick={() => setIsOpen(false)}
             className={`block px-4 py-3 rounded-xl text-base font-semibold transition-all ${
-              isActive("/")
+              isActive("/rajafifi")
                 ? "bg-purple-500/10 text-purple-400 border-l-2 border-purple-500 pl-5"
                 : "text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900/40"
             }`}
@@ -254,7 +254,7 @@ export default function Navbar() {
             <button
               onClick={() => setServicesDropdown(!servicesDropdown)}
               className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-base font-semibold transition-all text-left ${
-                pathname.startsWith("/services")
+                pathname.startsWith("/rajafifi/services")
                   ? "bg-purple-500/10 text-purple-400 border-l-2 border-purple-500 pl-5"
                   : "text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900/40"
               }`}
@@ -267,10 +267,10 @@ export default function Navbar() {
 
             <div className={`pl-4 pr-2 space-y-1 transition-all overflow-hidden ${servicesDropdown ? "max-h-60" : "max-h-0"}`}>
               <Link
-                href="/services/fast-track"
+                href="/rajafifi/services/fast-track"
                 onClick={() => { setIsOpen(false); setServicesDropdown(false); }}
                 className={`block px-4 py-2.5 rounded-xl text-sm font-medium transition-all ${
-                  isActive("/services/fast-track") 
+                  isActive("/rajafifi/services/fast-track") 
                     ? "text-purple-400 bg-purple-500/5 font-semibold" 
                     : "text-zinc-450 hover:text-zinc-200 hover:bg-zinc-900/20"
                 }`}
@@ -278,10 +278,10 @@ export default function Navbar() {
                 {t("navFastTrack")}
               </Link>
               <Link
-                href="/services/detailed"
+                href="/rajafifi/services/detailed"
                 onClick={() => { setIsOpen(false); setServicesDropdown(false); }}
                 className={`block px-4 py-2.5 rounded-xl text-sm font-medium transition-all ${
-                  isActive("/services/detailed") 
+                  isActive("/rajafifi/services/detailed") 
                     ? "text-purple-400 bg-purple-500/5 font-semibold" 
                     : "text-zinc-450 hover:text-zinc-200 hover:bg-zinc-900/20"
                 }`}
@@ -289,10 +289,10 @@ export default function Navbar() {
                 {t("navCustom")}
               </Link>
               <Link
-                href="/services/website-fix"
+                href="/rajafifi/services/website-fix"
                 onClick={() => { setIsOpen(false); setServicesDropdown(false); }}
                 className={`block px-4 py-2.5 rounded-xl text-sm font-medium transition-all ${
-                  isActive("/services/website-fix") 
+                  isActive("/rajafifi/services/website-fix") 
                     ? "text-purple-400 bg-purple-500/5 font-semibold" 
                     : "text-zinc-450 hover:text-zinc-200 hover:bg-zinc-900/20"
                 }`}
@@ -300,10 +300,10 @@ export default function Navbar() {
                 {t("navWebsiteFix")}
               </Link>
               <Link
-                href="/services/systems-apps"
+                href="/rajafifi/services/systems-apps"
                 onClick={() => { setIsOpen(false); setServicesDropdown(false); }}
                 className={`block px-4 py-2.5 rounded-xl text-sm font-medium transition-all ${
-                  isActive("/services/systems-apps") 
+                  isActive("/rajafifi/services/systems-apps") 
                     ? "text-purple-400 bg-purple-500/5 font-semibold" 
                     : "text-zinc-450 hover:text-zinc-200 hover:bg-zinc-900/20"
                 }`}
@@ -333,7 +333,7 @@ export default function Navbar() {
             <div className="relative group">
               <div className="absolute -inset-0.5 rounded-xl bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-500 opacity-20 blur-[2px]" />
               <Link
-                href="/calculator"
+                href="/rajafifi/calculator"
                 onClick={() => setIsOpen(false)}
                 className="relative block w-full py-3 text-center rounded-xl text-sm font-extrabold bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-500 text-zinc-950 border-none transition duration-300 shadow-[0_3px_12px_rgba(0,0,0,0.4)]"
               >
