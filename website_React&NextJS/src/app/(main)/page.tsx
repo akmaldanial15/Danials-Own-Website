@@ -33,6 +33,11 @@ export default function MainHomePage() {
     <div className="space-y-24 sm:space-y-32 lg:space-y-40 pb-28">
       {/* 1. HERO SECTION */}
       <section className="relative pt-8 sm:pt-16 lg:pt-20 pb-16 sm:pb-24 overflow-hidden">
+        {/* Colorful Floating Aurora Ambient Orbs */}
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-gradient-to-tr from-cyan-500/25 via-indigo-500/20 to-transparent blur-[120px] pointer-events-none rounded-full -z-10 animate-pulse-glow" />
+        <div className="absolute top-20 right-10 w-[450px] h-[450px] bg-gradient-to-bl from-purple-500/25 via-pink-500/20 to-transparent blur-[120px] pointer-events-none rounded-full -z-10" />
+        <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-gradient-to-tr from-emerald-500/20 via-teal-500/15 to-transparent blur-[120px] pointer-events-none rounded-full -z-10" />
+
         <div className="ms-container relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             {/* Left Content (7 cols) */}
@@ -118,91 +123,95 @@ export default function MainHomePage() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Pillar 1: Web */}
+          {/* Pillar 1: Web - Cyan Glow */}
           <Link
             href="/services/websites"
-            className="ms-card p-6 sm:p-7 flex flex-col justify-between group border-white/10 hover:border-cyan-500/50 hover:shadow-[0_15px_40px_rgba(0,0,0,0.8),0_0_25px_rgba(6,182,212,0.2)]"
+            className="ms-card p-6 sm:p-7 flex flex-col justify-between group border-cyan-500/40 bg-gradient-to-b from-cyan-500/25 via-[#0E1424] to-[#0A0F1D] hover:border-cyan-400 hover:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_40px_rgba(6,182,212,0.45)] transition-all duration-300 relative overflow-hidden"
           >
-            <div className="space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-cyan-500/15 text-cyan-300 flex items-center justify-center font-black text-base border border-cyan-500/30 group-hover:scale-110 transition-transform">
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-cyan-400 to-emerald-400 opacity-80 group-hover:opacity-100 shadow-[0_0_12px_rgba(6,182,212,0.6)]" />
+            <div className="space-y-4 pt-1">
+              <div className="w-12 h-12 rounded-2xl bg-cyan-500/25 text-cyan-300 flex items-center justify-center font-black text-base border border-cyan-500/40 shadow-[0_0_18px_rgba(6,182,212,0.35)] group-hover:scale-110 transition-transform">
                 01
               </div>
               <h3 className="text-lg font-black text-white group-hover:text-cyan-300 transition-colors">
                 {t("pillarWebTitle")}
               </h3>
-              <p className="text-xs text-zinc-400 leading-relaxed">
+              <p className="text-xs text-zinc-300 leading-relaxed font-medium">
                 {t("pillarWebDesc")}
               </p>
             </div>
-            <div className="pt-5 border-t border-white/5 flex items-center justify-between text-xs font-bold text-cyan-400 mt-4">
-              <span className="text-sm font-black text-white">dari RM79</span>
-              <span className="group-hover:translate-x-1 transition-transform">Ketahui →</span>
+            <div className="pt-5 border-t border-white/10 flex items-center justify-between text-xs font-bold text-cyan-300 mt-4">
+              <span className="text-sm font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-teal-300">dari RM79</span>
+              <span className="group-hover:translate-x-1.5 transition-transform font-black">Ketahui →</span>
             </div>
           </Link>
 
-          {/* Pillar 2: Design */}
+          {/* Pillar 2: Design - Vivid Rose / Pink Glow */}
           <Link
             href="/services/design"
-            className="ms-card p-6 sm:p-7 flex flex-col justify-between group border-white/10 hover:border-emerald-500/50 hover:shadow-[0_15px_40px_rgba(0,0,0,0.8),0_0_25px_rgba(16,185,129,0.2)]"
+            className="ms-card p-6 sm:p-7 flex flex-col justify-between group border-pink-500/40 bg-gradient-to-b from-pink-500/25 via-[#0E1424] to-[#0A0F1D] hover:border-pink-400 hover:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_40px_rgba(236,72,153,0.45)] transition-all duration-300 relative overflow-hidden"
           >
-            <div className="space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-emerald-500/15 text-emerald-300 flex items-center justify-center font-black text-base border border-emerald-500/30 group-hover:scale-110 transition-transform">
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-rose-400 via-pink-400 to-purple-400 opacity-80 group-hover:opacity-100 shadow-[0_0_12px_rgba(236,72,153,0.6)]" />
+            <div className="space-y-4 pt-1">
+              <div className="w-12 h-12 rounded-2xl bg-pink-500/25 text-pink-300 flex items-center justify-center font-black text-base border border-pink-500/40 shadow-[0_0_18px_rgba(236,72,153,0.35)] group-hover:scale-110 transition-transform">
                 02
               </div>
-              <h3 className="text-lg font-black text-white group-hover:text-emerald-300 transition-colors">
+              <h3 className="text-lg font-black text-white group-hover:text-pink-300 transition-colors">
                 {t("pillarDesignTitle")}
               </h3>
-              <p className="text-xs text-zinc-400 leading-relaxed">
+              <p className="text-xs text-zinc-300 leading-relaxed font-medium">
                 {t("pillarDesignDesc")}
               </p>
             </div>
-            <div className="pt-5 border-t border-white/5 flex items-center justify-between text-xs font-bold text-emerald-400 mt-4">
-              <span className="text-sm font-black text-white">dari RM5</span>
-              <span className="group-hover:translate-x-1 transition-transform">Ketahui →</span>
+            <div className="pt-5 border-t border-white/10 flex items-center justify-between text-xs font-bold text-pink-300 mt-4">
+              <span className="text-sm font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-rose-300">dari RM5</span>
+              <span className="group-hover:translate-x-1.5 transition-transform font-black">Ketahui →</span>
             </div>
           </Link>
 
-          {/* Pillar 3: Fix */}
+          {/* Pillar 3: Fix - Neon Purple Glow */}
           <Link
             href="/services/website-fix"
-            className="ms-card p-6 sm:p-7 flex flex-col justify-between group border-white/10 hover:border-purple-500/50 hover:shadow-[0_15px_40px_rgba(0,0,0,0.8),0_0_25px_rgba(168,85,247,0.2)]"
+            className="ms-card p-6 sm:p-7 flex flex-col justify-between group border-purple-500/40 bg-gradient-to-b from-purple-500/25 via-[#0E1424] to-[#0A0F1D] hover:border-purple-400 hover:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_40px_rgba(168,85,247,0.45)] transition-all duration-300 relative overflow-hidden"
           >
-            <div className="space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-purple-500/15 text-purple-300 flex items-center justify-center font-black text-base border border-purple-500/30 group-hover:scale-110 transition-transform">
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-purple-400 via-indigo-400 to-cyan-400 opacity-80 group-hover:opacity-100 shadow-[0_0_12px_rgba(168,85,247,0.6)]" />
+            <div className="space-y-4 pt-1">
+              <div className="w-12 h-12 rounded-2xl bg-purple-500/25 text-purple-300 flex items-center justify-center font-black text-base border border-purple-500/40 shadow-[0_0_18px_rgba(168,85,247,0.35)] group-hover:scale-110 transition-transform">
                 03
               </div>
               <h3 className="text-lg font-black text-white group-hover:text-purple-300 transition-colors">
                 {t("pillarRepairTitle")}
               </h3>
-              <p className="text-xs text-zinc-400 leading-relaxed">
+              <p className="text-xs text-zinc-300 leading-relaxed font-medium">
                 {t("pillarRepairDesc")}
               </p>
             </div>
-            <div className="pt-5 border-t border-white/5 flex items-center justify-between text-xs font-bold text-purple-400 mt-4">
-              <span className="text-sm font-black text-white">dari RM29</span>
-              <span className="group-hover:translate-x-1 transition-transform">Ketahui →</span>
+            <div className="pt-5 border-t border-white/10 flex items-center justify-between text-xs font-bold text-purple-300 mt-4">
+              <span className="text-sm font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-indigo-300">dari RM29</span>
+              <span className="group-hover:translate-x-1.5 transition-transform font-black">Ketahui →</span>
             </div>
           </Link>
 
-          {/* Pillar 4: Systems */}
+          {/* Pillar 4: Systems - Sunset Amber Glow */}
           <Link
             href="/services/systems-apps"
-            className="ms-card p-6 sm:p-7 flex flex-col justify-between group border-white/10 hover:border-amber-500/50 hover:shadow-[0_15px_40px_rgba(0,0,0,0.8),0_0_25px_rgba(245,158,11,0.2)]"
+            className="ms-card p-6 sm:p-7 flex flex-col justify-between group border-amber-500/40 bg-gradient-to-b from-amber-500/25 via-[#0E1424] to-[#0A0F1D] hover:border-amber-400 hover:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_40px_rgba(245,158,11,0.45)] transition-all duration-300 relative overflow-hidden"
           >
-            <div className="space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-amber-500/15 text-amber-300 flex items-center justify-center font-black text-base border border-amber-500/30 group-hover:scale-110 transition-transform">
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-400 opacity-80 group-hover:opacity-100 shadow-[0_0_12px_rgba(245,158,11,0.6)]" />
+            <div className="space-y-4 pt-1">
+              <div className="w-12 h-12 rounded-2xl bg-amber-500/25 text-amber-300 flex items-center justify-center font-black text-base border border-amber-500/40 shadow-[0_0_18px_rgba(245,158,11,0.35)] group-hover:scale-110 transition-transform">
                 04
               </div>
               <h3 className="text-lg font-black text-white group-hover:text-amber-300 transition-colors">
                 {t("pillarSystemsTitle")}
               </h3>
-              <p className="text-xs text-zinc-400 leading-relaxed">
+              <p className="text-xs text-zinc-300 leading-relaxed font-medium">
                 {t("pillarSystemsDesc")}
               </p>
             </div>
-            <div className="pt-5 border-t border-white/5 flex items-center justify-between text-xs font-bold text-amber-400 mt-4">
-              <span className="text-sm font-black text-white">dari RM499</span>
-              <span className="group-hover:translate-x-1 transition-transform">Ketahui →</span>
+            <div className="pt-5 border-t border-white/10 flex items-center justify-between text-xs font-bold text-amber-300 mt-4">
+              <span className="text-sm font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-yellow-300">dari RM499</span>
+              <span className="group-hover:translate-x-1.5 transition-transform font-black">Ketahui →</span>
             </div>
           </Link>
         </div>
@@ -277,21 +286,37 @@ export default function MainHomePage() {
           </p>
 
           {/* Category Tabs */}
-          <div className="inline-flex p-1.5 rounded-full bg-white/5 border border-white/10 gap-1.5 mt-6">
+          <div className="inline-flex flex-wrap items-center justify-center p-1.5 rounded-full bg-white/5 border border-white/10 gap-1.5 mt-6">
             {[
-              { id: "website", label: language === "ms" ? "Laman Web" : "Websites" },
-              { id: "design_express", label: "Design Express" },
-              { id: "design_custom", label: "Design Custom" },
-              { id: "repair", label: language === "ms" ? "Baiki & Sistem" : "Repair & Systems" },
+              {
+                id: "website",
+                label: language === "ms" ? "Laman Web" : "Websites",
+                activeStyle: "bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 text-black font-black shadow-[0_0_22px_rgba(6,182,212,0.5)]",
+              },
+              {
+                id: "design_express",
+                label: "Design Express",
+                activeStyle: "bg-gradient-to-r from-amber-400 via-orange-400 to-rose-400 text-black font-black shadow-[0_0_22px_rgba(245,158,11,0.5)]",
+              },
+              {
+                id: "design_custom",
+                label: "Design Custom",
+                activeStyle: "bg-gradient-to-r from-purple-400 via-fuchsia-400 to-pink-400 text-white font-black shadow-[0_0_22px_rgba(168,85,247,0.5)]",
+              },
+              {
+                id: "repair",
+                label: language === "ms" ? "Baiki & Sistem" : "Repair & Systems",
+                activeStyle: "bg-gradient-to-r from-blue-400 via-indigo-400 to-cyan-400 text-white font-black shadow-[0_0_22px_rgba(59,130,246,0.5)]",
+              },
             ].map((tab) => (
               <button
                 key={tab.id}
                 type="button"
                 onClick={() => setPricingCategoryTab(tab.id as ServiceCategory)}
-                className={`px-4 py-2 rounded-full text-xs font-black transition-all cursor-pointer ${
+                className={`px-4 sm:px-5 py-2.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
                   pricingCategoryTab === tab.id
-                    ? "bg-gradient-to-r from-cyan-500 to-emerald-500 text-black shadow-lg"
-                    : "text-zinc-400 hover:text-white"
+                    ? tab.activeStyle
+                    : "text-zinc-400 hover:text-white hover:bg-white/10"
                 }`}
               >
                 {tab.label}
@@ -320,7 +345,8 @@ export default function MainHomePage() {
 
       {/* 6. FOUR-STEP PROCESS (SECTION 17 OF PROMPT) */}
       <section className="ms-container">
-        <div className="p-8 sm:p-14 rounded-3xl bg-[#0E1424]/80 backdrop-blur-2xl border border-white/10 shadow-2xl">
+        <div className="p-8 sm:p-14 rounded-3xl bg-gradient-to-b from-[#0E1424]/90 to-[#0A0F1D]/95 backdrop-blur-2xl border border-white/15 shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 left-1/4 right-1/4 h-[1px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent" />
           <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
             <span className="ms-pill ms-pill-cyan uppercase font-black tracking-widest text-xs">
               {t("processEyebrow")}
@@ -332,17 +358,49 @@ export default function MainHomePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { num: "01", title: t("processStep1Title"), desc: t("processStep1Desc") },
-              { num: "02", title: t("processStep2Title"), desc: t("processStep2Desc") },
-              { num: "03", title: t("processStep3Title"), desc: t("processStep3Desc") },
-              { num: "04", title: t("processStep4Title"), desc: t("processStep4Desc") },
+              {
+                num: "01",
+                title: t("processStep1Title"),
+                desc: t("processStep1Desc"),
+                cardClass: "border-cyan-500/30 bg-gradient-to-b from-cyan-950/25 via-[#0E1424] to-[#0A0F1D] hover:border-cyan-400 hover:shadow-[0_15px_30px_rgba(6,182,212,0.25)]",
+                numClass: "bg-cyan-500/20 text-cyan-300 border-cyan-500/40 shadow-[0_0_15px_rgba(6,182,212,0.3)]",
+                barClass: "bg-cyan-400",
+              },
+              {
+                num: "02",
+                title: t("processStep2Title"),
+                desc: t("processStep2Desc"),
+                cardClass: "border-amber-500/30 bg-gradient-to-b from-amber-950/25 via-[#0E1424] to-[#0A0F1D] hover:border-amber-400 hover:shadow-[0_15px_30px_rgba(245,158,11,0.25)]",
+                numClass: "bg-amber-500/20 text-amber-300 border-amber-500/40 shadow-[0_0_15px_rgba(245,158,11,0.3)]",
+                barClass: "bg-amber-400",
+              },
+              {
+                num: "03",
+                title: t("processStep3Title"),
+                desc: t("processStep3Desc"),
+                cardClass: "border-purple-500/30 bg-gradient-to-b from-purple-950/25 via-[#0E1424] to-[#0A0F1D] hover:border-purple-400 hover:shadow-[0_15px_30px_rgba(168,85,247,0.25)]",
+                numClass: "bg-purple-500/20 text-purple-300 border-purple-500/40 shadow-[0_0_15px_rgba(168,85,247,0.3)]",
+                barClass: "bg-purple-400",
+              },
+              {
+                num: "04",
+                title: t("processStep4Title"),
+                desc: t("processStep4Desc"),
+                cardClass: "border-emerald-500/30 bg-gradient-to-b from-emerald-950/25 via-[#0E1424] to-[#0A0F1D] hover:border-emerald-400 hover:shadow-[0_15px_30px_rgba(16,185,129,0.25)]",
+                numClass: "bg-emerald-500/20 text-emerald-300 border-emerald-500/40 shadow-[0_0_15px_rgba(16,185,129,0.3)]",
+                barClass: "bg-emerald-400",
+              },
             ].map((step, idx) => (
-              <div key={idx} className="p-6 rounded-2xl bg-white/5 border border-white/10 space-y-3 hover:border-cyan-500/40 transition-colors">
-                <span className="text-xs font-mono font-black text-cyan-300 px-2.5 py-1 rounded-full bg-cyan-500/15 border border-cyan-500/30 inline-block">
+              <div
+                key={idx}
+                className={`p-6 rounded-2xl border space-y-3.5 transition-all relative overflow-hidden group ${step.cardClass}`}
+              >
+                <div className={`absolute top-0 left-0 right-0 h-1 ${step.barClass} opacity-60 group-hover:opacity-100 transition-opacity`} />
+                <span className={`w-9 h-9 rounded-xl font-mono font-black text-xs flex items-center justify-center border ${step.numClass} group-hover:scale-110 transition-transform`}>
                   {step.num}
                 </span>
-                <h3 className="font-black text-sm text-white">{step.title}</h3>
-                <p className="text-xs text-zinc-400 leading-relaxed">{step.desc}</p>
+                <h3 className="font-black text-sm text-white group-hover:text-cyan-200 transition-colors">{step.title}</h3>
+                <p className="text-xs text-zinc-300 leading-relaxed font-medium">{step.desc}</p>
               </div>
             ))}
           </div>

@@ -103,14 +103,14 @@ export default function DesignPathwayComparison() {
     <div className="w-full">
       {/* Side by side Pathway Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-        {/* Pathway A: Express */}
-        <div className="ms-card p-6 sm:p-8 flex flex-col justify-between border-t-4 border-t-emerald-400 bg-[#0E1424]/90 backdrop-blur-2xl border-white/10 hover:border-emerald-500/50 hover:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_30px_rgba(16,185,129,0.2)] transition-all duration-300">
+        {/* Pathway A: Express - Sunset Amber / Coral Glow */}
+        <div className="ms-card p-6 sm:p-8 flex flex-col justify-between border-t-4 border-t-amber-400 bg-gradient-to-b from-amber-500/10 via-[#0E1424] to-[#0E1424] backdrop-blur-2xl border-white/10 hover:border-amber-400/60 hover:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_35px_rgba(245,158,11,0.3)] transition-all duration-300">
           <div className="space-y-4">
             <div className="flex items-center justify-between">
-              <span className="ms-pill ms-pill-emerald">
+              <span className="ms-pill ms-pill-amber">
                 {language === "ms" ? "⚡ PILIHAN PANTAS" : "⚡ RAPID EDIT"}
               </span>
-              <span className="text-xs font-bold text-zinc-400">
+              <span className="text-xs font-bold text-amber-300/80">
                 {language === "ms" ? "Pakej E1 & E2" : "Packages E1 & E2"}
               </span>
             </div>
@@ -119,13 +119,13 @@ export default function DesignPathwayComparison() {
               <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
                 Design Express
               </h3>
-              <p className="text-sm font-bold text-emerald-400 mt-1">
+              <p className="text-sm font-bold text-amber-400 mt-1">
                 {language === "ms" ? "Ringkas, cepat dan mesra bajet." : "Focused, fast, and budget-conscious."}
               </p>
             </div>
 
             <div className="pt-2 flex items-baseline gap-2 border-b border-white/10 pb-4">
-              <span className="text-4xl font-black text-white tracking-tight">RM5</span>
+              <span className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-400 tracking-tight">RM5</span>
               <span className="text-xs text-zinc-400 font-semibold">
                 {language === "ms" ? "/ gambar (pakej asas)" : "/ image (starter tier)"}
               </span>
@@ -139,15 +139,15 @@ export default function DesignPathwayComparison() {
 
             <ul className="space-y-2 text-xs text-zinc-200 pt-2">
               <li className="flex items-center gap-2">
-                <span className="text-emerald-400 font-bold">✓</span>
+                <span className="text-amber-400 font-bold">✓</span>
                 <span>{language === "ms" ? "Siap cepat dengan fail PNG/JPG resolusi tinggi" : "Fast turnaround with high-res PNG/JPG"}</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-400 font-bold">✓</span>
+                <span className="text-amber-400 font-bold">✓</span>
                 <span>{language === "ms" ? "Termasuk 2 kali suntingan kecil dalam skop" : "Includes 2 minor revision rounds"}</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-400 font-bold">✓</span>
+                <span className="text-amber-400 font-bold">✓</span>
                 <span>{language === "ms" ? "Pilihan Duo Bundle: RM8 untuk 2 keping gambar" : "Duo Bundle option: RM8 for 2 images"}</span>
               </li>
             </ul>
@@ -156,21 +156,21 @@ export default function DesignPathwayComparison() {
           <div className="pt-6 mt-6 border-t border-white/10">
             <Link
               href="/calculator?category=design_express&package=e1-single-image"
-              className="ms-btn-primary w-full text-center text-xs py-3.5 rounded-xl font-extrabold"
+              className="ms-btn-sunset w-full text-center text-xs py-4 rounded-xl font-black uppercase tracking-wider block"
             >
-              {language === "ms" ? "Pilih Design Express →" : "Choose Design Express →"}
+              {language === "ms" ? "Pilih Design Express (RM5) →" : "Choose Design Express (RM5) →"}
             </Link>
           </div>
         </div>
 
-        {/* Pathway B: Custom */}
-        <div className="ms-card p-6 sm:p-8 flex flex-col justify-between border-t-4 border-t-cyan-400 bg-[#0E1424]/90 backdrop-blur-2xl border-white/10 hover:border-cyan-500/50 hover:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_30px_rgba(6,182,212,0.2)] transition-all duration-300">
+        {/* Pathway B: Custom - Neon Purple / Fuchsia Glow */}
+        <div className="ms-card p-6 sm:p-8 flex flex-col justify-between border-t-4 border-t-purple-400 bg-gradient-to-b from-purple-500/10 via-[#0E1424] to-[#0E1424] backdrop-blur-2xl border-white/10 hover:border-purple-400/60 hover:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_35px_rgba(168,85,247,0.3)] transition-all duration-300">
           <div className="space-y-4">
             <div className="flex items-center justify-between">
-              <span className="ms-pill ms-pill-cyan">
+              <span className="ms-pill ms-pill-purple">
                 {language === "ms" ? "✦ REKA BENTUK TELITI" : "✦ BESPOKE DESIGN"}
               </span>
-              <span className="text-xs font-bold text-zinc-400">
+              <span className="text-xs font-bold text-purple-300/80">
                 {language === "ms" ? "Pakej C1 - C5" : "Packages C1 - C5"}
               </span>
             </div>
@@ -179,7 +179,7 @@ export default function DesignPathwayComparison() {
               <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
                 Design Custom
               </h3>
-              <p className="text-sm font-bold text-cyan-400 mt-1">
+              <p className="text-sm font-bold text-purple-300 mt-1">
                 {language === "ms"
                   ? "Lebih terperinci, lebih tersusun, mengikut identiti anda."
                   : "Bespoke, refined, and tailored to your brand identity."}
@@ -187,7 +187,7 @@ export default function DesignPathwayComparison() {
             </div>
 
             <div className="pt-2 flex items-baseline gap-2 border-b border-white/10 pb-4">
-              <span className="text-4xl font-black text-white tracking-tight">RM35+</span>
+              <span className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-300 tracking-tight">RM35+</span>
               <span className="text-xs text-zinc-400 font-semibold">
                 {language === "ms" ? "/ poster atau gubahan gred cetak" : "/ poster or print-grade layout"}
               </span>
@@ -201,15 +201,15 @@ export default function DesignPathwayComparison() {
 
             <ul className="space-y-2 text-xs text-zinc-200 pt-2">
               <li className="flex items-center gap-2">
-                <span className="text-cyan-400 font-bold">✓</span>
+                <span className="text-purple-400 font-bold">✓</span>
                 <span>{language === "ms" ? "Gubahan visual tersusun & penetapan tipografi tajam" : "Bespoke visual composition & crisp typography"}</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-cyan-400 font-bold">✓</span>
+                <span className="text-purple-400 font-bold">✓</span>
                 <span>{language === "ms" ? "Termasuk 3 pusingan semakan terperinci" : "Includes 3 detailed revision milestones"}</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-cyan-400 font-bold">✓</span>
+                <span className="text-purple-400 font-bold">✓</span>
                 <span>{language === "ms" ? "Spesifikasi sedia cetak 300 DPI dengan margin kilang" : "Print-ready 300 DPI with factory trim margins"}</span>
               </li>
             </ul>
@@ -218,7 +218,7 @@ export default function DesignPathwayComparison() {
           <div className="pt-6 mt-6 border-t border-white/10">
             <Link
               href="/calculator?category=design_custom&package=c1-custom-poster"
-              className="ms-btn-secondary w-full text-center text-xs py-3.5 rounded-xl font-extrabold"
+              className="ms-btn-rainbow w-full text-center text-xs py-4 rounded-xl font-black uppercase tracking-wider block"
             >
               {language === "ms" ? "Bincang Design Custom →" : "Discuss Design Custom →"}
             </Link>

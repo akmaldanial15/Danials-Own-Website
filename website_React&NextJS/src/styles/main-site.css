@@ -22,10 +22,16 @@
   
   background-color: var(--ms-bg);
   background-image: 
-    radial-gradient(circle at 50% -10%, rgba(16, 185, 129, 0.18) 0%, transparent 55%),
-    radial-gradient(circle at 85% 15%, rgba(59, 130, 246, 0.15) 0%, transparent 45%),
-    radial-gradient(circle at 15% 45%, rgba(139, 92, 246, 0.12) 0%, transparent 40%),
-    radial-gradient(circle at 50% 85%, rgba(6, 182, 212, 0.14) 0%, transparent 50%);
+    /* Top vibrant cyan-emerald flare */
+    radial-gradient(circle at 50% -5%, rgba(6, 182, 212, 0.42) 0%, rgba(16, 185, 129, 0.32) 25%, transparent 65%),
+    /* Upper-right violet-fuchsia bloom */
+    radial-gradient(circle at 92% 15%, rgba(168, 85, 247, 0.40) 0%, rgba(236, 72, 153, 0.28) 30%, transparent 60%),
+    /* Mid-left electric indigo-blue nebula */
+    radial-gradient(circle at 6% 40%, rgba(99, 102, 241, 0.38) 0%, rgba(59, 130, 246, 0.26) 28%, transparent 55%),
+    /* Mid-right amber-rose warm glow */
+    radial-gradient(circle at 94% 62%, rgba(244, 63, 94, 0.30) 0%, rgba(245, 158, 11, 0.28) 32%, transparent 55%),
+    /* Lower emerald-teal pulse */
+    radial-gradient(circle at 45% 85%, rgba(16, 185, 129, 0.35) 0%, rgba(6, 182, 212, 0.28) 32%, transparent 65%);
   background-attachment: fixed;
   color: var(--ms-text);
   font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -200,33 +206,96 @@
 }
 
 .ms-pill-emerald {
-  background: rgba(16, 185, 129, 0.12);
+  background: rgba(16, 185, 129, 0.18);
   color: #34D399;
-  border: 1px solid rgba(16, 185, 129, 0.3);
+  border: 1px solid rgba(16, 185, 129, 0.45);
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.25);
 }
 
 .ms-pill-blue {
-  background: rgba(59, 130, 246, 0.12);
+  background: rgba(59, 130, 246, 0.18);
   color: #60A5FA;
-  border: 1px solid rgba(59, 130, 246, 0.3);
+  border: 1px solid rgba(59, 130, 246, 0.45);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.25);
 }
 
 .ms-pill-cyan {
-  background: rgba(6, 182, 212, 0.12);
+  background: rgba(6, 182, 212, 0.18);
   color: #22D3EE;
-  border: 1px solid rgba(6, 182, 212, 0.3);
+  border: 1px solid rgba(6, 182, 212, 0.45);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.25);
 }
 
 .ms-pill-amber {
-  background: rgba(245, 158, 11, 0.12);
+  background: rgba(245, 158, 11, 0.18);
   color: #FBBF24;
-  border: 1px solid rgba(245, 158, 11, 0.3);
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.25);
+}
+
+.ms-pill-purple {
+  background: rgba(168, 85, 247, 0.18);
+  color: #C084FC;
+  border: 1px solid rgba(168, 85, 247, 0.45);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.25);
+}
+
+.ms-pill-rose {
+  background: rgba(244, 63, 94, 0.18);
+  color: #FB7185;
+  border: 1px solid rgba(244, 63, 94, 0.45);
+  box-shadow: 0 0 15px rgba(244, 63, 94, 0.25);
 }
 
 .ms-pill-neutral {
-  background: rgba(255, 255, 255, 0.06);
-  color: #94A3B8;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+  color: #E2E8F0;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Multi-color gradient buttons */
+.ms-btn-rainbow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #06B6D4 0%, #3B82F6 30%, #8B5CF6 70%, #EC4899 100%);
+  color: #FFFFFF;
+  padding: 0.8125rem 1.75rem;
+  box-shadow: 0 4px 25px rgba(139, 92, 246, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.ms-btn-rainbow:hover {
+  box-shadow: 0 6px 35px rgba(236, 72, 153, 0.65), inset 0 1px 1px rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.12);
+}
+
+.ms-btn-sunset {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #F59E0B 0%, #F97316 40%, #EF4444 80%, #EC4899 100%);
+  color: #FFFFFF;
+  padding: 0.8125rem 1.75rem;
+  box-shadow: 0 4px 22px rgba(245, 158, 11, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.ms-btn-sunset:hover {
+  box-shadow: 0 6px 32px rgba(239, 68, 68, 0.65);
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.12);
 }
 
 /* Animated Floating Elements */
