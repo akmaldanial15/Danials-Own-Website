@@ -289,3 +289,69 @@
 .main-site ::-webkit-scrollbar-thumb:hover {
   background: rgba(16, 185, 129, 0.4);
 }
+
+/* Comprehensive High-Contrast Dark Studio Overrides */
+.main-site h1,
+.main-site h2,
+.main-site h3,
+.main-site h4,
+.main-site h5,
+.main-site h6 {
+  color: #FFFFFF;
+}
+
+/* Force light readable colors for any legacy charcoal/muted tokens */
+.main-site [class*="text-[#18201D]"] {
+  color: #F8FAFC !important;
+}
+
+.main-site [class*="text-[#52605A]"] {
+  color: #94A3B8 !important;
+}
+
+.main-site [class*="text-[#43504B]"] {
+  color: #CBD5E1 !important;
+}
+
+.main-site [class*="text-[#A3B1AB]"],
+.main-site [class*="text-[#A3B3AB]"] {
+  color: #94A3B8 !important;
+}
+
+/* Card backgrounds to dark obsidian glass */
+.main-site [class*="bg-[#FFFFFF]"],
+.main-site [class*="bg-white"]:not(button):not(.ms-btn-primary):not(.ms-pill) {
+  background-color: #0E1424 !important;
+}
+
+.main-site [class*="bg-[#FAF9F5]"] {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+.main-site [class*="bg-[#F0EFEA]"] {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Border visibility on dark backgrounds */
+.main-site [class*="border-[#DDE1DA]"],
+.main-site [class*="border-[#EBEFE8]"],
+.main-site [class*="border-[#F0EFEA]"] {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Input & Select fields inside forms */
+.main-site input,
+.main-site select,
+.main-site textarea {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.main-site input:focus,
+.main-site select:focus,
+.main-site textarea:focus {
+  border-color: #06B6D4 !important;
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.25) !important;
+}
+

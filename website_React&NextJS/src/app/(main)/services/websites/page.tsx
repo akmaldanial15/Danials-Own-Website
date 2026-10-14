@@ -13,31 +13,31 @@ export default function WebsitesServicePage() {
   const websitePackages = packagesCatalog.filter((p) => p.category === "website");
 
   return (
-    <div className="py-12 sm:py-16 space-y-16 sm:space-y-24">
+    <div className="py-12 sm:py-20 space-y-16 sm:space-y-24">
       {/* Hero Header */}
-      <div className="ms-container space-y-4 max-w-3xl mx-auto text-center">
-        <span className="ms-pill ms-pill-teal">
+      <div className="ms-container space-y-5 max-w-3xl mx-auto text-center">
+        <span className="ms-pill ms-pill-cyan uppercase font-black tracking-widest text-xs">
           {language === "ms" ? "PEMBANGUNAN LAMAN WEB" : "WEBSITE DEVELOPMENT"}
         </span>
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#18201D] tracking-tight">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight">
           {language === "ms"
             ? "Laman Web Kemas, Responsif & Sedia Dihubungi"
             : "Clean, Responsive Websites Built to Connect"}
         </h1>
-        <p className="text-sm sm:text-base text-[#52605A] leading-relaxed">
+        <p className="text-sm sm:text-lg text-zinc-300 leading-relaxed font-medium">
           {language === "ms"
             ? "Daripada landing page 1-halaman serendah RM79 hingga ke portal korporat berbilang muka surat. Dibina kemas, mesra telefon pintar, dan sedia untuk WhatsApp."
             : "From a single-page landing presence starting at RM79 to multi-page business profiles. Mobile-ready, lightweight, and structured for WhatsApp inquiries."}
         </p>
 
-        <div className="pt-2 flex flex-wrap items-center justify-center gap-4 text-xs font-bold text-[#18201D]">
-          <span className="px-3 py-1.5 rounded-full bg-[#E6F4F1] text-[#087A68] border border-[#C4E6DF]">
+        <div className="pt-2 flex flex-wrap items-center justify-center gap-3 text-xs font-bold text-white">
+          <span className="px-4 py-2 rounded-full bg-cyan-500/15 text-cyan-300 border border-cyan-500/30">
             📌 Landing Starter dari RM79
           </span>
-          <span className="px-3 py-1.5 rounded-full bg-[#FAF9F5] text-[#52605A] border border-[#DDE1DA]">
+          <span className="px-4 py-2 rounded-full bg-white/5 text-zinc-300 border border-white/10">
             ✓ Termasuk 2x suntingan kecil
           </span>
-          <span className="px-3 py-1.5 rounded-full bg-[#FAF9F5] text-[#52605A] border border-[#DDE1DA]">
+          <span className="px-4 py-2 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
             📱 100% Mobile Responsive
           </span>
         </div>
@@ -45,11 +45,11 @@ export default function WebsitesServicePage() {
 
       {/* Package Cards Grid */}
       <div className="ms-container">
-        <div className="text-center max-w-2xl mx-auto mb-10 space-y-1">
-          <h2 className="text-2xl font-extrabold text-[#18201D]">
+        <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
+          <h2 className="text-2xl sm:text-3xl font-black text-white">
             {language === "ms" ? "Pilihan Pakej Laman Web" : "Website Packages"}
           </h2>
-          <p className="text-xs text-[#52605A]">
+          <p className="text-xs sm:text-sm text-zinc-400">
             {language === "ms" ? "Pilih skop yang bersesuaian dengan fasa perniagaan anda." : "Choose the tier matching your business stage."}
           </p>
         </div>
@@ -61,103 +61,94 @@ export default function WebsitesServicePage() {
         </div>
       </div>
 
-      {/* What to Prepare Section */}
+      {/* Scope Transparency Matrix Note */}
       <div className="ms-container">
-        <div className="ms-card p-8 sm:p-10 bg-[#FAF9F5] border border-[#DDE1DA] space-y-6">
-          <div className="space-y-1">
-            <span className="text-xs font-bold tracking-widest text-[#087A68] uppercase">
-              {language === "ms" ? "PANDUAN PERSEDIAAN" : "CLIENT PREPARATION"}
+        <div className="ms-card p-6 sm:p-10 border border-white/15 bg-[#0E1424]/90 backdrop-blur-2xl shadow-2xl space-y-6 max-w-4xl mx-auto">
+          <div className="border-b border-white/10 pb-4">
+            <span className="ms-pill ms-pill-emerald uppercase font-black tracking-widest text-[10px]">
+              {language === "ms" ? "KETELUSAN SKOP" : "SCOPE TRANSPARENCY"}
             </span>
-            <h3 className="text-xl sm:text-2xl font-extrabold text-[#18201D]">
-              {language === "ms" ? "Apa yang perlu anda sediakan?" : "What should you prepare?"}
+            <h3 className="text-xl sm:text-2xl font-black text-white mt-1">
+              {language === "ms" ? "Perkara Penting Berkenaan Laman Web Kami" : "Important Website Deliverable Notes"}
             </h3>
-            <p className="text-xs text-[#52605A]">
-              {language === "ms" ? "Untuk memulakan projek dengan lancar dan pantas, sediakan bahan-bahan berikut:" : "To kick off your project efficiently, gather these simple items:"}
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-2">
-            <div className="p-4 rounded-xl bg-white border border-[#DDE1DA] space-y-2">
-              <span className="text-lg">📝</span>
-              <h4 className="font-extrabold text-sm text-[#18201D]">
-                {language === "ms" ? "1. Teks & Maklumat" : "1. Copy & Details"}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs text-zinc-300">
+            <div className="space-y-1.5 p-4 rounded-xl bg-white/5 border border-white/10">
+              <h4 className="font-black text-sm text-white">
+                {language === "ms" ? "Bahan Dibekalkan" : "Supplied Content"}
               </h4>
-              <p className="text-xs text-[#52605A] leading-relaxed">
+              <p className="leading-relaxed text-zinc-400">
                 {language === "ms"
-                  ? "Nama bisnes, pengenalan servis, senarai harga, waktu operasi, dan nombor WhatsApp."
-                  : "Business name, service descriptions, pricing notes, operating hours, and WhatsApp contact."}
+                  ? "Pelanggan menyediakan teks penerangan, logo, gambar produk/servis, dan pautan WhatsApp yang sah."
+                  : "Client supplies business details, branding logo, photography assets, and verified contact destinations."}
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-white border border-[#DDE1DA] space-y-2">
-              <span className="text-lg">🖼️</span>
-              <h4 className="font-extrabold text-sm text-[#18201D]">
-                {language === "ms" ? "2. Gambar & Logo" : "2. Photos & Logo"}
+            <div className="space-y-1.5 p-4 rounded-xl bg-white/5 border border-white/10">
+              <h4 className="font-black text-sm text-white">
+                {language === "ms" ? "Pusingan Suntingan" : "Revision Rounds"}
               </h4>
-              <p className="text-xs text-[#52605A] leading-relaxed">
+              <p className="leading-relaxed text-zinc-400">
                 {language === "ms"
-                  ? "Logo rasmi (PNG telus jika ada) dan gambar produk atau premis yang jelas."
-                  : "Official logo (transparent PNG preferred) and clear product or storefront photos."}
+                  ? "Satu pusingan suntingan merujuk kepada satu senarai perubahan yang diselaraskan serentak dalam skop asal."
+                  : "One revision round refers to one consolidated list of reasonable edits within the initial brief."}
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-white border border-[#DDE1DA] space-y-2">
-              <span className="text-lg">🌐</span>
-              <h4 className="font-extrabold text-sm text-[#18201D]">
-                {language === "ms" ? "3. Domain & Rujukan" : "3. Domain & Taste"}
+            <div className="space-y-1.5 p-4 rounded-xl bg-white/5 border border-white/10">
+              <h4 className="font-black text-sm text-white">
+                {language === "ms" ? "Domain & Hosting" : "Domain & Hosting"}
               </h4>
-              <p className="text-xs text-[#52605A] leading-relaxed">
+              <p className="leading-relaxed text-zinc-400">
                 {language === "ms"
-                  ? "Cadangan nama domain (.com/.my) atau contoh laman web yang anda minati gaya visualnya."
-                  : "Your preferred domain idea (.com/.my) or reference websites matching your aesthetic."}
+                  ? "Caj pembinaan tidak merangkumi yuran pendaftaran domain (.com) atau langganan hosting pihak ketiga."
+                  : "Build fees exclude third-party custom domain registration or ongoing commercial hosting plans."}
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Service Specific FAQ */}
-      <div className="ms-container">
-        <div className="text-center max-w-2xl mx-auto mb-8 space-y-1">
-          <h3 className="text-xl sm:text-2xl font-extrabold text-[#18201D]">
-            {language === "ms" ? "Soalan Lazim Servis Website" : "Website Service FAQ"}
+      {/* Website FAQ */}
+      <div className="ms-container max-w-3xl mx-auto space-y-8">
+        <div className="text-center space-y-2">
+          <span className="ms-pill ms-pill-cyan uppercase font-black tracking-widest text-xs">
+            FAQ
+          </span>
+          <h3 className="text-2xl sm:text-3xl font-black text-white">
+            {language === "ms" ? "Soalan Berkaitan Laman Web" : "Website Questions"}
           </h3>
-          <p className="text-xs text-[#52605A]">
-            {language === "ms" ? "Perincian mengenai domain, hosting, dan pusingan suntingan." : "Details on domain, hosting, and revision cycles."}
-          </p>
         </div>
-
-        <div className="max-w-3xl mx-auto">
-          <FaqAccordion filterCategory="website" limit={4} />
-        </div>
+        <FaqAccordion filterCategory="website" limit={4} />
       </div>
 
-      {/* CTA Strip */}
-      <div className="ms-container">
-        <div className="ms-card p-8 bg-[#17251F] text-white rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
-          <div className="space-y-1">
-            <h3 className="font-extrabold text-xl text-white">
-              {language === "ms" ? "Bina Laman Web Anda Sekarang" : "Start Your Website Project Today"}
-            </h3>
-            <p className="text-xs text-[#A3B1AB]">
-              {language === "ms" ? "Landing Starter dari RM79. Bincang terus di WhatsApp tanpa sebarang kewajipan." : "Landing Starter from RM79. Chat directly on WhatsApp with no commitment."}
-            </p>
-          </div>
-          <div className="flex items-center gap-3 shrink-0">
-            <Link
-              href="/calculator?category=website"
-              className="ms-btn-secondary text-xs py-2.5 px-4 rounded-xl font-bold bg-[#293832] text-white border-[#3b4c45]"
-            >
-              {language === "ms" ? "Kira Bajet" : "Estimate"}
-            </Link>
+      {/* CTA */}
+      <div className="ms-container text-center">
+        <div className="p-8 sm:p-14 rounded-3xl bg-gradient-to-b from-[#0E1424] via-[#111A30] to-[#070A12] border border-cyan-500/40 max-w-3xl mx-auto space-y-5 shadow-2xl">
+          <h3 className="text-2xl sm:text-3xl font-black text-white">
+            {language === "ms" ? "Sedia untuk membina laman web anda?" : "Ready to build your website?"}
+          </h3>
+          <p className="text-xs sm:text-sm text-zinc-300 max-w-md mx-auto">
+            {language === "ms"
+              ? "Bincang keperluan anda di WhatsApp atau gunakan kalkulator bajet untuk anggaran segera."
+              : "Discuss your requirements directly on WhatsApp or run an instant estimate."}
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
             <a
               href={siteConfig.contact.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="ms-btn-primary text-xs py-2.5 px-5 rounded-xl font-bold"
+              className="ms-btn-primary text-xs py-3.5 px-6 font-black uppercase tracking-wider"
             >
-              {language === "ms" ? "WhatsApp Danial →" : "WhatsApp Danial →"}
+              {language === "ms" ? "Bincang di WhatsApp →" : "Chat on WhatsApp →"}
             </a>
+            <Link
+              href="/calculator?category=website"
+              className="ms-btn-secondary text-xs py-3.5 px-6 font-black uppercase tracking-wider"
+            >
+              {language === "ms" ? "Kira Anggaran Web" : "Estimate Website"}
+            </Link>
           </div>
         </div>
       </div>

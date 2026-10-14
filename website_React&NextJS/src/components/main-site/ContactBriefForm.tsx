@@ -71,12 +71,12 @@ Requirements: ${formData.description}`;
   const isFormValid = formData.category.trim() !== "" && formData.description.trim().length >= 5;
 
   return (
-    <div className="ms-card p-6 sm:p-8 space-y-6">
-      <div className="space-y-1 border-b border-[#F0EFEA] pb-4">
-        <h3 className="text-xl sm:text-2xl font-extrabold text-[#18201D] tracking-tight">
+    <div className="ms-card p-6 sm:p-8 space-y-6 border border-white/10 bg-[#0E1424]/90 backdrop-blur-2xl shadow-2xl">
+      <div className="space-y-1.5 border-b border-white/10 pb-5">
+        <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">
           {t("contactTitle")}
         </h3>
-        <p className="text-xs text-[#52605A] leading-relaxed">
+        <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
           {t("contactSubtitle")}
         </p>
       </div>
@@ -88,12 +88,12 @@ Requirements: ${formData.description}`;
             window.open(whatsappUrl, "_blank", "noopener,noreferrer");
           }
         }}
-        className="space-y-4"
+        className="space-y-5"
       >
         {/* Name & Business */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="text-xs font-bold text-[#18201D] block mb-1">
+            <label className="text-xs font-bold text-white block mb-1.5">
               {t("contactFormName")}
             </label>
             <input
@@ -101,11 +101,11 @@ Requirements: ${formData.description}`;
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               placeholder={language === "ms" ? "Contoh: Danial" : "E.g. Danial"}
-              className="w-full p-2.5 rounded-lg border border-[#DDE1DA] bg-white text-xs"
+              className="w-full p-3 rounded-xl border border-white/15 bg-white/5 text-white placeholder-zinc-500 text-xs font-medium focus:border-cyan-400 focus:outline-hidden transition-all"
             />
           </div>
           <div>
-            <label className="text-xs font-bold text-[#18201D] block mb-1">
+            <label className="text-xs font-bold text-white block mb-1.5">
               {t("contactFormBiz")}
             </label>
             <input
@@ -113,7 +113,7 @@ Requirements: ${formData.description}`;
               value={formData.bizName}
               onChange={(e) => setFormData({ ...formData, bizName: e.target.value })}
               placeholder={language === "ms" ? "Contoh: Kedai Kopi Danial" : "E.g. Danial Coffee Bar"}
-              className="w-full p-2.5 rounded-lg border border-[#DDE1DA] bg-white text-xs"
+              className="w-full p-3 rounded-xl border border-white/15 bg-white/5 text-white placeholder-zinc-500 text-xs font-medium focus:border-cyan-400 focus:outline-hidden transition-all"
             />
           </div>
         </div>
@@ -121,38 +121,38 @@ Requirements: ${formData.description}`;
         {/* Category & Budget */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="text-xs font-bold text-[#18201D] block mb-1">
+            <label className="text-xs font-bold text-white block mb-1.5">
               {t("contactFormCategory")}
             </label>
             <select
               value={formData.category}
               onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-              className="w-full p-2.5 rounded-lg border border-[#DDE1DA] bg-white text-xs font-semibold"
+              className="w-full p-3 rounded-xl border border-white/15 bg-[#0E1424] text-white text-xs font-semibold focus:border-cyan-400 focus:outline-hidden transition-all"
               required
             >
-              <option value="website">{language === "ms" ? "Pembangunan Laman Web (dari RM79)" : "Website Development (from RM79)"}</option>
-              <option value="design_express">Design Express (RM5/gambar)</option>
-              <option value="design_custom">Design Custom (dari RM35)</option>
-              <option value="repair">{language === "ms" ? "Baiki / Naik Taraf Website (dari RM29)" : "Website Repair (from RM29)"}</option>
-              <option value="systems">{language === "ms" ? "Sistem Pangkalan Data & Android (dari RM499)" : "Systems & Android Sync (from RM499)"}</option>
-              <option value="not_sure">{language === "ms" ? "Belum pasti / Khidmat Nasihat Percuma" : "Not sure / Free Consultation"}</option>
+              <option value="website" className="bg-[#0E1424] text-white">{language === "ms" ? "Pembangunan Laman Web (dari RM79)" : "Website Development (from RM79)"}</option>
+              <option value="design_express" className="bg-[#0E1424] text-white">Design Express (RM5/gambar)</option>
+              <option value="design_custom" className="bg-[#0E1424] text-white">Design Custom (dari RM35)</option>
+              <option value="repair" className="bg-[#0E1424] text-white">{language === "ms" ? "Baiki / Naik Taraf Website (dari RM29)" : "Website Repair (from RM29)"}</option>
+              <option value="systems" className="bg-[#0E1424] text-white">{language === "ms" ? "Sistem Pangkalan Data & Android (dari RM499)" : "Systems & Android Sync (from RM499)"}</option>
+              <option value="not_sure" className="bg-[#0E1424] text-white">{language === "ms" ? "Belum pasti / Khidmat Nasihat Percuma" : "Not sure / Free Consultation"}</option>
             </select>
           </div>
 
           <div>
-            <label className="text-xs font-bold text-[#18201D] block mb-1">
+            <label className="text-xs font-bold text-white block mb-1.5">
               {t("contactFormBudget")}
             </label>
             <select
               value={formData.budgetRange}
               onChange={(e) => setFormData({ ...formData, budgetRange: e.target.value })}
-              className="w-full p-2.5 rounded-lg border border-[#DDE1DA] bg-white text-xs font-medium"
+              className="w-full p-3 rounded-xl border border-white/15 bg-[#0E1424] text-white text-xs font-medium focus:border-cyan-400 focus:outline-hidden transition-all"
             >
-              <option value="Belum pasti">{language === "ms" ? "Belum pasti / Mengikut cadangan" : "Not sure / Open to recommendations"}</option>
-              <option value="Bawah RM100">Bawah RM100 (RM5 - RM79)</option>
-              <option value="RM100 - RM399">RM100 - RM399</option>
-              <option value="RM400 - RM999">RM400 - RM999</option>
-              <option value="RM1,000+">RM1,000+</option>
+              <option value="Belum pasti" className="bg-[#0E1424] text-white">{language === "ms" ? "Belum pasti / Mengikut cadangan" : "Not sure / Open to recommendations"}</option>
+              <option value="Bawah RM100" className="bg-[#0E1424] text-white">Bawah RM100 (RM5 - RM79)</option>
+              <option value="RM100 - RM399" className="bg-[#0E1424] text-white">RM100 - RM399</option>
+              <option value="RM400 - RM999" className="bg-[#0E1424] text-white">RM400 - RM999</option>
+              <option value="RM1,000+" className="bg-[#0E1424] text-white">RM1,000+</option>
             </select>
           </div>
         </div>
@@ -160,7 +160,7 @@ Requirements: ${formData.description}`;
         {/* Conditional Intended Use for Design */}
         {(formData.category === "design_express" || formData.category === "design_custom") && (
           <div>
-            <label className="text-xs font-bold text-[#18201D] block mb-1">
+            <label className="text-xs font-bold text-white block mb-1.5">
               {language === "ms" ? "Format / Kegunaan (Contoh: Poster A4, Bunting 2x5, Label Botol, IG Post)" : "Format / Usage (E.g. A4 Poster, 2x5 Bunting, Bottle Label, IG Post)"}
             </label>
             <input
@@ -168,7 +168,7 @@ Requirements: ${formData.description}`;
               value={formData.intendedUse}
               onChange={(e) => setFormData({ ...formData, intendedUse: e.target.value })}
               placeholder={language === "ms" ? "Contoh: Poster A4 untuk dipaparkan di kafe" : "E.g. A4 print poster for cafe counter"}
-              className="w-full p-2.5 rounded-lg border border-[#DDE1DA] bg-white text-xs"
+              className="w-full p-3 rounded-xl border border-white/15 bg-white/5 text-white placeholder-zinc-500 text-xs font-medium focus:border-cyan-400 focus:outline-hidden transition-all"
             />
           </div>
         )}
@@ -176,7 +176,7 @@ Requirements: ${formData.description}`;
         {/* Existing Website URL if applicable */}
         {(formData.category === "repair" || formData.category === "website") && (
           <div>
-            <label className="text-xs font-bold text-[#18201D] block mb-1">
+            <label className="text-xs font-bold text-white block mb-1.5">
               {language === "ms" ? "Pautan Laman Web / Rujukan (Jika ada)" : "Website URL or Reference (If any)"}
             </label>
             <input
@@ -184,14 +184,14 @@ Requirements: ${formData.description}`;
               value={formData.websiteUrl}
               onChange={(e) => setFormData({ ...formData, websiteUrl: e.target.value })}
               placeholder="https://example.com"
-              className="w-full p-2.5 rounded-lg border border-[#DDE1DA] bg-white text-xs"
+              className="w-full p-3 rounded-xl border border-white/15 bg-white/5 text-white placeholder-zinc-500 text-xs font-medium focus:border-cyan-400 focus:outline-hidden transition-all"
             />
           </div>
         )}
 
         {/* Description / Brief */}
         <div>
-          <label className="text-xs font-bold text-[#18201D] block mb-1">
+          <label className="text-xs font-bold text-white block mb-1.5">
             {t("contactFormDesc")}
           </label>
           <textarea
@@ -204,14 +204,14 @@ Requirements: ${formData.description}`;
                 ? "Terangkan secara ringkas apa yang anda mahu buat, teks yang ada, atau isu yang perlu diselesaikan..."
                 : "Briefly explain what you wish to create, supplied assets, or problem to solve..."
             }
-            className="w-full p-3 rounded-xl border border-[#DDE1DA] bg-white text-xs leading-relaxed resize-none"
+            className="w-full p-3.5 rounded-xl border border-white/15 bg-white/5 text-white placeholder-zinc-500 text-xs leading-relaxed resize-none focus:border-cyan-400 focus:outline-hidden transition-all"
           />
         </div>
 
         {/* Informative Note */}
-        <div className="p-3.5 rounded-xl bg-[#FAF9F5] border border-[#EBEFE8] text-[11px] text-[#52605A] leading-relaxed">
+        <div className="p-4 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-xs text-zinc-300 leading-relaxed">
           💡 {t("contactNote")}{" "}
-          <span className="font-semibold text-[#18201D]">
+          <span className="font-bold text-white">
             {language === "ms"
               ? "Anda juga boleh terus melampirkan gambar/dokumen dalam chat WhatsApp tersebut."
               : "You can also directly attach files and images inside the WhatsApp chat."}
@@ -223,14 +223,14 @@ Requirements: ${formData.description}`;
           <button
             type="submit"
             disabled={!isFormValid}
-            className="ms-btn-primary flex-1 py-3.5 text-xs font-bold disabled:opacity-50 cursor-pointer"
+            className="ms-btn-primary flex-1 py-4 text-xs font-black uppercase tracking-wider disabled:opacity-50 cursor-pointer shadow-lg"
           >
             {t("contactFormSubmit")} →
           </button>
           <button
             type="button"
             onClick={handleCopy}
-            className="ms-btn-secondary py-3.5 px-5 text-xs font-semibold cursor-pointer"
+            className="py-4 px-6 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-white text-xs font-bold transition-all cursor-pointer text-center"
           >
             {copied ? t("calcCopied") : t("calcCopyBtn")}
           </button>

@@ -39,17 +39,17 @@ export default function CalculatorPage() {
   const isMs = language === "ms";
 
   return (
-    <div className="py-12 sm:py-16">
+    <div className="py-12 sm:py-20">
       <div className="ms-container">
         {/* Header */}
-        <div className="max-w-3xl mb-8 sm:mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E8F0EB] text-[#087A68] text-xs font-bold tracking-wider uppercase mb-4">
-            {isMs ? "Kalkulator Bajet Telus" : "Transparent Budget Estimator"}
+        <div className="max-w-3xl mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 text-xs font-black tracking-widest uppercase mb-4">
+            {isMs ? "KALKULATOR BAJET TELUS" : "TRANSPARENT BUDGET ESTIMATOR"}
           </div>
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-[#18201D] tracking-tight leading-tight mb-4">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight mb-4">
             {isMs ? "Kira Anggaran Projek Anda" : "Estimate Your Project Budget"}
           </h1>
-          <p className="text-base sm:text-lg text-[#52605A] leading-relaxed">
+          <p className="text-base sm:text-lg text-zinc-300 leading-relaxed font-medium">
             {isMs
               ? "Pilih kategori dan skop keperluan anda untuk mendapatkan gambaran kos awal. Tiada kos tersembunyi, tiada komitmen automatik — semak anggaran dan terus bincang di WhatsApp."
               : "Select your service category and scope requirements to get a clear initial estimate. No hidden fees, zero automatic commitment — review the breakdown and chat directly on WhatsApp."}
@@ -57,10 +57,10 @@ export default function CalculatorPage() {
         </div>
 
         {/* Global Transparent Pricing Disclaimer */}
-        <div className="p-4 sm:p-5 rounded-2xl bg-[#FAF9F5] border border-[#DDE1DA] mb-10 flex items-start gap-3">
+        <div className="p-5 rounded-2xl bg-[#0E1424]/90 backdrop-blur-2xl border border-white/15 mb-10 flex items-start gap-3 shadow-xl">
           <span className="text-xl shrink-0 mt-0.5">💡</span>
-          <div className="text-xs sm:text-sm text-[#52605A] leading-relaxed">
-            <strong className="text-[#18201D]">
+          <div className="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+            <strong className="text-white font-black">
               {isMs ? "Nota Ketelusan Harga:" : "Pricing Transparency Note:"}
             </strong>{" "}
             {isMs
@@ -72,7 +72,7 @@ export default function CalculatorPage() {
         {/* Wizard in Suspense Boundary */}
         <Suspense
           fallback={
-            <div className="p-12 text-center text-[#52605A] rounded-2xl bg-[#FFFFFF] border border-[#DDE1DA]">
+            <div className="p-12 text-center text-zinc-400 rounded-2xl bg-[#0E1424] border border-white/10">
               {isMs ? "Memuatkan kalkulator..." : "Loading estimator..."}
             </div>
           }

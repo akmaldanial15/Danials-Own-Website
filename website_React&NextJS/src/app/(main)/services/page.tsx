@@ -128,17 +128,17 @@ export default function ServicesIndexPage() {
   ];
 
   return (
-    <div className="py-12 sm:py-16 space-y-16">
-      <div className="ms-container space-y-4 text-center max-w-3xl mx-auto">
-        <span className="ms-pill ms-pill-teal">
+    <div className="py-12 sm:py-20 space-y-16 sm:space-y-24">
+      <div className="ms-container space-y-5 text-center max-w-3xl mx-auto">
+        <span className="ms-pill ms-pill-cyan uppercase font-black tracking-widest text-xs">
           {language === "ms" ? "KATALOG PERKHIDMATAN" : "SERVICE CATALOGUE"}
         </span>
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#18201D] tracking-tight">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight">
           {language === "ms"
             ? "Pilih Servis Mengikut Keperluan & Bajet Anda"
             : "Choose the Right Service for Your Budget"}
         </h1>
-        <p className="text-sm sm:text-base text-[#52605A] leading-relaxed">
+        <p className="text-sm sm:text-lg text-zinc-300 leading-relaxed font-medium">
           {language === "ms"
             ? "Kami menyediakan empat tiang perkhidmatan utama dengan skop yang jelas dan harga permulaan yang telus. Tiada yuran tersembunyi."
             : "We provide four core service pillars with transparent starting anchors and strictly defined scope. No hidden surprises."}
@@ -151,39 +151,39 @@ export default function ServicesIndexPage() {
           {services.map((svc) => (
             <div
               key={svc.id}
-              className="ms-card p-7 sm:p-8 flex flex-col justify-between hover:border-[#2457E6] transition-all"
+              className="ms-card p-7 sm:p-9 flex flex-col justify-between border border-white/10 hover:border-cyan-500/50 hover:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_30px_rgba(6,182,212,0.2)] transition-all bg-[#0E1424]/90 backdrop-blur-2xl"
             >
-              <div className="space-y-4">
+              <div className="space-y-5">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-mono font-extrabold text-[#2457E6] px-2.5 py-1 rounded-lg bg-[#EEF2FF] border border-[#D5E0FF]">
+                  <span className="text-xs font-mono font-black text-cyan-300 px-3 py-1 rounded-full bg-cyan-500/15 border border-cyan-500/30">
                     {svc.num}
                   </span>
-                  <span className="text-xs font-extrabold px-2.5 py-1 rounded-full bg-[#E6F4F1] text-[#087A68] border border-[#C4E6DF]">
+                  <span className="text-xs font-extrabold px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
                     {svc.badge}
                   </span>
                 </div>
 
                 <div>
-                  <h2 className="text-2xl font-extrabold text-[#18201D] tracking-tight">
+                  <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
                     {svc.title[language]}
                   </h2>
-                  <p className="text-xs sm:text-sm text-[#52605A] mt-2 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-zinc-300 mt-2 leading-relaxed">
                     {svc.tagline[language]}
                   </p>
                 </div>
 
-                <div className="p-3 rounded-lg bg-[#FAF9F5] border border-[#EBEFE8] text-xs font-bold text-[#087A68]">
+                <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 text-xs font-bold text-emerald-400">
                   📌 {svc.anchor}
                 </div>
 
                 <div className="space-y-2 pt-2">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#18201D] block">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-300 block">
                     {language === "ms" ? "Skop Pilihan Termasuk:" : "Featured Package Options:"}
                   </span>
-                  <ul className="space-y-1.5 text-xs text-[#52605A]">
+                  <ul className="space-y-1.5 text-xs text-zinc-300">
                     {svc.features[language].map((feat, i) => (
                       <li key={i} className="flex items-start gap-2">
-                        <span className="text-[#2457E6] font-bold">✓</span>
+                        <span className="text-cyan-400 font-bold shrink-0">✓</span>
                         <span>{feat}</span>
                       </li>
                     ))}
@@ -191,16 +191,16 @@ export default function ServicesIndexPage() {
                 </div>
               </div>
 
-              <div className="pt-6 mt-6 border-t border-[#F0EFEA] flex items-center justify-between">
+              <div className="pt-6 mt-6 border-t border-white/10 flex items-center justify-between">
                 <Link
                   href={svc.href}
-                  className="ms-btn-primary text-xs py-2.5 px-5 rounded-xl font-bold"
+                  className="ms-btn-primary text-xs py-3 px-6 rounded-xl font-black uppercase tracking-wider"
                 >
                   {language === "ms" ? "Perincian Servis →" : "Explore Service →"}
                 </Link>
                 <Link
                   href={`/calculator?category=${svc.id === "websites" ? "website" : svc.id}`}
-                  className="text-xs font-bold text-[#52605A] hover:text-[#18201D]"
+                  className="text-xs font-extrabold text-zinc-400 hover:text-white"
                 >
                   {language === "ms" ? "Kira Bajet" : "Estimate"}
                 </Link>
@@ -212,12 +212,12 @@ export default function ServicesIndexPage() {
 
       {/* Helpful Choice Helper */}
       <div className="ms-container">
-        <div className="ms-card p-6 sm:p-8 bg-[#FAF9F5] border border-[#DDE1DA] flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
-          <div className="space-y-1 max-w-xl">
-            <h3 className="font-extrabold text-base sm:text-lg text-[#18201D]">
+        <div className="ms-card p-8 sm:p-10 bg-white/5 border border-white/15 backdrop-blur-2xl flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left shadow-2xl">
+          <div className="space-y-1.5 max-w-xl">
+            <h3 className="font-black text-lg sm:text-xl text-white">
               {language === "ms" ? "Belum pasti servis mana yang paling sesuai?" : "Not sure which service suits you best?"}
             </h3>
-            <p className="text-xs text-[#52605A] leading-relaxed">
+            <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-medium">
               {language === "ms"
                 ? "Hubungi kami di WhatsApp. Ceritakan apa yang anda perlukan dan kami akan bantu pilihkan jalan paling jimat."
                 : "Chat with us directly. Tell us what you need and we will recommend the most cost-effective path."}
@@ -227,7 +227,7 @@ export default function ServicesIndexPage() {
             href={siteConfig.contact.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="ms-btn-primary text-xs py-3 px-6 rounded-xl font-bold shrink-0"
+            className="ms-btn-primary text-xs py-3.5 px-8 rounded-xl font-black uppercase tracking-wider shrink-0"
           >
             {language === "ms" ? "Bantu Saya Pilih →" : "Help Me Choose →"}
           </a>
